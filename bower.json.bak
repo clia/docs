@@ -20,5 +20,6 @@
     "firebase-element": "PolymerElements/firebase-element#^1.0.12"
   },
   "dependencies": {
+    "polymon-egg": "git@github.com:polymerelements/polymon-egg.git"
   }
 }
