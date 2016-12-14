@@ -1,42 +1,42 @@
 ---
-- section: Home
+- section: 主页
   shortpath: home
   path: /1.0/
 
-- section: Start
+- section: 开始
   shortpath: start
   path: /1.0/start/
   items:
-  - title: Get started
+  - title: 入门
     path: /1.0/start/index
-  - header: Build an element
-  - title: 1. Get set up
+  - header: 构建一个元素
+  - title: 1. 设置好
     path: /1.0/start/first-element/intro
     indent: True
-  - title: 2. Add local DOM
+  - title: 2. 添加本地 DOM
     path: /1.0/start/first-element/step-2
     indent: True
-  - title: 3. Data binding & properties
+  - title: 3. 数据绑定和属性
     path: /1.0/start/first-element/step-3
     indent: True
-  - title: 4. React to input
+  - title: 4. 响应输入
     path: /1.0/start/first-element/step-4
     indent: True
-  - title: 5. Theming with custom properties
+  - title: 5. 用自定义属性实现样式
     path: /1.0/start/first-element/step-5
     indent: True
   - endheader: True
-  - header: Build an app
-  - title: 1. Get set up
+  - header: 构建一个应用
+  - title: 1. 设置好
     path: /1.0/start/toolbox/set-up
     indent: True
-  - title: 2. Create a new page
+  - title: 2. 创建新页面
     path: /1.0/start/toolbox/create-a-page
     indent: True
-  - title: 3. Add some elements
+  - title: 3. 添加一些元素
     path: /1.0/start/toolbox/add-elements
     indent: True
-  - title: 4. Deploy
+  - title: 4. 部署
     path: /1.0/start/toolbox/deploy
     indent: True
   - endheader: True
