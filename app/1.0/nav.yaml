@@ -45,57 +45,57 @@
   shortpath: 1.0/docs
   path: /1.0/docs/devguide/feature-overview
   items:
-  - title: Feature overview
+  - title: 功能概述
     path: /1.0/docs/devguide/feature-overview
-  - title: Quick tour
+  - title: 快速浏览
     path: /1.0/docs/devguide/quick-tour
-  - header: Define elements
+  - header: 定义元素
 #  - title: Element lifecycle concepts
 #    path: /1.0/docs/devguide/lifecycle-concepts
 #    indent: True
-  - title: Register an element
+  - title: 注册一个元素
     path: /1.0/docs/devguide/registering-elements
     indent: True
-  - title: Declare properties
+  - title: 声明属性
     path: /1.0/docs/devguide/properties
     indent: True
-  - title: Instance methods
+  - title: 实例方法
     path: /1.0/docs/devguide/instance-methods
     indent: True
-  - title: Behaviors
+  - title: 行为
     path: /1.0/docs/devguide/behaviors
     indent: True
   - endheader: True
-  - header: Local DOM & styling
-  - title: Local DOM
+  - header: 本地 DOM 和样式
+  - title: 本地 DOM
     path: /1.0/docs/devguide/local-dom
     indent: True
-  - title: Styling
+  - title: 样式
     path: /1.0/docs/devguide/styling
     indent: True
   - endheader: True
-  - header: Events
-  - title: Handle and fire events
+  - header: 事件
+  - title: 处理和触发事件
     path: /1.0/docs/devguide/events
     indent: True
-  - title: Gesture events
+  - title: 手势事件
     path: /1.0/docs/devguide/gesture-events
     indent: True
   - endheader: True
-  - header: Data system
-  - title: Data system concepts
+  - header: 数据系统
+  - title: 数据系统的概念
     path: /1.0/docs/devguide/data-system
     indent: True
-  - title: Work with object and array data
+  - title: 与对象和数组数据工作
     path: /1.0/docs/devguide/model-data
     indent: True
-  - title: Observers and computed properties
+  - title: 观察者和被计算的属性
     path: /1.0/docs/devguide/observers
     indent: True
-  - title: Data binding
+  - title: 数据绑定
     path: /1.0/docs/devguide/data-binding
     indent: True
-  - title: Helper elements
+  - title: 助手元素
     path: /1.0/docs/devguide/templates
     indent: True
 #  - title: Work with the model
@@ -108,52 +108,52 @@
 #    path: /1.0/docs/devguide/data-binding
 #    indent: True
   - endheader: True
-  - header: Tools
-  - title: Tools overview
+  - header: 工具
+  - title: 工具概述
     path: /1.0/docs/tools/overview
     indent: True
   - title: Polymer CLI
     path: /1.0/docs/tools/polymer-cli
     indent: True
-  - title: Document your elements
+  - title: 为您的元素写文档
     path: /1.0/docs/tools/documentation
     indent: True
-  - title: Test your elements
+  - title: 测试您的元素
     path: /1.0/docs/tools/tests
     indent: True
-  - title: Optimize for production
+  - title: 为生产环境优化
     path: /1.0/docs/tools/optimize-for-production
     indent: True
-  - title: Publish an element
+  - title: 发布一个元素
     path: /1.0/docs/tools/reusable-elements
     indent: True
-  - title: Advanced tools
+  - title: 高级工具
     path: /1.0/docs/tools/advanced
     indent: True
-  - title: Services
+  - title: 服务
     path: /1.0/docs/tools/services
     indent: True
   - endheader: True
-  - header: What's new
-  - title: Release notes
+  - header: 新内容
+  - title: 发行说明
     path: /1.0/docs/release-notes
     indent: True
-  - title: 1.0 Migration guide
+  - title: 1.0 迁移指南
     path: /1.0/docs/migration
     indent: True
-  - title: About Polymer 1.0
+  - title: 关于 Polymer 1.0
     path: /1.0/docs/about_10
     indent: True
   - endheader: True
-  - header: Resources
-  - title: Community
+  - header: 资源
+  - title: 社区
     path: /1.0/docs/community
     indent: True
-  - title: Browser compatibility
+  - title: 浏览器兼容性
     path: /1.0/docs/browsers
     indent: True
   - endheader: True
-  - header: API Reference
+  - header: API 参考
   - title: Polymer.Base
     path: /1.0/docs/api/Polymer.Base
     indent: True
@@ -178,7 +178,7 @@
   - title: Polymer.Templatizer
     path: /1.0/docs/api/Polymer.Templatizer
     indent: True
-  - title: Global settings
+  - title: 全局设置
     path: /1.0/docs/devguide/settings
     indent: True
   - endheader: True

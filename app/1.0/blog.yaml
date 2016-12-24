@@ -1,4 +1,12 @@
 ---
+- title: "2.0 在路上！"
+  path: /1.0/blog/2016-12-21-polymer-2.0-update
+  published: 2016-12-21
+  author: polymer-team
+  description: "Polymer 2.0 最新进展情况。"
+  tags:
+     - blog
+     - announcements
 - title: "Polymer 峰会现场直播 2016"
   path: /1.0/blog/2016-10-17-tune-into-livestream
   published: 2016-10-17
