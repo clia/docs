@@ -1,27 +1,27 @@
 ---
-title: About Polymer 2.0
+title: 关于 Polymer 2.0
 ---
 
 <!-- toc -->
 
-Polymer 2.0 is designed to support the new custom elements v1 and shadow DOM v1 specifications being implemented by most major browser vendors, while providing a smooth migration path for Polymer 1.x users.
+Polymer 2.0旨在支持新的自定义元素 v1 和 shadow DOM v1 规范，这些规范已被大多数主流浏览器供应商所实现；同时为Polymer 1.x用户提供平滑的迁移路径。
 
-Polymer 2.0 also makes improvements in several areas:
+Polymer 2.0还在几个方面进行了改进：
 
 
 
-*   **Improved interoperability.** By removing the need to use Polymer.dom for DOM manipulation, Polymer 2.0 makes it easier to use Polymer components with other libraries and frameworks. In addition, the shady DOM code has been separated out into a reusable polyfill, instead of being integrated into Polymer.
-*   **Data system improvements.** Polymer 2.0 includes targeted improvements to the data system. These changes make it  easier to reason about and debug the propagation of data through and between elements. They also improve compatibility with top-down data flow approaches, like Flux.
-*   **More standard.** Polymer 2.0 uses standard ES6 classes and the standard custom elements v1 methods for defining elements, instead of a Polymer factory method. You can mix in features using standard JavaScript (class expression mixins) instead of `Polymer` behaviors. (The `Polymer` factory method is still supported using a compatibility layer.)
+*   **改进的互操作性。** 通过消除对使用 Polymer.dom 进行 DOM 操作的需要，Polymer 2.0 使得将 Polymer 组件与其他库和框架结合使用变得更加容易。此外，Shadow DOM 代码已被分离为可重复使用的 polyfill，而不是集成到 Polymer。
+*   **数据系统改进。** Polymer 2.0 包括对数据系统的有针对性的改进。这些更改使得对通过和在元素之间的数据传播进行分析和调试变得更容易。它们还提高了与自上而下的数据流方法（如 Flux）的兼容性。
+*   **更标准。** Polymer 2.0 使用标准 ES6 类和标准自定义元素 v1 的方法来定义元素，而不是 Polymer 工厂方法。您可以使用标准的 JavaScript（类表达混入）来混入功能，而不是 `Polymer` 的行为。（该 `Polymer` 的工厂方法仍然通过一个兼容层继续支持。）
 
-**Unreleased preview code.** Currently, Polymer 2.0 is available as a branch of the Polymer library repo on GitHub. **This is an active development branch, and should not be used in production.** By all means, use the `2.0-preview` branch to experiment, to provide feedback, and to familiarize yourself with the latest versions of the custom elements and shadow DOM specifications. Just don't build production code on it quite yet. Please.
+**未发布的预览代码。** 目前，Polymer 2.0 可作为 GitHub 上的 Polymer library repo 的一个分支。**这是一个积极的开发分支，不应在生产中使用。** 通过一切手段，使用 `2.0-preview` 分支进行实验，提供反馈，并让自己熟悉自定义元素和 Shadow DOM 规范的最新版本。只是当前还不要在它上面构建生产代码，恳请！
 {.alert .alert-warning}
 
-Some tests currently fail on non-Chrome browsers; these will be addressed soon, but in the short term Chrome Canary is your best bet.
+某些测试目前在非 Chrome 浏览器上失败; 这些都将很快解决，但在短期内 Chrome Canary 是你最好的选择。
 
-Polymer 2.0 introduces a number of breaking changes—many of which are required by new custom elements v1 and shadow DOM v1 specifications. Expect to see more changes as this new version nears release.
+Polymer 2.0 引入了许多不兼容的改变——其中许多是新的自定义元素 v1 和 shadow DOM v1 规范所要求的。将会看到更多的更改，因为这个新版本即将发布。
 
-The following sections describes the major changes in Polymer 2.0. For details on upgrading elements to Polymer 2.0, see the [upgrade guide](upgrade).
+以下部分描述了 Polymer 2.0 中的主要更改。有关升级元素到 Polymer 2.0 的详细信息，请参阅 [升级指南](upgrade).
 
 ## Custom elements v1
 

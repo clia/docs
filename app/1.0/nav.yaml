@@ -183,58 +183,58 @@
     indent: True
   - endheader: True
 
-- section: 2.0 Preview
+- section: 2.0 预览
   shortpath: 2.0/docs
   path: /2.0/docs/about_20
   items:
-  - title: About Polymer 2.0
+  - title: 关于 Polymer 2.0
     path: /2.0/docs/about_20
-  - title: Upgrade guide
+  - title: 升级指南
     path: /2.0/docs/upgrade
 #  - title: Custom element concepts
 #    path: /2.0/docs/devguide/custom-elements
 #  - title: Shadow DOM concepts
 #    path: /2.0/docs/devguide/shadow-dom
 
-- section: App Toolbox
+- section: 应用工具箱
   shortpath: toolbox
   path: /1.0/toolbox/
   items:
-  - title: What's in the box?
+  - title: 箱子里有什么？
     path: /1.0/toolbox/index
-  - header: Using the Toolbox
-  - title: App templates
+  - header: 使用工具箱
+  - title: 应用模板
     path: /1.0/toolbox/templates
     indent: True
-  - title: Responsive app layout
+  - title: 响应式应用布局
     path: /1.0/toolbox/app-layout
     indent: True
-  - title: Routing
+  - title: 路由
     path: /1.0/toolbox/routing
     indent: True
-  - title: Localization
+  - title: 本地化
     path: /1.0/toolbox/localize
     indent: True
-  - title: App storage
+  - title: 应用存储
     path: /1.0/toolbox/app-storage
     indent: True
   - title: Service worker
     path: /1.0/toolbox/service-worker
     indent: True
-  - title: Serve your app
+  - title: 服务您的应用
     path: /1.0/toolbox/server
     indent: True
   - endheader: true
-  - header: Case study
-  - title: "Shop"
+  - header: 案例分析
+  - title: “商店”
     path: /1.0/toolbox/case-study
     indent: True
   - endheader: true
 
-- section: Elements
+- section: 元素
   shortpath: elements
   path: https://elements.polymer-project.org
 
-- section: News
+- section: 新闻
   shortpath: blog
   path: /1.0/blog/
