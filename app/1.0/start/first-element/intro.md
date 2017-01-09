@@ -30,7 +30,7 @@ state](/images/1.0/first-element/sample-toggles.png)
 -   [Polymer CLI](/1.0/docs/tools/polymer-cli) 来运行演示程序。
 
 
-**不想要安装什么吗？** 要在网上运行本教程，
+**什么都不想安装吗？** 要在网上运行本教程，
 按照指令 [第 1 步：无需安装的版本](#noinstall).
 { .alert .alert-info }
 
