@@ -1,4 +1,12 @@
 ---
+- title: "webcomponents.org"
+  path: /1.0/blog/2017-01-09-webcomponents-org
+  published: 2017-01-09
+  author: polymer-team
+  description: "新的 webcomponents.org 现在上线了，有来自 Web 组件社区的更新和元素。"
+  tag:
+    - blog
+    - announcements
 - title: "2.0 在路上！"
   path: /1.0/blog/2016-12-21-polymer-2.0-update
   published: 2016-12-21
