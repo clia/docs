@@ -25,6 +25,8 @@ Polymer 应用工具箱是一套组件、工具和模板的集合，用来使用
 [商店演示](https://shop.polymer-project.org/)。商店是一个使用工具箱构建的功能齐全的电子商务渐进式 Web 应用演示。
 了解它是如何建成的 [案例：商店应用](case-study).
 
+[新闻应用演示](https://news.polymer-project.org) 展示了一个新闻站点的渐进式 Web 应用的实现。了解该新闻站点应用相关的实现细节 [案例：新闻应用](news-case-study)。
+
 要开始使用应用工具箱，请访问 [使用应用工具箱创建应用](/1.0/start/toolbox/set-up)。
 
 或者继续阅读，了解 [响应式应用布局](app-layout).

@@ -11,7 +11,7 @@ subtitle: "使用应用工具箱创建一个应用"
 
 ## 安装 Polymer CLI
 
-1.  安装 Node.js 的 LTS 版本（4.x）。当前版本（6.x）应该工作，但是没有官方支持。不支持低于LTS的版本。
+1.  安装 [Node.js 的活跃 LTS 版本](https://github.com/nodejs/LTS)（4.x 或 6.x）。当前版本（7.x）应该工作，但是没有官方支持。
 
 1.  安装 Polymer CLI
 

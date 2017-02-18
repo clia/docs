@@ -63,8 +63,7 @@ state](/images/1.0/first-element/sample-toggles.png)
 
 安装 Polymer CLI 来本地提供演示程序服务。
 
-1.  安装 LTS 版本的 (4.x) [Node.js](https://nodejs.org/en/download/).
-    当前版本 (6.x) 也可以工作，但不正式支持。不支持低于 LTS 版本。
+1.  安装 [Node.js 的活跃 LTS 版本](https://github.com/nodejs/LTS)（4.x 或 6.x）。当前版本（7.x）应该工作，但是没有官方支持。
 
 2.  安装 [git](https://git-scm.com/downloads).
 
