@@ -1,42 +1,42 @@
 ---
-subtitle: Feature Overview
-title: Polymer library
+subtitle: 功能概述
+title: Polymer 库
 ---
 
-The Polymer library provides a set of features for creating custom elements. These features are designed
-to make it easier and faster to make custom elements that work like standard DOM elements. Similar to standard DOM elements, Polymer elements can be:
+Polymer 库提供用于创建自定义元素的一组功能。这些功能的设计，使其更容易、更快地创建像标准的 DOM 元素一样工作的自定义元素。
+类似于标准 DOM 元素，Polymer 元素可以是：
 
-* Instantiated using a constructor or `document.createElement`.
-* Configured using attributes or properties.
-* Populated with internal DOM inside each instance.
-* Responsive to property and attribute changes (for example, by populating data into the DOM, or firing an event).
-* Styled with internal defaults or externally.
-* Responsive to methods that manipulate its internal state.
+* 使用构造函数实例化或是 `document.createElement`。
+* 使用 attributes 或者 properties 进行配置。
+* 填充每个实例内部的内部 DOM。
+* 响应于 property 和 attribute 的变化（例如，通过填充数据到 DOM，或触发一个事件）。
+* 用内部默认值来实现样式，或通过外部途径。
+* 响应于操纵其内部状态的方法。
 
-A basic Polymer element definition looks like this:
+一个基础的 Polymer 元素定义如下所示：
 
 ```
     <dom-module id="element-name">
 
       <template>
         <style>
-          /* CSS rules for your element */
+          /* 用于您的元素的 CSS 样式 */
         </style>
 
-        <!-- local DOM for your element -->
+        <!-- 用于您的元素的本地 DOM -->
 
-        <div>{{greeting}}</div> <!-- data bindings in local DOM -->
+        <div>{{greeting}}</div> <!-- 本地 DOM 中的数据绑定 -->
       </template>
 
       <script>
-        // element registration
+        // 元素注册
         Polymer({
           is: "element-name",
 
-          // add properties and methods on the element's prototype
+          // 添加属性和方法到元素的原型上
 
           properties: {
-            // declare properties for the element's public API
+            // 声明属性用于该元素的公共 API
             greeting: {
               type: String,
               value: "Hello!"
@@ -49,34 +49,27 @@ A basic Polymer element definition looks like this:
 ```
 
 
-This guide divides the features into the following groups:
+本指南把功能划分为以下几组：
 
-*   [Registration and lifecycle](registering-elements). Registering an
-    element associates a class (prototype) with a custom element name. The
-    element provides callbacks to manage its lifecycle. Use behaviors to
-    share code.
+*   [注册和生命周期](registering-elements)。用自定义的元素名称注册一个元素与一个类（原型）相关联。
+    该元素提供回调方法来管理它的生命周期。使用行为来共享代码。
 
-*   [Declared properties](properties). Declared properties can be
-    configured from markup using attributes. Declared properties can optionally
-    support change observers, two-way data binding, and reflection to attributes.
-    You can also declare computed properties and read-only properties.
+*   [声明 properties](properties)。声明的 properties 可通过标记语言使用 attributes 进行配置。
+    声明的 properties 可选择支持变更观察者，双向数据绑定和反射到 attributes。您也可以声明被计算的
+    properties 和只读 properties。
 
-*   [Local DOM](local-dom). Local DOM is the DOM created and managed by the element.
+*   [本地 DOM](local-dom)。本地 DOM 是由元素创建和管理的 DOM。
 
-*   [Events](events). Attaching event listeners to the host object
-    and local DOM children. Event retargeting.
+*   [事件](events)。附加事件监听器到宿主对象和本地 DOM 的子节点。事件重定向。
 
-*   [Data binding](data-binding). Property bindings. Binding to attributes.
+*   [数据绑定](data-binding)。Property 绑定。绑定到 attributes。
 
-*   [Behaviors](behaviors). Behaviors are reusable modules of code that can be
-    mixed into Polymer elements.
+*   [行为](behaviors)。行为是可重用的代码模块，可混入 Polymer 元素。
 
-*   [Utility functions](instance-methods). Helper methods for common tasks.
+*   [实用函数](instance-methods)。用于通用任务的辅助方法。
 
-*   [Experimental features and elements](experimental). Experimental template and styling features.
-    Feature layering.
+*   [实验性的功能和元素](experimental)。实验性的模板和样式功能。功能分层。
 
-If you're migrating an existing 0.5 element to the new APIs, see the [Migration guide](/1.0/docs/migration)
-for advice.
+如果您要迁移现有的 0.5 版本的元素到新的 API，请参阅 [迁移指南](/1.0/docs/migration) 以获得建议。
 
-If you're upgrading from the 0.8 release, see the [Release notes](/1.0/docs/release-notes).
+如果您从0.8版本升级，请参见 [发行说明](/1.0/docs/release-notes)。
