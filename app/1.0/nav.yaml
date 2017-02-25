@@ -1,7 +1,7 @@
 ---
 - section: 主页
   shortpath: home
-  path: /2.0/
+  path: /
 
 - section: 开始
   shortpath: start
@@ -173,46 +173,46 @@
 
 - section: 应用工具箱
   shortpath: toolbox
-  path: /2.0/toolbox/
+  path: /1.0/toolbox/
   items:
   - title: 箱子里有什么？
-    path: /2.0/toolbox/index
+    path: /1.0/toolbox/index
   - header: 使用工具箱
   - title: 应用模板
-    path: /2.0/toolbox/templates
+    path: /1.0/toolbox/templates
     indent: True
   - title: 响应式应用布局
-    path: /2.0/toolbox/app-layout
+    path: /1.0/toolbox/app-layout
     indent: True
   - title: 路由
-    path: /2.0/toolbox/routing
+    path: /1.0/toolbox/routing
     indent: True
   - title: 本地化
-    path: /2.0/toolbox/localize
+    path: /1.0/toolbox/localize
     indent: True
   - title: 应用存储
-    path: /2.0/toolbox/app-storage
+    path: /1.0/toolbox/app-storage
     indent: True
   - title: Service worker
-    path: /2.0/toolbox/service-worker
+    path: /1.0/toolbox/service-worker
     indent: True
   - title: 服务您的应用
-    path: /2.0/toolbox/server
+    path: /1.0/toolbox/server
     indent: True
   - endheader: true
   - header: 案例分析
   - title: “商店”
-    path: /2.0/toolbox/case-study
+    path: /1.0/toolbox/case-study
     indent: True
   - title: “新闻”
     path: /1.0/toolbox/news-case-study
     indent: True
   - endheader: true
 
-- section: 元素
-  shortpath: elements
-  path: https://elements.polymer-project.org
-
-- section: 新闻
+- section: 博客
   shortpath: blog
-  path: /2.0/blog/
+  path: /blog/
+
+- section: Community
+  shortpath: community
+  path: /community/
