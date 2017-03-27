@@ -2,6 +2,8 @@
 title: Custom element concepts
 ---
 
+<!-- toc -->
+
 Custom elements provide a component model for the web. The custom elements specification provides:
 
 *   A mechanism for associating  a class with a custom element name.
@@ -113,12 +115,12 @@ to run user code is response to certain lifecycle changes.
    <td>Called when the element is removed from a document.
    </td>
   </tr>
-  <tr>
-   <td>adoptedCallback
+  <!-- <tr>
+  <td>adoptedCallback
    </td>
    <td>Called when the element is adopted into a new document.
    </td>
-  </tr>
+  </tr> -->
   <tr>
    <td>attributeChangedCallback
    </td>
@@ -193,7 +195,7 @@ Related topics:
 *   [DOM templating](dom-template)
 *   [Data system concepts](data-system)
 *   [Observers and computed properties](observers)
-*   Monitoring child nodes (((Need Link here)))
+*   [Observe added and removed children](shadow-dom#observe-nodes)
 
 ## Element upgrades
 
@@ -201,7 +203,6 @@ By specification, custom elements can be used before they're defined. Adding a d
 element causes any existing instances of that element to be *upgraded* to the custom class.
 
 For example, consider the following code:
-
 
 ```
 <my-element></my-element>
@@ -256,13 +257,11 @@ In addition to `HTMLElement`, a custom element can extend another custom element
 class ExtendedElement extends MyElement {
   static get is() { return 'extended-element'; }
 
-  static get config {
+  static get properties() {
     return {
-      properties: {
-        thingCount: {
-          value: 0,
-          observer: '_thingCountChanged'
-        }
+      thingCount: {
+        value: 0,
+        observer: '_thingCountChanged'
       }
     }
   }
@@ -282,29 +281,40 @@ elements like `<button>` and `<input>`). However, not all browser makers have ag
 customized built-in elements, so Polymer does not support them at this time.
 {.alert .alert-info}
 
-## Sharing code with class expression mixins
+## Sharing code with class expression mixins {#mixins}
 
-ES6 classes allow single inheritance, which can make it challenging to share code between different elements. Class expression mixins let you share code between elements.
+ES6 classes allow single inheritance, which can make it challenging to share code between different
+elements. Class expression mixins let you share code between elements.
 
-A class expression mixin is basically a function that operates as a *class factory*. You pass in a superclass, and the function generates a new class which extends the superclass with the mixin's methods.
+A class expression mixin is basically a function that operates as a *class factory*. You pass in a
+superclass, and the function generates a new class which extends the superclass with the mixin's
+methods.
 
 
-```
+```js
 MyMixin = function(superClass) {
+
   return class extends superClass {
-    static get config() {
+
+    constructor() {
+      super()
+      this.addEventListener('keypress', e => this.handlePress(e));
+    }
+
+    static get properties() {
       return {
-        properties: {
-          bar: {
-            type: String,
-            value: 5
-          }
-        },
-        observers: [ '_barChanged(bar)' ]
+        bar: {
+          type: Object
+        }
       }
     }
-    ready() { this.addEventListener('keypress', (e)=>this.handlePress(e))
+
+    static get observers() {
+      return [ '_barChanged(bar.*)' ]
+    }
+
     _barChanged(bar) { ... }
+
     handlePress(e) { console.log('key pressed: ' + e.charCode) }
   }
 }
@@ -315,13 +325,11 @@ The mixin can define properties, observers, and methods just like a regular elem
 
 Add a mixin to your element like this:
 
-
-```
+```js
 class MyElement extends MyMixin(Polymer.Element) {
   static get is() { return 'my-element' }
 }
 ```
-
 
 This creates a new class defined by the `MyMixin` factory, so the inheritance hierarchy is:
 
@@ -332,7 +340,7 @@ MyElement <= MyMixin(Polymer.Element) <= Polymer.Element
 
 You can apply multiple mixins in sequence:
 
-```
+```js
 class AnotherElement extends AnotherMixin(MyMixin(Polymer.Element)) { … }
 ```
 

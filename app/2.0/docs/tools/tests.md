@@ -8,6 +8,11 @@ This guide shows you the basics of using Polymer CLI to run unit tests, and
 how to accomplish various tasks and scenarios using the Web Component Tester
 library (the underlying library that powers Polymer CLI's testing tools).
 
+**Not updated for 2.x.** This material has not been updated for Polymer 2.x.
+While much of the basic material remains the same, these samples have not been
+tested or updated for 2.x.
+{.alert .alert-warning}
+
 ## Overview
 
 Polymer CLI is an all-in-one command-line interface that covers the vast majority of
@@ -220,7 +225,7 @@ Web Component Tester includes [Sinon](http://sinonjs.org/), which enables you to
 requests and create fake servers.
 
 Below is an example of a simple XHR unit test suite for
-[`<iron-ajax>`](https://elements.polymer-project.org/elements/iron-ajax).
+[`<iron-ajax>`](https://www.webcomponents.org/element/PolymerElements/iron-ajax).
 Check out Sinon's documentation for more in-depth examples.
 
 ```
@@ -309,7 +314,7 @@ for an example.
 
 ### Test local DOM
 
-Use Polymer's [DOM API](/1.0/docs/devguide/local-dom#dom-api) to access
+Use Polymer's [DOM API](/{{{polymer_version_dir}}}/docs/devguide/local-dom#dom-api) to access
 and modify local DOM children.
 
 ```js
@@ -326,8 +331,8 @@ in the local DOM of `myEl`.
 #### Test DOM mutations
 
 Always wrap your test in `flush` if your element template contains a [template
-repeater (`dom-repeat`)](/1.0/docs/devguide/templates#dom-repeat) or
-[conditional template (`dom-if`)](/1.0/docs/devguide/templates#dom-if),
+repeater (`dom-repeat`)](/{{{polymer_version_dir}}}/docs/devguide/templates#dom-repeat) or
+[conditional template (`dom-if`)](/{{{polymer_version_dir}}}/docs/devguide/templates#dom-if),
 or if your test involves a local DOM mutation. Polymer lazily performs these
 operations in some cases for performance. `flush` ensures that asynchronous
 changes have taken place. The test function should take one argument, `done`,

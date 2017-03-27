@@ -33,10 +33,10 @@ Polymer 库提供用于创建自定义元素的一组功能。这些功能的设
         Polymer({
           is: "element-name",
 
-          // 添加属性和方法到元素的原型上
+          // 添加属物和方法到元素的原型上
 
           properties: {
-            // 声明属性用于该元素的公共 API
+            // 声明属物用于该元素的公共 API
             greeting: {
               type: String,
               value: "Hello!"

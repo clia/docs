@@ -16,33 +16,43 @@ Polymer 库提供用于创建自定义元素的一组功能。这些功能的设
 一个基础的 Polymer 元素定义如下所示：
 
 ```
-    <dom-module id="element-name">
-
+    <dom-module id="x-custom">
+      <!-- Optional shadow DOM template -->
       <template>
         <style>
           /* 用于您的元素的 CSS 样式 */
         </style>
 
-        <!-- 用于您的元素的本地 DOM -->
+        <!-- 用于您的元素的 shadow DOM -->
 
         <div>{{greeting}}</div> <!-- 本地 DOM 中的数据绑定 -->
       </template>
 
       <script>
-        // 元素注册
-        Polymer({
-          is: "element-name",
+        // 使用 ES2015 的类定义元素的 API
+        class XCustom extends Polymer.Element {
 
-          // 添加属性和方法到元素的原型上
+          static get is() { return 'x-custom'; }
 
-          properties: {
-            // 声明属性用于该元素的公共 API
-            greeting: {
-              type: String,
-              value: "Hello!"
+          // 为元素的公共 API 声明属物
+          static get properties() {
+            return {
+              greeting: {
+                type: String,
+                value: "Hello!"
+              }
             }
           }
-        });
+
+          // Add methods to the element's public API
+          greetMe() {
+            console.log(this.greeting);
+          }
+
+        }
+
+        // Register the x-custom element with the browser
+        customElements.define(XCustom.is, XCustom);
       </script>
 
     </dom-module>
@@ -51,25 +61,18 @@ Polymer 库提供用于创建自定义元素的一组功能。这些功能的设
 
 本指南把功能划分为以下几组：
 
-*   [注册和生命周期](registering-elements)。用自定义的元素名称注册一个元素与一个类（原型）相关联。
-    该元素提供回调方法来管理它的生命周期。使用行为来共享代码。
+*   [自定义元素](custom-elements)。注册元素将类与自定义元素名称相关联。该元素提供回调以管理其生命周期。
+    Polymer 还可以让您声明属物，将元素的属物 API 与 Polymer 数据系统集成。
 
-*   [声明 properties](properties)。声明的 properties 可通过标记语言使用 attributes 进行配置。
-    声明的 properties 可选择支持变更观察者，双向数据绑定和反射到 attributes。您也可以声明被计算的
-    properties 和只读 properties。
+*   [Shadow DOM](shadow-dom)。Shadow DOM 为您的元素提供了本地封装的DOM树。Polymer 可以自动用 DOM 模板为您的元素创建和填充阴影树。
 
-*   [本地 DOM](local-dom)。本地 DOM 是由元素创建和管理的 DOM。
+*   [事件](events)。Polymer 提供了一个用于将事件监听器附加到 shadow DOM 子节点的声明性语法。它还提供了一个用于处理手势事件的可选库。
 
-*   [事件](events)。附加事件监听器到宿主对象和本地 DOM 的子节点。事件重定向。
+*   [数据系统](data-system)。Polymer 数据系统提供与属物和属性的数据绑定; 属物观察者，和被计算的属物。
 
-*   [数据绑定](data-binding)。Property 绑定。绑定到 attributes。
 
-*   [行为](behaviors)。行为是可重用的代码模块，可混入 Polymer 元素。
+如果您要迁移现有的 1.x 版本的元素到新的 API，请参阅
+[迁移指南](/2.0/docs/upgrade) 以获得建议。
 
-*   [实用函数](instance-methods)。用于通用任务的辅助方法。
-
-*   [实验性的功能和元素](experimental)。实验性的模板和样式功能。功能分层。
-
-如果您要迁移现有的 0.5 版本的元素到新的 API，请参阅 [迁移指南](/1.0/docs/migration) 以获得建议。
-
-如果您从0.8版本升级，请参见 [发行说明](/1.0/docs/release-notes)。
+如果您要查找此版本中的最新更改，请参阅
+[发行说明](/2.0/docs/release-notes)。

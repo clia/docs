@@ -2,10 +2,10 @@
 title: Services
 ---
 
-<!-- toc --> 
+<!-- toc -->
 
 This document is a list of miscellaneous services that you may find useful
-when creating Polymer elements. 
+when creating Polymer elements.
 
 ## <b>polygit</b>—CDN web service for serving components {#polygit}
 
@@ -16,7 +16,7 @@ Usage:
 ```
 <head>
   <base href="https://polygit.org/components/"> <!-- saves typing! -->
-  <script src="webcomponentsjs/webcomponents-lite.min.js"></script>
+  <script src="webcomponentsjs/webcomponents-lite.js"></script>
   <link rel="import" href="paper-button/paper-button.html">
   <link rel="import" href="iron-selector/iron-selector.html">
 </head>
@@ -28,7 +28,7 @@ Source: [github.com/PolymerLabs/polygit](https://github.com/PolymerLabs/polygit)
 
 ## <b>polystyle</b>—web service for creating style modules {#polystyle}
 
-[polystyle](https://poly-style.appspot.com/demo/) is a web service that can wrap an existing stylesheet on a remote server as Polymer [style module](/1.0/docs/devguide/styling#style-modules). This is useful if you have a hosted third-party stylesheet that you want to use in an element or your application.
+[polystyle](https://poly-style.appspot.com/demo/) is a web service that can wrap an existing stylesheet on a remote server as Polymer [style module](/2.0/docs/devguide/style-shadow-dom#style-modules). This is useful if you have a hosted third-party stylesheet that you want to use in an element or your application.
 
 Usage:
 

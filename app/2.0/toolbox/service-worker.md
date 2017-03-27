@@ -34,7 +34,7 @@ considered a secure origin.
 
 ## Add a service worker
 
-Support for Service Worker Precache is built into the [Polymer CLI](/1.0/docs/tools/polymer-cli),
+Support for Service Worker Precache is built into the [Polymer CLI](/{{{polymer_version_dir}}}/docs/tools/polymer-cli),
 so a service worker script is automatically generated when you build your app.
 
 However, to use the service worker, you need to add code to register it:
@@ -78,7 +78,7 @@ module.exports = {
   staticFileGlobs: [
     '/index.html',
     '/manifest.json',
-    '/bower_components/webcomponentsjs/webcomponents-lite.min.js',
+    '/bower_components/webcomponentsjs/webcomponents-lite.js',
     '/images/*'
   ],
   navigateFallback: '/index.html',

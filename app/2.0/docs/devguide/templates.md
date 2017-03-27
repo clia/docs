@@ -65,7 +65,7 @@ Example: { .caption }
 ```html
 <link rel="import" href="components/polymer/polymer-element.html">
 <! -- import template repeater -->
-<link rel="import" href="components/polymer/src/templatizer/dom-repeat.html">
+<link rel="import" href="components/polymer/src/elements/dom-repeat.html">
 
 <dom-module id="x-custom">
   <template>
@@ -142,7 +142,7 @@ data is `model.item`:
 
 ```html
 <link rel="import" href="polymer/polymer-element.html">
-<link rel="import" href="polymer/src/templatizer/dom-repeat.html">
+<link rel="import" href="polymer/src/elements/dom-repeat.html">
 
 <dom-module id="x-custom">
 
@@ -396,7 +396,7 @@ different name for the index property.
 
 ### Forcing synchronous renders {#synchronous-renders}
 
-Call [`render`](/{{{polymer_version_dir}}}/docs/api/dom-repeat#method-render)
+Call [`render`](/{{{polymer_version_dir}}}/docs/api/elements/dom-repeat#method-render)
 to force a `dom-repeat` template to synchronously render any changes to its
 data. Normally changes are batched and rendered asynchronously. Synchronous
 rendering has a performance cost, but can be useful in a few scenarios:
@@ -410,15 +410,45 @@ rendering has a performance cost, but can be useful in a few scenarios:
 
 `render` **only** picks up [observable changes](data-system#observable-changes)
 such as those made with Polymer's [array mutation methods](model-data#array-mutation).
+
+To force the template to pick up unobservable changes, see
+[Forcing the template to update](#update-data).
+
+### Forcing the template to update {#update-data}
+
 If you or a third-party library mutate the array **without** using Polymer's methods, you can do
 one of the following:
 
 *   If you know the _exact set of changes made to your array_, use
     [`notifySplices`](model-data#notifysplices) to ensure that any elements watching the
     array are properly notified.
-*   If you don't have an exact set of changes, you can [Override dirty
-    checking](model-data#override-dirty-check) to force the data system to reevaluate the entire
-    array.
+
+*   Clone the array.
+
+    ```js
+    // Set items to a shallow clone of itself
+    this.items = this.items.slice();
+    ```
+
+    For complex data structures, a deep clone may be required.
+
+*   If you don't have an exact set of changes, you can set the
+    [`mutableData`](/{{{polymer_version_dir}}}/docs/api/elements/dom-repeat#property-mutableData)
+    property on the `dom-repeat` to disable dirty checking on the array.
+
+      ```html
+      <template is="dom-repeat" items={{items}} mutable-data> ... </template>
+      ```
+
+      With `mutableData` set, calling `notifyPath` on the array causes the entire array to be
+      re-evaluated.
+
+      ```js
+      //
+      this.notifyPath('items');
+      ```
+
+    For details, see [Using the MutableData mixin](data-system#mutable-data).
 
 For more information on working with arrays and the Polymer data system, see [Work with
 arrays](model-data#work-with-arrays).
@@ -429,22 +459,22 @@ By default, `dom-repeat` tries to render all of the list items at once. If
 you try to use `dom-repeat` to render a very large list of items, the UI may
 freeze while it's rendering the list. If you encounter this problem, enable
 "chunked" rendering by setting
-[`initialCount`](/{{{polymer_version_dir}}}/docs/api/dom-repeat#property-initialCount).
+[`initialCount`](/{{{polymer_version_dir}}}/docs/api/elements/dom-repeat#property-initialCount).
 In chunked mode,
 `dom-repeat` renders `initialCount` items at first, then renders the rest of
 the items incrementally one chunk per animation frame. This lets the UI thread
 handle user input between chunks. You can keep track of how many items have
 been rendered with the
-[`renderedItemCount`](/{{{polymer_version_dir}}}/docs/api/dom-repeat#property-renderedItemCount)
+[`renderedItemCount`](/{{{polymer_version_dir}}}/docs/api/elements/dom-repeat#property-renderedItemCount)
 read-only property.
 
 `dom-repeat` adjusts the number of items rendered in each chunk to try and
 maintain a target framerate. You can further tune rendering by setting
-[`targetFramerate`](/{{{polymer_version_dir}}}/docs/api/dom-repeat#property-targetFramerate).
+[`targetFramerate`](/{{{polymer_version_dir}}}/docs/api/elements/dom-repeat#property-targetFramerate).
 
 You can also set a debounce time that must pass before a `filter` or `sort`
 function is re-run by setting the
-[`delay`](/{{{polymer_version_dir}}}/docs/api/dom-repeat#property-delay)
+[`delay`](/{{{polymer_version_dir}}}/docs/api/elements/dom-repeat#property-delay)
 property.
 
 ## Data bind an array selection (array-selector) {#array-selector}
@@ -468,9 +498,9 @@ If you're not importing `polymer.html`, import `array-selector.html` as shown in
 ```html
 <link rel="import" href="components/polymer/polymer-element.html">
 <! -- import template repeater -->
-<link rel="import" href="components/polymer/src/templatizer/dom-repeat.html">
+<link rel="import" href="components/polymer/src/elements/dom-repeat.html">
 <!-- import array selector -->
-<link rel="import" href="components/polymer/src/templatizer/array-selector.html">
+<link rel="import" href="components/polymer/src/elements/array-selector.html">
 
 <dom-module id="x-custom">
 
@@ -577,7 +607,7 @@ Example: { .caption }
 ```
 <link rel="import" href="components/polymer/polymer-element.html">
 <! -- import conditional template -->
-<link rel="import" href="components/polymer/src/templatizer/dom-if.html">
+<link rel="import" href="components/polymer/src/elements/dom-if.html">
 
 <dom-module id="x-custom">
 
@@ -643,14 +673,14 @@ use the `<dom-bind>` element.  This template immediately stamps the contents of
 its child templateinto the main document. Data bindings in an auto-binding template use
 the `<dom-bind>` element itself as the binding scope.
 
-```
+```html
 <!doctype html>
 <html>
 <head>
   <meta charset="utf-8">
   <script src="components/webcomponentsjs/webcomponents-lite.js"></script>
-  <link rel="import" href="polymer/src/templatizer/dom-bind.html">
-  <link rel="import" href="polymer/src/templatizer/dom-repeat.html">
+  <link rel="import" href="polymer/src/elements/dom-bind.html">
+  <link rel="import" href="polymer/src/elements/dom-repeat.html">
 
 </head>
 <body>
@@ -686,6 +716,11 @@ the `<dom-bind>` element itself as the binding scope.
 
 All of the features in `dom-bind` are already available _inside_ a Polymer
 element. **Auto-binding templates should only be used _outside_ of a Polymer element.**
+
+**Forcing synchronous renders.** Like `dom-repeat`, `dom-bind` provides a `render` method and a
+`mutableData` property, as described in [Forcing synchronous renders](#synchronous-renders)
+and [Forcing the template to update](#update-data).
+{.alert .alert-info}
 
 ## dom-change event {#dom-change}
 

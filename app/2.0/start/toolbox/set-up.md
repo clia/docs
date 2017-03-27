@@ -19,9 +19,13 @@ Polymer CLI 是 Polymer 项目的一个一体化命令行工具。在本教程�
 
             git --version
 
-    *   Node.js（LTS版本或更高版本）
+    *   Node.js (LTS 版本 6.x)
 
             node -v
+
+    *   npm v3 or higher
+
+            npm -v
 
     *   Bower
 
@@ -29,13 +33,13 @@ Polymer CLI 是 Polymer 项目的一个一体化命令行工具。在本教程�
 
     您应该看到典型的输出，指示您正在运行的每个这些依赖项的版本。如果您缺少任何这些依赖项，
     请按照 Polymer CLI 指南中的以下部分中的说明操作，了解如何安装每个依赖项：
-    [Polymer CLI 指南中的安装部分](/1.0/docs/tools/polymer-cli#install)。
+    [Polymer CLI 指南中的安装部分](/2.0/docs/tools/polymer-cli#install)。
 
 
 
 1.  安装 Polymer CLI。
 
-        npm install -g polymer-cli
+        npm install -g polymer-cli@next
 
 ## 从模板初始化您的项目
 
@@ -46,7 +50,7 @@ Polymer CLI 是 Polymer 项目的一个一体化命令行工具。在本教程�
 
 1. 使用应用模板初始化您的项目
 
-        polymer init starter-kit
+        polymer init polymer-2-starter-kit
 
 ## 服务您的项目
 
@@ -56,28 +60,30 @@ Polymer CLI 是 Polymer 项目的一个一体化命令行工具。在本教程�
 
 上面的任务会自动打开默认 Web 浏览器并获取本地托管的应用 (位于 `http://localhost:8080`).
 
-![应用工具箱：入门套件模板](/images/2.0/toolbox/starter-kit.png)
+![App Toolbox: Starter Kit Template](/images/1.0/toolbox/starter-kit.png)
 
 ## 项目结构
 
 下图是项目中的文件和目录的简要摘要。
 
 ```
-bower.json  # bower 配置
-bower_components/  # 应用依赖
+bower.json             # bower 配置
+bower_components/      # 应用依赖
 images/
-index.html  # 您的应用的主入口
-manifest.json  # 应用清单配置
-polymer.json  # Polymer CLI 配置
-service-worker.js  # 自动生成的 service worker
-src/  # 应用特定元素
-  my-app.html  # 顶级元素
-  my-icons.html  # 应用图标
-  my-view1.html  # 示例视图或“页面”
+index.html             # 您的应用的主入口
+manifest.json          # 应用清单配置
+polymer.json           # Polymer CLI 配置
+service-worker.js      # 自动生成的 service worker
+src/                   # 应用特定元素
+  my-app.html            # 顶级元素
+  my-icons.html          # 应用图标
+  my-view1.html          # 示例视图或“页面”
   my-view2.hmtl
   my-view3.html
+  my-view404.html        # 示例 404 页面
+  shared-styles.html     # 示例共享样式
 sw-precache-config.js  # service worker 预缓存配置
-test/  # 单元测试
+test/                  # 单元测试
 ```
 
 ## 下一步
@@ -88,5 +94,4 @@ test/  # 单元测试
     href="create-a-page">下一步：创建页面</a>
 
 [toolbox]: /2.0/toolbox/
-[shared styles]: /1.0/docs/devguide/styling.html#style-modules
 [md]: http://www.google.com/design/spec/material-design/introduction.html

@@ -16,13 +16,13 @@
   - title: 2. 添加本地 DOM
     path: /1.0/start/first-element/step-2
     indent: True
-  - title: 3. 数据绑定和属性
+  - title: 3. 数据绑定和属物
     path: /1.0/start/first-element/step-3
     indent: True
   - title: 4. 响应输入
     path: /1.0/start/first-element/step-4
     indent: True
-  - title: 5. 用自定义属性实现样式
+  - title: 5. 用自定义属物实现样式
     path: /1.0/start/first-element/step-5
     indent: True
   - endheader: True
@@ -53,7 +53,7 @@
   - title: 注册一个元素
     path: /1.0/docs/devguide/registering-elements
     indent: True
-  - title: 声明属性
+  - title: 声明属物
     path: /1.0/docs/devguide/properties
     indent: True
   - title: 实例方法
@@ -86,7 +86,7 @@
   - title: 与对象和数组数据工作
     path: /1.0/docs/devguide/model-data
     indent: True
-  - title: 观察者和被计算的属性
+  - title: 观察者和被计算的属物
     path: /1.0/docs/devguide/observers
     indent: True
   - title: 数据绑定
