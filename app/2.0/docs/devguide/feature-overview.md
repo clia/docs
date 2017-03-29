@@ -17,13 +17,13 @@ Polymer 库提供用于创建自定义元素的一组功能。这些功能的设
 
 ```
     <dom-module id="x-custom">
-      <!-- Optional shadow DOM template -->
+      <!-- 可选的阴影 DOM 模板 -->
       <template>
         <style>
           /* 用于您的元素的 CSS 样式 */
         </style>
 
-        <!-- 用于您的元素的 shadow DOM -->
+        <!-- 用于您的元素的阴影 DOM -->
 
         <div>{{greeting}}</div> <!-- 本地 DOM 中的数据绑定 -->
       </template>
@@ -64,9 +64,9 @@ Polymer 库提供用于创建自定义元素的一组功能。这些功能的设
 *   [自定义元素](custom-elements)。注册元素将类与自定义元素名称相关联。该元素提供回调以管理其生命周期。
     Polymer 还可以让您声明属物，将元素的属物 API 与 Polymer 数据系统集成。
 
-*   [Shadow DOM](shadow-dom)。Shadow DOM 为您的元素提供了本地封装的DOM树。Polymer 可以自动用 DOM 模板为您的元素创建和填充阴影树。
+*   [阴影 DOM](shadow-dom)。阴影 DOM 为您的元素提供了本地封装的DOM树。Polymer 可以自动用 DOM 模板为您的元素创建和填充阴影树。
 
-*   [事件](events)。Polymer 提供了一个用于将事件监听器附加到 shadow DOM 子节点的声明性语法。它还提供了一个用于处理手势事件的可选库。
+*   [事件](events)。Polymer 提供了一个用于将事件监听器附加到阴影 DOM 子节点的声明性语法。它还提供了一个用于处理手势事件的可选库。
 
 *   [数据系统](data-system)。Polymer 数据系统提供与属物和属性的数据绑定; 属物观察者，和被计算的属物。
 

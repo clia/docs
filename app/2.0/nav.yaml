@@ -20,7 +20,7 @@
   items:
   - title: 功能概述
     path: /2.0/docs/devguide/feature-overview
-  - header: 新东西
+  - header: 新内容
   - title: 关于 Polymer 2.0
     path: /2.0/docs/about_20
     indent: True
@@ -45,14 +45,14 @@
     path: /2.0/docs/devguide/properties
     indent: True
   - endheader: True
-  - header: Shadow DOM & 样式
-  - title: Shadow DOM 概念
+  - header: 阴影 DOM & 样式
+  - title: 阴影 DOM 概念
     path: /2.0/docs/devguide/shadow-dom
     indent: True
   - title: DOM 模版化
     path: /2.0/docs/devguide/dom-template
     indent: True
-  - title: 样式 Shadow DOM
+  - title: 样式阴影 DOM
     path: /2.0/docs/devguide/style-shadow-dom
     indent: True
   - title: 自定义 CSS 属物

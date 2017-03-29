@@ -1,34 +1,28 @@
 ---
-title: Quick tour of Polymer
+title: Polymer 快速浏览
 ---
 
 <!-- toc -->
 
-Polymer makes it simple to create web components, declaratively.
+Polymer 使声明性地创建 Web 组件变得简单。
 
-Custom elements can leverage Polymer's special features to reduce boilerplate
-and make it even easier to build complex, interactive elements:
+自定义元素可以利用 Polymer 的特殊功能来减少样板，使其更容易构建复杂的互动元素：
 
-- Registering elements
-- Lifecycle callbacks
-- Property observation
-- Shadow DOM template
-- Data binding
+- 注册元素
+- 生命周期回调
+- 属物观察
+- 阴影 DOM 模板
+- 数据绑定
 
-In this section you can take a quick tour of the Polymer library,
-without installing anything. Click the **Edit on Plunker** button to open any
-of the samples in an interactive sandbox.
+在本节中，您可以快速浏览 Polymer 库，而无需安装任何内容。单击 **在Plunker上编辑** 按钮打开交互式沙箱中的任何示例。
 
-Tap the buttons following each feature to learn more.
+点击每个功能后面的按钮了解更多信息。
 
-### Register an element {#register}
+### 注册一个元素 {#register}
 
-To register a new element, create an ES6 class that extends
-`Polymer.Element`, then call the `customElements.define` method, which
-_registers_ a new element with the browser. Registering an element associates
-an element name with a class, so you can add properties and methods to your custom
-element. The custom element's name **must start with an ASCII letter and
-contain a dash (-)**.
+要注册一个新元素，创建 ES6 类扩展
+`Polymer.Element`，然后调用 `customElements.define` 方法，该方法在浏览器中 _注册_ 一个新的元素。
+注册元素将元素名称与类相关联，因此您可以向自定义元素添加属物和方法。自定义元素的名称 **必须以ASCII字母开头，并包含连接号（-）**。
 
 <demo-tabs selected="0" src="http://plnkr.co/edit/PaCt2M?p=preview">
   <demo-tab heading="custom-element.html">
@@ -41,23 +35,21 @@ contain a dash (-)**.
   <iframe frameborder="0" src="samples/custom-element/index.html" width="100%" height="40"></iframe>
 </demo-tabs>
 
-This sample uses a lifecycle callback
-to add contents to the `<custom-element>` when it's initialized.
-When a custom element finishes its initialization, the `ready` lifecycle callback is called.
-You can use the `ready` callback for one-time initialization work after the element is created.
+此示例使用一个生命周期回调把内容添加到 `<custom-element>` 上，在它初始化完成时。
+当自定义元素完成其初始化时，`ready` 生命周期回调被调用。
+您可以使用 `ready` 回调进行一次性的初始化工作，在元素被创建以后。
 
 <p><a href="/{{{polymer_version_dir}}}/docs/devguide/registering-elements" class="blue-button">
-  Learn more: element registration
+  了解更多：元素注册
 </a></p>
 
 <p><a href="/{{{polymer_version_dir}}}/docs/devguide/registering-elements#lifecycle-callbacks" class="blue-button">
-  Learn more: lifecycle callbacks
+  了解更多：生命周期回调
 </a></p>
 
-### Add shadow DOM
+### 添加阴影 DOM
 
-Many elements include some internal DOM nodes to implement the element's UI and behavior.
-You can use Polymer's DOM templating to create a shadow DOM tree for your element.
+许多元素包括一些内部 DOM 节点来实现元素的 UI 和行为。您可以使用 Polymer 的 DOM 模板化为元素创建一个阴影 DOM 树。
 
 <demo-tabs selected="0" src="http://plnkr.co/edit/bVyU2T?p=preview">
   <demo-tab heading="dom-element.html">
@@ -70,9 +62,9 @@ You can use Polymer's DOM templating to create a shadow DOM tree for your elemen
   <iframe frameborder="0" src="samples/dom-element/index.html" width="100%" height="40"></iframe>
 </demo-tabs>
 
-Shadow DOM is encapsulated inside the element.
+阴影 DOM 被封装在元素内。
 
-<p><a href="/{{{polymer_version_dir}}}/docs/devguide/dom-template" class="blue-button">Learn more: DOM templating</a></p>
+<p><a href="/{{{polymer_version_dir}}}/docs/devguide/dom-template" class="blue-button">了解更多：DOM 模板化</a></p>
 
 ### Compose with shadow DOM
 
