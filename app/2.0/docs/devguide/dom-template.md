@@ -27,7 +27,7 @@ Example: { .caption }
   <template>I am x-foo!</template>
 
   <script>
-    class XFoo extends extends Polymer.Element {
+    class XFoo extends Polymer.Element {
       static get is() { return  'x-foo' }
     }
     customElements.define(XFoo.is, XFoo);
@@ -41,7 +41,7 @@ In this example, the DOM template and the JavaScript that defines the element ar
 
 **Note:** Elements should generally be defined outside of the main document,
 except for testing. For caveats about defining elements in the main document,
-see [main document definitions][registering-elements#main-document-definitions].
+see [main document definitions](registering-elements#main-document-definitions).
 {.alert .alert-info}
 
 ## Automatic node finding {#node-finding}

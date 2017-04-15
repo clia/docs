@@ -1,5 +1,5 @@
 ---
-title: Declared Properties
+title: Declare Properties
 ---
 
 <!-- toc -->
@@ -49,11 +49,6 @@ class XCustom extends Polymer.Element {
       }
     }
   }
-
-  ready() {
-    this.textContent = 'Hello World, I am a Custom Element!';
-  }
-
 }
 
 customElements.define(XCustom.is, XCustom);
