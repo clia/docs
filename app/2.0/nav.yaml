@@ -13,6 +13,20 @@
     path: /2.0/start/quick-tour
   - title: 安装发布候选版
     path: /2.0/start/install-2-0
+  - header: Build an app
+  - title: 1. Get set up
+    path: /2.0/start/toolbox/set-up
+    indent: True
+  - title: 2. Create a new page
+    path: /2.0/start/toolbox/create-a-page
+    indent: True
+  - title: 3. Add some elements
+    path: /2.0/start/toolbox/add-elements
+    indent: True
+  - title: 4. Deploy
+    path: /2.0/start/toolbox/deploy
+    indent: True
+  - endheader: True
 
 - section: Polymer
   shortpath: docs
@@ -103,9 +117,6 @@
 #  - title: 发布一个元素
 #    path: /2.0/docs/tools/reusable-elements
 #    indent: True
-  - title: 高级工具
-    path: /2.0/docs/tools/advanced
-    indent: True
   - title: 服务
     path: /2.0/docs/tools/services
     indent: True
@@ -163,8 +174,8 @@
   - title: “商店”
     path: /2.0/toolbox/case-study
     indent: True
-  - title: "新闻"
-    path: /1.0/toolbox/news-case-study
+  - title: “新闻”
+    path: /2.0/toolbox/news-case-study
     indent: True
   - endheader: true
 

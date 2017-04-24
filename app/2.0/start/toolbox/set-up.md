@@ -56,22 +56,27 @@ Polymer CLI 是 Polymer 项目的一个一体化命令行工具。在本教程�
 
 应用工具箱模板不需要任何构建步骤即可开始开发。您可以使用 Polymer CLI 服务应用，并且您所做的文件更改将通过刷新浏览器立即可见。
 
-    polymer serve --open
+    polymer serve
 
-上面的任务会自动打开默认 Web 浏览器并获取本地托管的应用 (位于 `http://localhost:8080`).
+从 `polymer serve` 命令的输出中，您将看到您本地服务应用的URL：
 
-![App Toolbox: Starter Kit Template](/images/1.0/toolbox/starter-kit.png)
+![Output from the polymer serve command](/images/2.0/toolbox/polymer-serve-output.png)
+
+Open this URL in your browser:
+
+![App Toolbox: Starter Kit Template](/images/2.0/toolbox/starter-kit-template.png)
 
 ## 项目结构
 
 下图是项目中的文件和目录的简要摘要。
 
-```
+```text
 bower.json             # bower 配置
 bower_components/      # 应用依赖
 images/
 index.html             # 您的应用的主入口
 manifest.json          # 应用清单配置
+package.json           # NPM 元数据文件
 polymer.json           # Polymer CLI 配置
 service-worker.js      # 自动生成的 service worker
 src/                   # 应用特定元素
