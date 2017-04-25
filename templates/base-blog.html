@@ -8,7 +8,7 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 <!DOCTYPE html>
-<html itemscope itemtype="http://schema.org/Organization" lang="en">
+<html itemscope itemtype="http://schema.org/Organization" lang="zh-cmn">
 <head>
 <title>{% block title %}{% endblock %} - Polymer Project</title>
 {% include 'templates/head-meta.html' %}
@@ -142,11 +142,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <!-- Blog landing page -->
     <section class="blue short gradient-light">
       <div>
-        <h1>Blog</h1>
-        <p>The latest goings-on with the Polymer project and in the community.
-          We'll update this page to announce major releases and showcase cool stuff
-          being built with Polymer. Have an idea for an article?
-          <a href="https://github.com/Polymer/docs/issues/new?labels=article">Suggest it!</a>
+        <h1>博客</h1>
+        <p>Polymer 项目和社区中的最新进展。
+          我们将更新此页面以宣布主要版本，并展示使用Polymer构建的酷炫内容。有新的文章的想法？
+          <a href="https://github.com/Polymer/docs/issues/new?labels=article">提个建议！</a>
         </p>
       </div>
     </section>
@@ -158,7 +157,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <div class="section-columns-column">
           <h2 class="underline" title="{{{item.title}}}">{{{item.title}}}</h2>
           <p>{{{item.description}}}</p>
-          <a href="{{{item.path}}}.html" class="blue-button">Read more</a>
+          <a href="{{{item.path}}}.html" class="blue-button">阅读更多</a>
         </div>
         {% endfor %}
       </div>

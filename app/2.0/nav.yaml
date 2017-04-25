@@ -7,23 +7,23 @@
   shortpath: start
   path: /2.0/start/
   items:
-  - title: 入门
+  - title: 开始吧
     path: /2.0/start/index
   - title: Polymer 快速浏览
     path: /2.0/start/quick-tour
   - title: 安装发布候选版
     path: /2.0/start/install-2-0
-  - header: Build an app
-  - title: 1. Get set up
+  - header: 创建应用
+  - title: 1. 设置好
     path: /2.0/start/toolbox/set-up
     indent: True
-  - title: 2. Create a new page
+  - title: 2. 创建新页面
     path: /2.0/start/toolbox/create-a-page
     indent: True
-  - title: 3. Add some elements
+  - title: 3. 添加元素
     path: /2.0/start/toolbox/add-elements
     indent: True
-  - title: 4. Deploy
+  - title: 4. 部署
     path: /2.0/start/toolbox/deploy
     indent: True
   - endheader: True

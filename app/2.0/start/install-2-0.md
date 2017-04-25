@@ -1,99 +1,99 @@
 ---
-title: Install Polymer 2.x
+title: 安装 Polymer 2.x
 ---
 
 <!-- toc -->
 
-Polymer is distributed via the [Bower package manager](https://bower.io/). 
+Polymer 是通过 [Bower 包管理器](https://bower.io/) 进行分发的。
 
-To create an application template and install Polymer automatically, you can [use the Polymer CLI](#use-cli).
+要创建一个应用模板，并自动安装 Polymer，您可以 [使用 Polymer CLI](#use-cli)。
 
-To start a project from scratch, you can [install Polymer with Bower](#use-bower). 
+要从零开始一个项目，您可以 [用 Bower 安装 Polymer](#use-bower). 
 
-### Use the Polymer CLI to create an application template and install Polymer {#use-cli}
+### 使用 Polymer CLI 来创建应用模板，并安装 Polymer {#use-cli}
 
-1. Install Bower.
+1. 安装 Bower：
 
     ```bash
     npm install -g bower
     ```
 
-2. Install the Polymer CLI
+2. 安装 Polymer CLI：
 
     ```bash
     npm install -g polymer-cli
     ```
 
-3. Verify your Polymer version.
+3. 验证您的 Polymer 版本：
 
     ```bash
     polymer --version
     ```
 
-    The output of this command should be at least `0.18.0`.
+    这个命令的输出应该至少不低于 `0.18.0`；
 
-4. Create a test folder for Polymer 2.0, and switch to it.
+4. 为 Polymer 2.0 创建一个测试文件夹，然后切换到其中：
 
     ```bash
     mkdir polymer-20-test
     cd polymer-20-test
     ```
 
-5. Initialize your project.
+5. 初始化您的项目：
 
     ```bash
     polymer init
     ```
 
-6. Select `polymer-2-application`.
+6. 选择 `polymer-2-application`；
 
-7. Serve your project.
+7. 服务您的项目：
 
     ```bash
     polymer serve
     ```
 
-### Install Polymer from Bower {#use-bower}
+### 用 Bower 安装 Polymer {#use-bower}
 
-1. Install Bower.
+1. 安装 Bower：
 
     ```bash
     npm install -g bower
     ```
 
-2. Install the Polymer CLI
+2. 安装 Polymer CLI：
 
     ```bash
     npm install -g polymer-cli
     ```
 
-3. Verify your Polymer CLI version.
+3. 验证您的 Polymer CLI 版本：
 
     ```bash
     polymer --version
     ```
 
-    The output of this command should be at least `0.18.0`.
+    这个命令的输出应该至少不低于 `0.18.0`；
 
-4. Install the latest Polymer 2.0 RC release from bower
+4. 用 Bower 安装最新版的 Polymer 2.0 RC 版：
 
     ```bash
     bower install Polymer/polymer#^2.0.0-rc.3
     ```
 
-5. Create a test `index.html` file, and add the following in the `<head>` tag:
-  - `<script src="/bower_components/webcomponentsjs/webcomponents-loader.js"></script>` to
-  load the polyfills
-  - `<link rel="import" href="/bower_components/polymer/polymer.html">` to
-  import Polymer
+5. 创建一个测试 `index.html` 文件，把下面的代码加进 `<head>` 标签里：
+  - `<script src="/bower_components/webcomponentsjs/webcomponents-loader.js"></script>` 
+  用来装载 polyfills
+  - `<link rel="import" href="/bower_components/polymer/polymer.html">` 
+  用来导入 Polymer
 
-6. Import and use whichever elements you’d like.
+6. 导入和使用您想要的任何元素；
 
-7. Serve your project.
+7. 服务您的项目：
 
     ```bash
     polymer serve
     ```
 
-For information on building your project for production, see the documentation on [building Polymer applications for production](../docs/tools/build-for-production.md).
+有关为生产环境构建项目的信息，请参考文档 [为生产环境构建 Polymer 应用](../docs/tools/build-for-production.md).
 
