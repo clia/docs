@@ -16,11 +16,11 @@ then
   exit 0
 fi
 
-readonly APPDIR=$(dirname $BASH_SOURCE)
+readonly APPDIR=$(dirname "$BASH_SOURCE")
 
 echo "\nBuilding app version: $deployVersion\n"
 gulp
 
 echo "Deploying app version: $deployVersion"
-gcloud app deploy $APPDIR/../dist/app.yaml \
-    --project polymer-project --version $deployVersion --no-promote
+gcloud app deploy $APPDIR/dist/app.yaml \
+    --project polymer-zh --version $deployVersion --promote
