@@ -34,8 +34,8 @@
   items:
   - title: 功能概述
     path: /2.0/docs/devguide/feature-overview
-  - header: 新内容
-  - title: 关于 Polymer 2.0
+  - header: 关于该版本
+  - title: 2.0 的新内容
     path: /2.0/docs/about_20
     indent: True
   - title: 升级指南
@@ -98,6 +98,17 @@
     path: /2.0/docs/devguide/templates
     indent: True
   - endheader: True
+  - header: 浏览器支持
+  - title: 概述
+    path: /2.0/docs/browsers
+    indent: True
+  - title: Polyfills TBD
+    path: /2.0/docs/polyfills
+    indent: True
+  - title: ES6 TBD
+    path: /2.0/docs/es6
+    indent: True
+  - endheader: True
   - header: 工具
   - title: 工具概述
     path: /2.0/docs/tools/overview
@@ -128,10 +139,7 @@
     indent: True
   - endheader: True
   - header: 资源
-  - title: 浏览器兼容性
-    path: /2.0/docs/browsers
-    indent: True
-  - title: Glossary
+  - title: 词汇表
     path: /2.0/docs/glossary
     indent: True
   - endheader: True
@@ -183,6 +191,6 @@
   shortpath: blog
   path: /blog/
 
-- section: Community
+- section: 社区
   shortpath: community
   path: /community/

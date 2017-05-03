@@ -1,5 +1,5 @@
 ---
-title: 关于 Polymer 2.0
+title: 2.0 的新内容
 ---
 
 <!-- toc -->
