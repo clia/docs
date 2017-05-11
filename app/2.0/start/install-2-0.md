@@ -12,19 +12,15 @@ Polymer 是通过 [Bower 包管理器](https://bower.io/) 进行分发的。
 
 ### 使用 Polymer CLI 来创建应用模板，并安装 Polymer {#use-cli}
 
-1. 安装 Bower：
+Polymer CLI 需要 Node.js、npm、Git 和 Bower。如要完全安装指南，请见 [Polymer CLI 文档](../docs/tools/polymer-cli.md)。
 
-    ```bash
-    npm install -g bower
-    ```
-
-2. 安装 Polymer CLI：
+1. 安装 Polymer CLI.
 
     ```bash
     npm install -g polymer-cli
     ```
 
-3. 验证您的 Polymer 版本：
+2. 验证您的 Polymer 版本：
 
     ```bash
     polymer --version
@@ -32,22 +28,22 @@ Polymer 是通过 [Bower 包管理器](https://bower.io/) 进行分发的。
 
     这个命令的输出应该至少不低于 `0.18.0`；
 
-4. 为 Polymer 2.0 创建一个测试文件夹，然后切换到其中：
+3. 为 Polymer 2.0 创建一个测试文件夹，然后切换到其中：
 
     ```bash
     mkdir polymer-20-test
     cd polymer-20-test
     ```
 
-5. 初始化您的项目：
+4. 初始化您的项目：
 
     ```bash
     polymer init
     ```
 
-6. 选择 `polymer-2-application`；
+5. 选择 `polymer-2-application`；
 
-7. 服务您的项目：
+6. 服务您的项目：
 
     ```bash
     polymer serve
@@ -62,6 +58,8 @@ Polymer 是通过 [Bower 包管理器](https://bower.io/) 进行分发的。
     ```
 
 2. 安装 Polymer CLI：
+
+    The Polymer CLI requires Node.js and npm as well as Bower. For full installation instructions, see [the Polymer CLI documentation](tools/polymer-cli).
 
     ```bash
     npm install -g polymer-cli

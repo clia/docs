@@ -9,14 +9,26 @@ subtitle: "使用应用工具箱创建一个应用"
 
 按照以下说明，使用应用工具箱模板，在不到 15 分钟内安装、创建和部署一个项目。
 
+<<<<<<< HEAD
 ## 安装 Polymer CLI
 
 Polymer CLI 是 Polymer 项目的一个一体化命令行工具。在本教程中，您使用 Polymer CLI 初始化，服务和构建您的项目。您还可以使用它来进行代码检查和测试，但本教程不会涵盖这些主题。
 
 1.  通过运行以下命令检查是否已安装了所有 Polymer CLI 的依赖项。
+=======
+## Install Polymer CLI
 
-    *   Git
+Polymer CLI is an all-in-one command line tool for Polymer projects. In this tutorial you use 
+Polymer CLI to initialize, serve, and build your project. You can also use it for linting and 
+testing, but this tutorial won't cover those topics.
 
+Polymer CLI requires Node.js, npm, Git and Bower. For full installation instructions, see [the 
+Polymer CLI documentation](/{{{polymer_version_dir}}}/docs/tools/polymer-cli).
+>>>>>>> e04073f2ffb28a90217133a7c99af4085a170bda
+
+To install Polymer CLI:
+
+<<<<<<< HEAD
             git --version
 
     *   Node.js (LTS 版本 6.x)
@@ -40,6 +52,11 @@ Polymer CLI 是 Polymer 项目的一个一体化命令行工具。在本教程�
 1.  安装 Polymer CLI。
 
         npm install -g polymer-cli@next
+=======
+   ```bash
+   npm install -g polymer-cli
+   ```
+>>>>>>> e04073f2ffb28a90217133a7c99af4085a170bda
 
 ## 从模板初始化您的项目
 
@@ -56,15 +73,9 @@ Polymer CLI 是 Polymer 项目的一个一体化命令行工具。在本教程�
 
 应用工具箱模板不需要任何构建步骤即可开始开发。您可以使用 Polymer CLI 服务应用，并且您所做的文件更改将通过刷新浏览器立即可见。
 
-    polymer serve
+要服务您的项目：
 
-从 `polymer serve` 命令的输出中，您将看到您本地服务应用的URL：
-
-![Output from the polymer serve command](/images/2.0/toolbox/polymer-serve-output.png)
-
-Open this URL in your browser:
-
-![App Toolbox: Starter Kit Template](/images/2.0/toolbox/starter-kit-template.png)
+    polymer serve --open
 
 ## 项目结构
 

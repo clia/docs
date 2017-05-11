@@ -13,6 +13,25 @@
     path: /2.0/start/quick-tour
   - title: 安装发布候选版
     path: /2.0/start/install-2-0
+  - title: 开始吧
+    path: /2.0/start/index
+  - header: 创建元素
+  - title: 1. 设置好
+    path: /2.0/start/first-element/intro
+    indent: True
+  - title: 2. 添加本地 DOM
+    path: /2.0/start/first-element/step-2
+    indent: True
+  - title: 3. 数据绑定和属物
+    path: /2.0/start/first-element/step-3
+    indent: True
+  - title: 4. 响应输入
+    path: /2.0/start/first-element/step-4
+    indent: True
+  - title: 5. 用自定义属物主题化
+    path: /2.0/start/first-element/step-5
+    indent: True
+  - endheader: True
   - header: 创建应用
   - title: 1. 设置好
     path: /2.0/start/toolbox/set-up
