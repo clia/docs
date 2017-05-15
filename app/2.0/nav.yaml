@@ -121,10 +121,10 @@
   - title: 概述
     path: /2.0/docs/browsers
     indent: True
-  - title: Polyfills TBD
+  - title: Polyfills
     path: /2.0/docs/polyfills
     indent: True
-  - title: ES6 TBD
+  - title: ES6
     path: /2.0/docs/es6
     indent: True
   - endheader: True
@@ -141,13 +141,13 @@
   - title: 测试您的元素
     path: /2.0/docs/tools/tests
     indent: True
-  - title: 为生产环境优化
-    path: /2.0/docs/tools/optimize-for-production
+  - title: 为生产环境构建
+    path: /2.0/docs/tools/build-for-production
     indent: True
 #  - title: 发布一个元素
 #    path: /2.0/docs/tools/reusable-elements
 #    indent: True
-  - title: 服务
+  - title: Web services
     path: /2.0/docs/tools/services
     indent: True
   - title: polymer.json 规范
@@ -165,6 +165,9 @@
   - header: API 参考
   - title: API 参考
     path: /2.0/docs/api/
+    indent: True
+  - title: Global settings
+    path: /2.0/docs/devguide/settings
     indent: True
   - endheader: True
 
@@ -193,8 +196,16 @@
   - title: Service worker
     path: /2.0/toolbox/service-worker
     indent: True
+  - endheader: true
+  - header: 部署
+  - title: 为生产环境优化
+    path: /2.0/toolbox/optimize-for-production
+    indent: True
   - title: 服务您的应用
-    path: /2.0/toolbox/server
+    path: /2.0/toolbox/serve
+    indent: True
+  - title: PRPL 模式
+    path: /2.0/toolbox/prpl
     indent: True
   - endheader: true
   - header: 案例分析

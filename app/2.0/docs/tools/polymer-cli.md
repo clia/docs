@@ -4,18 +4,19 @@ title: Polymer CLI
 
 <!-- toc -->
 
-Polymer CLI is still pre-release. Some options may be subject to change.
-{.alert .alert-warning}
-
 ## Install {#install}
 
-1.  Install [Git](https://git-scm.com/downloads).
-
-1.  安装 [Node.js 的活跃 LTS 版本](https://github.com/nodejs/LTS) (4.x or 6.x)。当前版本（7.x）应该工作，但是没有官方支持。
+1.  确保您已经安装了受 Polymer 支持的一个版本的 Node.js。运行 `node --version` 来检查您所安装的 Node.js 版本，查看我们的 [官方 node 版本支持政策](node-support) 了解更多详情。
 
 1.  Update npm.
 
         npm install npm@latest -g
+
+1.  Ensure that Git is installed. 
+
+        git --version
+    
+    If it isn't, you can find it on the [Git downloads page](https://git-scm.com/downloads).
 
 1.  Install the latest version of Bower.
 
@@ -66,7 +67,7 @@ This section shows you how to start an element project.
 
         polymer init
 
-1.  Select `element`.
+1.  Select `polymer-2-element`.
 
 1.  Enter a name for your element.
 
@@ -182,7 +183,7 @@ Follow the steps below to get your `basic` app project set up.
 
         polymer init
 
-1.  Select `application`.
+1.  Select `polymer-2-application`.
 
 1.  Enter a name for your app. Defaults to the name of the current directory.
 
