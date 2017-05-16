@@ -11,7 +11,7 @@
     path: /2.0/start/index
   - title: Polymer 快速浏览
     path: /2.0/start/quick-tour
-  - title: 安装发布候选版
+  - title: 安装 Polymer 2.x
     path: /2.0/start/install-2-0
   - title: 开始吧
     path: /2.0/start/index
@@ -141,10 +141,7 @@
   - title: 测试您的元素
     path: /2.0/docs/tools/tests
     indent: True
-  - title: 为生产环境构建
-    path: /2.0/docs/tools/build-for-production
-    indent: True
-#  - title: 发布一个元素
+#  - title: Publish an element
 #    path: /2.0/docs/tools/reusable-elements
 #    indent: True
   - title: Web services
@@ -198,8 +195,8 @@
     indent: True
   - endheader: true
   - header: 部署
-  - title: 为生产环境优化
-    path: /2.0/toolbox/optimize-for-production
+  - title: 为生产环境构建
+    path: /2.0/toolbox/build-for-production
     indent: True
   - title: 服务您的应用
     path: /2.0/toolbox/serve

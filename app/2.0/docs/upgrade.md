@@ -67,7 +67,7 @@ Before you start the upgrade, there's a couple of things you need to do.
 Update the Polymer CLI to the `next` version:
 
 ```
-npm update polymer-cli@next
+npm update polymer-cli
 ```
 
 #### Create a new branch or workarea
@@ -85,39 +85,39 @@ Follow these steps to update your bower dependencies:
     rm -rf bower_components
     ```
 
-2.  Update the Polymer version in `bower.json` to the latest RC versions.
+2.  Update the Polymer version in `bower.json` to the latest versions.
 
     | Component | Version |
     |-----------|---------|
-    | Polymer   | `^2.0.0-rc.3` |
-    | webcomponentsjs | `^1.0.0-rc.7` |
-    | web-component-tester | `^6.0.0-prerelease.6` |
-    | Polymer elements | `2.0-preview` |
+    | Polymer   | `^2.0.0` |
+    | webcomponentsjs | `^1.0.0` |
+    | web-component-tester | `^6.0.0` |
+    | Polymer elements | `^2.0.0` |
 
-    Note that Polymer, webcomponentsjs, and web-component-tester have prerelease tags. You can use
-    a range like `^2.0.0-rc.3` to get all future prerelease tags. To use prerelease elements,
-    you need to refer to the `2.0-preview` branch. To get  updates to elements, you may need to remove
-    your `bower_components` folder and reinstall all components.
+    A list of 2.0-compatible Polymer elements can be found on the [About Polymer 2.0](/{{{polymer_version_dir}}}/docs/about_20#elements) page.
+
+    If you previously installed one of the 2.0 release candidates, you should
+    remove your `bower_components` folder and reinstall all components.
 
     Example dependencies {.caption}
 
     ```
       "dependencies": {
-        "app-layout": "PolymerElements/app-layout#2.0-preview",
-        "app-route": "PolymerElements/app-route#2.0-preview",
-        "iron-flex-layout": "PolymerElements/iron-flex-layout#2.0-preview",
-        "iron-icon": "PolymerElements/iron-icon#2.0-preview",
-        "iron-iconset-svg": "PolymerElements/iron-iconset-svg#2.0-preview",
-        "iron-localstorage": "PolymerElements/iron-localstorage#2.0-preview",
-        "iron-media-query": "PolymerElements/iron-media-query#2.0-preview",
-        "iron-pages": "PolymerElements/iron-pages#2.0-preview",
-        "iron-selector": "PolymerElements/iron-selector#2.0-preview",
-        "paper-icon-button": "PolymerElements/paper-icon-button#2.0-preview",
-        "polymer": "Polymer/polymer#^2.0.0-rc.3",
-        "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0-rc.7"
+        "app-layout": "PolymerElements/app-layout#^2.0.0",
+        "app-route": "PolymerElements/app-route#^2.0.0",
+        "iron-flex-layout": "PolymerElements/iron-flex-layout#^2.0.0",
+        "iron-icon": "PolymerElements/iron-icon#^2.0.0",
+        "iron-iconset-svg": "PolymerElements/iron-iconset-svg#^2.0.0",
+        "iron-localstorage": "PolymerElements/iron-localstorage#^2.0.0",
+        "iron-media-query": "PolymerElements/iron-media-query#^2.0.0",
+        "iron-pages": "PolymerElements/iron-pages#^2.0.0",
+        "iron-selector": "PolymerElements/iron-selector#^2.0.0",
+        "paper-icon-button": "PolymerElements/paper-icon-button#^2.0.0",
+        "polymer": "Polymer/polymer#^2.0.0",
+        "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
       },
       "devDependencies": {
-        "web-component-tester": "^6.0.0-prerelease.6"
+        "web-component-tester": "^6.0.0"
       },
     ```
 
@@ -127,8 +127,8 @@ Follow these steps to update your bower dependencies:
     bower install
     ```
 
-If you are upgrading the element to hybrid mode, you can add extra sets of bower dependencies so you
-can test against multiple versions of Polymer easily. For details, see
+If you are upgrading the element to hybrid mode, you can add extra sets of bower dependencies
+so you can test against multiple versions of Polymer easily. For details, see
 [Manage dependencies for hybrid elements](devguide/hybrid-elements#dependency-variants).
 
 ### Upgrade an element
@@ -562,8 +562,7 @@ If you still have any `/deep/` or `::shadow` selectors in your project, it's tim
 They don't work at all in shadow DOM v1.
 
 There's no direct substitute for shadow-piercing selectors.To let users customize your element,
-[custom CSS properties](../devguide/custom-css-properties) are probably the best option.
-
+[custom CSS properties](/{{{polymer_version_dir}}}/docs/devguide/custom-css-properties) are probably the best option.
 
 #### Replace root selectors {#replace-root-selectors}
 
@@ -1186,6 +1185,11 @@ _observeStuff: function(a, b, c) {
 }
 ```
 
+### Custom property serialization and deserialization
+
+If your element overrides the `serialize` or `deserialize` methods, these override points have been
+renamed to `_serializeValue` and `_deserializeValue`, respectively.
+
 ### Data system miscellany {#data-system-miscellany}
 
 A few more changes that you may need to take into account.
@@ -1407,7 +1411,7 @@ this.dispatchEvent(new CustomEvent('some-event', { bubbles: true, composed: true
 ```
 
 The `fire` method sets the `bubbles` and `composed` properties by default. For more on using custom
-events, see [Fire custom events](events#custom-events).
+events, see [Fire custom events](/{{{polymer_version_dir}}}/docs/devguide/events#custom-events).
 
 (The `CustomEvent` constructor is not supported on IE, but the webcomponents polyfills include a
 small polyfill for it so you can use the same syntax everywhere.)

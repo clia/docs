@@ -22,7 +22,7 @@ Some application developers will need to deliver JavaScript separately from HTML
   `polymer build`
   ```
 
-  You can configure your build, or create multiple builds, by writing a [`polymer.json`](https://www.polymer-project.org/2.0/docs/tools/polymer-json) configuration file.
+  You can configure your build, or create multiple builds, by writing a [`polymer.json`](/{{{polymer_version_dir}}}/docs/tools/polymer-json) configuration file.
   
 * If you need a custom build process, for example, to integrate another tool into your build chain, you can [use the `polymer-build` library](#use-polymer-build) to do so. 
 
@@ -36,7 +36,7 @@ The Polymer CLI and `polymer-build` library support the following transforms:
   
 ### Minifying HTML, JavaScript and CSS {#minifying}
 
-The Polymer build tools provide options to minify HTML, JavaScript and CSS by stripping whitespace and comments. You can use these on the command line, or configure them in `polymer.json`. See the [polymer.json specification](polymer-json) for more details.
+The Polymer build tools provide options to minify HTML, JavaScript and CSS by stripping whitespace and comments. You can use these on the command line, or configure them in `polymer.json`. See the [polymer.json specification](/{{{polymer_version_dir}}}/docs/tools/polymer-json) for more details.
 
 **Function**|**CLI flag**|**Entry in polymer.json**
 --- | --- | ---
@@ -100,7 +100,7 @@ Differential serving means you must serve both ES5 and ES6, depending on client 
 
 According to the native [Custom Elements V1](https://html.spec.whatwg.org/multipage/scripting.html#custom-element-conformance) spec, elements must be defined using ES6 classes. ES5-defined elements will error in the presence of native Custom Elements V1 implementations (Chrome and Safari Tech Preview). Because of this, the best approach is to differentially serve ES6 to browsers that support it (almost all of them), and ES5 to those that do not.
 
-For more information, see the [Polymer 2.0 browser compatibility documentation](/{{{polymer_version_dir}}}/docs/browsers.md)
+For more information, see the [Polymer 2.0 browser compatibility documentation](/{{{polymer_version_dir}}}/docs/browsers)
 
 ### Bundling resources to reduce the total number of HTTP requests made by the user's browser {#bundling}
   
@@ -143,9 +143,9 @@ Because not all browsers support HTTP/2 push, you will also need to create a bun
 
 Run `polymer help build` to see the command line options for the `polymer build` command.
 
-You can define your build options by editing the `builds` object in your project's `polymer.json` configuration file. For detailed information on `polymer.json`, see the [`polymer.json` specification](polymer-json).
+You can define your build options by editing the `builds` object in your project's `polymer.json` configuration file. For detailed information on `polymer.json`, see the [`polymer.json` specification](/{{{polymer_version_dir}}}/docs/tools/polymer-json).
 
-### Example 1: A single, compiled, bundled build
+### A single, compiled, bundled build
 
 This example gives a single build. ES6 is compiled to ES5; JavaScript, CSS and HTML are minified; and resources are bundled.
 
@@ -165,12 +165,12 @@ This example gives a single build. ES6 is compiled to ES5; JavaScript, CSS and H
 To build this configuration:
 
 1. Edit your `polymer.json` file to include the build configuration above.
-2. Ensure that you have installed the latest version of the [Polymer CLI](polymer-cli).
+2. Ensure that you have installed the latest version of the [Polymer CLI](/{{{polymer_version_dir}}}/docs/tools/polymer-cli).
 3. cd to your project's main folder, and type `polymer build`.
 
 Your build is output to the `build/default` folder.
 
-### Example 2: Multiple builds, both bundled and unbundled
+### Multiple builds, both bundled and unbundled
 
 This example gives two builds - bundled and unbundled.
 
@@ -199,10 +199,51 @@ This example gives two builds - bundled and unbundled.
 To build this configuration:
 
 1. Edit your `polymer.json` file to include the build configuration above.
-2. Ensure that you have installed the latest version of the [Polymer CLI](polymer-cli).
+2. Ensure that you have installed the latest version of the [Polymer CLI](/{{{polymer_version_dir}}}/docs/tools/polymer-cli).
 3. cd to your project's main folder, and type `polymer build`.
 
 Your builds are output to two separate folders, corresponding to their names: `build/bundled` and `build/unbundled`. 
+
+### Build presets
+
+**Build presets** provide an easy way to define common build configurations in your [polymer.json file](polymer-json). You can use a preset as-is, or define a build configuration that inherits from a preset. 
+
+We currently support three build presets:
+
+- **es5-bundled:**
+  - name: `es5-bundled`
+  - js: `{minify: true, compile: true}`
+  - css: `{minify: true}`
+  - html: `{minify: true}`
+  - bundle: `true`
+  - addServiceWorker: `true`
+  - addPushManifest: `true`
+  - insertPrefetchLinks: `true`
+- **es6-bundled:**
+  - js: `{minify: true, compile: false}`
+  - css: `{minify: true}`
+  - html: `{minify: true}`
+  - bundle: `true`
+  - addServiceWorker: `true`
+  - addPushManifest: `true`
+  - insertPrefetchLinks: `true`
+- **es6-unbundled:**
+  - js: `{minify: true, compile: false}`
+  - css: `{minify: true}`
+  - html: `{minify: true}`
+  - bundle: `false`
+  - addServiceWorker: `true`
+  - addPushManifest: `true`
+  - insertPrefetchLinks: `true`
+
+Any additional options that you provide will override the given preset. In the example below, a single "es5-bundled" build will be created with all the es5-bundled preset options except "addServiceWorker", which was overriden and set to false:
+
+```json
+"builds": [{
+  "preset": "es5-bundled",
+  "addServiceWorker": false
+}]
+```
 
 ## Building with `polymer-build` {#use-polymer-build}
 

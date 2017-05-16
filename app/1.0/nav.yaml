@@ -135,7 +135,7 @@
   - endheader: True
   - header: 资源
   - title: 社区
-    path: /1.0/docs/community
+    path: /community/
     indent: True
   - title: 浏览器兼容性
     path: /1.0/docs/browsers

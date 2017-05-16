@@ -1,4 +1,12 @@
 ---
+- title: "2.0 的时代到了！"
+  path: /blog/2017-05-15-time-for-two
+  published: 2017-05-15
+  author: wmginsberg
+  description: "Polymer 2.0 库是为开发高性能、互操作的 Web 组件而创建。"
+  tag:
+    - blog
+    - announcements
 - title: "欢迎 2.0 发布候选版！"
   path: /blog/2017-03-08-2-0-rc
   published: 2017-03-08
