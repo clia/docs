@@ -24,9 +24,9 @@ Polymer 应用工具箱是一套组件、工具和模板的集合，用来使用
 **混合兼容。** 工具箱元素和行为可用作混合版本，可与 Polymer 1 和 Polymer 2 一起使用。在使用 2.0 Release Candidate 时，使用元素的 `2.0-preview` 分支。
 {.alert .alert-info}
 
-要了解这些组件的操作，您可以尝试两个演示应用程序之一：
+要了解这些组件的操作，您可以尝试两个演示应用之一：
 
--   [商定](https://shop.polymer-project.org/)。商店是一个使用工具箱构建的功能齐全的电子商务渐进式 Web 应用演示。了解如何构建
+-   [商店](https://shop.polymer-project.org/)。商店是一个使用工具箱构建的功能齐全的电子商务渐进式 Web 应用演示。了解如何构建
     [案例研究：商店应用](case-study)。
 
 -   [新闻](https://news.polymer-project.org/)。新闻是一个功能齐全的渐进式 Web 应用演示，像商店一样，但专注于发布。了解如何构建

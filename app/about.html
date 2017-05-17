@@ -63,27 +63,27 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         <p>这些创新在 Web 从内容平台到支持功能强大，功能丰富的应用的平台变迁时发挥了重要作用。毫无疑问，我们在“用户空间”中的集体努力将继续清扫和照亮前进的道路。</p>
 
-        <p>也就是说，我们已在平台本身以外做得太多，有实际的代价需要支付——开发者和用户都需要支付的代价。</p>
+        <p>也就是说，我们已在平台本身以外和之上做得太多，有实际的代价需要支付——开发者和用户都需要支付的代价。</p>
 
-        <h2 class="underline">Developer costs</h2>
+        <h2 class="underline">开发者的代价</h2>
 
-        <p>Developer costs come in the form of complexity and lock-in.</p>
+        <p>开发者的代价来自于形式的复杂性和被锁定。</p>
 
-        <p>Over time, the stacks we’ve built on top of the platform have pushed web development further and further from the simplicity of view-source and shift-refresh, to a place where every project begins with an overwhelming sea of choices.</p>
+        <p>随着时间的推移，我们建立在平台之上的堆栈已经将 Web 开发从一个查看源代码 - Shift 刷新的循环，一步一步地推到了一个每个项目开始时都要面对着一个选择的绝海的境地。</p>
 
-        <p>And when we rely on libraries and frameworks for even our most basic needs, we end up writing code that depends on opinionated abstractions rather than universal platform primitives. Because it’s expensive to migrate from one abstraction to another, these dependencies limit our future choices and make our code costlier to maintain.</p>
+        <p>当我们依靠库和框架来满足我们甚至是最基本的需求时，我们最终会编写依赖于有倾向性的抽象而不是通用平台原语的代码。因为从一个抽象迁移到另一个抽象是昂贵的，这些依赖关系限制了我们未来的选择，并使我们的代码维护成本更高。</p>
 
-        <h2 class="underline">User costs</h2>
+        <h2 class="underline">用户的代价</h2>
 
-        <p>More importantly, users pay a performance penalty when the layers we build above the platform become too thick.</p>
+        <p>更重要的是，当我们在平台上方构建的层变得太厚时，用户会付出性能损失。</p>
 
-        <p>Every byte of code that we send over the wire consumes bandwidth that could be used for content and data, and every tick we spend executing JavaScript on the client reduces our apps’ responsiveness. This is especially true on the far reaches of the mobile web, where poor connections and underpowered devices are the norm.</p>
+        <p>我们通过网线发送的每行代码的字节都会消耗可用于内容和数据的带宽，我们花费在客户端上执行 JavaScript 的每个时钟周期都会降低应用程序的响应速度。在移动 Web 的远端尤其如此，其中连接不良和动力不足的设备是常态。</p>
 
-        <p>Many of the development patterns that we use today originated in an era when we used the web mostly from the desktop. Now that the web is mobile-first, we need to reconsider those patterns. Giving our users the experience they deserve in the hyper-constrained mobile environment means aggressively minimizing bandwidth and execution cost, leaning heavily on the platform and saving our limited budget for things that only our applications can provide.</p>
+        <p>我们今天使用的许多开发模式源自一个我们大多从桌面使用 Web 的时代。现在的 Web 是移动优先的，我们需要重新考虑这些模式。给予我们的用户在超受限的移动环境中他们应得的体验，意味着大大降低带宽和执行成本，重度地依赖于平台，并将有限的预算节省用于那些只有我们的应用能提供的东西。</p>
 
-        <p>For example, the browser specializes in loading resources, parsing native web formats like HTML and CSS, and caching them for maximum efficiency. Similarly, the browser has highly optimized native code for instantiating elements, inserting them in the DOM, updating their properties and attributes, managing the flow of events between them, and eventually tearing them down.</p>
+        <p>例如，浏览器专门负责加载资源，解析 HTML 和 CSS 等 Web 专属的格式，并以最高的效率进行缓存。类似地，浏览器具有高度优化的本机代码，用于实例化元素，将其插入到 DOM 中，更新其属物和属性，管理它们之间的事件流程，并最终将它们销毁。</p>
 
-        <p>When we write our own code to do these things, send that code over the network and execute it on the client, we are doing work we shouldn’t have to do; and in some cases, we are also negating current and future browser-side optimizations.</p>
+        <p>当我们编写自己的代码来做这些事情时，通过网络发送该代码并在客户端执行，我们正在做我们不应该做的工作; 在某些情况下，我们也会使当前和未来的浏览器端优化失效。</p>
 
         <h2 class="underline">A platform-centric path forward</h2>
 
