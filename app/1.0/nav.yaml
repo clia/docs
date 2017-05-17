@@ -26,7 +26,7 @@
     path: /1.0/start/first-element/step-5
     indent: True
   - endheader: True
-  - header: 构建一个应用
+  - header: 构建一个 App
   - title: 1. 设置好
     path: /1.0/start/toolbox/set-up
     indent: True
@@ -171,17 +171,17 @@
     indent: True
   - endheader: True
 
-- section: 应用工具箱
+- section: App 工具箱
   shortpath: toolbox
   path: /1.0/toolbox/
   items:
   - title: 箱子里有什么？
     path: /1.0/toolbox/index
   - header: 使用工具箱
-  - title: 应用模板
+  - title: App 模板
     path: /1.0/toolbox/templates
     indent: True
-  - title: 响应式应用布局
+  - title: 响应式 App 布局
     path: /1.0/toolbox/app-layout
     indent: True
   - title: 路由
@@ -190,13 +190,13 @@
   - title: 本地化
     path: /1.0/toolbox/localize
     indent: True
-  - title: 应用存储
+  - title: App 存储
     path: /1.0/toolbox/app-storage
     indent: True
   - title: Service worker
     path: /1.0/toolbox/service-worker
     indent: True
-  - title: 服务您的应用
+  - title: 服务您的 App
     path: /1.0/toolbox/server
     indent: True
   - endheader: true

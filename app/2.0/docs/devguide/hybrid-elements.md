@@ -16,7 +16,7 @@ Polymer CLI supports installing and testing with multiple versions of your bower
 you can test your hybrid elements against multiple versions of Polymer. For an overview, see
 [Manage dependencies for hybrid elements](#dependency-variants).
 
-## Hybrid element overview
+## 混合元素概述
 
 A hybrid element is defined using a 2.x-style DOM template and a 1.x-style `Polymer()` function call.
 
@@ -36,7 +36,7 @@ conditionalized.)
 You can use Polymer 1.x style [behaviors](#behaviors) to share code between elements, as long
 as they follow the same API restrictions as hybrid elements.
 
-## Working with DOM
+## 使用 DOM
 
 Hybrid elements need to run under Polymer 2.0—which uses the newer shadow DOM v1 specification, and
 Polymer 1.x, which uses the earlier shadow DOM v0 specification.
@@ -46,7 +46,7 @@ Polymer 1.x, which uses the earlier shadow DOM v0 specification.
 
 *   When manipulating DOM elements at runtime, use the `Polymer.dom` APIs for backward compatibility.
 
-### DOM template and styling
+### DOM 模板和样式
 
 Hybrid elements must use the shadow DOM v1 style `<slot>` element and `::slotted()` CSS selector
 in place of the `<content>` element and `::content` selector from shadow DOM v0.
@@ -130,7 +130,7 @@ Anywhere you're using `x-forward-compat`, you need to use the new slot syntax:
 </x-forward-compat>
 ```
 
-#### Default slot behavior
+#### 默认插槽行为
 
 For native shadow DOM v1, a default slot doesn't match children with an explicit slot name
 (that  is, a <code>slot="<var>slot_name</var>"</code> attribute).
@@ -151,7 +151,7 @@ For example, given this set of slots:
 Content with `slot="footer"` is distributed to the _default_ slot in 1.x, but distributed to the
 last slot in 2.x.
 
-### DOM APIs
+### DOM API
 
 When working with the DOM imperatively, use the Polymer 1.x APIs, such as `Polymer.dom`,
 `observeNodes`, and `getContentChildNodes`.
@@ -198,7 +198,7 @@ assert.equal(myElement.count, 1, 'child count should be 1');
 ```
 
 
-## Version-specific code {#version-specific-code}
+## 特定于版本的代码 {#version-specific-code}
 
 In some cases, you may need to run different code depending on which version of Polymer is in use.
 One easy way to test the version is to test for the existence of the `Polymer.Element` constructor,
@@ -212,7 +212,7 @@ if (Polymer.Element) {
 }
 ```
 
-## Manage dependencies for hybrid elements {#dependency-variants}
+## 管理混合元素的依赖关系 {#dependency-variants}
 
 For testing Polymer elements, Polymer CLI supports installing multiple versions of bower
 dependencies. These versions are called _variants_. The components' default dependencies are listed

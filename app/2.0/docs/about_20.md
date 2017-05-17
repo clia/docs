@@ -24,7 +24,7 @@ Polymer 2.0 引入了许多不兼容的改变——其中许多是新的自定�
 
 以下部分描述了 Polymer 2.0 中的主要更改。有关升级元素到 Polymer 2.0 的详细信息，请参阅 [升级指南](upgrade).
 
-## Custom elements v1
+## 自定义元素 v1
 
 Polymer 2.0 elements target the custom elements v1 API, which makes several changes to the v0
 version of the spec used in Polymer 1.x. In particular:
@@ -49,7 +49,7 @@ The following sections describe these changes in more detail.
 
 For general information on the custom elements v1 specification, see [Custom elements v1: reusable web components](https://developers.google.com/web/fundamentals/primers/customelements/?hl=en) on Web Fundamentals.
 
-### Lifecycle changes {#lifecycle-changes}
+### 生命周期的变更 {#lifecycle-changes}
 
 When creating class-based elements, use the new native lifecycle methods (called "custom element
 reactions"). When creating legacy elements using the `Polymer` factory method, use the legacy Polymer
@@ -133,7 +133,7 @@ In addition to changes in the callbacks, note that the `lazyRegister` option has
 all meta-programming (parsing the template, creating accessors on the prototype, and so on) is
 deferred until the first instance of the element is created.
 
-### Type-extension elements {#type-extension}
+### 扩展类型的元素 {#type-extension}
 
 Polymer 2.0 doesn't support type-extension elements (for example, `<input is="iron-input">`).
 Type-extension support is still included in the custom elements v1 spec (as "customized built-in
@@ -198,7 +198,7 @@ References:
 *   [Creating a customized built-in element](https://html.spec.whatwg.org/#custom-elements-customized-builtin-example) in the WHATWG HTML specification.
 *   [Apple's position on customized built-in elements](https://github.com/w3c/webcomponents/issues/509#issuecomment-233419167).
 
-## Shadow DOM v1
+## 阴影 DOM v1
 
 Polymer 2.0 supports shadow DOM v1. For Polymer users, the main differences in v1 involve replacing
 `<content>` elements with v1 `<slot>` element.
@@ -218,7 +218,7 @@ APIs.
 For a brief but comprehensive set of examples illustrating the shadow DOM v1 spec changes, see
 [What's New in Shadow DOM v1 (by examples)](http://hayato.io/2016/shadowdomv1/) by Hayato Ito.
 
-## Data system improvements {#data-system}
+## 数据系统的改进 {#data-system}
 
 Polymer 2.0 introduces a number of improvements in the data system:
 
@@ -248,7 +248,7 @@ Polymer 2.0 introduces a number of improvements in the data system:
 
 The following sections describe these changes in more detail.
 
-### Dirty checking for objects and arrays
+### 对于对象和数组的脏检查
 
 <!-- TODO: move me to data system concepts doc, summarize briefly here. -->
 
@@ -323,7 +323,7 @@ this.set('property.deep.path', 'new value');
 ```
 
 
-### Simpler array handling
+### 简化的数组处理
 
 The `Polymer.Collection` API and its associated key-based path and splice notification for arrays
 has been eliminated.
@@ -338,7 +338,7 @@ There are several other benefits to this change:
 Since key paths have been eliminated, array splice notifications only include the `indexSplices`
 property, not `keySplices`.
 
-### Batched data changes
+### 批量数据变更
 
 Propagation of data through the binding system is now batched, such that complex observers and
 computing functions run once with a set of coherent changes. There's two ways to create a set of
@@ -365,7 +365,7 @@ this.b = 20;
 this.setProperties({a: 10, b: 20});
 ```
 
-### Property effect order
+### 属物起作用的顺序
 
 In 2.0, observers fire before property-change notifications. The effect order in 2.0 is:
 
@@ -377,7 +377,7 @@ In 2.0, observers fire before property-change notifications. The effect order in
 
 In 1.x, observers fire last, after property-change notifications.
 
-### Observer changes
+### 观察者的变更
 
 In 2.x, the checks preventing observers from firing with undefined dependencies are removed.
 
@@ -394,7 +394,7 @@ basis. For details, see
 [Add observers and computed properties dynamically](devguide/observers#dynamic-observers).
 
 
-### Miscellaneous data system changes
+### 其他数据系统的变更
 
 *   Setting/changing any function used in a computed binding causes the binding to re-compute its
     value using the new function and current property values. For example, given the binding:
@@ -419,7 +419,7 @@ basis. For details, see
     properties that are <em>implicitly</em> declared (for example, by being included in a binding or
     as an observer dependency).
 
-## Polymer 1 compatibility layer
+## Polymer 1 兼容层
 
 Polymer 2.0 retains the existing `polymer/polymer.html` import that current Polymer 1.0 users can
 continue to import. This import includes the legacy Polymer function for defining elements, and
@@ -429,7 +429,7 @@ For the most part, existing users upgrading to Polymer 2.0 will only need to ada
 be compliant with the shadow DOM v1 API  related to content distribution and styling, as well as
 minor breaking changes introduced due to changes in the custom elements v1 API.
 
-## Removed methods and properties
+## 删除的方法和属物
 
 In keeping with a goal of reducing unnecessary code, the new ES6 base element, `Polymer.Element`,
 leaves out a number of methods and properties. The removed APIs fall into several categories:
@@ -443,7 +443,7 @@ leaves out a number of methods and properties. The removed APIs fall into severa
 A comprehensive list of missing or moved APIs will be available after the API for  `Polymer.Element`
 is finalized.
 
-## Browser support and polyfills
+## 浏览器支持和 polyfills
 
 When released, Polymer 2.0 should support the same set of browsers as Polymer 1.x—IE 11, Edge,
 Safari (9+), Chrome, Opera and Firefox.
@@ -462,7 +462,7 @@ There are several ways to load the polyfills:
 Read more about the different ways and their tradeoffs:
 *   [webcomponentsjs on GitHub](https://github.com/webcomponents/webcomponentsjs/blob/master/README.md)
 
-## EcmaScript 2015 (a.k.a. ES6)
+## EcmaScript 2015 (又名 ES6)
 
 Polymer 2.x and 2.x class-style elements are written using the next generation of the
 JavaScript standard, EcmaScript 2015 (more commonly known as ES6). This is required by the new
@@ -489,7 +489,7 @@ browser.
 
 For more information, see [Browser compatibility](browsers#es6).
 
-## Install Polymer 2.0 {#installing}
+## 安装 Polymer 2.0 {#installing}
 
 You can install the latest Polymer 2.x release using bower:
 
@@ -503,11 +503,11 @@ You can also use bower to install any of the available hybrid elements:
 bower install --save PolymerElements/paper-button#^2.0.0
 ```
 
-### Upgrade an existing project {#upgrading}
+### 升级现有项目 {#upgrading}
 
 See the [upgrade guide](upgrade) for information on getting your code working with 2.0.
 
-## Polymer element availability {#elements}
+## Polymer 元素可用性 {#elements}
 
 
 The team is in the process of updating the Polymer elements to use the new "hybrid" format compatible

@@ -36,7 +36,7 @@ See [Install Polymer 2.0](about_20#installing) for installation instructions.
 This upgrade guide is a work in progress. Please
 [report issues on GitHub](https://github.com/Polymer/docs/issues/new).
 
-## Upgrade strategy
+## 升级策略
 
 When upgrading an element or app, there are several possible scenarios:
 
@@ -56,7 +56,7 @@ in legacy mode. Then you can port elements to class-based mode as desired.
 For large applications, where you have written many of your own reusable elements, you may want to
 upgrade elements individually to hybrid mode.
 
-### Before you begin
+### 在您开始之前
 
 Before you start the upgrade, there's a couple of things you need to do.
 
@@ -70,12 +70,12 @@ Update the Polymer CLI to the `next` version:
 npm update polymer-cli
 ```
 
-#### Create a new branch or workarea
+#### 创建一个新的分支或工作区
 
 You'll want to work in a new branch or workarea so you don't
 break the existing, 1.x version of your element or app.
 
-#### Update bower dependencies
+#### 更新 bower 依赖关系
 
 Follow these steps to update your bower dependencies:
 
@@ -131,12 +131,12 @@ If you are upgrading the element to hybrid mode, you can add extra sets of bower
 so you can test against multiple versions of Polymer easily. For details, see
 [Manage dependencies for hybrid elements](devguide/hybrid-elements#dependency-variants).
 
-### Upgrade an element
+### 升级元素
 
 When upgrading an individual element, start by updating the DOM template and styling. For simple
 elements, this may be the only change you need to make to run in hybrid or legacy mode.
 
-## Shadow DOM template and styling {#shadow-dom-changes}
+## 阴影 DOM 模板和样式 {#shadow-dom-changes}
 
 Polymer 2.0 elements create shadow DOM v1 shadow trees.  As such, user code related to scoped
 styling, distribution, and events must be adapted to the native v1 API.
@@ -146,7 +146,7 @@ styling, distribution, and events must be adapted to the native v1 API.
     [DOM template](#dom-template) and [Shadow DOM styles](#shadow-dom-styles).
 
 
-### DOM Template {#dom-template}
+### DOM 模板 {#dom-template}
 
 **All elements** need to update their shadow DOM templates and styling as described in this section.
 
@@ -161,7 +161,7 @@ Quick summary:
 
 These changes are detailed in the following sections.
 
-#### Remove deprecated patterns in DOM module {#remove-deprecated-patterns-in-dom-module}
+#### 移除 DOM 模块中过时的模式 {#remove-deprecated-patterns-in-dom-module}
 
 Your `<dom-module>` **must set** the `id` property to specify the element name. Polymer 1.x accepted
 the deprecated  `is` or `name` as alternatives.
@@ -197,7 +197,7 @@ After {.caption}
 </dom-module>
 ```
 
-#### Replace content elements {#replace-content-elements}
+#### 替换内容元素 {#replace-content-elements}
 
 *   Change `<content>` insertion points to `<slot>` elements.
 
@@ -324,7 +324,7 @@ can be assigned to the same slot. For example:
 
 Here, both paragraphs are assigned to the default slot.
 
-#### Default slot versus default insertion point
+#### 默认插槽 VS 默认插入点
 
 In shadow DOM v0, a default insertion point (one without a
 `select` attribute) consumes all nodes **not matched by a previous insertion point**.  In v1, a
@@ -358,7 +358,7 @@ other words, **a node with a slot attribute is never distributed to the default 
 If you have complex distributions, and you're trying to upgrade to hybrid elements, you may need
 to place **both** `<content>` and `<slot>` elements in the template.
 
-#### Multilevel distribution {#multilevel-distribution}
+#### 多层分布 {#multilevel-distribution}
 
 Multilevel distribution works differently in shadow DOM v1. In v0, content was redistributed at each
 level. For example, an element with `class="title"` can be distributed through several insertion
@@ -449,7 +449,7 @@ Shadow DOM of `<child-el>` {.caption}
 <h2>
 ```
 
-#### All elements: Update URLs in templates {#urls-in-templates}
+#### 所有元素：在模板中更新 URL {#urls-in-templates}
 
 In Polymer 1.x, URLs in attributes and styles inside element templates were re-written to be
 relative to the HTML import that defined the element. Based on user feedback, we are changing this
@@ -481,7 +481,7 @@ In Polymer 2.x should be:
 The `importPath` and `rootPath` properties are being ported back to Polymer 1.x, so they can be used
 by hybrid elements.
 
-### Shadow DOM styles {#shadow-dom-styles}
+### 阴影 DOM 样式 {#shadow-dom-styles}
 
 Update styles in your shadow DOM to match v1 specifications:
 
@@ -492,7 +492,7 @@ Update styles in your shadow DOM to match v1 specifications:
 *   Update custom property syntax.
 *   Wrap `custom-style` elements.
 
-#### Replace content selectors
+#### 替换内容选择器
 
 Replace any `::content` CSS selectors with <code>::slotted(<em>selector</em>)</code>  where
 <code><em>selector</em></code> is [compound selector](https://drafts.csswg.org/selectors-4/#compound)
@@ -556,7 +556,7 @@ No selectors can follow the  `::slotted()` selector.
 
 For more information, see [Styling distributed nodes](https://developers.google.com/web/fundamentals/getting-started/primers/shadowdom#stylinglightdom) in the Web Fundamentals article on shadow DOM.
 
-#### Remove deep and shadow selectors
+#### 移除深度和阴影选择器
 
 If you still have any `/deep/` or `::shadow` selectors in your project, it's time to remove them.
 They don't work at all in shadow DOM v1.
@@ -564,7 +564,7 @@ They don't work at all in shadow DOM v1.
 There's no direct substitute for shadow-piercing selectors.To let users customize your element,
 [custom CSS properties](/{{{polymer_version_dir}}}/docs/devguide/custom-css-properties) are probably the best option.
 
-#### Replace root selectors {#replace-root-selectors}
+#### 替换根选择器 {#replace-root-selectors}
 
 If you're using the `:root` selector inside an element's template, replace it with:
 
@@ -613,7 +613,7 @@ After {.caption}
 </style>
 ```
 
-#### Update custom property syntax {#update-custom-property-syntax}
+#### 更新自定义属物语法 {#update-custom-property-syntax}
 
 When applying custom properties, Polymer 1.x accepted this incorrect syntax for specifying a default
 value to a `var()` function:
@@ -653,7 +653,7 @@ After {.caption}
 ```
 
 
-#### Wrap custom-style elements {#wrap-custom-style-elements}
+#### 封装自定义样式元素 {#wrap-custom-style-elements}
 
 While custom elements v1 supports customized built-in elements, Polymer 2.0 does not currently use
 them. Instead, it introduces a new `<custom-style>` element that wraps a `<style>` element.
@@ -703,7 +703,7 @@ After (2.x-only code) {.caption}
 </custom-style>
 ```
 
-## DOM APIs {#polymer-dom-apis}
+## DOM API {#polymer-dom-apis}
 
 **Hybrid elements** must continue to use existing Polymer DOM APIs, but may require some
 changes. **Class-based elements** should use native DOM APIs.
@@ -715,7 +715,7 @@ If your element doesn't do any imperative DOM manipulation, you can skip this se
 *   ***Class-based elements*** should use native DOM APIs.
 
 
-#### Hybrid elements: update Polymer.dom usage {#hybrid-elements-update-polymer-dom-usage}
+#### 混合元素：更新 Polymer.dom 用法 {#hybrid-elements-update-polymer-dom-usage}
 
 **Hybrid elements** need to keep using the `Polymer.dom` API. However, note that in 2.0, for native
 methods and properties that return a `NodeList,` **<code>Polymer.dom</code> APIs also return
@@ -748,7 +748,7 @@ _findTextNodes: function() {
 }
 ```
 
-#### Class-based and legacy elements: use native DOM methods {#class-based-and-legacy-elements-use-native-dom-methods}
+#### 基于类的和遗留的元素：使用原生的 DOM 方法 {#class-based-and-legacy-elements-use-native-dom-methods}
 
 **Class-based elements** should use the native DOM APIs instead of the `Polymer.dom` APIs.
 **Legacy elements** can optionally use the native APIs.
@@ -794,7 +794,7 @@ import, you need to import `FlattenedNodesObserver` separately.
 <link rel="import" href="/bower_components/polymer/lib/utils/flattened-nodes-observer.html">
 ```
 
-## CSS custom property shim {#css-custom-property-shim}
+## CSS 自定义属物垫片 {#css-custom-property-shim}
 
 Polymer 2.0 continues to use a shim to provide limited support for CSS custom properties on browsers
 that do not yet natively support custom properties (currently only Microsoft Edge and IE). This lets
@@ -813,7 +813,7 @@ The following changes have been made in the shims that Polymer 2.0 uses:
 *   Invalid custom properties syntax is no longer supported. These changes are described in
     [Shadow DOM styles](#shadow-dom-styles).
 
-### Class-based elements: import the CSS mixin shim
+### 基于类的元素：导入 CSS 混入垫片
 
 If you are using **class-based elements** and you are using **CSS mixins**, import the CSS mixin
 shim.
@@ -878,7 +878,7 @@ Example: importing CSS mixin shim to an element {.caption}
 </dom-module>
 ```
 
-### All elements: Use updateStyles instead of customStyle {#use-updatestyles-instead-of-customstyle}
+### 所有元素：使用 updateStyles 而不是 customStyle {#use-updatestyles-instead-of-customstyle}
 
 **All elements**. Instead of using the `customStyle` object, pass new style properties to the `updateStyles` method.
 This use of `updateStyles` was already supported in 1.x. The `customStyle` object is removed in 2.0.
@@ -899,7 +899,7 @@ After {.caption}
 this.updateStyles({'--my-dynamic-property': 'red'});
 ```
 
-## Custom elements APIs {#custom-elements-apis}
+## 自定义元素 API {#custom-elements-apis}
 
 Polymer 2.0 elements target the custom elements v1 API.
 
@@ -909,7 +909,7 @@ Polymer 2.0 elements target the custom elements v1 API.
 *   **All elements.** Refactor type-extension elements as wrapper elements. Wrap existing
     type-extension elements.
 
-### Callback contracts have changed {#callback-contracts-have-changed}
+### 回调合约已变更 {#callback-contracts-have-changed}
 
 Polymer 2.0 introduces several changes to the contracts of the various lifecycle callbacks. Some of
 these are required by the custom elements v1 specification, while others are designed to improve
@@ -917,7 +917,7 @@ performance.
 
 For more information on the lifecycle callbacks, see [Lifecycle changes](about_20#lifecycle-changes).
 
-#### Creation time (created/constructor) {#creation-time-created-constructor}
+#### 创建时间 (created/constructor) {#creation-time-created-constructor}
 
 The custom elements v1 specification forbids reading attributes, and accessing child or parent
 information from the DOM API from the constructor. Likewise, attributes and children cannot be added.
@@ -927,7 +927,7 @@ You need to move any DOM work out the constructor:
 *   Move work to a different callback,such as `attached`/`connectedCallback` or `ready`.
 *   Use an observer, `slotchange` event listener, or mutation observer to react to runtime changes.
 
-#### Ready time {#ready-time}
+#### 准备好的时间 {#ready-time}
 
 The `ready` callback, for one-time initialization, signals the creation of the element's shadow DOM.
 In the case of class-based elements, you need to call `super.ready()` before accessing the shadow
@@ -1012,7 +1012,7 @@ In 2.x, `Polymer.dom.flush` does not flush the `observeNodes` callbacks. To forc
 callbacks to be invoked, call the `flush` method on the observer object returned from `observeNodes`.
 
 
- #### Attach time (attached/connectedCallback) {#attach-time-attached-connectedcallback}
+ #### 附加时间 (attached/connectedCallback) {#attach-time-attached-connectedcallback}
 
 If you have any code that relies on the element being layed out when the `attached` callback runs
 (for example, measuring the element or its children), it must wait until the layout is complete.
@@ -1051,7 +1051,7 @@ import, you need to import `Polymer.RenderStatus` separately.
 <link rel="import" href="/bower_components/polymer/lib/utils/flattened-nodes-observer.html">
 ```
 
-### Remove type-extension elements {#remove-type-extension-elements}
+### 移除扩展类型的元素 {#remove-type-extension-elements}
 
 Polymer doesn't support type-extension elements (such as `<input is="iron-input">`). For a discussion
 of this change, see [Type-extension elements](about_20#type-extension)
@@ -1060,12 +1060,12 @@ of this change, see [Type-extension elements](about_20#type-extension)
 *   **All projects.** Replace any top-level template extension elements with the 2.0 wrapper
     equivalents.
 
-#### Refactor type-extension elements {#refactor-type-extension-elements}
+#### 重构扩展类型的元素 {#refactor-type-extension-elements}
 
 Type extension elements need to be refactored into standard custom elements (for example, instead of
 an element that extends an `<a>` element, an element that takes an `<a>` element in its light DOM).
 
-#### Convert template extension elements at the document level {#convert-template-extension-elements-at-the-document-level}
+#### 在文档级别转换模板扩展元素 {#convert-template-extension-elements-at-the-document-level}
 
 
 If you have any template extension elements—`dom-bind`, `dom-if`, or `dom-repeat`—*in the main
@@ -1123,12 +1123,12 @@ inside a Polymer element template. As shown above, nested templates inside a top
 **Templates used in the main document must be manually wrapped.**
 
 
-## Data system {#data-system}
+## 数据系统 {#data-system}
 
 Polymer 2.0 includes several important changes to the data system, detailed in
 [Data system improvements](about_20#data-system).
 
-### Remove key paths and Polymer.Collection {#remove-key-paths-and-polymer-collection}
+### 移除键路径和 Polymer.Collection {#remove-key-paths-and-polymer-collection}
 
 Code that interacts with key paths, or uses `Polymer.Collection` directly won't run in hybrid mode.
 If upgrading to hybrid mode, you can conditionalize 1.0 code:
@@ -1147,7 +1147,7 @@ If upgrading to legacy or class-based elements, you can eliminate this code. Arr
 notifications for specific items use index paths. Changing the entire array results in a change
 notification for the entire array.
 
-### Update observers {#update-observers}
+### 更新观察者 {#update-observers}
 
 Observers need to check for `undefined` arguments, which was not an issue in 1.x. If all of your
 observer's dependencies have default values, the observer should not be called with `undefined`
@@ -1185,12 +1185,12 @@ _observeStuff: function(a, b, c) {
 }
 ```
 
-### Custom property serialization and deserialization
+### 自定义属物序列化和反序列化
 
 If your element overrides the `serialize` or `deserialize` methods, these override points have been
 renamed to `_serializeValue` and `_deserializeValue`, respectively.
 
-### Data system miscellany {#data-system-miscellany}
+### 数据系统杂项 {#data-system-miscellany}
 
 A few more changes that you may need to take into account.
 
@@ -1216,7 +1216,7 @@ override a default `true` property of the target, due to the semantics of boolea
 In general, property binding should always be used when possible, and will avoid such situations.
 
 
-## Removed APIs {#removed-apis}
+## 移除的 API {#removed-apis}
 
 The following APIs have been removed.
 
@@ -1245,7 +1245,7 @@ The following APIs have been removed.
 
 *    Methods starting with `_` are not guaranteed to exist (most have been removed).
 
-## Upgrading to class-based elements {#upgrading-to-class-based-elements}
+## 升级到基于类的元素 {#upgrading-to-class-based-elements}
 
 To define a class-based element, create a class that extends `Polymer.Element` (a subclass of
 `HTMLElement`), which provides most of the same features of Polymer 1.x based on static
@@ -1327,7 +1327,7 @@ Below are the general steps for defining a custom element using this new syntax:
 
     Note that attributes can't be manipulated in the constructor.
 
-### Common utility APIs
+### 通用实用程序 API
 
 `Polymer.Element` provides a cleaner base class without much of the sugared utility API
 that present on legacy elements, such as `fire`, `transform`, and so on. With web platform surface
@@ -1433,7 +1433,7 @@ Polymer.importHref(this.resolveUrl('some-other-file.html'),
 
 The `$$` method isn't available. Use `this.shadowRoot.querySelector` instead.
 
-#### Using the legacy APIs
+#### 使用遗留的 API
 
 If you want to upgrade to a class-based element but depend on some of the removed APIs, you can
 add most of the legacy APIs by using the `LegacyElementMixin`.
@@ -1442,7 +1442,7 @@ add most of the legacy APIs by using the `LegacyElementMixin`.
 class MyLegacyElement extends Polymer.LegacyElementMixin(Polymer.Element) { ... }
 ```
 
-### Class mixins and behaviors {#mixins}
+### 类混入和行为 {#mixins}
 
 A class expression mixin is essentially a factory function that takes a class as an argument and
 returns a new class, with new features "mixed in." Polymer 2.x provides a number of features as
@@ -1465,7 +1465,7 @@ For information on writing your own class expression mixins, see
 [Sharing code with class expression mixins](#mixins)
 
 
-#### Using hybrid behaviors with class-style elements
+#### 在类风格的元素上使用混合行为
 
 In some cases, the features you want to use may be available as hybrid behaviors, but not as
 class mixins.
@@ -1484,7 +1484,7 @@ customElements.define(XClass.is, XClass);
 The `mixinBehavior` function also mixes in the Legacy APIs, the same as if you extended
 `Polymer.LegacyElement`. These APIs are required since since hybrid behaviors depend on them.
 
-### Import optional features {#optional-features}
+### 导入可选功能 {#optional-features}
 
 A number of features have been omitted from the base `Polymer.Element` class and packaged as
 separate, optional imports. These include:

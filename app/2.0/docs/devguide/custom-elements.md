@@ -82,7 +82,7 @@ Polymer adds a set of features to the basic custom element:
 *   Creating shadow DOM trees for element instances based on a supplied `<template>`.
 *   A data system that supports data binding, property change observers, and computed properties.
 
-## Custom element lifecycle {#element-lifecycle}
+## 自定义元素的生命周期 {#element-lifecycle}
 
 The custom element spec provides a set of callbacks called "custom element reactions" that allow you
 to run user code in response to certain lifecycle changes.
@@ -159,7 +159,7 @@ For a complete list of limitations, see [Requirements for custom element constru
 
 Whenever possible, defer work until the `connectedCallback` or later instead of performing it in the constructor.
 
-### One-time initialization
+### 一次性初始化
 
 The custom elements specification doesn't provide a one-time initialization callback. Polymer
 provides a `ready` callback, invoked the first time the element is added to the DOM.
@@ -195,7 +195,7 @@ Related topics:
 *   [Observers and computed properties](observers)
 *   [Observe added and removed children](shadow-dom#observe-nodes)
 
-## Element upgrades
+## 元素升级
 
 By specification, custom elements can be used before they're defined. Adding a definition for an
 element causes any existing instances of that element to be *upgraded* to the custom class.
@@ -246,7 +246,7 @@ my-element:not(:defined) {
 }
 ```
 
-## Extending other elements
+## 扩展其他元素
 
 In addition to `HTMLElement`, a custom element can extend another custom element:
 
@@ -279,7 +279,7 @@ elements like `<button>` and `<input>`). However, not all browser makers have ag
 customized built-in elements, so Polymer does not support them at this time.
 {.alert .alert-info}
 
-## Sharing code with class expression mixins {#mixins}
+## 与类表达式混入共享代码 {#mixins}
 
 ES6 classes allow single inheritance, which can make it challenging to share code between different
 elements. Class expression mixins let you share code between elements.
@@ -340,6 +340,6 @@ class AnotherElement extends AnotherMixin(MyMixin(Polymer.Element)) { … }
 ```
 
 
-## Resources
+## 资源
 
 More information: [Custom elements v1: reusable web components](https://developers.google.com/web/fundamentals/primers/customelements/?hl=en) on Web Fundamentals.

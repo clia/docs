@@ -1,13 +1,13 @@
 ---
 title: 第 1 步：设置好
-subtitle: "使用应用工具箱创建一个应用"
+subtitle: "使用 App 工具箱创建一个 App"
 ---
 
 <!-- toc -->
 
-[Polymer 应用工具箱][toolbox] 是组件，工具和模板的一个集合，用来使用 Polymer 构建渐进式 Web 应用。
+[Polymer App 工具箱][toolbox] 是组件，工具和模板的一个集合，用来使用 Polymer 构建渐进式 Web App。
 
-按照以下说明，使用应用工具箱模板，在不到 15 分钟内安装、创建和部署一个项目。
+按照以下说明，使用 App 工具箱模板，在不到 15 分钟内安装、创建和部署一个项目。
 
 ## 安装 Polymer CLI
 
@@ -30,13 +30,13 @@ Polymer CLI 文档](/{{{polymer_version_dir}}}/docs/tools/polymer-cli)。
         mkdir my-app
         cd my-app
 
-1. 使用应用模板初始化您的项目
+1. 使用 App 模板初始化您的项目
 
         polymer init polymer-2-starter-kit
 
 ## 服务您的项目
 
-应用工具箱模板不需要任何构建步骤即可开始开发。您可以使用 Polymer CLI 服务应用，并且您所做的文件更改将通过刷新浏览器立即可见。
+App 工具箱模板不需要任何构建步骤即可开始开发。您可以使用 Polymer CLI 服务应用，并且您所做的文件更改将通过刷新浏览器立即可见。
 
 要服务您的项目：
 
@@ -48,16 +48,16 @@ Polymer CLI 文档](/{{{polymer_version_dir}}}/docs/tools/polymer-cli)。
 
 ```text
 bower.json             # bower 配置
-bower_components/      # 应用依赖
+bower_components/      # App 依赖
 images/
-index.html             # 您的应用的主入口
-manifest.json          # 应用清单配置
+index.html             # 您的 App 的主入口
+manifest.json          # App 清单配置
 package.json           # NPM 元数据文件
 polymer.json           # Polymer CLI 配置
 service-worker.js      # 自动生成的 service worker
-src/                   # 应用特定元素
+src/                   # App 特定元素
   my-app.html            # 顶级元素
-  my-icons.html          # 应用图标
+  my-icons.html          # App 图标
   my-view1.html          # 示例视图或“页面”
   my-view2.hmtl
   my-view3.html
@@ -69,7 +69,7 @@ test/                  # 单元测试
 
 ## 下一步
 
-您的应用现已建立并在本机运行。接下来，了解如何向您的应用添加页面。
+您的 App 现已建立并在本机运行。接下来，了解如何向您的 App 添加页面。
 
 <a class="blue-button"
     href="create-a-page">下一步：创建页面</a>

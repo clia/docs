@@ -5,7 +5,7 @@ title: Define an element
 <!-- toc -->
 
 
-## Define a custom element {#register-element}
+## 定义一个自定义元素 {#register-element}
 
 
 To define a custom element, create a class that extends `Polymer.Element` and pass the class to the `customElements.define` method. The class must have a static `is` getter that returns the HTML tag name for your custom element.
@@ -42,7 +42,7 @@ var el2 = new MyElement();
 
 As shown above, the element's class can define callbacks for the custom element reactions as described in [Custom element lifecycle](custom-elements#element-lifecycle).
 
-## Extending an existing element {#extend-element}
+## 扩展现有元素 {#extend-element}
 
 You can leverage native subclassing support provided by ES6 to extend and customize existing
 elements defined using ES6 syntax:
@@ -67,7 +67,7 @@ If you don't provide a template for your subclass, it inherits the superclass's 
 To override this behavior, or modify the superclass template, override the subclass's `template`
 getter.
 
-## Imports and APIs
+## 导入和 API
 
 There are three main HTML imports for defining Polymer elements:
 
@@ -88,7 +88,7 @@ Use the `polymer.html` import for defining hybrid elements that can run under bo
 
 
 
-## Using hybrid behaviors with class-style elements
+## 在类风格的元素上使用混合行为
 
 You can add hybrid behaviors to your class-style element using the `Polymer.mixinBehavior` function:
 
@@ -103,7 +103,7 @@ customElements.define('x-class', XClass);
 The `mixinBehavior` function also mixes in the Legacy APIs, the same as if you extended
 `Polymer.LegacyElement`. These APIs are required since since hybrid behaviors depend on them.
 
-## Define an element in the main HTML document {#main-document-definitions}
+## 在主 HTML 文档中定义一个元素 {#main-document-definitions}
 
 You should only define elements from the main document when
 experimenting. In production, elements should always be defined in
@@ -146,7 +146,7 @@ all imports in the document have finished loading.
 </html>
 ```
 
-## Define a legacy element {#legacy-element}
+## 定义遗留元素 {#legacy-element}
 
 Legacy elements can use use the `Polymer` function to register an element.
 The function takes as its argument the  prototype for the new element. The prototype
@@ -185,7 +185,7 @@ Polymer value-added features), so you cannot set up your own
 prototype chain. However, you can use [behaviors](#prototype-mixins) to
 share code between elements.
 
-## Lifecycle callbacks {#lifecycle-callbacks}
+## 生命周期回调 {#lifecycle-callbacks}
 
 The Polymer.Element class implements the standard Custom Element lifecycle
 callbacks to perform tasks necessary for Polymer's built-in features.
@@ -254,7 +254,7 @@ finished creating and initializing the element's DOM.
   </tr>
 </table>
 
-### Legacy behaviors {#prototype-mixins}
+### 遗留的行为 {#prototype-mixins}
 
 Legacy elements can share code in the form of _behaviors_, which can define
 properties, lifecycle callbacks, event listeners, and other features.

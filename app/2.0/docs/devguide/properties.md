@@ -139,7 +139,7 @@ for more information.
 </tr>
 </table>
 
-## Property name to attribute name mapping {#property-name-mapping}
+## 属物名到属性名的映射 {#property-name-mapping}
 
 For data binding, deserializing properties from attributes, and reflecting
 properties back to attributes, Polymer maps attribute names to property
@@ -164,7 +164,7 @@ mappings are set up on the element at registration time based on the rules
 described above.
 { .alert .alert-warning }
 
-## Attribute deserialization {#attribute-deserialization}
+## 属性反序列化 {#attribute-deserialization}
 
 If a property is configured in the `properties` object, an attribute on the
 instance matching the property name will be deserialized according to the type
@@ -246,7 +246,7 @@ encouraged that attributes only be used for configuring properties in static
 markup, and instead that properties are set directly for changes at runtime.
 {.alert .alert-info}
 
-### Configuring boolean properties
+### 配置布尔属性
 
 For a Boolean property to be configurable from markup, it must default to `false`. If it defaults
 to `true`, you cannot set it to `false` from markup, since the presence of the attribute, with or
@@ -255,7 +255,7 @@ without a value, equates to `true`. This is the standard behavior for attributes
 If this behavior doesn't fit your use case, you can use a string-valued or number-valued attribute
 instead.
 
-### Configuring object and array properties
+### 配置对象和数组属性
 
 For object and array properties you can pass an object or array in JSON format:
 
@@ -265,7 +265,7 @@ For object and array properties you can pass an object or array in JSON format:
 
 Note that JSON requires double quotes, as shown above.
 
-### Custom deserializers
+### 自定义反序列器
 
 The type system includes build-in support for Boolean and Number values, Object and Array values
 expressed as JSON, or Date objects expressed as any Date-parsable string
@@ -282,7 +282,7 @@ _deserializeValue(value, type) {
 }
 ```
 
-## Configuring default property values {#configure-values}
+## 配置默认属物值 {#configure-values}
 
 Default values for properties may be specified in the `properties` object using
 the `value` field.  The value may either be a primitive value, or a function
@@ -318,7 +318,7 @@ class XCustom extends Polymer.Element {
 ```
 
 
-## Property change notification events (notify) {#notify}
+## 属物变更通知事件 (notify) {#notify}
 
 When a property is set to `notify: true`, an event is fired whenever the
 property value changes. The event name is:
@@ -336,7 +336,7 @@ directly using `addEventListener`.
 For more on property change notifications and the data system, see
 [Data flow](data-system#data-flow).
 
-## Read-only properties {#read-only}
+## 只读属物 {#read-only}
 
 When a property only "produces" data and never consumes data, this can be made
 explicit to avoid accidental changes from the host by setting the `readOnly`
@@ -368,7 +368,7 @@ For more on read-only properties and data binding, see
 [How data flow is controlled](data-system#data-flow-control).
 
 
-## Reflecting properties to attributes  {#attribute-reflection}
+## 反射属物到属性  {#attribute-reflection}
 
 In specific cases, it may be useful to keep an HTML attribute value in sync with
 a property value.  This may be achieved by setting `reflectToAttribute: true` on
@@ -395,7 +395,7 @@ class XCustom extends Polymer.Element {
 }
 ```
 
-### Attribute serialization {#attribute-serialization}
+### 属性序列化 {#attribute-serialization}
 
 When reflecting a property to an attribute or
 [binding a property to an attribute](data-binding#attribute-binding),
@@ -421,7 +421,7 @@ _serializeValue(value) {
 }
 ```
 
-## Implicitly declared properties
+## 隐式声明的属物
 
 A property is declared _implicitly_ if you add it to a data binding or add it as a dependency of an
 observer, computed property, or computed binding.
@@ -429,7 +429,7 @@ observer, computed property, or computed binding.
 Polymer automatically creates setters for these implicitly declared properties. However, implicitly
 declared properties can't be configured from markup.
 
-## Private and protected properties
+## 私有和受保护的属物
 
 JavaScript doesn't have any true protection for properties. By convention, Polymer elements usually
 use a single underscore (`_protectedProp`) to indicate a protected property or method (intended to
