@@ -24,7 +24,7 @@ Polymer 使声明性地创建 Web 组件变得简单。
 `Polymer.Element`，然后调用 `customElements.define` 方法，该方法在浏览器中 _注册_ 一个新的元素。
 注册元素将元素名称与类相关联，因此您可以向自定义元素添加属物和方法。自定义元素的名称 **必须以ASCII字母开头，并包含连接号（-）**。
 
-<demo-tabs selected="0" src="http://plnkr.co/edit/PaCt2M?p=preview">
+<demo-tabs selected="0" src="http://plnkr.co/edit/ScvcB4?p=preview">
   <demo-tab heading="custom-element.html">
 <pre><code>{{{include_file('2.0/start/samples/custom-element/custom-element.html')}}}</code></pre>
   </demo-tab>
@@ -51,7 +51,7 @@ Polymer 使声明性地创建 Web 组件变得简单。
 
 许多元素包括一些内部 DOM 节点来实现元素的 UI 和行为。您可以使用 Polymer 的 DOM 模板化为元素创建一个阴影 DOM 树。
 
-<demo-tabs selected="0" src="http://plnkr.co/edit/bVyU2T?p=preview">
+<demo-tabs selected="0" src="http://plnkr.co/edit/DaiLYY?p=preview">
   <demo-tab heading="dom-element.html">
 <pre><code>{{{include_file('2.0/start/samples/dom-element/dom-element.html')}}}</code></pre>
   </demo-tab>
@@ -74,7 +74,7 @@ so they render as if they were inserted into the shadow DOM tree.
 This example creates a simple tag that decorates an image by wrapping it
 with a styled `<div>` tag.
 
-<demo-tabs selected="0" src="http://plnkr.co/edit/RJOuQf?p=preview">
+<demo-tabs selected="0" src="http://plnkr.co/edit/BzgJBN?p=preview">
   <demo-tab heading="picture-frame.html">
 <pre><code>{{{include_file('2.0/start/samples/picture-frame/picture-frame.html')}}}</code></pre>
   </demo-tab>
@@ -101,7 +101,7 @@ Data binding is a great way to quickly propagate changes in your element and red
 You can bind properties in your component using the "double-mustache" syntax (`{%raw%}{{}}{%endraw%}`).
 The `{%raw%}{{}}{%endraw%}` is replaced by the value of the property referenced between the brackets.
 
-<demo-tabs selected="0" src="http://plnkr.co/edit/l0zSDN?p=preview">
+<demo-tabs selected="0" src="http://plnkr.co/edit/8mZK8S?p=preview">
   <demo-tab heading="name-tag.html">
 <pre><code>{{{include_file('2.0/start/samples/name-tag/name-tag.html')}}}</code></pre>
   </demo-tab>
@@ -124,7 +124,7 @@ values, configuring properties from markup, observing property changes, and more
 The following example declares the `owner` property from the last example.
 It also shows configuring the owner property from markup in `index.html`.
 
-<demo-tabs selected="0" src="http://plnkr.co/edit/huYt0l?p=preview">
+<demo-tabs selected="0" src="http://plnkr.co/edit/ROIvZg?p=preview">
   <demo-tab heading="configurable-name-tag.html">
 <pre><code>{{{include_file('2.0/start/samples/configurable-name-tag/configurable-name-tag.html')}}}</code></pre>
   </demo-tab>
@@ -147,7 +147,7 @@ can optionally support two-way binding, using curly braces (`property-name="{{bi
 This example uses two-way binding: binding the value of a custom input element (`iron-input`)
 to the element's `owner` property, so it's updated as the user types.
 
-<demo-tabs selected="0" src="http://plnkr.co/edit/SEm7jd?p=preview">
+<demo-tabs selected="0" src="http://plnkr.co/edit/VYR8my?p=preview">
   <demo-tab heading="editable-name-tag.html">
 <pre><code>{{{include_file('2.0/start/samples/editable-name-tag/editable-name-tag.html')}}}</code></pre>
   </demo-tab>
@@ -166,7 +166,7 @@ data binding and input validation.
 
 The template repeater (`dom-repeat`) is a specialized template that binds to an array. It creates one instance of the template's contents for each item in the array.
 
-<demo-tabs selected="0" src="http://plnkr.co/edit/1KYc2z?p=preview">
+<demo-tabs selected="0" src="http://plnkr.co/edit/FdgkAtcLFHX5TpTsYtZn?p=preview">
   <demo-tab heading="employee-list.html">
 <pre><code>{{{include_file('2.0/start/samples/employee-list/employee-list.html')}}}</code></pre>
   </demo-tab>
@@ -176,7 +176,6 @@ The template repeater (`dom-repeat`) is a specialized template that binds to an 
 
   <iframe frameborder="0" src="samples/employee-list/index.html" width="100%" height="100"></iframe>
 </demo-tabs>
-
 
 <p><a href="/2.0/docs/devguide/templates" class="blue-button">
 Learn more: Template repeater</a></p>

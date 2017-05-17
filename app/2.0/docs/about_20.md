@@ -10,7 +10,7 @@ Polymer 2.0还在几个方面进行了改进：
 
 
 *   **改进的互操作性。** 通过消除对使用 Polymer.dom 进行 DOM 操作的需要，Polymer 2.0 使得将 Polymer 组件与其他库和框架结合使用变得更加容易。
-    此外，shady DOM 代码已被分离为可重复使用的 polyfill，而不是集成到 Polymer。
+    此外，[shady DOM](https://github.com/webcomponents/shadydom) 代码已被分离为可重复使用的 polyfill，而不是集成到 Polymer。
 
 *   **数据系统改进。** Polymer 2.0 包括对数据系统的有针对性的改进。这些更改使得对穿过元素和在元素之间的数据传播进行思考和调试变得更容易。
 

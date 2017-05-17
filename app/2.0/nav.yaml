@@ -13,8 +13,6 @@
     path: /2.0/start/quick-tour
   - title: 安装 Polymer 2.x
     path: /2.0/start/install-2-0
-  - title: 开始吧
-    path: /2.0/start/index
   - header: 创建元素
   - title: 1. 设置好
     path: /2.0/start/first-element/intro
