@@ -102,7 +102,7 @@
   - title: 数据系统的概念
     path: /2.0/docs/devguide/data-system
     indent: True
-  - title: 与对象和数组数据工作
+  - title: 使用对象和数组数据
     path: /2.0/docs/devguide/model-data
     indent: True
   - title: 观察者和被计算的属物

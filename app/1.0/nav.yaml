@@ -83,7 +83,7 @@
   - title: 数据系统的概念
     path: /1.0/docs/devguide/data-system
     indent: True
-  - title: 与对象和数组数据工作
+  - title: 使用对象和数组数据
     path: /1.0/docs/devguide/model-data
     indent: True
   - title: 观察者和被计算的属物
@@ -193,7 +193,7 @@
   - title: App 存储
     path: /1.0/toolbox/app-storage
     indent: True
-  - title: Service worker
+  - title: 服务工作者
     path: /1.0/toolbox/service-worker
     indent: True
   - title: 服务您的 App
