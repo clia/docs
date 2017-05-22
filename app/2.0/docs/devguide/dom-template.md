@@ -10,7 +10,7 @@ By default, adding a DOM template to an element causes Polymer to create a shado
 
 The DOM template is also processed to enable data binding and declarative event handlers.
 
-## Specify a DOM template
+## 指定 DOM 模板
 
 Polymer provides three basic ways to specify a DOM template:
 
@@ -25,7 +25,7 @@ Polymer provides a default `template` getter that retrieves a template from the 
 `<dom-module>`. You can override this getter to provide a string template or a generated template
 element.
 
-### Specify a template using dom-module
+### 使用 dom-module 指定模板
 
 To specify an element's DOM template using a `<dom-module>`:
 
@@ -60,7 +60,7 @@ except for testing. For caveats about defining elements in the main document,
 see [main document definitions](registering-elements#main-document-definitions).
 {.alert .alert-info}
 
-### Specify a string template
+### 指定字符串模板
 
 As an alternative to specifying the element's template in markup, you can specify a string template
 by creating a static `template` getter that returns a string.
@@ -82,7 +82,7 @@ customElements.define('my-element', MyElement);
 When using a string template, the element doesn't need to provide an `is` getter (however, the tag
 name still needs to  be  passed as the first argument to `customElements.define`).
 
-### Inherited templates
+### 继承的模板
 
 An element that extends another Polymer element can inherit its template. If the element doesn't
 provide its own DOM template (using either a `<dom-module>` or a string template), Polymer uses the
@@ -160,7 +160,7 @@ template.
 </dom-module>
 ```
 
-### Elements with no shadow DOM
+### 没有阴影 DOM 的元素
 
 To create an element with no shadow DOM, don't specify a DOM template (either using a `<dom-module>`
 or by overriding the `template` getter), then no shadow root is created for the element.
@@ -168,7 +168,7 @@ or by overriding the `template` getter), then no shadow root is created for the 
 If the element is extending another element that has a DOM template and you don't want a DOM template,
 define a `template` getter that returns a falsy value.
 
-### URLs in templates {#urls-in-templates}
+### 模板中的 URL {#urls-in-templates}
 
 A relative URL in a template may need to be relative to an application or to a specific component.
 For example, if a component includes images alongside an HTML import that defines an element, the
@@ -205,7 +205,7 @@ by hybrid elements.
 
 
 
-## Static node map {#node-finding}
+## 静态节点映射 {#node-finding}
 
 Polymer builds a static map of node IDs when the element initializes its DOM template, to provide
 convenient access to frequently used nodes without the need to query for them manually. Any node
@@ -249,7 +249,7 @@ use the standard DOM `querySelector`  method.
 
 
 
-## Remove empty text nodes {#strip-whitespace}
+## 删除空文本节点 {#strip-whitespace}
 
 
 Add the `strip-whitespace` boolean attribute to a template to remove
@@ -321,7 +321,7 @@ Here, the shadow tree contains only the two `<div>` nodes:
 
 Note that the whitespace _inside_ the `<div>` elements isn't affected.
 
-## Preserve template contents
+## 保持模板内容
 
 Polymer performs one-time processing on your DOM template, such as parsing and removing binding
 annotations and caching  and removing nested template contents for better performance. This processing
@@ -364,14 +364,14 @@ This is a fairly rare use case.
 </dom-module>
 ```
 
-## Customize DOM initialization
+## 定制 DOM 初始化
 
 There are several points where you can customize how Polymer initializes your element's DOM. You
 can customize how the shadow root is created by creating it yourself. And you can override the
 `_attachDom` method to change how the the DOM tree is added to your element: for example, to
 stamp into light DOM instead of shadow DOM.
 
-### Create your own shadow root
+### 创建您自己的阴影根
 
 In some cases, you may want to create your own shadow root. You can do this by creating a shadow root
 before calling `super.ready()`—or before the `ready` callback, such as in the constructor.

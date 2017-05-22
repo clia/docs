@@ -15,7 +15,7 @@ about it in this section.
 
 Read more about shadow DOM concepts in our developer documentation: [Shadow DOM concepts](https://www.polymer-project.org/2.0/docs/devguide/shadow-dom)
 
-## Edit icon-toggle.html
+## 编辑 icon-toggle.html
 
 Open `icon-toggle.html `. This file contains the skeleton of a custom element.
 
@@ -139,7 +139,7 @@ Key information:
     customElements.define(IconToggle.is, IconToggle);
     ```
 
-### Create the local DOM structure
+### 创建本地 DOM 结构
 
 Now that you're familiar with the basic layout of the element, add something
 useful to its local DOM template.
@@ -170,7 +170,7 @@ Key information:
   * The `<iron-icon>` element is a custom element that renders an icon. Here it's hard-coded to use
 an icon named "polymer".
 
-### Style the local DOM
+### 样式化本地 DOM
 
 There are a number of new CSS selectors to work with shadow DOM. The `icon-toggle.html ` file already includes a `:host` selector, discussed earlier, to style the top-level `<icon-toggle>` element.
 

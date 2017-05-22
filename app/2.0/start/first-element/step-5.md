@@ -18,7 +18,7 @@ You apply a custom property inside your element using the `var` function.
 
 Where <code>--<em>my-custom-property</em></code> is a custom property name, always starting with two dashes (`--`), and <code><em>defaultValue</em></code> is an (optional) CSS value that's used if the custom property isn't set.
 
-## Add new custom property values
+## 添加新的自定义属物值
 
 Edit your element's `<style>` tag and replace the `fill` and `stroke`
 values with custom properties:
@@ -101,7 +101,7 @@ If you have any trouble getting the element working, check out the
 
 If you'd like to learn a little more about custom properties, read on.
 
-## Extra credit: set custom properties at the document level
+## 额外加分：在文档级别设置自定义属物
 
 Frequently you want to define custom property values at the document level, to
 set a theme for an entire application, for example. Because custom properties

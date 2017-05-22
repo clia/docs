@@ -18,7 +18,7 @@ Polymer 使声明性地创建 Web 组件变得简单。
 
 点击每个功能后面的按钮了解更多信息。
 
-### 注册一个元素 {#register}
+### 注册元素 {#register}
 
 要注册一个新元素，创建 ES6 类扩展
 `Polymer.Element`，然后调用 `customElements.define` 方法，该方法在浏览器中 _注册_ 一个新的元素。
@@ -66,7 +66,7 @@ Polymer 使声明性地创建 Web 组件变得简单。
 
 <p><a href="/{{{polymer_version_dir}}}/docs/devguide/dom-template" class="blue-button">了解更多：DOM 模板化</a></p>
 
-### Compose with shadow DOM
+### 构造阴影 DOM
 
 Shadow DOM lets you control _composition_. The element's children can be _distributed_
 so they render as if they were inserted into the shadow DOM tree.
@@ -92,7 +92,7 @@ So the `div` rule here only affects `<div>` tags inside `<picture-frame>`.
 <p><a href="/2.0/docs/devguide/shadow-dom#shadow-dom-and-composition" class="blue-button">
 Learn more: Composition & distribution</a></p>
 
-### Use data binding
+### 使用数据绑定
 
 Of course, it's not enough to have static shadow DOM. You usually want to have your element update
 its shadow DOM dynamically.
@@ -115,7 +115,7 @@ The `{%raw%}{{}}{%endraw%}` is replaced by the value of the property referenced 
 <p><a href="/2.0/docs/devguide/data-binding" class="blue-button">
 Learn more: data binding</a></p>
 
-### Declare a property
+### 声明属物
 
 Properties are an important part of an element's public API. Polymer
 _declared properties_ support a number of common patterns for properties—setting default
@@ -138,7 +138,7 @@ It also shows configuring the owner property from markup in `index.html`.
 <p><a href="/2.0/docs/devguide/properties" class="blue-button">
 Learn more: declared properties</a></p>
 
-### Bind to a property
+### 绑定到属物
 
 In addition to text content, you can bind to an element's _properties_ (using
 `property-name="[[binding]]"`). Polymer properties
@@ -162,7 +162,7 @@ to the element's `owner` property, so it's updated as the user types.
 data binding and input validation.
 {: .alert .alert-info }
 
-### Using `<dom-repeat>` for template repeating
+### 使用 `<dom-repeat>` 来进行模板循环
 
 The template repeater (`dom-repeat`) is a specialized template that binds to an array. It creates one instance of the template's contents for each item in the array.
 
@@ -180,6 +180,6 @@ The template repeater (`dom-repeat`) is a specialized template that binds to an 
 <p><a href="/2.0/docs/devguide/templates" class="blue-button">
 Learn more: Template repeater</a></p>
 
-## Next steps
+## 下一步
 
 Now that you understand these fundamental Polymer concepts, you can [build an app with App Toolbox](/2.0/start/toolbox/set-up) or see a [feature overview of the Polymer library](/2.0/docs/devguide/feature-overview).

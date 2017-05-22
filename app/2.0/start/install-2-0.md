@@ -8,7 +8,7 @@ title: 安装 Polymer 2.x
 
 * [快速浏览 Polymer](/{{{polymer_version_dir}}}/start/quick-tour)
 * [了解如何构建您的第一个 Polymer App](/{{{polymer_version_dir}}}/start/toolbox/set-up)
-* [了解如何使用 Polymer 库构建您的第一个元素](/{{{polymer_version_dir}}}/start/first-element/intro)
+* [了解如何使用 Polymer 库创建您的第一个元素](/{{{polymer_version_dir}}}/start/first-element/intro)
 
 Polymer 是通过 [Bower 包管理器](https://bower.io/) 进行分发的。
 

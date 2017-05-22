@@ -25,7 +25,7 @@ Don’t worry if you don’t understand everything. Each of the concepts present
 here is described in detail in the Polymer documentation.
 
 
-## Step 1: Get set up
+## 第一步：设置好
 
 To follow this tutorial, you’ll need:
 
@@ -34,7 +34,7 @@ To follow this tutorial, you’ll need:
 GitHub](https://github.com/PolymerLabs/polymer-2-first-element.git).
 -   The [Polymer CLI](/2.0/docs/tools/polymer-cli) to run the demo.
 
-### Download the starting code
+### 下载起始代码
 
 1.  Download the starting code by running this command:
 
@@ -63,7 +63,7 @@ GitHub](https://github.com/PolymerLabs/polymer-2-first-element.git).
     The main file you’ll work with is `icon-toggle.html`, which contains the definition for your 
 custom element.
 
-### Install Polymer CLI
+### 安装 Polymer CLI
 
 Install the Polymer CLI to serve the demo locally. 
 
@@ -76,7 +76,7 @@ To install Polymer CLI:
    npm install -g polymer-cli
    ```
 
-### Install dependencies and run the demo
+### 安装依赖项并运行 demo
 
 To install the element's dependencies and run the demo:
 

@@ -7,7 +7,7 @@ subtitle: "Build an app with App Toolbox"
 
 In this step, you'll deploy your application to the web.
 
-## Build for deployment
+## 为部署而构建
 
 Run the following Polymer CLI command to prepare your
 application for deployment:
@@ -25,7 +25,7 @@ For more information on build options, see the [documentation for the `polymer b
 This includes documentation on generating bundled (concatenated) resources suitable for
 serving from servers or to clients that do not support HTTP/2 server push.
 
-## Deploy to a server
+## 部署到服务器
 
 Polymer applications can be deployed to any web server.
 
@@ -39,7 +39,7 @@ Static Hosting](https://www.firebase.com/docs/hosting/), which are both free and
 secure approaches for deploying a Polymer app.  The approach
 is similar for other hosting providers.
 
-### Deploy with AppEngine
+### 使用 AppEngine 部署
 
 1.  Download the [Google App Engine SDK](https://cloud.google.com/appengine/downloads)
 and follow the instructions for your platform to install it. This tutorial uses the Python SDK.
@@ -119,7 +119,7 @@ and create a new project
     gcloud app browse
     ````
 
-### Deploy with Firebase
+### 使用 Firebase 部署
 
 The instructions below are based on the [Firebase hosting quick start
 guide](https://www.firebase.com/docs/hosting/quickstart.html).

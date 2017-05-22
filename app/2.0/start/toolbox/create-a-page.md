@@ -10,7 +10,7 @@ the views of your application. But at some point, you'll probably want to add mo
 
 This step takes you through the process of adding a new page or top-level view to your application.
 
-## Create an element for the new page
+## 为新页面创建元素
 
 First, create a new custom element that encapsulates the contents of
 your new view.
@@ -50,7 +50,7 @@ your new view.
 For now your element is very basic, and just has a `<h1>` that says "New view",
 but we can return to it and make it more interesting later.
 
-## Add the element to your app
+## 将元素添加到您的 App
 
 Your element is defined, but your app isn't actually using it yet. To use it,
 you need to add it to your app's HTML.
@@ -123,7 +123,7 @@ you need to add it to your app's HTML.
       }
     ```
 
-## Create a navigation menu item
+## 创建导航菜单项
 
 You've defined your new element and declared it in your app. Now you
 just need to add a menu item in the left-hand drawer so that users can navigate to the new page.
@@ -173,7 +173,7 @@ Your new page is now ready! Serve your app with `polymer serve --open`.
 
 ![Example new page](/images/2.0/toolbox/new-view.png)
 
-## Register the page for the build
+## 注册要构建的页面
 
 When you deploy your application to the web, you'll use the Polymer CLI
 to prepare your files for deployment.  Polymer CLI will need to know about any
@@ -199,7 +199,7 @@ Note: You only need to add files you will lazy load or import using the `async`
 attribute to the `fragments` list.  Any files that are imported using synchronous
 `<link rel="import">` tags should *not* be added to `fragments`.
 
-## Next steps
+## 下一步
 
 You've added a new page to your application. Next, learn how to install and add an off-the-shelf custom element to your app.
 

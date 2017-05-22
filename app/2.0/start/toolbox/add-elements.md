@@ -12,7 +12,7 @@ In the process, you'll likely want to turn
 to some off-the-shelf components, for example from [webcomponents.org][webcomponents.org].
 
 
-## Install an off-the-shelf component
+## 安装现成的组件
 
 Once you've identified a component you'd like to install, you'll want to find
 the bower package name for the component.
@@ -24,7 +24,7 @@ Run this command from your project root directory:
 
     bower install --save PolymerElements/paper-checkbox#2.0-preview
 
-## Add the element to your application
+## 将元素添加到您的应用
 
 1.  Open `src/my-new-view.html` in a text editor.
 
@@ -65,7 +65,7 @@ You should be able to see the `paper-checkbox` working in your new view now:
 
 ![Example of page with checkbox](/images/2.0/toolbox/starter-kit-checkbox.png)
 
-## Next steps
+## 下一步
 
 Now that you've added a 3rd-party component to your page, learn how to
 [deploy the app to the web](deploy).

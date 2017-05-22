@@ -9,7 +9,7 @@
   items:
   - title: 入门
     path: /1.0/start/index
-  - header: 构建一个元素
+  - header: 构建元素
   - title: 1. 设置好
     path: /1.0/start/first-element/intro
     indent: True
@@ -26,7 +26,7 @@
     path: /1.0/start/first-element/step-5
     indent: True
   - endheader: True
-  - header: 构建一个 App
+  - header: 构建 App
   - title: 1. 设置好
     path: /1.0/start/toolbox/set-up
     indent: True
@@ -50,7 +50,7 @@
   - title: 快速浏览
     path: /1.0/docs/devguide/quick-tour
   - header: 定义元素
-  - title: 注册一个元素
+  - title: 注册元素
     path: /1.0/docs/devguide/registering-elements
     indent: True
   - title: 声明属物
@@ -112,7 +112,7 @@
   - title: 为生产环境优化
     path: /1.0/docs/tools/optimize-for-production
     indent: True
-  - title: 发布一个元素
+  - title: 发布元素
     path: /1.0/docs/tools/reusable-elements
     indent: True
   - title: 高级工具
