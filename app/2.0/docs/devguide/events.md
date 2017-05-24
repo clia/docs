@@ -10,7 +10,7 @@ Polymer elements can use the standard DOM APIs for creating, dispatching, and li
 Polymer also provides annotated event listeners, which allow you to specify event listeners
 declaratively as part of the  element's DOM template.
 
-## Add annotated event listeners {#annotated-listeners}
+## 添加注解的事件监听器 {#annotated-listeners}
 
 To add event listeners to local DOM children, use
 <code>on-<var>event</var></code>  annotations in your template. This often
@@ -51,7 +51,7 @@ insensitive. So specifying `on-myEvent` adds a listener for `myevent`. The event
 name (for example, `handleClick`) **is** case sensitive. **To avoid confusion, always use
 lowercase event names.**
 
-## Add and remove listeners imperatively {#imperative-listeners}
+## 命令式添加和删除监听器 {#imperative-listeners}
 
 You can use the standard `addEventListener` and `removeEventListener`
 methods to add and remove event listeners imperatively.
@@ -90,7 +90,7 @@ like a window or document level event listener, may prevent the element from bei
 collected. Remove the event listener in `disconnectedCallback` to prevent memory leaks.
 
 
-## Fire custom events {#custom-events}
+## 触发自定义事件 {#custom-events}
 
 To fire a custom event from the host element use the standard `CustomEvent` constructor and
 the `dispatchEvent` method.
@@ -139,7 +139,7 @@ To get the same behavior, you need to specify both options when you create a cus
 above.
 {.alert .alert-info}
 
-## Handle retargeted events {#retargeting}
+## 处理重定向的事件 {#retargeting}
 
 Shadow DOM has a feature called "event retargeting" which changes an event's
 target as it bubbles up, such that target is always in the same scope as the
@@ -207,7 +207,7 @@ of `DocumentFragment`. In native shadow DOM, this would show up as an instance o
 
 For more information, see [Event retargeting](shadow-dom#event-retargeting) in Shadow DOM concepts.
 
-## Property change events {#property-changes}
+## 属物改变事件 {#property-changes}
 
 You can configure an element to fire a non-bubbling DOM event when a specified
 property changes. For more information, see [Change notification events](#change-events).

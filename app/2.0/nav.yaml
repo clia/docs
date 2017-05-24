@@ -83,7 +83,7 @@
   - title: DOM 模版化
     path: /2.0/docs/devguide/dom-template
     indent: True
-  - title: 样式阴影 DOM
+  - title: 样式化阴影 DOM
     path: /2.0/docs/devguide/style-shadow-dom
     indent: True
   - title: 自定义 CSS 属物

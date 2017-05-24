@@ -392,7 +392,7 @@ _attachDom(dom) {
 }
 ```
 
-### Stamp templates in light DOM
+### 轻型 DOM 中的印花模板
 
 You can customize how the DOM is stamped by overriding the `_attachDom` method. The method takes a
 single argument, a `DocumentFragment` containing the DOM to be stamped. If you want to stamp the

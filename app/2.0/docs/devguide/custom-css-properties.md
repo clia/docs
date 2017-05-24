@@ -18,7 +18,7 @@ As a developer, you can use these properties to style `<paper-checkbox>` element
 
 When you create your own custom elements, you can use custom properties to build an interface for the users of your element so they can style it.
 
-### Use a custom properties API to style an element
+### 使用自定义属物 API 来样式化元素
 
 To use the interface of custom properties provided by an element author, look at the element's API documentation.
 
@@ -69,7 +69,7 @@ We can use variables to configure the custom CSS properties in `<paper-checkbox>
 </style>
 ```
 
-## Create custom properties
+## 创建自定义属物
 
 Rather than exposing the details of an element's internal implementation for
 theming, an element author defines one or more custom CSS
@@ -167,7 +167,7 @@ Thus, custom CSS properties are a powerful way for element authors to
 expose a theming API to their users in a way that naturally fits right alongside
 normal CSS styling.
 
-### Use custom CSS mixins
+### 使用自定义 CSS 混入
 
 It may be tedious (or impossible) for an element author to predict every
 CSS property that may be important for theming, let alone expose every
@@ -262,7 +262,7 @@ Example usage of `my-toolbar`: { .caption }
 </dom-module>
 ```
 
-## Use CSS inheritance
+## 使用 CSS 继承
 
 If an element doesn't override styling information, that element inherits styles from its parent:
 
@@ -284,7 +284,7 @@ If an element doesn't override styling information, that element inherits styles
 </body>
 ```
 
-## Create global styles
+## 创建全局样式
 
 Create global styles by styling the the html element of your document:
 
@@ -306,7 +306,7 @@ Create global styles by styling the the html element of your document:
 
 Note that the font family is inherited, but the text color is not. This is because `<paper-checkbox>` overrides the text color.
 
-### Custom property API for Polymer elements {#style-api}
+### 用于 Polymer 元素的自定义属物 API {#style-api}
 
 Polymer's custom property shim evaluates and applies custom property values once
 at element creation time.  In order to have an element (and its subtree) re-
@@ -371,7 +371,7 @@ Elements using the legacy API can use the
 instance method instead of testing for `ShadyCSS`.
 
 
-### Custom properties shim limitations
+### 自定义属物垫片限制
 
 Cross-platform support for custom properties is provided in Polymer by a
 JavaScript library that **approximates** the capabilities of the CSS Variables
@@ -385,7 +385,7 @@ interests of practicality and performance.
 Below are current limitations of the shim. Improvements to performance and
 dynamism will continue to be explored.
 
-#### Dynamism limitations
+#### 动态性限制
 
 Only property definitions which match the element at *creation time* are applied.
 Any dynamic changes that update property values are not applied automatically. You
@@ -439,7 +439,7 @@ have the desired effect, since the dynamism is related to *application* of a cus
 }
 ```
 
-#### Inheritance limitations
+#### 继承限制
 
 Unlike normal CSS inheritance which flows from parent to child, custom
 properties in Polymer's shim can only change when inherited by a custom element
@@ -482,7 +482,7 @@ styling for custom elements, which is the primary goal of the shim.
 </dom-module>
 ```
 
-#### Styling distributed elements not supported
+#### 不支持样式化分布式的元素
 
 The custom properties shim doesn't support styling distributed elements.
 

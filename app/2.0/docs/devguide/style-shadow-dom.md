@@ -4,7 +4,7 @@ title: Style an element's shadow DOM
 
 <!-- toc -->
 
-## Style your elements
+## 样式化您的元素
 
 Polymer supports DOM templating and the shadow DOM API. When you provide a DOM template for your custom element, Polymer then copies in the contents of the template you provided for your element.
 
@@ -95,7 +95,7 @@ For a detailed explanation of shadow DOM as it applies to Polymer, see [Shadow D
 
 For an exploration of the shadow DOM v1 API, see [Shadow DOM v1: Self-Contained Web Components](https://developers.google.com/web/fundamentals/getting-started/primers/shadowdom).
 
-### Use inheritance from document-level styles
+### 从文档级样式继承
 
 When used in an HTML document, your element will still inherit any styling information that applies to its parent element:
 
@@ -165,7 +165,7 @@ Styles declared inside shadow DOM will override styles declared outside of it:
 <p><x-foo></x-foo></p>
 ```
 
-### Style the host element
+### 样式化宿主元素
 
 
 The element to which shadow DOM is attached is known as the host. To style the host, use the `:host` selector.
@@ -210,7 +210,7 @@ x-foo {
 }
 ```
 
-#### Use CSS selectors to style the host element
+#### 使用 CSS 选择器样式化宿主元素
 
 You can use CSS selectors to determine when and how to style the host. In this code sample:
 
@@ -272,7 +272,7 @@ Descendant selectors after `:host` match elements in the shadow tree. In this ex
 
 Styling with the `:host` selector is one of two instances where rules inside a shadow tree can affect an element outside a shadow tree. The second instance uses the `::slotted()` syntax to apply styling rules to distributed children. See [*Composition and slots* in Eric Bidelman's article on shadow DOM](https://developers.google.com/web/fundamentals/getting-started/primers/shadowdom#composition_slot) for more information.
 
-### Style slotted content (distributed children)
+### 样式化插槽内内容（分布的子节点）
 
 You can create **slots** in an element's template that are populated at runtime. For more information on slots, see the documentation on [shadow DOM and composition](/2.0/docs/devguide/shadow-dom#shadow-dom-and-composition).
 
@@ -444,9 +444,9 @@ And you can select by slot name:
 </x-foo>
 ```
 
-## Share styles between elements
+## 在元素之间共享样式
 
-### Use style modules {#style-modules}
+### 使用样式模块 {#style-modules}
 
 The preferred way to share styles is with *style modules*. You can package up styles in a style module, and share them between elements.
 
@@ -525,7 +525,7 @@ Here's an example:
 ```
 
 
-### Use external stylesheets (deprecated) {#external-stylesheets}
+### 使用外部样式表（已过时） {#external-stylesheets}
 
 **Deprecated feature.** This experimental feature is now deprecated in favor of
 [style modules](#style-modules). It is still supported, but support will
@@ -577,7 +577,7 @@ For example:
 <x-foo></x-foo>
 ```
 
-## Use `custom-style` in document-level styles {#custom-style}
+## 在文档级样式中使用 `custom-style` {#custom-style}
 
 Browsers that implement the current Shadow DOM v1 specifications will automatically encapsulate styles, scoping them to the elements in which they were defined.
 
@@ -590,7 +590,7 @@ To ensure that your styles behave according to the Shadow DOM v1 specifications 
 
 *Note: You should only use `custom-style` to define styles for the main document. To define styles for an element's local DOM, just use a `<style>` block.*
 
-### Examples
+### 示例
 
 In the first code sample, the style for the `p` element “leaks” into Paragraph B in browsers that haven’t implemented the Shadow DOM v1 specs. In the second code sample, the developer has used `custom-style` to wrap the style block, preventing this leak.
 
@@ -652,7 +652,7 @@ In the first code sample, the style for the `p` element “leaks” into Paragra
 <x-foo></x-foo>
 ```
 
-### Syntax and compatibility
+### 语法和兼容性
 
 The syntax of `custom-style` has changed. In Polymer 2.x, `<custom-style>` is a wrapper element. You can use a hybrid syntax to ensure compatibility between Polymer 1.x and other versions.
 

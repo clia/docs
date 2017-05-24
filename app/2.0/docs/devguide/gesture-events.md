@@ -11,7 +11,7 @@ touch-specific event counterparts. This provides better interoperability with bo
 mouse devices.  For example, `tap` should be used instead of
 `click` for the most reliable cross-platform results.
 
-## Using gesture events
+## 使用手势事件
 
 Gesture events are supported by default when using hybrid elements. For class-style elements based
 on `Polymer.Element`, you need to explicitly add gesture support by importing and using the
@@ -46,7 +46,7 @@ using the generic `addEventListener` method. To listen for a gesture event:
 
     You can use the `Polymer.Gestures.addListener` function to add a listener to the host element.
 
-### Gesture event types
+### 手势事件类型
 
 The following are the gesture event types supported, with a short description
 and list of detail properties available on `event.detail` for each type:
@@ -76,7 +76,7 @@ and list of detail properties available on `event.detail` for each type:
   * `ddy`—change in pixels vertically since last track event
   * `hover()`—a function that may be called to determine the element currently being hovered
 
-### Examples
+### 示例
 
 Example declarative event listener { .caption }
 
@@ -170,7 +170,7 @@ to be garbage collected.
 </dom-module>
 ```
 
-## Gestures and scroll direction
+## 手势和滚动方向
 
 Listening for certain gestures controls the scrolling direction for touch input.
 For example, nodes with a listener for the `track` event will prevent scrolling
