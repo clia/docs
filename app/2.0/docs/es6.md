@@ -18,7 +18,7 @@ For other browsers, you should compile your application to ES5.
 Information on multiple builds and differential serving is available in the
 [documentation on building for production](/{{{polymer_version_dir}}}/toolbox/build-for-production).
 
-## Compiling ES6 to ES5 {#compile}
+## 编译 ES6 到 ES5 {#compile}
 
 Polymer 2.x and native 2.x class-style elements are written using the next generation of the
 JavaScript standard, EcmaScript 2015 (more commonly known as ES6). ES6 is required by the native

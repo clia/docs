@@ -133,7 +133,7 @@
   - title: Polymer CLI
     path: /2.0/docs/tools/polymer-cli
     indent: True
-  - title: 为您的元素写文档
+  - title: 文档化您的元素
     path: /2.0/docs/tools/documentation
     indent: True
   - title: 测试您的元素
@@ -161,7 +161,7 @@
   - title: API 参考
     path: /2.0/docs/api/
     indent: True
-  - title: Global settings
+  - title: 全局设置
     path: /2.0/docs/devguide/settings
     indent: True
   - endheader: True
@@ -188,7 +188,7 @@
   - title: App 存储
     path: /2.0/toolbox/app-storage
     indent: True
-  - title: Service worker
+  - title: 服务工作者
     path: /2.0/toolbox/service-worker
     indent: True
   - endheader: true

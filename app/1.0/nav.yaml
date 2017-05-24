@@ -103,7 +103,7 @@
   - title: Polymer CLI
     path: /1.0/docs/tools/polymer-cli
     indent: True
-  - title: 为您的元素写文档
+  - title: 文档化您的元素
     path: /1.0/docs/tools/documentation
     indent: True
   - title: 测试您的元素

@@ -12,7 +12,7 @@ library (the underlying library that powers Polymer CLI's testing tools).
 version of the Polymer CLI.
 {.alert .alert-info}
 
-## Overview
+## 概览
 
 Polymer CLI is an all-in-one command-line interface that covers the vast majority of
 Polymer development tasks, including unit testing. The underlying library
@@ -34,7 +34,7 @@ popular third-party tools, including:
     Tools](https://github.com/GoogleChrome/accessibility-developer-tools)
     for accessibility audits.
 
-## Quick start {#quick-start}
+## 快速开始 {#quick-start}
 
 For demonstration purposes, this guide shows you how to install Polymer CLI
 and initialize an element project. You'll then use this project to learn how
@@ -76,7 +76,7 @@ to add and run unit tests.
 
 If you receive errors about testing on Safari, see [Set up testing on Safari](#safari).
 
-### Run tests interactively
+### 交互式运行测试
 
 You can also run your tests in the browser. This allows you to use the
 browser's DevTools to inspect or your debug your unit tests.
@@ -91,7 +91,7 @@ would open a web browser and go to the following URL:
 
     localhost:8080/components/my-el/test/my-el_test.html
 
-## Creating tests
+## 创建测试
 
 Now that you've got the basics down of using Polymer CLI to run tests, it's
 time to start creating them.
@@ -99,7 +99,7 @@ time to start creating them.
 This section of the doc shows you how to accomplish various tasks or scenarios
 while implementing your unit tests.
 
-### Asynchronous tests {#async}
+### 异步测试 {#async}
 
 To create an asynchronous test, pass `done` as an argument to the test function
 and then call `done()` when the test is complete. The `done` argument is a
@@ -128,7 +128,7 @@ test('fires an event', function(done) {
 });
 ```
 
-### Prevent shared state with test fixtures {#test-fixtures}
+### 用测试夹具防止共享状态 {#test-fixtures}
 
 Test fixtures enable you to define a template of content and copy a clean,
 new instance of that content into each test suite. Use test fixtures to
@@ -161,7 +161,7 @@ To use a test fixture:
 </script>
 ```
 
-### Create stub methods
+### 创建存根方法
 
 Stubs enable you to replace default implementations with custom methods. This
 is useful for catching side effects.
@@ -179,7 +179,7 @@ setup(function() {
 You don't have to use stubs directly on individual elements. You can override
 the implementation for all elements of a given type.
 
-### Create stub elements
+### 创建存根元素
 
 Use [stub elements](http://stackoverflow.com/questions/463278/what-is-a-stub)
 to test elements in isolation. For example, if one of your tests
@@ -287,7 +287,7 @@ Check out Sinon's documentation for more in-depth examples.
 assertion style.
 { .alert .alert-info }
 
-### Run a set of tests {#test-sets}
+### 运行一套测试 {#test-sets}
 
 To run a set of tests, create an HTML file and call `loadSuites()`. When
 running Web Component Tester, specify the path to the HTML file as the first argument
@@ -317,7 +317,7 @@ should be a relative URL to a test suite. You can configure your tests
 using query strings in the URLs. See [Test shadow DOM](#shadow-dom)
 for an example.
 
-### Hybrid elements: test local DOM
+### 混合元素：测试本地 DOM
 
 For hybrid elements, use Polymer's [DOM API](/{{{polymer_version_dir}}}/docs/devguide/local-dom#dom-api)
 to access and modify local DOM children.
@@ -333,7 +333,7 @@ test('click sets isWaiting to true', function() {
 in the local DOM of `myEl`.
 { .alert .alert-info }
 
-#### Test DOM mutations
+#### 测试 DOM 突变
 
 Always wrap your test in `flush` if your element template contains a [template
 repeater (`dom-repeat`)](/{{{polymer_version_dir}}}/docs/devguide/templates#dom-repeat) or
@@ -367,7 +367,7 @@ suite('my-list tests', function() {
 )};
 ```
 
-#### Test with polyfills {#shady-dom}
+#### 使用 polyfills 测试 {#shady-dom}
 
 To test out how a test suite behaves when the browser runs the polyfill,
 create a [test set](#test-sets) and pass options in your
@@ -383,7 +383,7 @@ WCT.loadSuites([
 This sample runs `basic-test.html` twice, once using native APIs (where the browser supports them),
 and once using using all of the polyfills.
 
-### Automated testing in the cloud
+### 在云端自动测试
 
 It's important to get a good testing setup in place for your project as
 early as possible. Using services like Travis for continuous integration,
@@ -394,7 +394,7 @@ devices. For guidance on setting up these tools check out the Polycast below.
 <google-youtube video-id="afy_EEq_4Go" autoplay="0"
                 rel="0" fluid></google-youtube>
 
-## Set up testing on Safari {#safari}
+## 在 Safari 上设置好测试 {#safari}
 
 Safari 10 has built-in support for testing, but it must be manually enabled. Safari 9 may require
 a you to install a browser extension.
@@ -430,7 +430,7 @@ More information:
 -   [Selenium SafariDriver page][selenium]. Note
     that the link for the SafariDriver on this page is unhelpful.
 
-## Learn more
+## 了解更多
 
 Polymer Summit 2015 video on testing:
 

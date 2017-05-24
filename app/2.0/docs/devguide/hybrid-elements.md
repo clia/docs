@@ -212,7 +212,7 @@ if (Polymer.Element) {
 }
 ```
 
-## 管理混合元素的依赖关系 {#dependency-variants}
+## 管理混合元素的依赖项 {#dependency-variants}
 
 For testing Polymer elements, Polymer CLI supports installing multiple versions of bower
 dependencies. These versions are called _variants_. The components' default dependencies are listed

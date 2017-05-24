@@ -30,7 +30,7 @@ your project. Here's an example from the [Shop app](https://github.com/Polymer/s
   |-test
 ```
 
-## Example `polymer.json` file
+## 示例 `polymer.json` 文件
 
 Here’s an example `polymer.json` file from the [Shop app](https://github.com/Polymer/shop):
 
@@ -63,7 +63,7 @@ Here’s an example `polymer.json` file from the [Shop app](https://github.com/P
 }
 ```
 
-## Properties
+## 属物
 
 ### entrypoint
 Optional, Defaults to `index.html`<br>

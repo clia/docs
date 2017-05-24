@@ -21,11 +21,11 @@ All of these elements share a common localization cache, so you only need to loa
 `AppLocalizeBehavior` can be used directly in Polymer 1.x elements and Polymer 2.x hybrid elements.
 For class-style elements, use the `mixinBehaviors` method.
 
-## Install AppLocalizeBehavior
+## 安装 AppLocalizeBehavior
 
     bower install --save PolymerElements/app-localize-behavior
 
-## Add localization to your app
+## 添加本地化到您的 App
 
 The main application is usually responsible for loading the localized messages and setting the
 current language.

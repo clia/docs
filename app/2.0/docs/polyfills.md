@@ -35,7 +35,7 @@ There are a couple of other related polyfill files that you may need:
 References:
 *   [webcomponentsjs on GitHub](https://github.com/webcomponents/webcomponentsjs)
 
-## Polyfill settings {#settings}
+## Polyfill 设置 {#settings}
 
 By default, the individual polyfill for a given feature is disabled on browsers that natively support
 that feature. For testing purposes, you can force the polyfills on for browsers that have native
@@ -124,7 +124,7 @@ Query parameter:
 
 
 
-## Progress of native browser support
+## 浏览器原生支持的进度
 
 As of April 2017, there has been broad cross-browser agreement around the v1 versions of the [Custom
 Elements](https://w3c.github.io/webcomponents/spec/custom/) and [Shadow

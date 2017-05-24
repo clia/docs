@@ -15,7 +15,7 @@ App 工具箱功能：
     [`<app-localize-behavior>`](https://www.webcomponents.org/element/PolymerElements/app-localize-behavior)。
 -   本地存储的交钥匙支持，使用
     [App 存储元素](https://www.webcomponents.org/element/PolymerElements/app-storage)。
--   离线缓存作为渐进增强，使用 service workers。
+-   离线缓存作为渐进增强，使用服务工作者。
 -   构建工具以支持以多种方式服务您的 App：未打包的用于通过 HTTP/2 和服务器推技术进行分发，打包的用于通过 HTTP/1 进行分发。
 
 您可以单独使用这些组件中的任何一个，或者使用它们一起构建一个功能全面的渐进式 Web App。

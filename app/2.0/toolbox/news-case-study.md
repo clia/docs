@@ -13,7 +13,7 @@ This case study shows how News uses the principles of Progressive Web App (PWA) 
 great
 user experience.
 
-## App structure
+## App 结构
 
 Like other PWAs, News is designed with an [application shell
 architecture](https://developers.google.com/web/fundamentals/architecture/app-shell). The app shell
@@ -42,7 +42,7 @@ subfolders.
   </div>
 </div>
 
-## Views and routing
+## 视图和路由
 
 Views in the News app use the same implementation as the Shop app. [See the Shop app case study for
 more information on views and
@@ -73,7 +73,7 @@ the cached content is displayed.
 
 -   [`<app-route>` API reference](https://www.webcomponents.org/element/PolymerElements/app-route)
 
-## Routing and data binding in the News app
+## 新闻 App 中的路由和数据绑定
 
 Routing and data bindings work together in the News app to retrieve and display the data relevant
 to the URL that the user selects.
@@ -92,7 +92,7 @@ The app shell element, `<news-app>`, acts as the host, while `<news-data>`, `<ne
 * The list of articles in the current category (`category`)
 * The raw HTML for the current article (`article`)
 
-### Part 1: Routing
+### 第 1 部分：路由
 
 `categoryName` and `articleId` are set by the routing logic in the view elements (`<news-list>` and
 `<news-article>`). The active view element processes the user's selected URL in order to set
@@ -148,7 +148,7 @@ Two-way data binding in the host element ensures that the data is passed back to
     ...></news-list>
 ```
 
-### Part 2: Data retrieval
+### 第 2 部分：数据检索
 
 `categoryName` and `articleId` are one-way bound from `<news-app>` to `<news-data>`:
 
@@ -186,7 +186,7 @@ therefore propagate back to `<news-app>`:
     ...></news-data>
 ```
 
-### Part 3: Data display
+### 第 3 部分：数据显示
 
 `category` and `article` are one-way bound from `<news-app>` to the elements that display this
 content (`<news-list>` and `<news-article>`. When these properties are updated in `<news-app>`,
@@ -224,13 +224,13 @@ visits `/list/top_stories`:
   </div>
 </div>
 
-## Resource URLs
+## 资源 URL
 
 Resource URLs, like `/bower_components/`, `/data/` and `/src/` are served as static files. These
 static URLs are defined in `app.yaml`. These URLs are used internally by the app to load components
 and data.
 
-## Displaying ads
+## 显示广告
 
 The News app attempts to display ads, without blocking a fast first paint.
 
@@ -257,7 +257,7 @@ attached: function() {
 If `IntersectionObserver` isn't available, the application briefly delays displaying the ad to let
 the rest of the page load first.
 
-## AMP version of the News app
+## AMP 版的新闻 App
 
 We built a [version of the News app](https://github.com/Polymer/news/tree/amp) for integration
 with [AMP (Accelerated Mobile Pages)](https://www.ampproject.org/) documents. In the AMP version of
@@ -293,7 +293,7 @@ loading the title, image and author of the previous or next article. In the AMP 
 that data is only loaded when the article content is loaded. It is not loaded with the list of
 articles.
 
-## Documentation and more resources
+## 文档和更多资源
 
 Visit the [News app site](https://news-docs.polymer-project.org/) for documentation on using and
 customizing the News app.

@@ -4,9 +4,9 @@ title: Build for production
 
 <!-- toc -->
 
-## Overview
+## 概览
 
-### Why do we need  a build process?
+### 为什么我们需要一个构建过程？
 
 The tools in the Polymer build process can optimize your application. The build toolset can reduce the download size of your app and its elements by minifying your code. By concatenating your app's element definitions, scripts and stylesheets, the build toolset can also reduce the number of network requests a user's browser will make when loading your app and its resources. 
 
@@ -14,7 +14,7 @@ The Polymer build tools ensure that your applications can run across multiple an
 
 Some application developers will need to deliver JavaScript separately from HTML files - for example, for deployment to environments that use [CSP (Content Security Policy)](https://developers.google.com/web/fundamentals/security/csp/). The Polymer build tools can handle this requirement by splitting inline JavaScript and CSS from HTML.
 
-### What build tools are available?
+### 什么构建工具可用？
 
 * If your application is written entirely in Polymer and does not use any other tools or frameworks, you can simply use the Polymer CLI to build your application:
 
@@ -26,7 +26,7 @@ Some application developers will need to deliver JavaScript separately from HTML
   
 * If you need a custom build process, for example, to integrate another tool into your build chain, you can [use the `polymer-build` library](#use-polymer-build) to do so. 
 
-## Understanding the transforms
+## 理解这些转换
 
 The Polymer CLI and `polymer-build` library support the following transforms:
 
@@ -34,7 +34,7 @@ The Polymer CLI and `polymer-build` library support the following transforms:
 * [Compiling ES6 to ES5](#compiling)
 * [Bundling resources to reduce the total number of HTTP requests made by the user's browser](#bundling)
   
-### Minifying HTML, JavaScript and CSS {#minifying}
+### 缩小 HTML、JavaScript 和 CSS {#minifying}
 
 The Polymer build tools provide options to minify HTML, JavaScript and CSS by stripping whitespace and comments. You can use these on the command line, or configure them in `polymer.json`. See the [polymer.json specification](/{{{polymer_version_dir}}}/docs/tools/polymer-json) for more details.
 
@@ -60,7 +60,7 @@ Example: A build object in `polymer.json` that minifies JavaScript, CSS and HTML
 }]
 ```
 
-### Compiling ES6 to ES5 {#compiling}
+### 编译 ES6 到 ES5 {#compiling}
 
 Polymer 2.x and its native elements are written using ES6, allowing class definitions, inheritance and modular code. Support for ES6 is required in order for a browser to implement the [custom elements](https://developers.google.com/web/fundamentals/getting-started/primers/customelements) specification.
 
@@ -102,15 +102,15 @@ According to the native [Custom Elements V1](https://html.spec.whatwg.org/multip
 
 For more information, see the [Polymer 2.0 browser compatibility documentation](/{{{polymer_version_dir}}}/docs/browsers)
 
-### Bundling resources to reduce the total number of HTTP requests made by the user's browser {#bundling}
+### 打包资源以减少用户浏览器发出的 HTTP 请求总数 {#bundling}
   
 Web pages that use multiple HTML Imports, external scripts, and stylesheets to load dependencies may end up making lots of network round-trips. In many cases, this can lead to long initial load times and unnecessary bandwidth usage. The Polymer build tools can follow HTML Imports and external script and stylesheet references, inlining these external assets into "bundles" to be used in production.
 
-## Build choices
+## 构建的选择
 
 Your build choices will reflect the environments you will be deploying to.
 
-### One build or multiple builds?
+### 一个构建或多个构建？
 
 * Static hosting services like [GitHub Pages](https://pages.github.com/) and [Firebase Hosting](https://firebase.google.com/docs/hosting/) don't support serving different files to different user agents. If you're hosting your application on one of these services, you'll need to serve a single build.
   
@@ -120,7 +120,7 @@ Your build choices will reflect the environments you will be deploying to.
   
 * If you need to serve multiple builds, your web server must perform user-agent detection and serve different content to different browsers. The Polymer CLI and the `polymer-build` library both permit you to configure multiple build outputs.
 
-### To bundle or not to bundle?
+### 打包还是不打包？
 
 The decision of whether to produce a build/s with bundled or unbundled resources depends on the behaviour and capabilities of both server and browser. 
 
@@ -139,13 +139,13 @@ Because not all browsers support HTTP/2 push, you will also need to create a bun
    polymer build --bundle
    ```
 
-## Building with the CLI
+## 使用 CLI 构建
 
 Run `polymer help build` to see the command line options for the `polymer build` command.
 
 You can define your build options by editing the `builds` object in your project's `polymer.json` configuration file. For detailed information on `polymer.json`, see the [`polymer.json` specification](/{{{polymer_version_dir}}}/docs/tools/polymer-json).
 
-### A single, compiled, bundled build
+### 一个单一的，编译的，打包的构建
 
 This example gives a single build. ES6 is compiled to ES5; JavaScript, CSS and HTML are minified; and resources are bundled.
 
@@ -170,7 +170,7 @@ To build this configuration:
 
 Your build is output to the `build/default` folder.
 
-### Multiple builds, both bundled and unbundled
+### 多个构建，打包和非打包
 
 This example gives two builds - bundled and unbundled.
 
@@ -204,7 +204,7 @@ To build this configuration:
 
 Your builds are output to two separate folders, corresponding to their names: `build/bundled` and `build/unbundled`. 
 
-### Build presets
+### 构建预设置
 
 **Build presets** provide an easy way to define common build configurations in your [polymer.json file](polymer-json). You can use a preset as-is, or define a build configuration that inherits from a preset. 
 
@@ -245,7 +245,7 @@ Any additional options that you provide will override the given preset. In the e
 }]
 ```
 
-## Building with `polymer-build` {#use-polymer-build}
+## 使用 `polymer-build` 构建 {#use-polymer-build}
 
 Consider using `polymer-build` instead of the CLI if you:
 

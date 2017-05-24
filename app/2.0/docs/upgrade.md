@@ -75,7 +75,7 @@ npm update polymer-cli
 You'll want to work in a new branch or workarea so you don't
 break the existing, 1.x version of your element or app.
 
-#### 更新 bower 依赖关系
+#### 更新 bower 依赖项
 
 Follow these steps to update your bower dependencies:
 

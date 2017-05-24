@@ -7,7 +7,7 @@ title: Web services
 This document is a list of miscellaneous services that you may find useful
 when creating Polymer elements.
 
-## <b>polygit</b>—CDN web service for serving components {#polygit}
+## <b>polygit</b>—用于服务组件的 CDN Web 服务 {#polygit}
 
 [Polygit](http://polygit.org/) is a proxy server for serving components from a CDN. **It is not 
 meant to be used for production apps**, but is very useful when prototyping and sharing jsbins.
@@ -27,7 +27,7 @@ For more documentation, see [http://polygit.org](http://polygit.org/).
 
 Source: [github.com/PolymerLabs/polygit](https://github.com/PolymerLabs/polygit)
 
-## <b>polystyle</b>—web service for creating style modules {#polystyle}
+## <b>polystyle</b>—用于创建样式模块的 Web 服务 {#polystyle}
 
 [polystyle](https://poly-style.appspot.com/demo/) is a web service that can wrap an existing 
 stylesheet on a remote server as Polymer [style 
@@ -57,7 +57,7 @@ wrapping local CSS files into style modules
 
 Source: [github.com/PolymerLabs/polystyles](https://github.com/PolymerLabs/polystyles)
 
-## <b>polyicon</b>—create an optimized custom icon set {#polyicon}
+## <b>polyicon</b>—创建优化的自定义图标集 {#polyicon}
 
 [polyicon](https://github.com/PolymerLabs/polyicon) is an online tool to generate
 an optimized custom icon set for your app, with only the icons that you need.

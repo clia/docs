@@ -4,9 +4,13 @@ title: Polymer CLI
 
 <!-- toc -->
 
-## Install {#install}
+## 安装 {#install}
 
-1.  确保您已经安装了受 Polymer 支持的一个版本的 Node.js。运行 `node --version` 来检查您所安装的 Node.js 版本，查看我们的 [官方 node 版本支持政策](node-support) 了解更多详情。
+1.  确保您已经安装了受 Polymer 支持的一个版本的 Node.js。要检查您安装的 Node.js 的版本，运行：
+    
+        node --version
+    
+    查看我们的 [官方 node 版本支持政策](node-support) 了解更多详情。
 
 1.  Update npm.
 
@@ -26,9 +30,13 @@ title: Polymer CLI
 
         npm install -g polymer-cli
 
+    In the output from this command, you may see an npm warning about Bower being deprecated. You 
+    can safely ignore this warning. See [Bower.io](https://bower.io/blog/) for more information.
+    {.alert .alert-info}
+
 You're all set. Run `polymer help` to view a list of commands.
 
-## Overview {#overview}
+## 概览 {#overview}
 
 Polymer CLI is a command-line interface for Polymer projects. It includes a build pipeline, a
 boilerplate generator for creating elements and apps, a linter, a development server, and a test
@@ -50,7 +58,7 @@ Complete the [Install](#install) section to learn how to install
 Polymer CLI and then proceed to the [Build an element](#element) or
 [Build an app](#app) section to get started on your first project.
 
-## Create an element project {#element}
+## 创建元素项目 {#element}
 
 This section shows you how to start an element project.
 
@@ -81,7 +89,7 @@ This section shows you how to start an element project.
 At this point, Polymer CLI generates files and directories for your element,
 and installs your project's dependencies.
 
-### Element project layout
+### 元素项目布局
 
 After the initialization process Polymer CLI generates the following files and directories.
 
@@ -94,7 +102,7 @@ After the initialization process Polymer CLI generates the following files and d
 *   `test/`<code><var>my-el</var></code>`_test.html`. Unit tests for
     the element.
 
-#### HTML imports and dependency management {#element-imports}
+#### HTML 导入和依赖管理 {#element-imports}
 
 Summary:
 
@@ -146,7 +154,7 @@ made-up path of <code>/components/<var>bower name</var></code>, where
 <code><var>bower name</var></code> is the `name` field from your element
 project's `bower.json` file.
 
-## Create an app project {#app}
+## 创建 App 项目 {#app}
 
 Polymer CLI supports initializing a project folder with one of
 several application templates.  The CLI comes with a `basic` template,
@@ -157,7 +165,7 @@ This chapter teaches you more about `basic` app projects.  See
 [Polymer App Toolbox templates](../../toolbox/templates) for more details on
 other templates.
 
-### App project architecture {#app-architecture}
+### App 项目的架构 {#app-architecture}
 
 Polymer CLI is designed for apps that follow the [app shell
 architecture](https://developers.google.com/web/updates/2015/11/app-shell).
@@ -167,7 +175,7 @@ creating your app project with Polymer CLI: the entrypoint,
 the shell, and fragments. See [App structure](../../toolbox/prpl#app-structure)
 from the App Toolbox docs for an in-depth overview of these concepts.
 
-### Set up basic app project {#basic-app}
+### 设置基本的 App 项目 {#basic-app}
 
 Follow the steps below to get your `basic` app project set up.
 
@@ -202,7 +210,7 @@ Follow the steps below to get your `basic` app project set up.
 At this point, Polymer CLI generates files and directories for your app,
 and installs your project's dependencies.
 
-### App project layout
+### App 项目布局
 
 After the initialization process Polymer CLI generates the following files and directories.
 
@@ -215,7 +223,7 @@ After the initialization process Polymer CLI generates the following files and d
 *    `test/`<code><var>my-app</var></code>/<code><var>my-app</var></code>`_test.html`. Tests for
 main element.
 
-#### Add elements
+#### 添加元素
 
 You may want to compose your main element out of smaller, application-specific
 elements. These app-specific elements should be defined in the `src` directory, at the same level
@@ -229,7 +237,7 @@ as <code><var>my-app</var></code>.
 Currently there is no Polymer CLI command to generate application-specific elements. You should do
 it by hand and should not create an [element project](#element) within your app project.
 
-## Commands {#commands}
+## 命令 {#commands}
 
 This section explains various useful Polymer CLI commands that you'll want to incorporate into your
 development workflow while you build your element or app project.
@@ -247,9 +255,13 @@ noted.
 
 Installs Bower dependencies. Running `polymer install` is equivalent to running `bower install`.
 
-The `--variants` flag allows you to install dependency variants. See the documentation on [managing dependencies for hybrid elements](/{{{polymer_version_dir}}}/docs/devguide/hybrid-elements#dependency-variants) for more information.
+The `--variants` flag allows you to install dependency variants. See the documentation on [managing 
+dependencies for hybrid 
+elements](/{{{polymer_version_dir}}}/docs/devguide/hybrid-elements#dependency-variants) for more 
+information.
 
-The `--offline` flag tells the install command not to hit the network to retrieve components. If components are not cached, the install will fail.
+The `--offline` flag tells the install command not to hit the network to retrieve components. If 
+components are not cached, the install will fail.
 
 ### `polymer test` {#tests}
 
@@ -291,7 +303,7 @@ App project demo:
 
     http://localhost:8080
 
-#### Server options {#server-options}
+#### 服务器选项 {#server-options}
 
 This section shows examples of using various `polymer serve` options.
 
@@ -311,15 +323,24 @@ Open up a page other than the default `index.html` in a specific browser
 
 ### `polymer lint` {#lint}
 
-Analyze your project for syntax errors, missing imports, bad databinding expressions and more. `polymer lint` helps with identifying issues across your HTML, JS, and CSS based on an in-depth analysis of web components in source code. It does not reinvent the wheel though, it focuses on issues specific to web components and Polymer, so it is a good adjunct to other tools like [`eslint`](http://eslint.org/) and [`htmlhint`](http://htmlhint.com/).
+Analyze your project for syntax errors, missing imports, bad databinding expressions and more. 
+`polymer lint` helps with identifying issues across your HTML, JS, and CSS based on an in-depth 
+analysis of web components in source code. It does not reinvent the wheel though, it focuses on 
+issues specific to web components and Polymer, so it is a good adjunct to other tools like 
+[`eslint`](http://eslint.org/) and [`htmlhint`](http://htmlhint.com/).
 
 Use it like so:
 
     polymer lint --rules=polymer-2
 
-This will lint all of the code in your project with the `polymer-2` ruleset, which is appropriate for projects using Polymer 2.0. If your code is hybrid and should with with either Polymer 1.x or 2.x then `polymer-2-hybrid` is a better choice, as it will warn you about use of features that do not exist in Polymer 2.x.
+This will lint all of the code in your project with the `polymer-2` ruleset, which is appropriate 
+for projects using Polymer 2.0. If your code is hybrid and should with with either Polymer 1.x or 
+2.x then `polymer-2-hybrid` is a better choice, as it will warn you about use of features that do 
+not exist in Polymer 2.x.
 
-You can pass flags to the linter like `--rules` but even better is to put the configuration in `polymer.json` so that all you need to do is run `polymer lint`. Putting your configuration in `polymer.json` also means that other tools, like IDE plugins can use the same lint configuration.
+You can pass flags to the linter like `--rules` but even better is to put the configuration in 
+`polymer.json` so that all you need to do is run `polymer lint`. Putting your configuration in 
+`polymer.json` also means that other tools, like IDE plugins can use the same lint configuration.
 
 Here's what that looks like:
 
@@ -332,10 +353,11 @@ Here's what that looks like:
 }
 ```
 
-- `rules`: An array of lint rules and rule collections to run on your project. For most projects, one of  `polymer-2`, `polymer-2-hybrid`, or `polymer-1` is all that's needed here.
+- `rules`: An array of lint rules and rule collections to run on your project. For most projects, 
+one of  `polymer-2`, `polymer-2-hybrid`, or `polymer-1` is all that's needed here.
 - `ignoreWarnings`: An array of warning codes to ignore.
 
-#### Warning Codes:
+#### 警告代码：
 
 The output of `polymer lint` looks like this:
 
@@ -346,7 +368,10 @@ The output of `polymer lint` looks like this:
 index.html(83,12) warning [undefined-elements] - The element iron-collapse is not defined
 ```
 
-This means that on line 83 of `index.html` there's an `<iron-collapse>` tag, but the linter can't find the definition of the `iron-collapse` custom element. This probably means that there's a missing HTML import in `index.html`. To ignore this warning, add `undefined-elements` to the `ignoreWarnings` array in `polymer.json`.
+This means that on line 83 of `index.html` there's an `<iron-collapse>` tag, but the linter can't 
+find the definition of the `iron-collapse` custom element. This probably means that there's a 
+missing HTML import in `index.html`. To ignore this warning, add `undefined-elements` to the 
+`ignoreWarnings` array in `polymer.json`.
 
 
 ### `polymer build` {#build}
@@ -448,24 +473,29 @@ In a Polymer app, the files listed in the fragments flag usually contain one or 
 definitions that may or may not be required during the user’s interaction with the app, and can
 thus be lazily loaded.
 
-#### Build presets {#presets}
+#### 构建预设置 {#presets}
 
 ```bash
 polymer build --preset preset-name
 ```
 
-**Build presets** provide an easy way to create common build configurations. When you provide a valid preset for your build, it will use the flags in that preset. We currently support 3 different presets:
+**Build presets** provide an easy way to create common build configurations. When you provide a 
+valid preset for your build, it will use the flags in that preset. We currently support 3 different 
+presets:
 
 - **es5-bundled:**
-  --js-minify --js-compile --css-minify --bundled --add-service-worker --add-push-manifest --insert-prefetch-links
+  --js-minify --js-compile --css-minify --bundled --add-service-worker --add-push-manifest 
+--insert-prefetch-links
 
 - **es6-bundled:**
-  --js-minify --css-minify --html-minify --bundled --add-service-worker --add-push-manifest --insert-prefetch-links
+  --js-minify --css-minify --html-minify --bundled --add-service-worker --add-push-manifest 
+--insert-prefetch-links
   
 - **es6-unbundled:**
-  --js-minify --css-minify --html-minify --add-service-worker --add-push-manifest --insert-prefetch-links
+  --js-minify --css-minify --html-minify --add-service-worker --add-push-manifest 
+--insert-prefetch-links
 
-#### Examples {#examples}
+#### 示例 {#examples}
 
 Create a bundled build for browsers that support ES5:
 
@@ -475,7 +505,7 @@ Create an unbundled build for browsers that support ES6:
 
 `polymer build --preset es6-unbundled`
 
-## Manage dependencies {#dependencies}
+## 管理依赖项 {#dependencies}
 
 Polymer CLI uses [Bower](http://bower.io) for dependency management.
 
@@ -492,7 +522,7 @@ bower install --save PolymerElements/iron-ajax
 bower uninstall PolymerElements/iron-ajax
 ```
 
-## Global options {#global-options}
+## 全局选项 {#global-options}
 
 You can see a list of global options by running `polymer help`. Most of them
 are self-explanatory.

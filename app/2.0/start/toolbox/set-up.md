@@ -54,7 +54,7 @@ index.html             # 您的 App 的主入口
 manifest.json          # App 清单配置
 package.json           # NPM 元数据文件
 polymer.json           # Polymer CLI 配置
-service-worker.js      # 自动生成的 service worker
+service-worker.js      # 自动生成的服务工作者
 src/                   # App 特定元素
   my-app.html            # 顶级元素
   my-icons.html          # App 图标
@@ -63,7 +63,7 @@ src/                   # App 特定元素
   my-view3.html
   my-view404.html        # 示例 404 页面
   shared-styles.html     # 示例共享样式
-sw-precache-config.js  # service worker 预缓存配置
+sw-precache-config.js  # 服务工作者预缓存配置
 test/                  # 单元测试
 ```
 
