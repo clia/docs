@@ -85,47 +85,47 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         <p>当我们编写自己的代码来做这些事情时，通过网络发送该代码并在客户端执行，我们正在做我们不应该做的工作; 在某些情况下，我们也会使当前和未来的浏览器端优化失效。</p>
 
-        <h2 class="underline">A platform-centric path forward</h2>
+        <h2 class="underline">以平台为中心的前行之路</h2>
 
-        <p>Thanks to new web platform primitives, many of the needs we’ve addressed by building over and around the platform can now be met by the platform itself:</p>
-
-        <ul>
-          <li><p>Web Components let us extend the browser’s built-in component model—the DOM—rather than bring our own.</p></li>
-
-          <li><p>In combination with HTTP/2 and server push, standard module formats like <a href="http://webcomponents.org/articles/introduction-to-html-imports/">HTML Imports</a> and <a href="http://exploringjs.com/es6/ch_modules.html">ES6 Modules</a> let us declare fine-grained dependencies and efficiently deliver them to the client in optimally cacheable form, without relying on complicated packaging tools and loaders.</p></li>
-
-          <li><p>Service Workers let us build pure web apps that users can access even when their devices are offline or network conditions are poor, whereas previously we might have had to resort to manually installable native or “hybrid” apps.</p></li>
-        </ul>
-
-        <p>We believe that in the next era, the best-performing apps will be those that take full advantage of these modern web platform features and let the browser do the heavy lifting wherever it can. Similarly, the least costly, most future-proof apps will be those that build as much as possible on platform primitives, maximizing interoperability and minimizing switching costs.</p>
-
-        <h2 class="underline">Rethinking libraries and frameworks</h2>
-
-        <p>Using the platform doesn’t mean leaving libraries and frameworks behind; it just means making them lighter, and designing them to complement the strengths of the platform itself.</p>
-
-        <p>At their best, libraries and frameworks make our jobs easier. They provide off-the-shelf solutions for hard problems; broadly applicable abstractions that save us from reinventing the wheel; and useful patterns and constraints to help us structure our apps intelligently and avoid shooting ourselves in the foot.</p>
-
-        <p>The challenge is to achieve these benefits while minimizing the weight of our solutions and making the most of what the platform provides.</p>
-
-        <p>Within this problem space, as always, there’s plenty of room for innovation and opinion. For our part, we aim to treat the platform as the framework, adding value in the form of lightweight, optional “sugaring” of platform APIs; loosely coupled, interoperable modules; and effective patterns for composing components and applications from smaller building blocks.</p>
-
-        <h2 class="underline">Our role</h2>
-
-        <p>Returning to our mission, here’s how we see our role:</p>
+        <p>由于新的 Web 平台原语，现在平台本身就可以满足我们提出的在平台之上和围绕平台来进行构建的许多需求：</p>
 
         <ul>
-          <li><p>Strongly advocate a platform-centric approach to building modern web apps</p></li>
+          <li><p>Web 组件让我们可以扩展浏览器的内置组件模型（DOM），而不是自己创建。</p></li>
 
-          <li><p>Build libraries and tools to support app developers in adopting a platform-centric approach</p></li>
+          <li><p>结合 HTTP/2 和服务器推，标准模块格式如 <a href="http://webcomponents.org/articles/introduction-to-html-imports/">HTML 导入</a> 和 <a href="http://exploringjs.com/es6/ch_modules.html">ES6 模块</a> 允许我们声明细粒度的依赖关系，并以最佳可缓存的形式有效地将它们提供给客户端，而无需依赖复杂的打包工具和装载程序。</p></li>
 
-          <li><p>In doing so, explore and exemplify best practices for designing platform-centric libraries and tools</p></li>
-
-          <li><p>Based on our own experiences and those of the broader community, continue to influence the evolution of the platform from within the Chrome organization</p></li>
+          <li><p>服务工作者让我们可以构建纯 Web App，用户即使设备离线或网络状况差，也可以访问；而以前我们可能不得不诉诸手动安装的原生或“混合” App。</p></li>
         </ul>
 
-        <p>We believe the patterns, libraries and tools we work on are beneficial, and we're happy to see them widely adopted.</p>
+        <p>我们相信，在下一个时代，表现最好的 App 将是充分利用这些现代 Web 平台功能的 App，让浏览器尽可能地担负重任。同样，成本最低，面向未来的 App 将是那些尽可能在平台原语上构建的 App，能够最大限度地提高互操作性并减少迁移成本。</p>
 
-        <p>But our campaign to <strong>#UseThePlatform</strong> is ultimately not about driving people to use the stuff the Polymer Project builds. It’s about promoting the use of the web platform to deliver the best apps possible, and helping to ensure that web users and developers get everything they deserve from the platform in the future.</p>
+        <h2 class="underline">重新思考库和框架</h2>
+
+        <p>使用平台并不意味着丢弃现有的库和框架; 这意味着使其更轻，并设计它们来补充平台本身的能力。</p>
+
+        <p>当库和框架表现最好的时候，使我们的工作变得更容易。它们为困难问题提供现成的解决方案; 广泛适用的抽象，挽救我们于重复造轮子; 还有有用的模式和约束，帮助我们聪明地构建我们的 App，并避免射到自己的脚。</p>
+
+        <p>现在的挑战是要得到这些好处，同时最大限度地减少我们的解决方案的重量，并充分利用平台提供的功能。</p>
+
+        <p>在这个问题空间里，一如既往地有很多创新和选择的余地。就我们而言，我们的目标是将平台视为框架，以轻量级，可选的给平台 API “加糖”的形式增加价值; 松散耦合，可互操作的模块; 以及从较小的构建块组成组件和应用的有效模式。</p>
+
+        <h2 class="underline">我们的角色</h2>
+
+        <p>回到我们的使命，这是我们如何看待我们的角色：</p>
+
+        <ul>
+          <li><p>强烈倡导以平台为中心的方式来构建现代 Web App</p></li>
+
+          <li><p>构建库和工具，以支持 App 开发人员采用以平台为中心的方法</p></li>
+
+          <li><p>在这样做时，探索并举例说明设计以平台为中心的库和工具的最佳实践</p></li>
+
+          <li><p>根据我们自己的经验和更广泛的社区的经验，继续影响 Chrome 组织内平台的演进</p></li>
+        </ul>
+
+        <p>我们相信我们致力于的模式，库和工具是有益的，我们很高兴看到它们被广泛采用。</p>
+
+        <p>但是，我们的 <strong>#UseThePlatform</strong> 运动的最终目的不是为了让人们使用 Polymer 项目构建的东西。这是关于推广对 Web 平台的使用，来提供尽可能最好的 App，并帮助确保 Web 用户和开发人员在未来能从平台获得他们应得的一切。</p>
       </div>
     </section>
 
