@@ -3,95 +3,82 @@ title: "Step 2: Add Local DOM"
 subtitle: "Build your first Polymer element"
 ---
 
-Next, you'll create a simple element that displays an icon.
+接下来，您将创建一个显示图标的简单元素。
 
-In this step, you'll learn about:
+在此步骤中，您将了解到：
 
-*   Creating a custom element using Polymer.
-*   Working with shadow DOM.
+*   使用 Polymer 创建自定义元素。
+*   使用阴影 DOM。
 
-_Shadow DOM_ is the set of DOM elements managed by your element. You'll learn more
-about it in this section.
+_阴影 DOM_ 是由您的元素管理的一组 DOM 元素。您将在本节中了解更多信息。
 
-Read more about shadow DOM concepts in our developer documentation: [Shadow DOM concepts](https://www.polymer-project.org/2.0/docs/devguide/shadow-dom)
+在我们的开发者文档中阅读更多关于阴影 DOM 的概念： [阴影 DOM 概念](https://www.polymer-project.org/2.0/docs/devguide/shadow-dom)
 
 ## 编辑 icon-toggle.html
 
-Open `icon-toggle.html `. This file contains the skeleton of a custom element.
+打开 `icon-toggle.html `。此文件包含自定义元素的骨架。
 
-Unlike most HTML files, this file <em>won't display anything if you load it in a
-browser</em>—it just <em>defines</em> a new element. The demo imports
-`icon-toggle.html` so it can use the `<icon-toggle>`
-element. As you add features to the element in the following steps, they'll show
-up in the demo.
+与大多数 HTML 文件不同，此文件<em>如果在浏览器中打开，将不会显示任何东西</em>——它仅仅<em>定义</em>了一个新的元素。演示导入了
+`icon-toggle.html`，因此可以使用该 `<icon-toggle>`
+元素。当您在以下步骤中为元素添加功能时，它们将显示在演示中。
 
-Start by taking a look at the existing code:
+首先看看现有代码：
 
 
-Starting code—HTML imports { .caption }
+开始代码——HTML 导入 { .caption }
 
 ```html
 <link rel="import" href="../polymer/polymer-element.html">
 <link rel="import" href="../iron-icon/iron-icon.html">
 ```
 
-Key information:
+关键信息：
 
-*   The `link rel="import"` element is an <em>HTML import</em>, a
-    way of including resources in an HTML file.
-*   These lines import the Polymer library and another custom element called
-    `iron-icon` that you'll use later in this step.
+*   `link rel="import"` 元素是一个 <em>HTML 导入</em>，是将资源包含在 HTML 文件中的一种方式。
+*   这些行将导入 Polymer 库和另一个自定义元素叫做
+    `iron-icon`，您将在此步骤中稍后使用。
 
-**Learn more: HTML Imports.** See [HTML Imports: #include for the web](http://www.html5rocks.com/en/tutorials/webcomponents/imports/)
-on HTML5Rocks.com for an in-depth discussion of HTML Imports.
+**了解更多：HTML 导入。** 请参阅 HTML5Rocks.com 上的 [HTML 导入：用于 Web 的 #include](http://www.html5rocks.com/en/tutorials/webcomponents/imports/)，
+以深入讨论HTML导入。
 { .alert .alert-info }
 
-Next is the definition of the element itself:
+接下来是元素本身的定义：
 
-Starting code—local DOM template { .caption }
+起始代码——本地 DOM 模板 { .caption }
 
 ```html
 <dom-module id="icon-toggle">
   <template>
     <style>
-      /* shadow DOM styles go here */
+      /* 阴影 DOM 样式放在这里 */
       :host {
         display: inline-block;
       }
     </style>
-    <!-- shadow DOM goes here -->
+    <!-- 阴影 DOM 放在这里 -->
     <span>Not much here yet.</span>
   </template>
 ```
 
-Key information:
+关键信息：
 
-*   The `<dom-module>` tag wraps an element's local DOM definition.
-    In this case, the `id` attribute shows that this module includes the
-    local DOM for an element called `icon-toggle`.
-*   The `<template>` actually defines the element's local DOM structure and
-    styling. This is where you'll add markup for your custom element.
-*   The `<style>` element inside the `<template>` lets you
-    define styles that are <em>scoped</em>  to the local DOM, so they don't
-    affect the rest of the document.
-*   The `:host` pseudo-class matches the custom element you're
-    defining (in this case, the `<icon-toggle>`). This is the element
-    that contains or <em>hosts </em>the local DOM tree.
+*   `<dom-module>` 标签包装了元素的本地 DOM 定义。
+    在本例中，`id` 属性显示了这个模块包含一个叫做 `icon-toggle` 的元素的本地 DOM。
+*   `<template>` 实际定义元素的本地 DOM 结构和样式。这就是您为自定义元素添加标记的位置。
+*   `<template>` 里的 `<style>` 元素让您定义<em>作用域</em>为本地 DOM 的样式，因此它们不会影响文档的其余部分。
+*   `:host` 伪类匹配您所定义的自定义元素 (在本例中： `<icon-toggle>`)。这是包含或<em>主有 </em>该本地 DOM 树的元素。
 
-**Learn more: Shadow DOM.** Shadow DOM
-lets you add a <em>scoped</em> DOM tree inside an element, with local styles and
-markup that are decoupled from the rest of the web page. Shadow DOM is based on
-the Shadow DOM specification, and works with native shadow DOM where available.
-To learn more, see <a href="/2.0/docs/devguide/shadow-dom">Shadow 
-DOM Concepts</a> in the Polymer library docs.
+**了解更多：阴影 DOM。** 阴影 DOM 允许您在元素内添加<em>定界的</em> DOM 树，拥有与网页的其余部分解耦的本地样式和标记。
+阴影 DOM 基于阴影 DOM 规范，当原生阴影 DOM 可用时，使用原生。
+要了解更多信息，请参阅 Polymer 库文档中的 <a href="/2.0/docs/devguide/shadow-dom">阴影 
+DOM 概念</a>。
 { .alert .alert-info }
 
-At the end of the element definition is some JavaScript that registers the
-element. If the element has a `<dom-module>`, this script is usually placed
-<em>inside</em> the `<dom-module>` to keep everything together.
+元素定义的末尾是注册元素的一些JavaScript。如果该元素有一个 `<dom-module>`，这个脚本通常放在
+`<dom-module>` 的<em>里面</em>，以保持所有东西在一起。
 
 
-Starting code—element registration { .caption }
+起始代码——元素注册 { .caption }
 
 ```html
 <script>

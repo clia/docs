@@ -1,9 +1,9 @@
 ---
-- section: Home
+- section: 主页
   shortpath: home
   path: /
 
-- section: Start
+- section: 开始
   shortpath: start
   path: /2.0/start/
   items:

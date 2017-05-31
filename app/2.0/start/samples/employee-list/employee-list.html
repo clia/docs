@@ -1,7 +1,7 @@
-<!-- import polymer-element -->
+<!-- 导入 polymer-element -->
 <link rel="import"  href="https://polygit.org/components/polymer/polymer-element.html">
 
-<!-- import template repeater --> 
+<!-- 导入模板重复器 --> 
 <link rel="import"  href="https://polygit.org/components/polymer/lib/elements/dom-repeat.html">
 
 <dom-module id="employee-list">
@@ -18,7 +18,7 @@
     class EmployeeList extends Polymer.Element {
       static get is() { return "employee-list"; }
       
-      // set this element's employees property
+      // 设置元素的雇员属物
       constructor() {
         super();
         this.employees = [

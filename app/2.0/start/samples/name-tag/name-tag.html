@@ -1,9 +1,9 @@
-<!-- import polymer-element -->
+<!-- 导入 polymer-element -->
 <link rel="import"  href="https://polygit.org/components/polymer/polymer-element.html">
 
 <dom-module id="name-tag">
   <template>
-    <!-- bind to the "owner" property -->
+    <!-- 绑定到 "owner" 属物 -->
     This is <b>{{owner}}</b>'s name-tag element.
   </template>
   
@@ -11,7 +11,7 @@
     class NameTag extends Polymer.Element {
       static get is() { return "name-tag"; }
       
-      // set this element's owner property
+      // 设置该元素的 owner 属物
       constructor() {
         super();
         this.owner = "Daniel";

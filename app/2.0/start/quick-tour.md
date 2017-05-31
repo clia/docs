@@ -68,11 +68,10 @@ Polymer 使声明性地创建 Web 组件变得简单。
 
 ### 构造阴影 DOM
 
-Shadow DOM lets you control _composition_. The element's children can be _distributed_
-so they render as if they were inserted into the shadow DOM tree.
+阴影 DOM 可让您控制 _构造_。元素的子元素可以是 _分布式的_
+以让它们可以被渲染成像被插入到阴影 DOM 树中一样。
 
-This example creates a simple tag that decorates an image by wrapping it
-with a styled `<div>` tag.
+此示例创建一个简单的标签，通过使用一个样式化的 `<div>` 标签来包装一个图片来装饰该图片。
 
 <demo-tabs selected="0" src="http://plnkr.co/edit/BzgJBN?p=preview">
   <demo-tab heading="picture-frame.html">
@@ -85,21 +84,20 @@ with a styled `<div>` tag.
   <iframe frameborder="0" src="samples/picture-frame/index.html" width="100%" height="60"></iframe>
 </demo-tabs>
 
-**Note:** The CSS styles defined inside the `<dom-module>` are _scoped_ to the element's shadow DOM.
-So the `div` rule here only affects `<div>` tags inside `<picture-frame>`.
+**注意：**  `<dom-module>` 里面定义的 CSS 样式的 _作用域_ 仅限于元素的阴影 DOM。
+所以这里的 `div` 规则仅仅影响 `<picture-frame>` 里的 `<div>` 标签。
 {: .alert .alert-info }
 
 <p><a href="/2.0/docs/devguide/shadow-dom#shadow-dom-and-composition" class="blue-button">
-Learn more: Composition & distribution</a></p>
+了解更多：构造和分布</a></p>
 
 ### 使用数据绑定
 
-Of course, it's not enough to have static shadow DOM. You usually want to have your element update
-its shadow DOM dynamically.
+当然，静态阴影 DOM 还不够。您通常想让您的元素动态地更新它的阴影 DOM。
 
-Data binding is a great way to quickly propagate changes in your element and reduce boilerplate code.
-You can bind properties in your component using the "double-mustache" syntax (`{%raw%}{{}}{%endraw%}`).
-The `{%raw%}{{}}{%endraw%}` is replaced by the value of the property referenced between the brackets.
+数据绑定是快速传播元素内改变并减少样板代码的好方法。
+您可以使用“双胡子”语法 (`{%raw%}{{}}{%endraw%}`) 来绑定组件中的属物。
+这 `{%raw%}{{}}{%endraw%}` 由大括号中引用的属物的值所替换。
 
 <demo-tabs selected="0" src="http://plnkr.co/edit/8mZK8S?p=preview">
   <demo-tab heading="name-tag.html">
@@ -113,16 +111,15 @@ The `{%raw%}{{}}{%endraw%}` is replaced by the value of the property referenced 
 </demo-tabs>
 
 <p><a href="/2.0/docs/devguide/data-binding" class="blue-button">
-Learn more: data binding</a></p>
+了解更多：数据绑定</a></p>
 
 ### 声明属物
 
-Properties are an important part of an element's public API. Polymer
-_declared properties_ support a number of common patterns for properties—setting default
-values, configuring properties from markup, observing property changes, and more.
+属物是元素的公共 API 的重要组成部分。Polymer
+_声明的属物_ 支持许多常见的用于属物的模式——设置默认值，从标记配置属物，观察属物更改，以及更多。
 
-The following example declares the `owner` property from the last example.
-It also shows configuring the owner property from markup in `index.html`.
+以下示例声明来自于上一个示例的 `owner` 属物。
+它还展示了在 `index.html` 中用标记配置 owner 属物。
 
 <demo-tabs selected="0" src="http://plnkr.co/edit/ROIvZg?p=preview">
   <demo-tab heading="configurable-name-tag.html">
@@ -136,16 +133,16 @@ It also shows configuring the owner property from markup in `index.html`.
 </demo-tabs>
 
 <p><a href="/2.0/docs/devguide/properties" class="blue-button">
-Learn more: declared properties</a></p>
+了解更多：声明的属物</a></p>
 
 ### 绑定到属物
 
-In addition to text content, you can bind to an element's _properties_ (using
-`property-name="[[binding]]"`). Polymer properties
-can optionally support two-way binding, using curly braces (`property-name="{{binding}}"`).
+除文本内容之外，您还可以绑定到元素的 _属物_ (使用
+`property-name="[[binding]]"`)。Polymer 属物可以选择性地支持双向绑定，
+使用花括号 (`property-name="{{binding}}"`)。
 
-This example uses two-way binding: binding the value of a custom input element (`iron-input`)
-to the element's `owner` property, so it's updated as the user types.
+的值绑定到元素的 (`iron-input`)
+的值绑定到元素的 `owner` 属物，因此它将在用户输入时进行更新。
 
 <demo-tabs selected="0" src="http://plnkr.co/edit/VYR8my?p=preview">
   <demo-tab heading="editable-name-tag.html">
@@ -158,13 +155,12 @@ to the element's `owner` property, so it's updated as the user types.
   <iframe frameborder="0" src="samples/editable-name-tag/index.html" width="100%" height="100"></iframe>
 </demo-tabs>
 
-**Note:** The `<iron-input>` element wraps a native `<input>` element and provides two-way
-data binding and input validation.
+**注意：** `<iron-input>` 元素包装了原生的 `<input>` 元素，并提供双向数据绑定和输入校验。
 {: .alert .alert-info }
 
 ### 使用 `<dom-repeat>` 来进行模板循环
 
-The template repeater (`dom-repeat`) is a specialized template that binds to an array. It creates one instance of the template's contents for each item in the array.
+模板重复器 (`dom-repeat`) 是一个绑定到数组的专用模板。它为数组中的每个项创建模板内容的一个实例。
 
 <demo-tabs selected="0" src="http://plnkr.co/edit/FdgkAtcLFHX5TpTsYtZn?p=preview">
   <demo-tab heading="employee-list.html">
@@ -178,8 +174,8 @@ The template repeater (`dom-repeat`) is a specialized template that binds to an 
 </demo-tabs>
 
 <p><a href="/2.0/docs/devguide/templates" class="blue-button">
-Learn more: Template repeater</a></p>
+了解更多：模板重复器</a></p>
 
 ## 下一步
 
-Now that you understand these fundamental Polymer concepts, you can [build an app with App Toolbox](/2.0/start/toolbox/set-up) or see a [feature overview of the Polymer library](/2.0/docs/devguide/feature-overview).
+现在您已经了解了这些基本的 Polymer 概念，您可以 [使用 App 工具箱创建 App](/2.0/start/toolbox/set-up) 或查看 [Polymer 库的功能概述](/2.0/docs/devguide/feature-overview)。

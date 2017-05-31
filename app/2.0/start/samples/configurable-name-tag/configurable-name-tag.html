@@ -3,14 +3,14 @@
 <dom-module id="configurable-name-tag">
 
   <template>
-    <!-- bind to the "owner" property -->
+    <!-- 绑定到 "owner" 属物 -->
     This is <b>[[owner]]</b>'s name-tag element.
   </template>
   
   <script>
     class ConfigurableNameTag extends Polymer.Element {
       static get is() { return "configurable-name-tag"; }
-      // configure owner property
+      // 配置 owner 属物
       static get properties() {
         return {
           owner: {
