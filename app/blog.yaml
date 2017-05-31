@@ -1,4 +1,20 @@
 ---
+- title: "I/O ‘17 上的 Polymer，ICYMI"
+  path: /blog/2017-05-26-polymer-at-io-17
+  published: 2017-05-26
+  author: emarquez
+  description: "当您错过了 Google I/O 2017，这里有您需要了解的上面关于 Polymer 项目的所有信息。 "
+  tag:
+  - blog
+  - announcements
+- title: "Polymer 峰会 2017：精彩在哥本哈根"
+  path: /blog/2017-05-17-summit-2017
+  published: 2017-05-17
+  author: polymer-team
+  description: "加入我们参加 2017 年 8 月 22 日至 23 日在丹麦哥本哈根举行的第三届 Polymer 峰会。"
+  tag:
+    - blog
+    - announcements
 - title: "2.0 的时代到了！"
   path: /blog/2017-05-15-time-for-two
   published: 2017-05-15
