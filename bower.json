@@ -1,26 +1,29 @@
 {
-    "name": "polymer-docs",
-    "description": "Polymer documentation site",
-    "homepage": "https://www.polymer-project.org/",
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-        "test",
-        "tests"
-    ],
-    "devDependencies": {
-        "app-layout": "PolymerLabs/app-layout#^0.0.14",
-        "app-route": "PolymerElements/app-route#^0.9.0",
-        "iron-doc-viewer": "PolymerElements/iron-doc-viewer#2.0-analyzer",
-        "iron-elements": "PolymerElements/iron-elements#^1.0.4",
-        "paper-elements": "PolymerElements/paper-elements#^1.0.5",
-        "google-youtube": "GoogleWebComponents/google-youtube#^1.2.1",
-        "prism-element": "PolymerElements/prism-element#^1.0.0",
-        "google-map": "GoogleWebComponents/google-map#^1.1.10",
-        "firebase-element": "PolymerElements/firebase-element#^1.0.12"
-    },
-    "resolutions": {
-        "iron-doc-viewer": "2.0-analyzer"
-    }
+  "name": "polymer-docs",
+  "description": "Polymer documentation site",
+  "homepage": "https://www.polymer-project.org/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "app-layout": "PolymerLabs/app-layout#^0.0.14",
+    "app-route": "PolymerElements/app-route#^0.9.0",
+    "iron-doc-viewer": "PolymerElements/iron-doc-viewer#2.0-analyzer",
+    "iron-elements": "PolymerElements/iron-elements#^1.0.4",
+    "paper-elements": "PolymerElements/paper-elements#^1.0.5",
+    "google-youtube": "GoogleWebComponents/google-youtube#^1.2.1",
+    "prism-element": "PolymerElements/prism-element#^1.0.0",
+    "google-map": "GoogleWebComponents/google-map#^1.1.10",
+    "firebase-element": "PolymerElements/firebase-element#^1.0.12"
+  },
+  "resolutions": {
+    "iron-location": "1 - 2",
+    "app-route": "1 - 2",
+    "iron-doc-viewer": "2.0-analyzer",
+    "webcomponentsjs": "0.7"
+  }
 }
