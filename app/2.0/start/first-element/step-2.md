@@ -94,7 +94,7 @@ DOM 概念</a>。
 </script>
 ```
 
-Key information:
+关键信息：
 
   * Polymer uses ES6 class syntax. With this code, you extend the base Polymer.Element class to create your own:
 
