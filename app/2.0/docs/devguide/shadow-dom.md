@@ -537,7 +537,7 @@ background-color: var(--my-theme-color, var(--another-theme-color, blue));
 ### 自定义属物混入
 
 Custom property *mixins* are a feature built on top of the custom property specification. Basically,
-the mixin is a custom property that takes an object value:
+the mixin is a variable that contains multiple properties:
 
 
 ```
