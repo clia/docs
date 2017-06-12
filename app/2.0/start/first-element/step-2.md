@@ -96,13 +96,13 @@ DOM 概念</a>。
 
 关键信息：
 
-  * Polymer uses ES6 class syntax. With this code, you extend the base Polymer.Element class to create your own:
+  * Polymer 使用 ES6 的类语法。使用此代码，您可以扩展基础 Polymer.Element 类来创建您自己的：
 
     ```
     class IconToggle extends Polymer.Element {...}
     ```
 
-  * You then give your new element a name, so that the browser can recognize it when you use it in tags. This name must match the `id` given in your element's template definition (`<dom-module id="icon-toggle">`).
+  * 然后，您为新的元素赋予一个名称，以便您在标签中使用它时浏览器可以识别它。该名称必须与您元素的模板定义 (`<dom-module id="icon-toggle">`) 中给定的 `id` 相匹配。
     
     ```
     static get is() {
@@ -110,7 +110,7 @@ DOM 概念</a>。
     }
     ```
 
-  * The element has a constructor:
+  * 元素有一个构造函数：
     
     ```
     constructor() {
@@ -118,9 +118,9 @@ DOM 概念</a>。
     }
     ```
     
-    At the moment, this constructor does nothing. It is included here as a placeholder since we'll use it later.
+    目前，这个构造函数什么都不做。它被包括在这里作为占位符，因为我们稍后会使用它。
 	
-  * At the end of the script, this line calls the "define" method from the Custom Elements API to register your element: 
+  * 在脚本结尾处，此行从自定义元素 API 中调用 “define” 方法来注册您的元素：
     
     ```
     customElements.define(IconToggle.is, IconToggle);
@@ -128,34 +128,32 @@ DOM 概念</a>。
 
 ### 创建本地 DOM 结构
 
-Now that you're familiar with the basic layout of the element, add something
-useful to its local DOM template.
+现在，您已经熟悉了元素的基本布局，下面为其本地 DOM 模板添加一些有用的东西。
 
-Find the `<span>` below the  `shadow DOM goes here` comment:
+找到  `阴影 DOM 放在这里` 注释下面的 `<span>` ：
 
 icon-toggle.html—before { .caption }
 
 ```html
-    <!-- shadow DOM goes here -->
+    <!-- 阴影 DOM 放在这里 -->
     <span>Not much here yet.</span>
   </template>
 ```
 
- Replace the `<span>` and its contents with the `<iron-icon>` tag below:
+ 将 `<span>` 其及其内容替换为以下的 `<iron-icon>` 标签：
 
 icon-toggle.html—after { .caption }
 
 ```html
-    <!-- shadow DOM goes here -->
+    <!-- 阴影 DOM 放在这里 -->
     <iron-icon icon="polymer">
     </iron-icon>
   </template>
 ```
 
-Key information:
+关键信息：
 
-  * The `<iron-icon>` element is a custom element that renders an icon. Here it's hard-coded to use
-an icon named "polymer".
+  * `<iron-icon>` 元素是呈现图标的自定义元素。这里用硬编码的方式来使用一个叫做 "polymer" 的图标。
 
 ### 样式化本地 DOM
 
