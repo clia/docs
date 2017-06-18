@@ -4,14 +4,26 @@ title: Polymer CLI
 
 <!-- toc -->
 
+<<<<<<< HEAD
 ## 安装 {#install}
+=======
+Polymer CLI is the official command line tool for Polymer projects and Web Components. It includes 
+a build pipeline, a boilerplate generator for creating elements and apps, a linter, a development
+server, and a test runner.
+
+## Install Polymer CLI {#install}
+>>>>>>> a2bb6eb4984a80263fb99d97691eb355e8b5d32b
 
 1.  Make sure you have installed a version of Node.js supported by Polymer. To check the version
     of Node.js that you have installed, run:
     
         node --version
     
+<<<<<<< HEAD
     查看我们的 [官方 node 版本支持政策](node-support) 了解更多详情。
+=======
+    See the [official node version support policy](node-support) for more details.
+>>>>>>> a2bb6eb4984a80263fb99d97691eb355e8b5d32b
 
 1.  Update npm.
 
@@ -38,6 +50,7 @@ title: Polymer CLI
 
 You're all set. Run `polymer help` to view a list of commands.
 
+<<<<<<< HEAD
 ## 概览 {#overview}
 
 Polymer CLI is a command-line interface for Polymer projects. It includes a build pipeline, a
@@ -531,9 +544,28 @@ are self-explanatory.
 
 The following commands are currently only supported for the `polymer build`
 command, with planned support for other commands in the future.
+=======
+## CLI project types {#project-types}
 
-*   `entrypoint`
-*   `shell`
-*   `fragment`
+Polymer CLI works with two types of projects:
 
-See [Build app](#build) for more information on how to use these options.
+* Elements projects. In an element project, you expose a single element or group of related 
+  elements which you intend to use in other element or app projects, or distribute on a registry 
+  like Bower or NPM. Elements are reusable and organized to be used alongside other elements, so 
+  components are referenced outside the project.
+  
+  See the guide to [creating an element project with the Polymer CLI](create-element-polymer-cli)
+  for more information.
+
+* Application projects. In an app project, you build an application, composed of Polymer elements, 
+  which you intend to deploy as a website. Applications are self-contained, organized with 
+  components inside the application.
+  
+  See the guide to [creating an application project with the Polymer CLI](create-app-polymer-cli)
+  for more information.
+>>>>>>> a2bb6eb4984a80263fb99d97691eb355e8b5d32b
+
+## Commands
+
+See the documentation on [Polymer CLI commands](polymer-cli-commands) for a list of commands and
+how to use them.
