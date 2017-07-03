@@ -157,26 +157,26 @@ icon-toggle.html—after { .caption }
 
 ### 样式化本地 DOM
 
-There are a number of new CSS selectors to work with shadow DOM. The `icon-toggle.html ` file already includes a `:host` selector, discussed earlier, to style the top-level `<icon-toggle>` element.
+有一些新的 CSS 选择器可以用于处理阴影 DOM。前面讨论过，`icon-toggle.html ` 文件已经包括一个 `:host` 选择器，用来样式化顶级的 `<icon-toggle>` 元素。
 
-To style the `<iron-icon>` element, add CSS rules inside the `<style>` tag after the existing content.
+要样式化 `<iron-icon>` 元素，在 `<style>` 标签内的现有内容之后添加 CSS 规则。
 
-icon-toggle.html: Before { .caption }
+icon-toggle.html: 之前 { .caption }
 
 ```html
     <style>
-      /* shadow DOM styles go here */
+      /* 阴影 DOM 样式放在这里 */
       :host {
         display: inline-block;
       }
     </style>
 ```
 
-icon-toggle.html: After { .caption }
+icon-toggle.html: 之后 { .caption }
 
 ```html
     <style>
-      /* shadow DOM styles go here */
+      /* 阴影 DOM 样式放在这里 */
       :host {
         display: inline-block;
       }
@@ -190,19 +190,17 @@ icon-toggle.html: After { .caption }
     </style>
 ```
 
-Key information:
+关键信息：
 
-*   The `<iron-icon>` tag uses an SVG icon. The `fill`
-    and `stroke` properties are SVG-specific CSS properties. They
-    set the fill color and the outline color for the icon, respectively.
+*   `<iron-icon>` 标签采用了 SVG 图标。`fill`
+    和 `stroke` 属物是特定于 SVG 的 CSS 属物。
+    它们分别设置图标的填充颜色和轮廓颜色。
 
-*   The `:host()` function matches the host element <em>if the
-    selector inside the parentheses matches the host element</em>. In this
-    case, `[pressed]`is a standard CSS attribute selector, so this
-    rule matches when the `icon-toggle` has a `pressed`
-    attribute set on it.
+*   <em>当 `:host()` 函数括号内的选择器匹配宿主元素时</em>，`:host()` 函数匹配宿主元素。
+    在这种情况下，`[pressed]` 是一个标准的 CSS 属性选择器，所以当 `icon-toggle` 有一个 `pressed` 属性设置在上面时，
+    该规则就匹配了。
 
-Your custom element definition should now look like this:
+您的自定义元素定义现在应如下所示：
 
 icon-toggle.html { .caption }
 
@@ -212,7 +210,7 @@ icon-toggle.html { .caption }
 <dom-module id="icon-toggle">
   <template>
     <style>
-      /* shadow DOM styles go here */
+      /* 阴影 DOM 样式放在这里 */
       :host {
         display: inline-block;
       }
@@ -224,7 +222,7 @@ icon-toggle.html { .caption }
         fill: currentcolor;
       }
     </style>
-    <!-- shadow DOM goes here -->
+    <!-- 阴影 DOM 放在这里 -->
     <iron-icon icon="polymer"></iron-icon>
   </template>
   <script>
@@ -241,18 +239,17 @@ icon-toggle.html { .caption }
 </dom-module>
 ```
 
-Make sure `polymer serve` is running and reload the demo page. You should see the toggle buttons show up with the hard-coded icon.
+确保 `polymer serve` 正在运行并重新加载演示页面。您应该看到切换按钮处显示的硬编码的图标。
 
 <img src="/images/2.0/first-element/hardcoded-toggles.png" alt="Demo showing icon toggles displaying Polymer icon">
 
-You'll notice that one toggle is styled as pressed, because the `pressed`
-attribute is set in the demo. But click all you want, the button won't toggle
-yet; there's no code to change the `pressed` property.
+您将注意到，一个切换按钮的样式是按下的，因为在这个演示中 `pressed` 属性是被设置的。
+但点击所有你想要的，该按钮不会切换; 没有代码来更改 `pressed` 属物。
 
-**If you don't see the new toggles,** double-check your file against the code above. If you see a blank page, make
-sure you're clicking on the demo folder or on demo/index.html.
+**如果没有看到新的切换按钮，** 请根据上面的代码仔细检查文件。如果您看到空白页面，
+请确保您点击的是 demo 文件夹或 demo/index.html。
 { .alert .alert-info }
 
-<a class="blue-button" href="intro">Previous step: Intro</a>
+<a class="blue-button" href="intro">上一步：简介</a>
 <a class="blue-button"
-    href="step-3">Next step: Use data binding and properties</a>
+    href="step-3">下一步：使用数据绑定和属物</a>

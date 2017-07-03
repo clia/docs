@@ -1048,7 +1048,7 @@ class-based elements as well. If you're loading the `polymer-element.html`
 import, you need to import `Polymer.RenderStatus` separately.
 
 ```html
-<link rel="import" href="/bower_components/polymer/lib/utils/flattened-nodes-observer.html">
+<link rel="import" href="/bower_components/polymer/lib/utils/render-status.html">
 ```
 
 ### 移除扩展类型的元素 {#remove-type-extension-elements}

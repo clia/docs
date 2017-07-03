@@ -8,7 +8,7 @@
   path: /2.0/start/
   items:
   - title: 开始吧
-    path: /2.0/start/index
+    path: /2.0/start/
   - title: Polymer 快速浏览
     path: /2.0/start/quick-tour
   - title: 安装 Polymer 2.x
@@ -180,7 +180,7 @@
   path: /2.0/toolbox/
   items:
   - title: 箱子里有什么？
-    path: /2.0/toolbox/index
+    path: /2.0/toolbox/
   - header: 使用工具箱
   - title: App 模板
     path: /2.0/toolbox/templates

@@ -7,8 +7,8 @@
   shortpath: start
   path: /1.0/start/
   items:
-  - title: 入门
-    path: /1.0/start/index
+  - title: 开始吧
+    path: /1.0/start/
   - header: 构建元素
   - title: 1. 设置好
     path: /1.0/start/first-element/intro
@@ -176,7 +176,7 @@
   path: /1.0/toolbox/
   items:
   - title: 箱子里有什么？
-    path: /1.0/toolbox/index
+    path: /1.0/toolbox/
   - header: 使用工具箱
   - title: App 模板
     path: /1.0/toolbox/templates

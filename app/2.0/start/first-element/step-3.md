@@ -3,23 +3,22 @@ title: "Step 3: Use data binding and properties"
 subtitle: "Build your first Polymer element"
 ---
 
-Right now, the element doesn't do much. In this step, you'll give it a basic
-API, allowing you to configure the icon from markup, using an attribute, or
-from JavaScript, using a property.
+现在，这个元素并没有做多少事。在此步骤中，您将给它一个基本的 API，
+允许您从标记中使用属性，或是从 JavaScript 中使用属物，来配置图标。
 
-First, a bit of data binding. We'll create a `toggleIcon` property that you can use in HTML markup, like this: 
+首先，来一点数据绑定。我们将创建一个 `toggleIcon` 属物，您能在 HTML 标记中使用，如下所示：
 
 ```html
 <iron-icon icon="[[toggleIcon]]"></iron-icon>
 ```
 
-Before this will work, we'll need to declare toggleIcon as a property.
+在这个起作用之前，我们需要将 toggleIcon 声明为属物。
 
-Next, add a declaration for the `toggleIcon` property.
+接下来，添加 `toggleIcon` 属物声明。
 
-Find the script tag and add the following properties to the element's class definition:
+找到脚本标签，并将以下属物添加到元素的类定义中：
 
-icon-toggle.html: Before { .caption }
+icon-toggle.html: 之前 { .caption }
 
 ```html
 <script>
@@ -34,7 +33,7 @@ icon-toggle.html: Before { .caption }
   customElements.define(IconToggle.is, IconToggle);
 </script>
 ```
-icon-toggle.html: After { .caption }
+icon-toggle.html: 之后 { .caption }
 
 ```html
 <script>
@@ -57,41 +56,40 @@ icon-toggle.html: After { .caption }
 </script>
 ```
 
-Key information:
+关键信息：
 
-  * You must declare a property in order to use it in your HTML.
-  * A simple property declaration like this one just includes the type (in this
-    case, `String`).
+  * 您必须声明一个属物才能在 HTML 中使用它。
+  * 像这样一个简单的属物声明只包括类型（在这个例子中：`String`）。
 
-**Learn more: deserializing attributes.** The declared property type affects how Polymer converts, or <em>deserializes</em>
-the attribute value (always a string value) into a JavaScript property value.
-The default is `String`, so the declaration of `toggleIcon` is a formality here.
-To learn more, see <a href="/2.0/docs/devguide/properties#attribute-deserialization">Attribute
-deserialization</a> in the Polymer docs.
+**了解更多：反序列化属性。** 声明的属物类型将影响到 Polymer 如何把属性值（始终是一个字符串值）转换或是<em>反序列化</em>
+为一个 JavaScript 属物值。
+默认的是 `String`，所以此处 `toggleIcon` 的声明仅仅是走个形式。
+要了解更多信息，请参阅 Polymer 文档中的 <a href="/2.0/docs/devguide/properties#attribute-deserialization">属性反序列化
+</a>。
 { .alert .alert-info }
 
-Now find the `<iron-icon>` element and change the value of the `icon` attribute from `"polymer"` to  "`[[toggleIcon]]`".
+现在找到 `<iron-icon>` 元素并将 `icon` 属性的值从 `"polymer"` 改为  "`[[toggleIcon]]`"。
 
 icon-toggle.html { .caption }
 
 ```html
-<!-- local DOM goes here -->
+<!-- 本地 DOM 放在这里 -->
 <iron-icon icon="[[toggleIcon]]">
 </iron-icon>
 ```
 
-Key information:
+关键信息：
 
-  * `toggleIcon` is a <em>property</em> you'll define on the toggle button element. It doesn't have a default value yet.
+  * `toggleIcon` 是您将在切换按钮元素上定义的 <em>属物</em>。它还没有默认值。
     
-  * The `icon="[[toggleIcon]]" `assignment is a <em>data binding</em>. It links your element's `toggleIcon` <em>property</em> with the `<iron-icon>`'s `icon` property.
+  * `icon="[[toggleIcon]]" `分配是一个 <em>数据绑定</em>。它连接您的元素的 `toggleIcon` <em>属物</em> 与 `<iron-icon>` 的 `icon` 属物。
 
-You could now use your element and set the `toggleIcon` property in markup or
-using JavaScript. If you're curious about where the new icons come from, take a look at `demo-element.html` in the `demo` folder.
+您现在可以使用您的元素，在标记中或使用 JavaScript 设置 `toggleIcon` 属物。
+如果您好奇新图标来自哪里，请看一看 `demo` 文件夹中的 `demo-element.html`。
 
-You'll see lines like this:
+您会看到这样的行：
 
-demo-element.html—existing demo code { .caption }
+demo-element.html——已有的演示代码 { .caption }
 
 ```html
 <icon-toggle toggle-icon="star" pressed></icon-toggle>
