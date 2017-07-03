@@ -3,31 +3,30 @@ title: "Step 5: Theming with custom CSS properties"
 subtitle: "Build your first Polymer element"
 ---
 
-You now have a button that's basically functional. But it's stuck using the
-existing text color for both pressed and unpressed states. What if you want to
-get a little flashier?
+您现在已有了一个基本功能的按钮。但它现在受困于使用已有的文本颜色，既用于按压的状态，也用于未按压的状态。
+如果您想要更闪亮一点呢？
 
-Shadow DOM helps prevent users from styling your element's internals by accident.
-To allow users to style your component, you can use _custom CSS properties_. Polymer
-provides a custom CSS property implementation inspired by the
-[CSS Custom Properties for Cascading Variables](http://www.w3.org/TR/css-variables/) specification.
+阴影 DOM 帮助防止用户无意中更改到了元素的内部样式。
+要允许用户对组件进行样式化，您可以使用 _自定义 CSS 属物_。Polymer
+提供了一个自定义 CSS 属物实现，灵感来自于
+[用于级联变量的 CSS 自定义属物](http://www.w3.org/TR/css-variables/) 规范。
 
-You apply a custom property inside your element using the `var` function.
+您可以使用 `var` 函数在您的元素中应用自定义属物。
 
 <pre><code>background-color: var(<em>--my-custom-property</em>, <em>defaultValue</em>);</pre></code>
 
-Where <code>--<em>my-custom-property</em></code> is a custom property name, always starting with two dashes (`--`), and <code><em>defaultValue</em></code> is an (optional) CSS value that's used if the custom property isn't set.
+这里 <code>--<em>my-custom-property</em></code> 是一个自定义属物名称，总是以两个连字符开头 (`--`)，
+而 <code><em>defaultValue</em></code> 是一个（可选的）CSS 值，当自定义属物未被设值时被使用。
 
 ## 添加新的自定义属物值
 
-Edit your element's `<style>` tag and replace the `fill` and `stroke`
-values with custom properties:
+编辑您元素的 `<style>` 标签，使用自定义属物替换 `fill` 和 `stroke` 的值。
 
-icon-toggle.html: Before  { .caption }
+icon-toggle.html: 之前  { .caption }
 
 ```
   <style>
-    /* local styles go here */
+    /* 本地样式放在这里 */
     :host {
       display: inline-block;
     }
@@ -41,11 +40,11 @@ icon-toggle.html: Before  { .caption }
   </style>
 ```
 
-icon-toggle.html: After  { .caption }
+icon-toggle.html: 之后  { .caption }
 
 ```
   <style>
-    /* local styles go here */
+    /* 本地样式放在这里 */
     :host {
       display: inline-block;
     }
@@ -59,12 +58,11 @@ icon-toggle.html: After  { .caption }
   </style>
 ```
 
-Because of the default values, you can still style the `<icon-toggle>` just by
-setting `color`, but now you have other options.
+由于有默认值，您依然可以仅仅设定 `color` 来样式化 `<icon-toggle>`，但您现在有其他选择。
 
-From the `demo` folder, open up `demo-element.html` and set the new properties.
+从 `demo` 文件夹，打开 `demo-element.html`，设定新的属物。
 
-demo-element.html: Before { .caption }
+demo-element.html: 之前 { .caption }
 
 ```
     <style>
@@ -74,7 +72,7 @@ demo-element.html: Before { .caption }
     </style>
 ```
 
-demo-element.html: After { .caption }
+demo-element.html: 之后 { .caption }
 
 ```
     <style>
@@ -87,19 +85,19 @@ demo-element.html: After { .caption }
     </style>
 ```
 
-Run the demo again to get colorful.
+再次运行演示以获得多彩颜色。
 
 
 <img src="/images/2.0/first-element/toggles-styled.png" alt="Demo showing
 icon toggles with star and heart icons. Pressed icons are red.">
 
-That's it — your element is finished. You've created an element that has a basic
-UI, API, and custom styling properties.
+就这样 — 您的元素完成了。您已经创建了一个元素，有基础的
+UI、API 和自定义样式属物。
 
-If you have any trouble getting the element working, check out the
-[finished version](https://github.com/PolymerLabs/polymer-2-first-element/tree/master/icon-toggle-finished).
+如果您在使该元素工作的过程中遇到了任何麻烦，请检查
+[完成的版本](https://github.com/PolymerLabs/polymer-2-first-element/tree/master/icon-toggle-finished)。
 
-If you'd like to learn a little more about custom properties, read on.
+如果您想了解更多有关自定义属物的信息，请继续阅读。
 
 ## 额外加分：在文档级别设置自定义属物
 

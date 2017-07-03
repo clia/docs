@@ -95,21 +95,19 @@ demo-element.html——已有的演示代码 { .caption }
 <icon-toggle toggle-icon="star" pressed></icon-toggle>
 ```
 
-These lines are _already in place_, you don't have to add them. These lines
-are part of the demo you see on screen. But if you'd like to experiment, try
-adding a new `<icon-toggle>` element to the `demo-element.html` file. Some
-icon names you can try are `add`, `menu`, and `settings`.
+这些代码行 _已经准备好_，您无需手动添加它们。这些代码行是您在屏幕上看到的演示的一部分。
+但如果您想自己试验一下，可以尝试添加一个新的 `<icon-toggle>` 元素到 `demo-element.html` 文件里。
+您可以尝试的一些图标名称包括 `add`、`menu` 和 `settings`。
 
-**Learn more: attribute and property names.** You'll note that the markup above
-uses `toggle-icon`, not `toggleIcon`. Polymer represents camelCase property names
-using dash-case attribute names. To learn more, see <a href="/2.0/docs/devguide/properties#property-name-mapping">Property
-name to attribute name mapping</a> in the Polymer library docs.
+**了解更多：属性和属物名称。** 您会注意到上面使用的标记是 `toggle-icon`，而不是 `toggleIcon`。
+Polymer 使用连字符形式的属性名称来表示驼峰形式的属物名称。
+要了解更多信息，请参阅 Polymer 库文档中的 <a href="/2.0/docs/devguide/properties#property-name-mapping">属物名称到属性名称映射</a>。
 { .alert .alert-info }
 
-The `properties` object also supports several more features. Add the following lines to add
-support for the `pressed` property:
+`properties` 对象还支持其他多个功能。添加以下行以添加对
+`pressed` 属物的支持：
 
-icon-toggle.html: Before { .caption }
+icon-toggle.html: 之前 { .caption }
 ```html
 <script>
   class IconToggle extends Polymer.Element {
@@ -131,7 +129,7 @@ icon-toggle.html: Before { .caption }
 </script>
 ```
 
-icon-toggle.html: After { .caption }
+icon-toggle.html: 之后 { .caption }
 
 ```html
 <script>
@@ -160,34 +158,28 @@ icon-toggle.html: After { .caption }
 </script>
 ```
 
-Key information:
+关键信息：
 
- *   For this more complicated property, you supply a configuration object with
-several fields.
-*   The `value` specifies the property's [default value](/2.0/docs/devguide/properties#configure-values).
-*   The `notify` property tells Polymer to <em>dispatch property change events
-    </em>when the property value changes. This lets the change be observed by
-    other nodes.
-*   The `reflectToAttribute` property tells Polymer to
-    [update the corresponding attribute when the property changes](/2.0/docs/devguide/properties#attribute-reflection).
-    This lets you style the element using an attribute selector, like
-    `icon-toggle[pressed]`.
+ *   对于这个更复杂的属物，您提供了一个具有多个字段的配置对象。
+*   `value` 指定属物的 [默认值](/2.0/docs/devguide/properties#configure-values)。
+*   `notify` 属物告诉 Polymer 在属物值更改时 <em>分发属物变更事件
+    </em>。这样可以让其他节点观察到变化。
+*   `reflectToAttribute` 属物告诉 Polymer
+    [在属物更改时更新相应的属性](/2.0/docs/devguide/properties#attribute-reflection)。
+    这样可以让您使用属性选择器，如 `icon-toggle[pressed]` 来样式化该元素。
 
-**Learn more: `notify` and `reflectToAttribute`.** The `notify` and
-`reflectToAttribute` properties may _sound_ similar: they both make the element's
-state visible to the outside world. `reflectToAttribute` makes the
-state visible **in the DOM tree**, so that it's visible to CSS and the
-`querySelector` methods. `notify` **makes state changes observable outside the
-element**, either using JavaScript event handlers or Polymer
-<a href="/2.0/docs/devguide/data-binding#two-way-bindings">two-way data binding</a>.
+**了解更多：`notify` 和 `reflectToAttribute`。** `notify` 和
+`reflectToAttribute` 属物可能 _听起来_ 相似：它们都使元素的状态为外面的世界可见。
+`reflectToAttribute` 使状态**在 DOM 树中**可见，以便它能在 CSS 中可见和被 `querySelector` 方法检索到。
+`notify` **使状态变更能被元素外部观察到**，或者使用 JavaScript 事件处理器，或者使用 Polymer
+<a href="/2.0/docs/devguide/data-binding#two-way-bindings">双向数据绑定</a>。
 { .alert .alert-info }
 
-Now your element has `pressed` and `toggleIcon` properties working.
+现在您的元素已有 `pressed` 和 `toggleIcon` 属物在工作。
 
-Reload the demo, and you should see star and heart icons instead of the
-hard-coded icon from the previous step:
+重新加载演示，您应该看到星形和心形图标，而不是上一步中的硬编码图标：
 
 <img src="/images/2.0/first-element/static-toggles.png" alt="Demo showing icon toggles with star and heart icons">
 
-<a class="blue-button" href="step-2">Previous step: Add local DOM</a>
-<a class="blue-button" href="step-4">Next step: React to input</a>
+<a class="blue-button" href="step-2">上一步：添加本地 DOM</a>
+<a class="blue-button" href="step-4">下一步：响应输入</a>

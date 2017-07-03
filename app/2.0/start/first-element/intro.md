@@ -44,7 +44,7 @@ state](/images/2.0/first-element/sample-toggles.png)
     cd polymer-2-first-element
     ```
 
-    你的项目文件夹应该是这样的：
+    您的项目文件夹应该是这样的：
 
     <pre>
     README.md

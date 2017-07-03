@@ -244,7 +244,7 @@ icon-toggle.html { .caption }
 <img src="/images/2.0/first-element/hardcoded-toggles.png" alt="Demo showing icon toggles displaying Polymer icon">
 
 您将注意到，一个切换按钮的样式是按下的，因为在这个演示中 `pressed` 属性是被设置的。
-但点击所有你想要的，该按钮不会切换; 没有代码来更改 `pressed` 属物。
+但点击所有您想要的，该按钮不会切换; 没有代码来更改 `pressed` 属物。
 
 **如果没有看到新的切换按钮，** 请根据上面的代码仔细检查文件。如果您看到空白页面，
 请确保您点击的是 demo 文件夹或 demo/index.html。
