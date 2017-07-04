@@ -5,26 +5,24 @@ subtitle: "Build an app with App Toolbox"
 
 <!-- toc -->
 
-The `starter-kit` includes placeholder pages you can use to start building out
-the views of your application. But at some point, you'll probably want to add more.
+`starter-kit` 包括您可以用它来开始构建您的应用的视图的占位页面。但在某些时候，您可能需要添加更多。
 
-This step takes you through the process of adding a new page or top-level view to your application.
+此步骤将引导您完成向应用添加新页面或顶级视图的过程。
 
 ## 为新页面创建元素
 
-First, create a new custom element that encapsulates the contents of
-your new view.
+首先，创建一个封装新视图内容的新自定义元素。
 
-1.  Create a new file called `src/my-new-view.html` and open it in an editor.
+1.  创建一个新文件叫做 `src/my-new-view.html`，在编辑器中打开它。
 
-2.  Add some scaffolding for a new custom element definition using Polymer:
+2.  使用 Polymer 为新的自定义元素定义添加一些脚手架：
 
     ```html
-    <!-- Load the Polymer.Element base class -->
+    <!-- 载入 Polymer.Element 基类 -->
     <link rel="import" href="../bower_components/polymer/polymer-element.html">
 
     <dom-module id="my-new-view">
-      <!-- Defines the element's style and local DOM -->
+      <!-- 定义元素的样式和本地 DOM -->
       <template>
         <style>
           :host {
@@ -34,30 +32,29 @@ your new view.
           }
         </style>
 
-        <h1>New view</h1>
+        <h1>新视图</h1>
       </template>
       <script>
-        // Your new element extends the Polymer.Element base class
+        // 您的新元素扩展 Polymer.Element 基类
         class MyNewView extends Polymer.Element {
           static get is() { return 'my-new-view'; }
         }
-        //Now, register your new custom element so the browser can use it
+        //现在，注册您的新的自定义元素，以便浏览器能使用它
         customElements.define(MyNewView.is, MyNewView);
       </script>
     </dom-module>
     ```
 
-For now your element is very basic, and just has a `<h1>` that says "New view",
-but we can return to it and make it more interesting later.
+到现在您的元素是非常基本的，仅有一个 `<h1>` 在说 "新视图"，
+但是之后我们可以回到它，让它更有趣。
 
 ## 将元素添加到您的 App
 
-Your element is defined, but your app isn't actually using it yet. To use it,
-you need to add it to your app's HTML.
+您的元素已定义好了，但您的 App 尚未实际使用它。要使用它，您需要将其添加到您 App 的 HTML 中。
 
-1.  Open `src/my-app.html` in a text editor.
+1.  在文本编辑器中打开 `src/my-app.html`。
 
-1.  Find the set of existing pages inside the `<iron-pages>`:
+1.  在 `<iron-pages>` 中找到一组已有的页面：
 
     ```
     <iron-pages
@@ -72,16 +69,15 @@ you need to add it to your app's HTML.
     </iron-pages>
     ```
 
-    The `<iron-pages>` is bound to the `page` variable that changes with the
-    route, and selects the active page while hiding the others.
+    `<iron-pages>` 是绑定到 `page` 变量，根据路由而改变，并且选择活动的页面，而隐藏其他页面。
 
-1.  Add your new page inside the iron-pages:
+1.  在 iron-pages 中添加您的新页面：
 
     ```
     <my-new-view name="new-view"></my-new-view>
     ```
 
-    Your `<iron-pages>` should now look like this:
+    您的 `<iron-pages>` 现在应该看起来像这样：
 
     ```
     <iron-pages
