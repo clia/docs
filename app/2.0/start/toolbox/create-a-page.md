@@ -1,6 +1,6 @@
 ---
-title: Step 2. Create a new page
-subtitle: "Build an app with App Toolbox"
+title: 步骤 2. 创建一个新页面
+subtitle: "使用 App Toolbox 构建应用程序"
 ---
 
 <!-- toc -->
