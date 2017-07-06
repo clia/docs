@@ -170,7 +170,39 @@ To build this configuration:
 
 Your build is output to the `build/default` folder.
 
-### 多个构建，打包和非打包
+### 单个构建，使用自定义打包选项
+
+This configuration generates a bundled, minified application build with the following bundling options:
+
+* Specified paths are excluded from inlining
+* Comments are stripped
+* External CSS is not inlined
+* Identity source maps for inline scripts are created
+
+```json
+"build": [{
+  "name": "bundled-custom",
+  "bundle": {
+    "excludes": ["/path/to/stuff/", "/path/to/more/stuff.html"],
+    "stripComments": "true",
+    "inlineCss": "false",
+    "sourcemaps": "true"
+  },
+  "js": {"minify": true},
+  "css": {"minify": true},
+  "html": {"minify": true}
+}]
+```
+
+To build this configuration:
+
+1. Edit your `polymer.json` file to include the build configuration above.
+2. Ensure that you have installed the latest version of the [Polymer CLI](/{{{polymer_version_dir}}}/docs/tools/polymer-cli).
+3. cd to your project's main folder, and type `polymer build`.
+
+Your build is output to the `build/bundled-custom` folder.
+
+### 多个构建，都打包或非打包
 
 This example gives two builds - bundled and unbundled.
 
@@ -202,7 +234,8 @@ To build this configuration:
 2. Ensure that you have installed the latest version of the [Polymer CLI](/{{{polymer_version_dir}}}/docs/tools/polymer-cli).
 3. cd to your project's main folder, and type `polymer build`.
 
-Your builds are output to two separate folders, corresponding to their names: `build/bundled` and `build/unbundled`. 
+Your builds are output to two separate folders, corresponding to their names: `build/bundled` and `build/unbundled`.
+ 
 
 ### 构建预设置
 
