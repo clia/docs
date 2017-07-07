@@ -93,23 +93,19 @@ subtitle: "使用 App Toolbox 构建应用程序"
     </iron-pages>
     ```
 
-    Note: Normally when adding a new custom element for the first time, you'd
-    want to add an HTML import to ensure the component definition has been
-    loaded.  However, this app template is already set up to lazy-load top
-    level views on-demand based on the route, so in this case you don't need
-    to add an import for your new `<my-new-view>` element.
+    注意：通常当第一次添加新的自定义元素时，您需要添加一个 HTML 导入，以确保已经加载组件定义。
+    然而，这个 App 模板已经被设置成根据路由按需对顶级视图进行懒加载，因此在这种情况下，您不需要为您的新
+    `<my-new-view>` 元素添加导入。
 
-    The following code that came with the app template will ensure the
-    definition for each page has been loaded when the route changes.  As
-    you can see, the app follows a simple convention (`'my-' + page + '.html'`)
-    when importing the definition for each route,. You can adapt this code as you
-    like to handle more complex routing and lazy loading.
+    App 模板附带的以下代码将确保在路由更改时每个页面的定义已加载。
+    您可以看到，应用程序遵循一个简单的惯例 (`'my-' + page + '.html'`)
+    导入每个路由的定义。您可以根据需要调整此代码，以处理更复杂的路由和懒加载。
 
-    Existing template code—you do not need to add this { .caption }
+    现有的模板代码 — 您不需要添加它 { .caption }
 
     ```
       _pageChanged(page) {
-        // Load page import on demand. Show 404 page if fails
+        // 按需装载页面导入，失败则显示 404 页面
         var resolvedPageUrl = this.resolveUrl('my-' + page + '.html');
         Polymer.importHref(
             resolvedPageUrl,
@@ -121,15 +117,15 @@ subtitle: "使用 App Toolbox 构建应用程序"
 
 ## 创建导航菜单项
 
-You've defined your new element and declared it in your app. Now you
-just need to add a menu item in the left-hand drawer so that users can navigate to the new page.
+您已经定义了您的新元素，并在您的 App 中声明了它。
+现在您只需要在左侧的抽屉里添加一个菜单项，以便用户可以导航到新页面。
 
-1.  Keep `src/my-app.html` open in your editor.
+1.  保持 `src/my-app.html` 在您的编辑器中打开。
 
-1.  Find the navigation menu inside the `<app-drawer>` element.
+1.  找到 `<app-drawer>` 元素内的导航菜单。
 
     ```
-      <!-- Drawer content -->
+      <!-- 抽屉内容 -->
       <app-drawer id="drawer" slot="drawer">
         <app-toolbar>Menu</app-toolbar>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
@@ -140,19 +136,19 @@ just need to add a menu item in the left-hand drawer so that users can navigate 
       </app-drawer>
     ```
 
-    Each navigation menu item consists of an anchor element (`<a>`) styled with CSS.
+    每个导航菜单项都包含一个由 CSS 修饰的锚点元素 (`<a>`)。
 
-1.  Add the following new navigation item to the bottom of the menu.
+1.  将以下新的导航项添加到菜单底部。
 
     ```
     <a name="new-view" href="/new-view">New View</a>
     ```
 
-    Your menu should now look like the following:
+    您的菜单现在应如下所示：
 
     ```
     ...
-      <!-- Drawer content -->
+      <!-- 抽屉内容 -->
       <app-drawer id="drawer" slot="drawer">
         <app-toolbar>Menu</app-toolbar>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
@@ -165,21 +161,20 @@ just need to add a menu item in the left-hand drawer so that users can navigate 
     ...
     ```
 
-Your new page is now ready! Serve your app with `polymer serve --open`.
+您的新页面现在准备好了！用 `polymer serve --open` 服务您的 App。
 
 ![Example new page](/images/2.0/toolbox/new-view.png)
 
 ## 注册要构建的页面
 
-When you deploy your application to the web, you'll use the Polymer CLI
-to prepare your files for deployment.  Polymer CLI will need to know about any
-demand-loaded fragments like the lazy-loaded view you just added.
+当您将应用部署到 Web 时，您将使用 Polymer CLI 来准备文件进行部署。
+Polymer CLI 将需要了解所有按需加载的片段，如您刚添加的懒加载视图。
 
-1.  Open `polymer.json` in a text editor.
+1.  在文本编辑器中打开 `polymer.json`。
 
-1.  Add `src/my-new-view.html` to the list of `fragments`.
+1.  添加 `src/my-new-view.html` 到 `fragments` 的列表中。
 
-    The new list should look like this:
+    新列表应如下所示：
 
     ```
     "fragments": [
@@ -191,13 +186,12 @@ demand-loaded fragments like the lazy-loaded view you just added.
     ]
     ```
 
-Note: You only need to add files you will lazy load or import using the `async`
-attribute to the `fragments` list.  Any files that are imported using synchronous
-`<link rel="import">` tags should *not* be added to `fragments`.
+注意：您只需要添加您要懒加载的文件到 `fragments` 列表，或是使用 `async` 属性来导入。
+任何使用同步的 `<link rel="import">` 标签导入的文件*都不应该*被添加到 `fragments`。
 
 ## 下一步
 
-You've added a new page to your application. Next, learn how to install and add an off-the-shelf custom element to your app.
+您已经在应用中添加了一个新页面。接下来，了解如何安装和添加现成的自定义元素到您的 App。
 
 <a class="blue-button"
-    href="add-elements">Next step: Add an element</a>
+    href="add-elements">下一步：添加元素</a>
