@@ -5,18 +5,18 @@ subtitle: "使用 App 工具箱构建 App"
 
 <!-- toc -->
 
-现在您已经向应用程序添加了新的视图, 您可以开始构建
+现在您已经向应用程序添加了新的视图，您可以开始构建
 该视图的细节了。
 
-在此过程中, 您可能想使用一些现成的组件, 例如从 [webcomponents.org][webcomponents.org] 获取。
+在此过程中，您可能想使用一些现成的组件，例如从 [webcomponents.org][webcomponents.org] 获取。
 
 
 ## 安装现成的组件
 
-确定要安装的组件后, 您将需要找到该组件的
+确定要安装的组件后，您将需要找到该组件的
 bower 软件包名称。
 
-在此步骤中, 你将要在应用中添加 Polymer 的 `<paper-checkbox>` 元素，该元素在
+在此步骤中，你将要在应用中添加 Polymer 的 `<paper-checkbox>` 元素，该元素在
 [webcomponents.org][paper-checkbox] 列出。您可以使用 Bower 来安装它。
 
 在您的项目根目录运行以下命令：
@@ -41,7 +41,7 @@ bower 软件包名称。
     <paper-checkbox>Ready to deploy!</paper-checkbox>
     ```
     
-    你可以把它添加到前面步骤的 `<h1>` 下面. 之后, 你的新模版看起来应该像:
+    你可以把它添加到前面步骤的 `<h1>` 下面. 之后，你的新模版看起来应该像:
 
     ```
     <!-- 定义元素的样式和本地 DOM -->
@@ -65,7 +65,7 @@ bower 软件包名称。
 
 ## 下一步
 
-现在您已经向页面添加了第三方组件, 该学习如何
+现在您已经向页面添加了第三方组件，该学习如何
 [部署 App 到 Web 上](deploy).
 
 [bower]: http://bower.io/
