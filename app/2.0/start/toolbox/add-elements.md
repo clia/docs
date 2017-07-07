@@ -1,52 +1,48 @@
 ---
-title: Step 3. Add some elements
-subtitle: "Build an app with App Toolbox"
+title: 步骤3. 添加一些添加一些元
+subtitle: "使用 App Toolbox 构建应用"
 ---
 
 <!-- toc -->
 
-Now that you've added a new view to your application, you can start building
-out the details of that view.
+现在您已经向应用程序添加了新的 view, 您可以开始构建
+该 view 的细节.
 
-In the process, you'll likely want to turn
-to some off-the-shelf components, for example from [webcomponents.org][webcomponents.org].
+在此过程中, 你可能想使用一些现成的组件, 例子在这里 [webcomponents.org][webcomponents.org].
 
 
 ## 安装现成的组件
 
-Once you've identified a component you'd like to install, you'll want to find
-the bower package name for the component.
+确定要安装的组件后, 您就可以找到
+对应该组建 bower 安装包.
 
-In this step, you'll add Polymer's `<paper-checkbox>` element to your app, which is listed on
-[webcomponents.org][paper-checkbox].  You can use Bower to install it.
+这一步, 你要在应用中添加 Polymer 的 `<paper-checkbox>`, 该元素在
+[webcomponents.org][paper-checkbox]列出.  你可以使用 Bower 来安装它.
 
-Run this command from your project root directory:
+在你的项目根目录运行以下命令:
+    bower install --save PolymerElements/paper-checkbox#2.0-preview
 
-    bower install --save PolymerElements/paper-checkbox#2.0-preview
+## 将元素添加到你的应用
 
-## 将元素添加到您的应用
+1.  在文本编辑器中打开 `src/my-new-view.html`.
 
-1.  Open `src/my-new-view.html` in a text editor.
+1.  作为依赖导入 `paper-checkbox.html`.
 
-1.  Import `paper-checkbox.html` as a dependency.
-
-    Add this import beneath the existing import for `polymer-element.html`:
-
-    ```
+    向已有导入内添加为`polymer-element.html`增加新导入:
+    ```
     <link rel="import" href="../bower_components/paper-checkbox/paper-checkbox.html">
     ```
 
-1.  Add the `<paper-checkbox>` element to the template for the element.
+1.  向模板中添加 `<paper-checkbox>`.
 
     ```
     <paper-checkbox>Ready to deploy!</paper-checkbox>
     ```
-
-    You can add it under the `<h1>` you added in the previous step.  Your new
-    template should look like this:
+    
+    你可以把它添加到前面步骤的 `<h1>` 下面. 之后, 你的新模版看起来应该像:
 
     ```
-    <!-- Defines the element's style and local DOM -->
+    <!-- 定义元素风格和本地 DOM -->
     <template>
       <style>
         :host {
@@ -61,7 +57,7 @@ Run this command from your project root directory:
     </template>
     ```
 
-You should be able to see the `paper-checkbox` working in your new view now:
+你现在应该可以看到新视图中已经出现 `paper-checkbox`:
 
 ![Example of page with checkbox](/images/2.0/toolbox/starter-kit-checkbox.png)
 
@@ -69,6 +65,8 @@ You should be able to see the `paper-checkbox` working in your new view now:
 
 Now that you've added a 3rd-party component to your page, learn how to
 [deploy the app to the web](deploy).
+现在您已经向页面添加了第三方组件, 该学习如何
+[deploy the app to the web](部署).
 
 [bower]: http://bower.io/
 [webcomponents.org]: https://www.webcomponents.org
