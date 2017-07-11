@@ -21,7 +21,7 @@ bower 软件包名称。
 
 在您的项目根目录运行以下命令：
 
-    bower install --save PolymerElements/paper-checkbox#2.0-preview
+    bower install --save PolymerElements/paper-checkbox#2.0-preview
 
 ## 将元素添加到你的应用
 
@@ -29,9 +29,9 @@ bower 软件包名称。
 
 1.  作为依赖导入 `paper-checkbox.html`.
 
-    向已有导入 `polymer-element.html` 下面增加新导入：
-    
-    ```
+    向已有导入 `polymer-element.html` 下面增加新导入：
+
+    ```
     <link rel="import" href="../bower_components/paper-checkbox/paper-checkbox.html">
     ```
 
@@ -40,11 +40,11 @@ bower 软件包名称。
     ```
     <paper-checkbox>Ready to deploy!</paper-checkbox>
     ```
-    
-    你可以把它添加到前面步骤的 `<h1>` 下面. 之后，你的新模版看起来应该像:
+
+    你可以把它添加到前面步骤的 `<h1>` 下面. 之后，你的新模版看起来应该像:
 
     ```
-    <!-- 定义元素的样式和本地 DOM -->
+    <!-- 定义元素的样式和本地 DOM -->
     <template>
       <style>
         :host {
