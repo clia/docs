@@ -1,3 +1,7 @@
+## 翻译准则请见
+
+https://github.com/clia/docs/wiki
+
 ## Polymer documentation site
 
 https://www.polymer-project.org/
