@@ -4,17 +4,16 @@ title: Hybrid elements
 
 <!-- toc -->
 
-Hybrid elements are Polymer elements designed to run under both Polymer 1.x and Polymer 2.x. Polymer
-2 provides a backwards-compatible API for hybrid elements.
+混合元素是设计用来在 Polymer 1.x 和 Polymer 2.x 下都能运行的 Polymer 元素。
+Polymer 2 为混合元素提供了一套向后兼容的 API。
 
-Implementing a hybrid element requires some extra work, including maintaining multiple sets of
-bower dependencies and testing on both Polymer 1 and Polymer 2. Build hybrid elements if you're
-creating a set of reusable elements and need to support customers using both Polymer 1.x and Polymer
-2.x. You may also find hybrid elements useful if you're trying to port a large application.
+实现混合元素需要一些额外的工作，包括维护多组 bower 依赖项，以及在 Polymer 1 和 Polymer 2 上都进行测试。
+只有当您在创建一组可重用的元素，并且需要支持同时使用 Polymer 1.x 和 Polymer 2.x 的客户时，您才需要创建混合元素。
+如果您尝试移植大型应用时，您也可能会发现混合元素很有用。
 
-Polymer CLI supports installing and testing with multiple versions of your bower dependencies, so
-you can test your hybrid elements against multiple versions of Polymer. For an overview, see
-[Manage dependencies for hybrid elements](#dependency-variants).
+Polymer CLI 支持使用多个版本的 bower 依赖项进行安装和测试，因此您可以针对多个版本的 Polymer 测试混合元素。
+相关概览信息，请参阅
+[管理混合元素的依赖项](#dependency-variants)。
 
 ## 混合元素概述
 

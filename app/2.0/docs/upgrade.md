@@ -5,36 +5,30 @@ title: Polymer 2.0 upgrade guide
 <!-- toc -->
 
 
-Polymer 2.0 includes a number of breaking changes. However, the Polymer team has worked to provide
-an incremental path for updating Polymer 1.x elements to 2.0.
+Polymer 2.0 包括一些破坏性的改变。不过，Polymer 团队一直致力于一条增量地将 Polymer 1.x 元素更新到 2.0 的路径。
 
-Polymer 2.0 supports several types of elements:
+Polymer 2.0 支持多种类型的元素：
 
-*   2.x class-based elements use the ES6 class-based syntax supported by the custom elements v1
-    specification. Recommended for new development in Polymer 2.0.
-*   2.x legacy elements use the `Polymer` factory method, and have most of the 1.0 APIs available to
-    them, as well as any new 2.x APIs.
-*   2.x hybrid elements are elements defined using the legacy `Polymer` factory method, with extra
-    code for backwards compatibility with 1.x. They can run on Polymer 1.8+ as well as Polymer 2.x.
-    As much as possible, hybrid elements should stick to the common subset of APIs supported by 1.x
-    and 2.x. In some cases, they may need to conditionalize code to run in 1.x or 2.x.
-    Maintaining hybrid elements is more complicated than maintaining class-based or legacy elements,
-    since they need to be tested on both 1.x and 2.x.
+*   2.x 基于类的元素，使用受自定义元素 v1 规范支持的 ES6 基于类的语法。推荐用于 Polymer 2.0 的新开发。
+*   2.x 遗留元素，使用 `Polymer` 工厂方法，拥有大多数的 1.0 API 对于它们是可用的，以及任何新的 2.x API。
+*   2.x 混合元素是使用遗留的 `Polymer` 工厂方法定义的元素，有额外的代码来提供 1.x 向后兼容性。
+    它们可以在 Polymer 1.8+ 以及 Polymer 2.x 上运行。
+    尽可能地，混合元素应该只使用 1.x 和 2.x 都支持的 API 的公共子集。
+    在某些情况下，他们可能需要条件化的代码来运行在 1.x 或 2.x 中。
+    维护混合元素比维护基于类的元素或遗留元素更复杂，因为它们需要在 1.x 和 2.x 上都进行测试。
 
-When porting a large project, you can update to Polymer 1.8 and upgrade elements to 2.0 hybrid style
-one at a time. After all of the elements have been upgraded, you can test your project against
-Polymer 2.0.
+移植大型项目时，您可以一次性地更新到 Polymer 1.8 并将元素升级为 2.0 混合形式。
+当所有元素都升级完后，您可以针对 Polymer 2.0 来测试您的项目。
 
-The Polymer team plans to release a Polymer Upgrade tool to automatically perform a number of the
-changes required to upgrade 1.x elements to either hybrid or class-based style. The remaining
-changes require either manual code changes, testing, or both to ensure that your element operates
-the same in 2.0 as it did in 1.x. **The upgrade tool is not available at this time.**
+Polymer 团队计划发布一个 Polymer 升级工具，以自动执行将 1.x 元素升级为混合的或基于类的形式所需的一些更改。
+剩下的更改需要手动对代码进行修改、测试，或者两者都有，以确保您的元素在 2.0 中的表现与 1.x 中的相同。
+**升级工具目前还不可用。**
 
 
-See [Install Polymer 2.0](about_20#installing) for installation instructions.
+有关安装的说明，请参阅 [安装 Polymer 2.0](about_20#installing)。
 
-This upgrade guide is a work in progress. Please
-[report issues on GitHub](https://github.com/Polymer/docs/issues/new).
+此升级指南目前还在完善中。请
+[在 GitHub 上报告问题](https://github.com/Polymer/docs/issues/new)。
 
 ## 升级策略
 
