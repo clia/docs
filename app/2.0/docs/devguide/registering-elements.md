@@ -8,17 +8,17 @@ title: Define an element
 ## 定义一个自定义元素 {#register-element}
 
 
-To define a custom element, create a class that extends `Polymer.Element` and pass the class to the `customElements.define` method. The class must have a static `is` getter that returns the HTML tag name for your custom element.
+要定义一个自定义元素，创建一个类扩展 `Polymer.Element` 并将该类传递给 `customElements.define` 方法。该类必须有一个静态 `is` getter，它返回自定义元素的 HTML 标签名称。
 
-By specification, the custom element's name **must start with a lower-case ASCII letter and must contain a dash (-)**.
+按照规范，自定义元素的名称 **必须以小写 ASCII 字母开头，并且必须包含连字符（-）**。
 
-Example: { .caption }
+示例： { .caption }
 
 ```
-// define the element's class element
+// 定义元素的类元素
 class MyElement extends Polymer.Element {
 
-  // Element class can define custom element reactions
+  // 元素类能定义一些自定义元素的反应
   connectedCallback() {
     super.connectedCallback();
     console.log('my-element created!');
@@ -30,17 +30,17 @@ class MyElement extends Polymer.Element {
   }
 }
 
-// Associate the new class with an element name
+// 将新类与一个元素名称相关联
 customElements.define('my-element', MyElement);
 
-// create an instance with createElement:
+// 用 createElement 创建一个实例：
 var el1 = document.createElement('my-element');
 
-// ... or with the constructor:
+// ... 或者使用构造方法：
 var el2 = new MyElement();
 ```
 
-As shown above, the element's class can define callbacks for the custom element reactions as described in [Custom element lifecycle](custom-elements#element-lifecycle).
+如上所示，元素的类可以定义一些自定义元素反应的回调，如在 [自定义元素生命周期](custom-elements#element-lifecycle) 中所描述的那样。
 
 ## 扩展现有元素 {#extend-element}
 

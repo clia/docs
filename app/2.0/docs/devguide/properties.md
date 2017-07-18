@@ -4,34 +4,28 @@ title: Declare Properties
 
 <!-- toc -->
 
-You can declare properties on an element to add a default value and enable various features in the
-data system.
+您可以在元素上声明属物以添加默认值并启用数据系统中的各种功能。
 
-Declared properties can specify:
+声明的属物可以指定：
 
-*   Property type.
-*   Default value.
-*   Property change observer. Calls a method whenever the property value changes.
-*   Read-only status. Prevents accidental changes to the property value.
-*   Two-way data binding support. Fires an event whenever the property value changes.
-*   Computed property. Dynamically calculates a value based on other properties.
-*   Property reflection to attribute. Updates the corresponding attribute value when the property
-    value changes.
+*   属物类型。
+*   默认值。
+*   属物变更观察者。每次当属物值变更时会调用一个方法。
+*   只读的状态。防止意外地改变属物的值。
+*   双向数据绑定支持。每次当属性值变更时会触发一个事件。
+*   被计算的属物。根据其他属物动态地计算一个属物的值。
+*   属物反射到属性。当属物的值变更时更新相应的属性的值。
 
-Many of these features are tightly integrated into the [data system](data-system), and are
-documented in the data system section.
+许多这些功能被紧密地集成到 [数据系统](data-system) 中，在数据系统的章节中进行详细描述。
 
-In addition, a declared property can be configured from markup using an attribute
-(see [attribute deserialization](#attribute-deserialization) for details).
+此外，也可以使用属性从标识来配置声明的属物（有关详细信息，请参阅 [属性反序列化](#attribute-deserialization)）。
 
-**In most cases, a property that's part of your element's public API should be declared in the
-`properties` object.**
+**在大多数情况下，属于元素的公共 API 的一部分的属物，应在 `properties` 对象中进行声明。**
 
 
-To declare properties, add a static `properties` getter to the element's class. The getter should
-return  an object containing property declarations.
+要声明属物，在元素的类中添加一个静态的 `properties` getter。该 getter 应返回一个包含属物声明的对象。
 
-Example { .caption }
+示例 { .caption }
 
 ```js
 class XCustom extends Polymer.Element {
@@ -52,7 +46,7 @@ class XCustom extends Polymer.Element {
 customElements.define('x-custom', XCustom);
 ```
 
-The `properties` object supports the following keys for each property:
+`properties` 对象中的每个属物都支持以下的一些键：
 
 <table>
 <tr>
