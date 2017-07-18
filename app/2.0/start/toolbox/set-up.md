@@ -59,7 +59,7 @@ src/                   # App 特定元素
   my-app.html            # 顶级元素
   my-icons.html          # App 图标
   my-view1.html          # 示例视图或“页面”
-  my-view2.hmtl
+  my-view2.html
   my-view3.html
   my-view404.html        # 示例 404 页面
   shared-styles.html     # 示例共享样式

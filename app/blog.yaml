@@ -1,4 +1,13 @@
 ---
+- title: "对 Neon Animation 的更新"
+  path: /blog/2017-07-12-an-update-on-neon-animation
+  published: 2017-07-12
+  author: emarquez
+  description: "neon-animation 将要进入的状态是什么样的？这对您来说又意味着什么？"
+  tags:
+    - blog
+    - animation
+    - polymer 2
 - title: "I/O ‘17 上的 Polymer，若错过"
   path: /blog/2017-05-26-polymer-at-io-17
   published: 2017-05-26
