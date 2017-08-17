@@ -9,18 +9,44 @@ subtitle: "Build an app with App Toolbox"
 
 ## 为部署而构建
 
-运行以下 Polymer CLI 命令来准备好您的应用进行部署：
+输入 `polymer build` 来为生产环境构建您的 Polymer 应用。
 
-    polymer build
+您可以向浏览器服务您的 App 的不同的构建，支持不同的能力。Polymer 入门套件被配置成生成三种构建：
 
-此命令将缩小您的应用的 HTML，JS 和 CSS 依赖项，并生成一个服务工作者，
-以预缓存应用的所有依赖项，以使其能够脱机工作。
+* 一种打包的、最小化的构建，提供服务工作者，编译为 ES5 以兼容旧的浏览器。
+* 一种打包的、最小化的构建，提供服务工作者，ES6 代码以原样服务。这种构建是用于那些能处理 ES6 代码的浏览器。
+* 一种未打包的、最小化的构建，提供服务工作者，ES6 代码以原样服务。这种构建是用于那些能支持 HTTP/2 服务器推技术的浏览器。
 
-构建好的文件被输出到 `build/default` 文件夹。默认构建包含一个非打包的构建，
-生成适合通过 HTTP/2 与服务器推技术服务的细粒度资源。
+在这一步中，您将会部署一种打包的、编译的构建 (`es5-bundled`)，以提供最大的兼容性。服务其他形式的构建需要更复杂的服务器设置。
 
-有关构建选项的更多信息，请参阅 [`polymer build` 命令的文档](/2.0/docs/tools/polymer-cli#build)。
-这包含生成打包的（联结的）资源的文档，适用于从不支持 HTTP/2 服务器推技术的服务器，或向不支持该技术的客户端提供服务。
+构建种类已在项目根目录下的一个配置文件 `polymer.json` 中的 `builds` 对象下配置了。
+
+polymer.json { .caption}
+```
+...
+"builds": [
+  {
+    "preset": "es5-bundled"
+  },
+  {
+    "preset": "es6-bundled"
+  },
+  {
+    "preset": "es6-unbundled"
+  }
+]
+...
+```
+
+构建的文件将被输出到 `build/` 目录的子目录中，如下所示：
+
+    build/
+      es5-bundled/
+      es6-bundled/
+      es6-unbundled/
+
+要配置一种自定义的构建，您可以使用命令行选项，或者编辑 `polymer.json`。运行 `polymer help build` 以查看所有可用选项和优化项的列表。
+另外，查看这些文档： [polymer.json 规范](https://www.polymer-project.org/2.0/docs/tools/polymer-json) 和 [为生产环境构建您的 Polymer 应用](https://www.polymer-project.org/2.0/toolbox/build-for-production)。
 
 ## 部署到服务器
 
@@ -60,57 +86,49 @@ Polymer 应用可以部署到任何 Web 服务器。
 
     handlers:
     - url: /bower_components
-      static_dir: build/default/bower_components
+      static_dir: build/es5-bundled/bower_components
       secure: always
 
     - url: /images
-      static_dir: build/default/images
+      static_dir: build/es5-bundled/images
       secure: always
 
     - url: /src
-      static_dir: build/default/src
+      static_dir: build/es5-bundled/src
       secure: always
 
     - url: /manifest.json
-      static_files: build/default/manifest.json
-      upload: build/default/manifest.json
+      static_files: build/es5-bundled/manifest.json
+      upload: build/es5-bundled/manifest.json
       secure: always
 
     - url: /.*
-      static_files: build/default/index.html
-      upload: build/default/index.html
+      static_files: build/es5-bundled/index.html
+      upload: build/es5-bundled/index.html
       secure: always
     ```
 
-1.  将您的项目 ID 设置为 App Engine 提供给您的 App 的ID。例如：
-    ````
-    gcloud config set project my-app-164409
-    ````
+1. 将您的项目 ID 设置为 App Engine 提供给您的 App 的ID。例如：
+   
+       gcloud config set project my-app-164409
 
-1. 创建您的 App。
-    ````
-    gcloud app create
-    ````
-	
-    您将需要为您的 App 选择要部署的区域。这不能更改。
+1. 创建您的 App：
+   
+       gcloud app create
+     
+   您将需要为您的 App 选择要部署的区域。这不能更改。
 
-1. 部署您的 App。
-
-    ````
-    gcloud app deploy
-    ````
+1. 部署您的 App：
+   
+       gcloud app deploy
 
 1. 您的 App 将在其指定的 URL 上在线提供。例如：
-
-    ````
-    https://my-app-164409.appspot.com/new-view
-    ````
-
-    通过键入以下命令在浏览器中打开您的 App 的 URL：
-
-    ````
-    gcloud app browse
-    ````
+   
+       https://my-app-164409.appspot.com/new-view
+   
+   通过键入以下命令在浏览器中打开您的 App 的 URL：
+   
+       gcloud app browse
 
 ### 使用 Firebase 部署
 
@@ -126,7 +144,7 @@ Polymer 应用可以部署到任何 Web 服务器。
 
         npm install -g firebase-tools
 
-1.  `cd` 进入你的项目目录。
+1.  `cd` 进入您的项目目录。
 
 1.  初始化 Firebase 应用。
 
@@ -135,8 +153,7 @@ Polymer 应用可以部署到任何 Web 服务器。
 
 1.  Firebase 会询问与您的 App 关联的项目。选择您之前创建的。
 
-1.  Firebase 会询问您的 App 的公共目录的名称。输入
-    `build/default`.
+1.  Firebase 会询问您的 App 的公共目录的名称。输入 `build/es5-bundled/`。
 
 1.  编辑您的 Firebase 配置以添加对 URL 路由的支持。将以下内容添加到 `firebase.json` 文件的 `hosting` 对象中。
 
@@ -161,7 +178,7 @@ Polymer 应用可以部署到任何 Web 服务器。
         "rules": "database.rules.json"
       },
       "hosting": {
-        "public": "build/default",
+        "public": "build/es5-bundled/",
         "rewrites": [
           {
             "source": "!/__/**",

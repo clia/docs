@@ -4,7 +4,7 @@ title: Shadow DOM concepts
 
 <!-- toc -->
 
-Shadow DOM is a new DOM feature that helps you build components. You can think of shadow DOM as a
+阴影 DOM 是一种新的 DOM 功能，可以帮助您构建组件。您可以将阴影 DOM 视为您元素中的
 **scoped subtree** inside your element.
 
 **Read more on Web Fundamentals**. This document gives an overview of shadow DOM as it relates to

@@ -16,14 +16,14 @@ subtitle: "使用 App 工具箱构建 App"
 确定要安装的组件后，您将需要找到该组件的
 bower 软件包名称。
 
-在此步骤中，你将要在应用中添加 Polymer 的 `<paper-checkbox>` 元素，该元素在
+在此步骤中，您将要在应用中添加 Polymer 的 `<paper-checkbox>` 元素，该元素在
 [webcomponents.org][paper-checkbox] 列出。您可以使用 Bower 来安装它。
 
 在您的项目根目录运行以下命令：
 
-    bower install --save PolymerElements/paper-checkbox#2.0-preview
+    bower install --save PolymerElements/paper-checkbox
 
-## 将元素添加到你的应用
+## 将元素添加到您的应用
 
 1.  在文本编辑器中打开 `src/my-new-view.html`.
 
@@ -41,7 +41,7 @@ bower 软件包名称。
     <paper-checkbox>Ready to deploy!</paper-checkbox>
     ```
 
-    你可以把它添加到前面步骤的 `<h1>` 下面. 之后，你的新模版看起来应该像:
+    您可以把它添加到前面步骤的 `<h1>` 下面. 之后，您的新模版看起来应该像:
 
     ```
     <!-- 定义元素的样式和本地 DOM -->
@@ -59,7 +59,7 @@ bower 软件包名称。
     </template>
     ```
 
-你现在应该可以看到新视图中已经出现 `paper-checkbox`:
+您现在应该可以看到新视图中已经出现 `paper-checkbox`:
 
 ![Example of page with checkbox](/images/2.0/toolbox/starter-kit-checkbox.png)
 

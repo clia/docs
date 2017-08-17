@@ -1,4 +1,23 @@
 ---
+- title: "Polymer 峰会演讲者聚焦：Maria Husmann，苏黎世联邦理工学院"
+  path: /blog/2017-08-09-speaker-spotlight-maria
+  published: 2017-08-09
+  author: katejeffreys
+  description: "Maria Husmann 讲述 Web 作为开放平台的好处，以及渐进式 Web App 能提供的更优秀的用户体验。"
+- title: "Polymer 峰会演讲者聚焦：Chad Killingsworth，Jack Henry & Associates"
+  path: /blog/2017-08-03-speaker-spotlight-chad
+  published: 2017-08-03
+  author: katejeffreys
+  description: "Chad Killingsworth 讲述组件化 Web App 开发，以及强大的主题化的重要性。"
+  tag:
+    - blog
+- title: "Polymer 峰会演讲者聚焦: 来自 Gannett 的 Josh Trout"
+  path: /blog/2017-07-31-speaker-spotlight-josh
+  published: 2017-07-31
+  author: katejeffreys
+  description: "来自 Gannett 的 Josh Trout 讲述 Polymer、Web，以及为未来构建应用。"
+  tag:
+    - blog
 - title: "对 Neon Animation 的更新"
   path: /blog/2017-07-12-an-update-on-neon-animation
   published: 2017-07-12

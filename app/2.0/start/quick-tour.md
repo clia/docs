@@ -24,7 +24,7 @@ Polymer 使声明性地创建 Web 组件变得简单。
 `Polymer.Element`，然后调用 `customElements.define` 方法，该方法在浏览器中 _注册_ 一个新的元素。
 注册元素将元素名称与类相关联，因此您可以向自定义元素添加属物和方法。自定义元素的名称 **必须以ASCII字母开头，并包含连接号（-）**。
 
-<demo-tabs selected="0" src="http://plnkr.co/edit/ScvcB4?p=preview">
+<demo-tabs selected="0" name="qt-1-register" src="http://plnkr.co/edit/ScvcB4?p=preview">
   <demo-tab heading="custom-element.html">
 <pre><code>{{{include_file('2.0/start/samples/custom-element/custom-element.html')}}}</code></pre>
   </demo-tab>
@@ -51,7 +51,7 @@ Polymer 使声明性地创建 Web 组件变得简单。
 
 许多元素包括一些内部 DOM 节点来实现元素的 UI 和行为。您可以使用 Polymer 的 DOM 模板化为元素创建一个阴影 DOM 树。
 
-<demo-tabs selected="0" src="http://plnkr.co/edit/DaiLYY?p=preview">
+<demo-tabs selected="0" name="qt-2-shadow-dom" src="http://plnkr.co/edit/DaiLYY?p=preview">
   <demo-tab heading="dom-element.html">
 <pre><code>{{{include_file('2.0/start/samples/dom-element/dom-element.html')}}}</code></pre>
   </demo-tab>
@@ -73,7 +73,7 @@ Polymer 使声明性地创建 Web 组件变得简单。
 
 此示例创建一个简单的标签，通过使用一个样式化的 `<div>` 标签来包装一个图片来装饰该图片。
 
-<demo-tabs selected="0" src="http://plnkr.co/edit/BzgJBN?p=preview">
+<demo-tabs selected="0" name="qt-3-compose" src="http://plnkr.co/edit/BzgJBN?p=preview">
   <demo-tab heading="picture-frame.html">
 <pre><code>{{{include_file('2.0/start/samples/picture-frame/picture-frame.html')}}}</code></pre>
   </demo-tab>
@@ -99,7 +99,7 @@ Polymer 使声明性地创建 Web 组件变得简单。
 您可以使用“双胡子”语法 (`{%raw%}{{}}{%endraw%}`) 来绑定组件中的属物。
 这 `{%raw%}{{}}{%endraw%}` 由大括号中引用的属物的值所替换。
 
-<demo-tabs selected="0" src="http://plnkr.co/edit/8mZK8S?p=preview">
+<demo-tabs selected="0" name="qt-4-data-binding" src="http://plnkr.co/edit/8mZK8S?p=preview">
   <demo-tab heading="name-tag.html">
 <pre><code>{{{include_file('2.0/start/samples/name-tag/name-tag.html')}}}</code></pre>
   </demo-tab>
@@ -121,7 +121,7 @@ _声明的属物_ 支持许多常见的用于属物的模式——设置默认�
 以下示例声明来自于上一个示例的 `owner` 属物。
 它还展示了在 `index.html` 中用标记配置 owner 属物。
 
-<demo-tabs selected="0" src="http://plnkr.co/edit/ROIvZg?p=preview">
+<demo-tabs selected="0" name="qt-5-declare-property" src="http://plnkr.co/edit/ROIvZg?p=preview">
   <demo-tab heading="configurable-name-tag.html">
 <pre><code>{{{include_file('2.0/start/samples/configurable-name-tag/configurable-name-tag.html')}}}</code></pre>
   </demo-tab>
@@ -144,7 +144,7 @@ _声明的属物_ 支持许多常见的用于属物的模式——设置默认�
 的值绑定到元素的 (`iron-input`)
 的值绑定到元素的 `owner` 属物，因此它将在用户输入时进行更新。
 
-<demo-tabs selected="0" src="http://plnkr.co/edit/VYR8my?p=preview">
+<demo-tabs selected="0" name="qt-6-bind-property" src="http://plnkr.co/edit/VYR8my?p=preview">
   <demo-tab heading="editable-name-tag.html">
 <pre><code>{{{include_file('2.0/start/samples/editable-name-tag/editable-name-tag.html')}}}</code></pre>
   </demo-tab>
@@ -162,7 +162,7 @@ _声明的属物_ 支持许多常见的用于属物的模式——设置默认�
 
 模板重复器 (`dom-repeat`) 是一个绑定到数组的专用模板。它为数组中的每个项创建模板内容的一个实例。
 
-<demo-tabs selected="0" src="http://plnkr.co/edit/FdgkAtcLFHX5TpTsYtZn?p=preview">
+<demo-tabs selected="0" name="qt-7-dom-repeat" src="http://plnkr.co/edit/FdgkAtcLFHX5TpTsYtZn?p=preview">
   <demo-tab heading="employee-list.html">
 <pre><code>{{{include_file('2.0/start/samples/employee-list/employee-list.html')}}}</code></pre>
   </demo-tab>

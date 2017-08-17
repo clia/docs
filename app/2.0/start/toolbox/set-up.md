@@ -19,12 +19,10 @@ Polymer CLI 文档](/{{{polymer_version_dir}}}/docs/tools/polymer-cli)。
 
 要安装 Polymer CLI：
 
-   ```bash
    npm install -g polymer-cli
-   ```
+
 
 ## 从模板初始化您的项目
-
 1. 创建一个新的项目文件夹以开始
 
         mkdir my-app
@@ -32,7 +30,11 @@ Polymer CLI 文档](/{{{polymer_version_dir}}}/docs/tools/polymer-cli)。
 
 1. 使用 App 模板初始化您的项目
 
-        polymer init polymer-2-starter-kit
+        polymer init
+
+    Press the down arrow until `polymer-2-starter-kit` is highlighted and press the enter / return
+    key to select.
+
 
 ## 服务您的项目
 
