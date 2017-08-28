@@ -490,7 +490,7 @@ The custom properties shim doesn't support styling distributed elements.
 
 ```css
 /* Not supported */
-:host ::content div {
+:host ::slotted(div) {
   --custom-color: red;
 }
 ```

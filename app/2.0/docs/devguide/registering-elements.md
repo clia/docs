@@ -8,7 +8,7 @@ title: Define an element
 ## 定义一个自定义元素 {#register-element}
 
 
-要定义一个自定义元素，创建一个类扩展 `Polymer.Element` 并将该类传递给 `customElements.define` 方法。该类必须有一个静态 `is` getter，它返回自定义元素的 HTML 标签名称。
+要定义一个自定义元素，创建一个类扩展 `Polymer.Element` 并将该类传递给 `customElements.define` 方法。
 
 按照规范，自定义元素的名称 **必须以小写 ASCII 字母开头，并且必须包含连字符（-）**。
 
@@ -63,9 +63,38 @@ class MyElementSubclass extends MyElement {
 customElements.define(MyElementSubclass.is, MyElementSubclass);
 ```
 
+For more information on extending elements, see [Extending other elements](custom-elements#extending-elements)
+in Custom element concepts.
+
 If you don't provide a template for your subclass, it inherits the superclass's template by default.
 To override this behavior, or modify the superclass template, override the subclass's `template`
 getter.
+
+## 使用混入
+
+You can share code using _mixins_. You use a mixin to add new features on top of a base class:
+
+```js
+class MyElementWithMixin extends MyMixin(Polymer.Element) {
+
+}
+```
+
+This pattern may be easier to understand if you think of it as two steps:
+
+```js
+// Create a new base class that adds MyMixin's features to Polymer.Element
+const BaseClassWithMixin = MyMixin(Polymer.Element);
+
+// Extend the new base class
+class MyElementWithMixin extends BaseClassWithMixin { ... }
+```
+
+Because mixins are simply adding classes to the inheritance chain, all of the usual rules of
+inheritance apply.
+
+For information on defining mixins, see [Sharing code with class expression mixins](custom-elements#mixins)
+in Custom element concepts.
 
 ## 导入和 API
 
@@ -74,8 +103,8 @@ There are three main HTML imports for defining Polymer elements:
 | Import | Description |
 |---|-------|
 | `polymer-element.html` | Defines the `Polymer.Element` base class.  |
-| `legacy-element.html` | Defines the `Polymer.LegacyElement` base class, which extends `Polymer.Element` and adds 1.x compatible legacy API. Also defines the legacy `Polymer()` factory method for creating hybrid elements. (Includes `polymer-element.html`.)|
-| `polymer.html` | Includes the Polymer base classes plus the helper elements (`custom-style`, `dom-bind`, `dom-if`, and `dom-repeat`) that were included in the 1.x `polymer.html` bundle. (Includes `legacy-element.html`.) |
+| `legacy-element.html` | Defines the `Polymer.LegacyElementMixin` base class, which can be used to add 1.x compatible legacy API to `Polymer.Element`. Also defines the legacy `Polymer()` factory method for creating hybrid elements. (Includes `polymer-element.html`.)|
+| `polymer.html` | Includes the previous imports plus the helper elements (`custom-style`, `dom-bind`, `dom-if`, and `dom-repeat`) that were included in the 1.x `polymer.html` bundle. |
 
 For the smallest footprint, use the `polymer-element.html` import and import any required helper
 elements separately.
