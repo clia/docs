@@ -6,11 +6,11 @@ title: Style an element's shadow DOM
 
 ## 样式化您的元素
 
-Polymer supports DOM templating and the shadow DOM API. When you provide a DOM template for your custom element, Polymer then copies in the contents of the template you provided for your element.
+Polymer 支持 DOM 模板化和阴影 DOM API。当您为自定义元素提供 DOM 模板时，Polymer 将复制提供的模板内容到您为元素。
 
-Here's an example:
+以下是一个例子：
 
-[See it on Plunker](http://plnkr.co/edit/TOgaxeSzuQsWFSIpzN7S?p=preview)
+[在 Plunker 上查看它](http://plnkr.co/edit/TOgaxeSzuQsWFSIpzN7S?p=preview)
 
 `custom-element.html` { .caption }
 ```html

@@ -4,11 +4,9 @@ title: Gesture events
 
 <!-- toc -->
 
-Polymer provides optional support for custom "gesture" events for certain user
-interactions. These events fire consistently on both touch and mouse environments,
-so we recommend using these events instead of their mouse- or
-touch-specific event counterparts. This provides better interoperability with both touch and
-mouse devices.
+Polymer 为某些用户交互的自定义​​“手势”事件提供可选支持。
+这些事件在触摸和鼠标环境中都是一致的，所以我们建议您使用这些事件，而不是使用鼠标或触摸特定的事件。
+这提供了与触摸和鼠标设备的更好的互操作性。
 
 ## 使用手势事件
 

@@ -5,16 +5,14 @@ title: Shadow DOM concepts
 <!-- toc -->
 
 阴影 DOM 是一种新的 DOM 功能，可以帮助您构建组件。您可以将阴影 DOM 视为您元素中的
-**scoped subtree** inside your element.
+**作用域子树**。
 
-**Read more on Web Fundamentals**. This document gives an overview of shadow DOM as it relates to
-Polymer. For a more comprehensive overview of Shadow DOM, see
-[Shadow DOM v1: self-contained web components](https://developers.google.com/web/fundamentals/primers/shadowdom/?hl=en)
-on Web Fundamentals.
+**阅读更多关于 Web 基础知识**。本文档概述了与 Polymer 有关的阴影 DOM。
+有关阴影 DOM 的更全面的概述，请参阅 Web 基础中的
+[阴影 DOM v1：自包含的 Web 组件](https://developers.google.com/web/fundamentals/primers/shadowdom/?hl=en)。
 {.alert .alert-info}
 
-Consider a header component that includes a page title and a  menu button: The DOM tree for this
-element might look like this:
+考虑一个包含页面标题和菜单按钮的页头组件：此元素的 DOM 树可能如下所示：
 
 
 ```html
@@ -25,8 +23,7 @@ element might look like this:
 ```
 
 
-Shadow DOM lets you place the children in a scoped subtree, so document-level CSS can't restyle the
-button by accident, for example. This subtree is called a shadow tree.
+阴影 DOM 可以让您把子节点们放在一个作用域子树中，因此，文档级的 CSS 不能无意间影响例如这个按钮的样式。这个子树称为阴影树。
 
 
 ```

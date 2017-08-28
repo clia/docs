@@ -26,28 +26,23 @@ Polymer 2.0 引入了许多不兼容的改变——其中许多是新的自定�
 
 ## 自定义元素 v1
 
-Polymer 2.0 elements target the custom elements v1 API, which makes several changes to the v0
-version of the spec used in Polymer 1.x. In particular:
+Polymer 2.0 元素针对自定义元素 v1 API，它对 Polymer 1.x 中使用的规范的 v0 版本进行了一些更改。尤其是：
 
-*   The custom elements v1 spec defines elements using ES6 classes, instead of prototypes.
+*   自定义元素 v1 规范使用 ES6 类定义元素，而不是原型。
 
-    Polymer 2.0 lets you use this native ES6 form by providing an ES6 base class (`Polymer.Element`)
-    for your elements to extend. In addition, legacy elements using the `Polymer` factory method are
-    supported with a Polymer 1.x compatibility layer.
+    Polymer 2.0 让您使用原生的 ES6 形式，通过提供一个ES6基类 (`Polymer.Element`) 来给您的元素进行扩展。
+    此外，使用 `Polymer` 工厂方法的遗留元素由 Polymer 1.x 兼容层支持。
 
-*   The new spec has some changes to the lifecycle callbacks. In particular, instead of a created
-    callback it invokes the class constructor. The spec also imposes new restrictions on what can be
-    done in the constructor (equivalent to the `created` callback in Polymer 1.x).
+*   新规范对生命周期回调有一些更改。特别地，它调用类构造函数，而非创建的回调。
+    该规范还对构造函数中可以执行的操作（相当于 Polymer 1.x 中的 `created` 回调）施加了新的限制。
 
-*   In addition, although they are supported in the specification, Polymer 2.0 does not currently
-    support type-extension elements (`is=`).
+*   此外，尽管扩展类型的元素 (`is=`) 在规范中得到支持，但 Polymer 2.0 目前不支持它们。
 
-*   Because of complications related to the new specification, the `disable-upgrade` feature is not
-    supported in 2.x. It may be added later as a mixin or add-on.
+*   由于与新规范相关的并发症，`disable-upgrade` 功能在 2.x 中不受支持。它可能稍后被添加为混入或 add-on。
 
-The following sections describe these changes in more detail.
+以下部分将更详细地介绍这些更改。
 
-For general information on the custom elements v1 specification, see [Custom elements v1: reusable web components](https://developers.google.com/web/fundamentals/primers/customelements/?hl=en) on Web Fundamentals.
+有关自定义元素 v1 规范的一般信息，请参阅 Web 基础知识中的 [自定义元素 v1：可重用的 Web 组件](https://developers.google.com/web/fundamentals/primers/customelements/?hl=en)。
 
 ### 生命周期的变更 {#lifecycle-changes}
 

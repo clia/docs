@@ -4,19 +4,21 @@ title: Use custom properties
 
 <!-- toc -->
 
-The author of a Polymer element can provide custom CSS properties that you can use to style the appearance of the element in your application.
+一个 Polymer 元素的作者可以提供自定义的 CSS 属物，这样您就可以在应用中使用它们来样式化元素的外观。
 
-Custom properties allow CSS authors to define cascading CSS variables, which are accepted by all CSS properties.
+自定义属物允许 CSS 作者定义级联的 CSS 变量，这被所有 CSS 属物所接受。
 
-CSS variables can be used outside the context of custom elements, simply as a way to avoid scattering style data throughout a stylesheet. A CSS author assigns values to a custom property, and then uses the `var()` function to use these values elsewhere in the stylesheet.
+CSS 变量可以在自定义元素的上下文之外使用，只是作为避免在样式表中各处散布样式数据的一种方法。
+CSS 作者将值分配给自定义属物，然后使用 `var()` 函数在样式表中的其他位置使用这些值。
 
-This makes editing your CSS much easier and less prone to author error.
+这使得编辑您的 CSS 更容易，更不容易造成书写错误。
 
-For example, the [`<paper-checkbox>` element](https://www.webcomponents.org/element/PolymerElements/paper-checkbox) provides custom properties for styling the colors, spacing and size of the checkbox and its label.
+例如，[`<paper-checkbox>` 元素](https://www.webcomponents.org/element/PolymerElements/paper-checkbox) 
+提供自定义属物来样式化复选框及其标签的颜色、间距和大小。
 
-As a developer, you can use these properties to style `<paper-checkbox>` elements in your applications.
+作为开发人员，您可以使用这些属物来为应用中的 `<paper-checkbox>` 元素设置样式。
 
-When you create your own custom elements, you can use custom properties to build an interface for the users of your element so they can style it.
+当您创建自己的自定义元素时，可以使用自定义属物为元素的用户构建一个界面，以便他们可以对其进行样式化。
 
 ### 使用自定义属物 API 来样式化元素
 

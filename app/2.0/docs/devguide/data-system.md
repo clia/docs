@@ -16,23 +16,19 @@ table.config-summary td {
 }
 </style>
 
-Polymer lets you observe changes to an element's properties and take various actions based on data
-changes. These actions, or *property effects*, include:
+Polymer 可让您观察元素属物的更改，并根据数据更改执行各种动作。
+这些动作或*属物效应*包括：
 
 
-*   Observers. Callbacks invoked when data changes.
+*   观察者。数据更改时调用回调。
 
-*   Computed properties. Virtual properties computed based on other properties, and recomputed when
-    the input data changes.
+*   计算的属物。基于其他属物计算的虚拟属物，并在输入数据更改时重新计算。
 
-*   Data bindings. Annotations that update the properties, attributes, or text content of a DOM node
-    when data changes.
+*   数据绑定。提供注解，当数据更改时，更新 DOM 节点的属物，属性或文本内容。
 
-Each Polymer element manages  its own data model and local DOM elements. The *model* for an element
-is the element's properties. Data bindings link an element's model with the elements in its local
-DOM.
+每个 Polymer 元素管理自己的数据模型和本地 DOM 元素。元素的*模型*是元素的属物。数据绑定将元素的模型与元素在其本地 DOM 中相连接。
 
-Consider a very simple element:
+考虑一个非常简单的元素：
 
 ```html
 <dom-module id="name-card">

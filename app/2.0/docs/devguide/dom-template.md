@@ -4,11 +4,11 @@ title: DOM templating
 
 <!-- toc -->
 
-Many elements use a subtree of DOM elements to implement their features. DOM templating provides an easy way to create a DOM subtree for your element.
+许多元素使用 DOM 元素的子树来实现它们的功能。DOM 模板化为您的元素创建一个 DOM 子树提供了一种简单的方法。
 
-By default, adding a DOM template to an element causes Polymer to create a shadow root for the element and clone the template into the shadow tree.
+默认情况下，向元素添加 DOM 模板会导致 Polymer 为元素创建一个阴影根，并将该模板克隆到阴影树中。
 
-The DOM template is also processed to enable data binding and declarative event handlers.
+DOM 模板也被处理以启用数据绑定和声明性事件处理器。
 
 ## 指定 DOM 模板
 

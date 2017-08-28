@@ -4,11 +4,9 @@ title: Handle and fire events
 
 <!-- toc -->
 
-Elements  use events to communicate state changes up the DOM tree to parent elements.
-Polymer elements can use the standard DOM APIs for creating, dispatching, and listening for events.
+元素使用事件将 DOM 树的状态更改传递给父元素。Polymer 元素可以使用标准的 DOM API 来创建，发送和监听事件。
 
-Polymer also provides annotated event listeners, which allow you to specify event listeners
-declaratively as part of the  element's DOM template.
+Polymer 还提供了注解的事件监听器，它允许您以声明方式指定事件监听器作为元素的 DOM 模板的一部分。
 
 ## 添加注解的事件监听器 {#annotated-listeners}
 
