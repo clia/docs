@@ -1,18 +1,26 @@
 ---
-title: Polymer 快速浏览
+title: 尝试 Polymer
 ---
 
 <!-- toc -->
 
 Polymer 使声明性地创建 Web 组件变得简单。
 
-自定义元素可以利用 Polymer 的特殊功能来减少样板，使其更容易构建复杂的互动元素：
+新的 Web 开发者能够简单地使用标记来添加自定义 HTML 元素到一个网页上去。这就像您已经熟悉的使用 HTML 标签的用法一样：
+
+<pre><code>&lt;h1&gt;A heading!&lt;/h1&gt;</code></pre>
+
+<pre><code>&lt;fancy-thing&gt;A fancy thing!&lt;/fancy-thing&gt;</code></pre>
+
+
+有经验的 Web 开发者能够使用 Polymer 的特殊功能来减少样板代码，使构建复杂的、交互的元素变得更容易。
+在这个教程中，您将学会如何：
 
 - 注册元素
-- 生命周期回调
-- 属物观察
-- 阴影 DOM 模板
-- 数据绑定
+- 使用生命周期回调
+- 观察属物
+- 使用模板创建阴影 DOM
+- 使用数据绑定
 
 在本节中，您可以快速浏览 Polymer 库，而无需安装任何内容。单击 **在Plunker上编辑** 按钮打开交互式沙箱中的任何示例。
 
@@ -34,6 +42,10 @@ Polymer 使声明性地创建 Web 组件变得简单。
 
   <iframe frameborder="0" src="samples/custom-element/index.html" width="100%" height="40"></iframe>
 </demo-tabs>
+
+* 尝试更改 `this.textContent` 的内容。
+* 如果您熟悉您的浏览器的开发者工具，尝试在控制台里面打印该自定义元素的 `tagName` 属物。
+  提示：添加 `console.log(this.tagName);` 到构造方法里！
 
 此示例使用一个生命周期回调把内容添加到 `<custom-element>` 上，在它初始化完成时。
 当自定义元素完成其初始化时，`ready` 生命周期回调被调用。
@@ -84,6 +96,9 @@ Polymer 使声明性地创建 Web 组件变得简单。
   <iframe frameborder="0" src="samples/picture-frame/index.html" width="100%" height="60"></iframe>
 </demo-tabs>
 
+* 尝试在 index.html 中添加 div 以观察它们如何不受那些应用到 picture-frame 的阴影 DOM 的 div 的样式影响。
+* 尝试添加其他 HTML 元素到 DOM 模板中，以观察它们如何相对于那些分布的子节点来定位。
+
 **注意：**  `<dom-module>` 里面定义的 CSS 样式的 _作用域_ 仅限于元素的阴影 DOM。
 所以这里的 `div` 规则仅仅影响 `<picture-frame>` 里的 `<div>` 标签。
 {: .alert .alert-info }
@@ -110,6 +125,11 @@ Polymer 使声明性地创建 Web 组件变得简单。
   <iframe frameborder="0" src="samples/name-tag/index.html" width="100%" height="40"></iframe>
 </demo-tabs>
 
+* Try editing the value of the `owner` property.
+* Try adding another property and binding it in your component. 
+  Hint: Add `this.propertyName = "Property contents";` to the constructor
+  and add {{propertyName}} to the element’s shadow DOM.  
+
 <p><a href="/2.0/docs/devguide/data-binding" class="blue-button">
 了解更多：数据绑定</a></p>
 
@@ -131,6 +151,8 @@ _声明的属物_ 支持许多常见的用于属物的模式——设置默认�
 
   <iframe frameborder="0" src="samples/configurable-name-tag/index.html" width="100%" height="40"></iframe>
 </demo-tabs>
+
+* Try editing the initial value of `owner` in index.html. Observe how this sets the property directly from your HTML.
 
 <p><a href="/2.0/docs/devguide/properties" class="blue-button">
 了解更多：声明的属物</a></p>
@@ -155,6 +177,8 @@ _声明的属物_ 支持许多常见的用于属物的模式——设置默认�
   <iframe frameborder="0" src="samples/editable-name-tag/index.html" width="100%" height="100"></iframe>
 </demo-tabs>
 
+* 编辑占位符文本以观察双向数据绑定如何工作的。
+
 **注意：** `<iron-input>` 元素包装了原生的 `<input>` 元素，并提供双向数据绑定和输入校验。
 {: .alert .alert-info }
 
@@ -172,6 +196,13 @@ _声明的属物_ 支持许多常见的用于属物的模式——设置默认�
 
   <iframe frameborder="0" src="samples/employee-list/index.html" width="100%" height="100"></iframe>
 </demo-tabs>
+
+* Change the first and last names inside this.employees
+* Add another employee by inserting this text into the array definition after Tony Morelli:<br/>
+  ```
+   ,
+     {first: 'Shawna', last: 'Williams'} 
+  ```
 
 <p><a href="/2.0/docs/devguide/templates" class="blue-button">
 了解更多：模板重复器</a></p>

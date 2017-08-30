@@ -19,7 +19,7 @@ Polymer CLI 文档](/{{{polymer_version_dir}}}/docs/tools/polymer-cli)。
 
 要安装 Polymer CLI：
 
-   npm install -g polymer-cli
+    npm install -g polymer-cli
 
 
 ## 从模板初始化您的项目
