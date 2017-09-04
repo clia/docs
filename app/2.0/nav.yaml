@@ -9,7 +9,7 @@
   items:
   - title: 开始吧
     path: /2.0/start/
-  - title: Polymer 快速浏览
+  - title: 尝试 Polymer
     path: /2.0/start/quick-tour
   - title: 安装 Polymer 2.x
     path: /2.0/start/install-2-0

@@ -32,7 +32,7 @@ Polymer 使声明性地创建 Web 组件变得简单。
 `Polymer.Element`，然后调用 `customElements.define` 方法，该方法在浏览器中 _注册_ 一个新的元素。
 注册元素将元素名称与类相关联，因此您可以向自定义元素添加属物和方法。自定义元素的名称 **必须以ASCII字母开头，并包含连接号（-）**。
 
-<demo-tabs selected="0" name="qt-1-register" src="http://plnkr.co/edit/ScvcB4?p=preview">
+<demo-tabs selected="0" name="qt-1-register" src="http://plnkr.co/edit/Q4E8zO?p=preview">
   <demo-tab heading="custom-element.html">
 <pre><code>{{{include_file('2.0/start/samples/custom-element/custom-element.html')}}}</code></pre>
   </demo-tab>
@@ -43,6 +43,7 @@ Polymer 使声明性地创建 Web 组件变得简单。
   <iframe frameborder="0" src="samples/custom-element/index.html" width="100%" height="40"></iframe>
 </demo-tabs>
 
+在 **Plunker** 上尝试：
 * 尝试更改 `this.textContent` 的内容。
 * 如果您熟悉您的浏览器的开发者工具，尝试在控制台里面打印该自定义元素的 `tagName` 属物。
   提示：添加 `console.log(this.tagName);` 到构造方法里！
@@ -63,7 +64,7 @@ Polymer 使声明性地创建 Web 组件变得简单。
 
 许多元素包括一些内部 DOM 节点来实现元素的 UI 和行为。您可以使用 Polymer 的 DOM 模板化为元素创建一个阴影 DOM 树。
 
-<demo-tabs selected="0" name="qt-2-shadow-dom" src="http://plnkr.co/edit/DaiLYY?p=preview">
+<demo-tabs selected="0" name="qt-2-shadow-dom" src="http://plnkr.co/edit/buPxSJ?p=preview">
   <demo-tab heading="dom-element.html">
 <pre><code>{{{include_file('2.0/start/samples/dom-element/dom-element.html')}}}</code></pre>
   </demo-tab>
@@ -73,6 +74,9 @@ Polymer 使声明性地创建 Web 组件变得简单。
 
   <iframe frameborder="0" src="samples/dom-element/index.html" width="100%" height="40"></iframe>
 </demo-tabs>
+
+在 **Plunker** 上尝试：
+* 尝试在 <template></template> 块中添加一些其他 HTML 元素。例如，添加 `<h1>A heading!</h1>` 或 `<a href=”stuff.html”>A link!</a>`
 
 阴影 DOM 被封装在元素内。
 
@@ -85,7 +89,7 @@ Polymer 使声明性地创建 Web 组件变得简单。
 
 此示例创建一个简单的标签，通过使用一个样式化的 `<div>` 标签来包装一个图片来装饰该图片。
 
-<demo-tabs selected="0" name="qt-3-compose" src="http://plnkr.co/edit/BzgJBN?p=preview">
+<demo-tabs selected="0" name="qt-3-compose" src="http://plnkr.co/edit/KvBnmE?p=preview">
   <demo-tab heading="picture-frame.html">
 <pre><code>{{{include_file('2.0/start/samples/picture-frame/picture-frame.html')}}}</code></pre>
   </demo-tab>
@@ -96,7 +100,8 @@ Polymer 使声明性地创建 Web 组件变得简单。
   <iframe frameborder="0" src="samples/picture-frame/index.html" width="100%" height="60"></iframe>
 </demo-tabs>
 
-* 尝试在 index.html 中添加 div 以观察它们如何不受那些应用到 picture-frame 的阴影 DOM 的 div 的样式影响。
+在 **Plunker** 上尝试：
+* 尝试添加 `<div>` 到 `index.html`；它是否受 `<picture-frame>` 的阴影 DOM 里的样式影响？
 * 尝试添加其他 HTML 元素到 DOM 模板中，以观察它们如何相对于那些分布的子节点来定位。
 
 **注意：**  `<dom-module>` 里面定义的 CSS 样式的 _作用域_ 仅限于元素的阴影 DOM。
@@ -125,6 +130,7 @@ Polymer 使声明性地创建 Web 组件变得简单。
   <iframe frameborder="0" src="samples/name-tag/index.html" width="100%" height="40"></iframe>
 </demo-tabs>
 
+Try it out in **Plunker**:
 * Try editing the value of the `owner` property.
 * Try adding another property and binding it in your component. 
   Hint: Add `this.propertyName = "Property contents";` to the constructor
@@ -141,7 +147,7 @@ _声明的属物_ 支持许多常见的用于属物的模式——设置默认�
 以下示例声明来自于上一个示例的 `owner` 属物。
 它还展示了在 `index.html` 中用标记配置 owner 属物。
 
-<demo-tabs selected="0" name="qt-5-declare-property" src="http://plnkr.co/edit/ROIvZg?p=preview">
+<demo-tabs selected="0" name="qt-5-declare-property" src="http://plnkr.co/edit/3Nz8GL?p=preview">
   <demo-tab heading="configurable-name-tag.html">
 <pre><code>{{{include_file('2.0/start/samples/configurable-name-tag/configurable-name-tag.html')}}}</code></pre>
   </demo-tab>
@@ -152,6 +158,7 @@ _声明的属物_ 支持许多常见的用于属物的模式——设置默认�
   <iframe frameborder="0" src="samples/configurable-name-tag/index.html" width="100%" height="40"></iframe>
 </demo-tabs>
 
+Try it out in **Plunker**:
 * Try editing the initial value of `owner` in index.html. Observe how this sets the property directly from your HTML.
 
 <p><a href="/2.0/docs/devguide/properties" class="blue-button">
@@ -166,7 +173,7 @@ _声明的属物_ 支持许多常见的用于属物的模式——设置默认�
 的值绑定到元素的 (`iron-input`)
 的值绑定到元素的 `owner` 属物，因此它将在用户输入时进行更新。
 
-<demo-tabs selected="0" name="qt-6-bind-property" src="http://plnkr.co/edit/VYR8my?p=preview">
+<demo-tabs selected="0" name="qt-6-bind-property" src="http://plnkr.co/edit/03HGzn98uIN5I1WgkDwu?p=preview">
   <demo-tab heading="editable-name-tag.html">
 <pre><code>{{{include_file('2.0/start/samples/editable-name-tag/editable-name-tag.html')}}}</code></pre>
   </demo-tab>
@@ -177,6 +184,7 @@ _声明的属物_ 支持许多常见的用于属物的模式——设置默认�
   <iframe frameborder="0" src="samples/editable-name-tag/index.html" width="100%" height="100"></iframe>
 </demo-tabs>
 
+在 **Plunker** 上尝试：
 * 编辑占位符文本以观察双向数据绑定如何工作的。
 
 **注意：** `<iron-input>` 元素包装了原生的 `<input>` 元素，并提供双向数据绑定和输入校验。
@@ -197,8 +205,9 @@ _声明的属物_ 支持许多常见的用于属物的模式——设置默认�
   <iframe frameborder="0" src="samples/employee-list/index.html" width="100%" height="100"></iframe>
 </demo-tabs>
 
+Try it out in **Plunker**:
 * Change the first and last names inside this.employees
-* Add another employee by inserting this text into the array definition after Tony Morelli:<br/>
+* Add another employee by inserting the following text into the array definition after Tony Morelli:<br/>
   ```
    ,
      {first: 'Shawna', last: 'Williams'} 

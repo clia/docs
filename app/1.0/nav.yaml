@@ -47,7 +47,7 @@
   items:
   - title: 功能概述
     path: /1.0/docs/devguide/feature-overview
-  - title: 快速浏览
+  - title: 尝试 Polymer
     path: /1.0/docs/devguide/quick-tour
   - header: 定义元素
   - title: 注册元素

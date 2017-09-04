@@ -1,4 +1,19 @@
 ---
+- title: "Polymer 峰会演讲者聚焦：Bede Overend，Simpla"
+  path: /blog/2017-08-30-speaker-spotlight-bede
+  published: 2017-08-30
+  author: katejeffreys
+  description: "来自 Simpla 的 Bede Overend 讲述利用 Web 组件促进用户的参与。"
+- title: "Polymer 3.0 预览版上手"
+  path: /blog/2017-08-23-hands-on-30-preview
+  published: 2017-08-23
+  author: arthurevans
+  description: "开始实验性地使用 Polymer，使用 npm 和 ES6 模块。"
+- title: "Polymer 3.0 预览：npm 和 ES6 模块"
+  path: /blog/2017-08-22-npm-modules
+  published: 2017-08-22
+  author: justinfagnani
+  description: "今天在哥本哈根举行的 2017 年 Polymer 峰会上，我们宣布了项目历史上对我们的开发人员的工作流程的最大变化之一。"
 - title: "Polymer 峰会演讲者聚焦：Kunal Kundaje，Netflix"
   path: /blog/2017-08-16-speaker-spotlight-kunal
   published: 2017-08-16
