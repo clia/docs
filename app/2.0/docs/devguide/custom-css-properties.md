@@ -364,7 +364,7 @@ slightly differently depending on whether the shady CSS polyfill is loaded:
 if (ShadyCSS) {
   style = ShadyCSS.getComputedStyleValue(this, '--something');
 } else {
-  style = getComputedStyle(this, '--something');
+  style = getComputedStyle(this).getPropertyValue('--something');
 }
 ```
 

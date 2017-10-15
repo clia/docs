@@ -148,9 +148,9 @@
   - title: 测试您的元素
     path: /2.0/docs/tools/tests
     indent: True
-#  - title: Publish an element
-#    path: /2.0/docs/tools/reusable-elements
-#    indent: True
+  - title: Publish your elements
+    path: /2.0/docs/tools/publish
+    indent: True
   - title: Web services
     path: /2.0/docs/tools/services
     indent: True

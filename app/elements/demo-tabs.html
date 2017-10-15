@@ -15,7 +15,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <!-- Note: this is lazy loaded by quick-tour.md -->
 <dom-module id='demo-tab'>
   <template>
-    <content></content>
+    <slot></slot>
   </template>
   <script>
     Polymer({
@@ -79,9 +79,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <div class="tabstrip layout horizontal center">
       <paper-tabs selected="{{_selected}}" class="flex">
-        <template is="dom-repeat" items="[[_panels]]">
-          <paper-tab>{{item.heading}}</paper-tab>
-        </template>
+        <dom-repeat items="[[_panels]]">
+          <template>
+            <paper-tab>{{item.heading}}</paper-tab>
+          </template>
+        </dom-repeat>
       </paper-tabs>
       <a href="[[src]]" target="_blank" hidden$="[[_hidePlunkrButton(src)]]">
         <paper-button on-click="_plunkerLaunched" raised>
@@ -93,12 +95,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <div class="layout horizontal">
       <iron-pages selected="[[_selected]]">
-        <content id="contentpanels" select="demo-tab"></content>
+        <slot id="contentpanels" name="demo-tab"></slot>
       </iron-pages>
     </div>
 
     <div class="results">
-      <content select="iframe"></content>
+      <slot></slot>
     </div>
   </template>
 

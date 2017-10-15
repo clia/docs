@@ -102,6 +102,11 @@ Polymer 应用可以部署到任何 Web 服务器。
       upload: build/es5-bundled/manifest.json
       secure: always
 
+    - url: /service-worker.js
+      static_files: build/es5-bundled/service-worker.js
+      upload: build/es5-bundled/service-worker.js
+      secure: always
+
     - url: /.*
       static_files: build/es5-bundled/index.html
       upload: build/es5-bundled/index.html
@@ -155,37 +160,16 @@ Polymer 应用可以部署到任何 Web 服务器。
 
 1.  Firebase 会询问您的 App 的公共目录的名称。输入 `build/es5-bundled/`。
 
-1.  编辑您的 Firebase 配置以添加对 URL 路由的支持。将以下内容添加到 `firebase.json` 文件的 `hosting` 对象中。
-
-    ```
-    "rewrites": [
-      {
-        "source": "!/__/**",
-        "destination": "/index.html"
-      },
-      {
-        "source": "**/!(*.js|*.html|*.css|*.json|*.svg|*.png|*.jpg|*.jpeg)",
-        "destination": "/index.html"
-      }
-    ]
-    ```
-
-    例如，您的 `firebase.json` 修改后可能会如下所示：
+1.  编辑您的 Firebase 配置以添加对 URL 路由的支持。最终的
+    `firebase.json` 文件应该如下面所示：
 	
     ```
     {
-      "database": {
-        "rules": "database.rules.json"
-      },
       "hosting": {
         "public": "build/es5-bundled/",
         "rewrites": [
           {
-            "source": "!/__/**",
-            "destination": "/index.html"
-          },
-          {
-            "source": "**/!(*.js|*.html|*.css|*.json|*.svg|*.png|*.jpg|*.jpeg)",
+            "source": "**/!(*.*)",
             "destination": "/index.html"
           }
         ]
