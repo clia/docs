@@ -205,11 +205,10 @@ Try it out in **Plunker**:
   <iframe frameborder="0" src="samples/employee-list/index.html" width="100%" height="100"></iframe>
 </demo-tabs>
 
-Try it out in **Plunker**:
-* Change the first and last names inside this.employees
-* Add another employee by inserting the following text into the array definition after Tony Morelli:<br/>
+在 **Plunker** 上尝试：
+* 更改 this.employees 中的名字和姓氏
+* 在 Tony Morelli 之后，通过将以下文本插入数组定义添加另一名员工:<br/>
   ```
-   ,
      {first: 'Shawna', last: 'Williams'} 
   ```
 
