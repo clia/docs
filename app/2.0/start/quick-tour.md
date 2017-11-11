@@ -130,11 +130,11 @@ Polymer 使声明性地创建 Web 组件变得简单。
   <iframe frameborder="0" src="samples/name-tag/index.html" width="100%" height="40"></iframe>
 </demo-tabs>
 
-Try it out in **Plunker**:
-* Try editing the value of the `owner` property.
-* Try adding another property and binding it in your component. 
-  Hint: Add `this.propertyName = "Property contents";` to the constructor
-  and add {{propertyName}} to the element’s shadow DOM.  
+在 **Plunker** 上尝试：
+* 尝试编辑`owner` 属物的值。 
+* 尝试添加另一个属物并将其绑定到组件中。
+  提示：将 `this.propertyName = "Property contents";` 添加到构造函数中
+  并将 {{propertyName}} 添加到元素的阴影DOM。 
 
 <p><a href="/2.0/docs/devguide/data-binding" class="blue-button">
 了解更多：数据绑定</a></p>
