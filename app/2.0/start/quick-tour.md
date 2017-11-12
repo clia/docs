@@ -8,9 +8,13 @@ Polymer 使声明性地创建 Web 组件变得简单。
 
 新的 Web 开发者能够简单地使用标记来添加自定义 HTML 元素到一个网页上去。这就像您已经熟悉的使用 HTML 标签的用法一样：
 
-<pre><code>&lt;h1&gt;A heading!&lt;/h1&gt;</code></pre>
+```html
+<h1>A heading!</h1>
+```
 
-<pre><code>&lt;fancy-thing&gt;A fancy thing!&lt;/fancy-thing&gt;</code></pre>
+```html
+<fancy-thing>A fancy thing!</fancy-thing>
+```
 
 
 有经验的 Web 开发者能够使用 Polymer 的特殊功能来减少样板代码，使构建复杂的、交互的元素变得更容易。
@@ -33,14 +37,23 @@ Polymer 使声明性地创建 Web 组件变得简单。
 注册元素将元素名称与类相关联，因此您可以向自定义元素添加属物和方法。自定义元素的名称 **必须以ASCII字母开头，并包含连接号（-）**。
 
 <demo-tabs selected="0" name="qt-1-register" src="http://plnkr.co/edit/Q4E8zO?p=preview">
-  <demo-tab slot="demo-tab" heading="custom-element.html">
-<pre><code>{{{include_file('2.0/start/samples/custom-element/custom-element.html')}}}</code></pre>
-  </demo-tab>
-  <demo-tab slot="demo-tab" heading="index.html">
-<pre><code>{{{include_file('2.0/start/samples/custom-element/index.html')}}}</code></pre>
-  </demo-tab>
+  <paper-tab slot="tabs">custom-element.html</paper-tab>
+  <div>
 
-  <iframe frameborder="0" src="samples/custom-element/index.html" width="100%" height="40"></iframe>
+```html
+<!-- include_file 2.0/start/samples/custom-element/custom-element.html -->
+```
+
+  </div>
+  <paper-tab slot="tabs">index.html</paper-tab>
+  <div>
+
+```html
+<!-- include_file 2.0/start/samples/custom-element/index.html -->
+```
+
+  </div>
+  <iframe slot="results" frameborder="0" src="samples/custom-element/index.html" width="100%" height="40"></iframe>
 </demo-tabs>
 
 在 **Plunker** 上尝试：
@@ -65,14 +78,23 @@ Polymer 使声明性地创建 Web 组件变得简单。
 许多元素包括一些内部 DOM 节点来实现元素的 UI 和行为。您可以使用 Polymer 的 DOM 模板化为元素创建一个阴影 DOM 树。
 
 <demo-tabs selected="0" name="qt-2-shadow-dom" src="http://plnkr.co/edit/buPxSJ?p=preview">
-  <demo-tab slot="demo-tab" heading="dom-element.html">
-<pre><code>{{{include_file('2.0/start/samples/dom-element/dom-element.html')}}}</code></pre>
-  </demo-tab>
-  <demo-tab slot="demo-tab" heading="index.html">
-<pre><code>{{{include_file('2.0/start/samples/dom-element/index.html')}}}</code></pre>
-  </demo-tab>
+  <paper-tab slot="tabs">dom-element.html</paper-tab>
+  <div>
 
-  <iframe frameborder="0" src="samples/dom-element/index.html" width="100%" height="40"></iframe>
+```html
+<!-- include_file 2.0/start/samples/dom-element/dom-element.html -->
+```
+
+  </div>
+  <paper-tab slot="tabs">index.html</paper-tab>
+  <div>
+
+```html
+<!-- include_file 2.0/start/samples/dom-element/index.html -->
+```
+
+  </div>
+  <iframe slot="results" frameborder="0" src="samples/dom-element/index.html" width="100%" height="40"></iframe>
 </demo-tabs>
 
 在 **Plunker** 上尝试：
@@ -90,14 +112,23 @@ Polymer 使声明性地创建 Web 组件变得简单。
 此示例创建一个简单的标签，通过使用一个样式化的 `<div>` 标签来包装一个图片来装饰该图片。
 
 <demo-tabs selected="0" name="qt-3-compose" src="http://plnkr.co/edit/KvBnmE?p=preview">
-  <demo-tab slot="demo-tab" heading="picture-frame.html">
-<pre><code>{{{include_file('2.0/start/samples/picture-frame/picture-frame.html')}}}</code></pre>
-  </demo-tab>
-  <demo-tab slot="demo-tab" heading="index.html">
-<pre><code>{{{include_file('2.0/start/samples/picture-frame/index.html')}}}</code></pre>
-  </demo-tab>
+  <paper-tab slot="tabs">picture-frame.html</paper-tab>
+  <div>
 
-  <iframe frameborder="0" src="samples/picture-frame/index.html" width="100%" height="60"></iframe>
+```html
+<!-- include_file 2.0/start/samples/picture-frame/picture-frame.html -->
+```
+
+  </div>
+  <paper-tab slot="tabs">index.html</paper-tab>
+  <div>
+
+```html
+<!-- include_file 2.0/start/samples/picture-frame/index.html -->
+```
+
+  </div>
+  <iframe slot="results" frameborder="0" src="samples/picture-frame/index.html" width="100%" height="60"></iframe>
 </demo-tabs>
 
 在 **Plunker** 上尝试：
@@ -120,14 +151,23 @@ Polymer 使声明性地创建 Web 组件变得简单。
 这 `{%raw%}{{}}{%endraw%}` 由大括号中引用的属物的值所替换。
 
 <demo-tabs selected="0" name="qt-4-data-binding" src="http://plnkr.co/edit/8mZK8S?p=preview">
-  <demo-tab slot="demo-tab" heading="name-tag.html">
-<pre><code>{{{include_file('2.0/start/samples/name-tag/name-tag.html')}}}</code></pre>
-  </demo-tab>
-  <demo-tab slot="demo-tab" heading="index.html">
-<pre><code>{{{include_file('2.0/start/samples/name-tag/index.html')}}}</code></pre>
-  </demo-tab>
+  <paper-tab slot="tabs">name-tag.html</paper-tab>
+  <div>
 
-  <iframe frameborder="0" src="samples/name-tag/index.html" width="100%" height="40"></iframe>
+```html
+<!-- include_file 2.0/start/samples/name-tag/name-tag.html -->
+```
+
+  </div>
+  <paper-tab slot="tabs">index.html</paper-tab>
+  <div>
+
+```html
+<!-- include_file 2.0/start/samples/name-tag/index.html -->
+```
+
+  </div>
+  <iframe slot="results" frameborder="0" src="samples/name-tag/index.html" width="100%" height="40"></iframe>
 </demo-tabs>
 
 在 **Plunker** 上尝试：
@@ -148,14 +188,23 @@ _声明的属物_ 支持许多常见的用于属物的模式——设置默认�
 它还展示了在 `index.html` 中用标记配置 owner 属物。
 
 <demo-tabs selected="0" name="qt-5-declare-property" src="http://plnkr.co/edit/3Nz8GL?p=preview">
-  <demo-tab slot="demo-tab" heading="configurable-name-tag.html">
-<pre><code>{{{include_file('2.0/start/samples/configurable-name-tag/configurable-name-tag.html')}}}</code></pre>
-  </demo-tab>
-  <demo-tab slot="demo-tab" heading="index.html">
-<pre><code>{{{include_file('2.0/start/samples/configurable-name-tag/index.html')}}}</code></pre>
-  </demo-tab>
+  <paper-tab slot="tabs">configurable-name-tag.html</paper-tab>
+  <div>
 
-  <iframe frameborder="0" src="samples/configurable-name-tag/index.html" width="100%" height="40"></iframe>
+```html
+<!-- include_file 2.0/start/samples/configurable-name-tag/configurable-name-tag.html -->
+```
+
+  </div>
+  <paper-tab slot="tabs">index.html</paper-tab>
+  <div>
+
+```html
+<!-- include_file 2.0/start/samples/configurable-name-tag/index.html -->
+```
+
+  </div>
+  <iframe slot="results" frameborder="0" src="samples/configurable-name-tag/index.html" width="100%" height="40"></iframe>
 </demo-tabs>
 
 Try it out in **Plunker**:
@@ -174,14 +223,23 @@ Try it out in **Plunker**:
 的值绑定到元素的 `owner` 属物，因此它将在用户输入时进行更新。
 
 <demo-tabs selected="0" name="qt-6-bind-property" src="http://plnkr.co/edit/03HGzn98uIN5I1WgkDwu?p=preview">
-  <demo-tab slot="demo-tab" heading="editable-name-tag.html">
-<pre><code>{{{include_file('2.0/start/samples/editable-name-tag/editable-name-tag.html')}}}</code></pre>
-  </demo-tab>
-  <demo-tab slot="demo-tab" heading="index.html">
-<pre><code>{{{include_file('2.0/start/samples/editable-name-tag/index.html')}}}</code></pre>
-  </demo-tab>
+  <paper-tab slot="tabs">editable-name-tag.html</paper-tab>
+  <div>
 
-  <iframe frameborder="0" src="samples/editable-name-tag/index.html" width="100%" height="100"></iframe>
+```html
+<!-- include_file 2.0/start/samples/editable-name-tag/editable-name-tag.html -->
+```
+
+  </div>
+  <paper-tab slot="tabs">index.html</paper-tab>
+  <div>
+
+```html
+<!-- include_file 2.0/start/samples/editable-name-tag/index.html -->
+```
+
+  </div>
+  <iframe slot="results" frameborder="0" src="samples/editable-name-tag/index.html" width="100%" height="100"></iframe>
 </demo-tabs>
 
 在 **Plunker** 上尝试：
@@ -195,20 +253,30 @@ Try it out in **Plunker**:
 模板重复器 (`dom-repeat`) 是一个绑定到数组的专用模板。它为数组中的每个项创建模板内容的一个实例。
 
 <demo-tabs selected="0" name="qt-7-dom-repeat" src="http://plnkr.co/edit/FdgkAtcLFHX5TpTsYtZn?p=preview">
-  <demo-tab slot="demo-tab" heading="employee-list.html">
-<pre><code>{{{include_file('2.0/start/samples/employee-list/employee-list.html')}}}</code></pre>
-  </demo-tab>
-  <demo-tab slot="demo-tab" heading="index.html">
-<pre><code>{{{include_file('2.0/start/samples/employee-list/index.html')}}}</code></pre>
-  </demo-tab>
+  <paper-tab slot="tabs">employee-list.html</paper-tab>
+  <div>
 
-  <iframe frameborder="0" src="samples/employee-list/index.html" width="100%" height="100"></iframe>
+```html
+<!-- include_file 2.0/start/samples/employee-list/employee-list.html -->
+```
+
+  </div>
+  <paper-tab slot="tabs">index.html</paper-tab>
+  <div>
+
+```html
+<!-- include_file 2.0/start/samples/employee-list/index.html -->
+```
+
+  </div>
+  <iframe slot="results" frameborder="0" src="samples/employee-list/index.html" width="100%" height="100"></iframe>
 </demo-tabs>
 
 在 **Plunker** 上尝试：
 * 更改 this.employees 中的名字和姓氏
-* 在 Tony Morelli 之后，通过将以下文本插入数组定义添加另一名员工:<br/>
-  ```
+* 在 Tony Morelli 之后，通过将以下文本插入数组定义添加另一名员工：<br/>
+  ```js
+   ,
      {first: 'Shawna', last: 'Williams'} 
   ```
 
