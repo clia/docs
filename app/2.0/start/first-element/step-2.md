@@ -1,7 +1,9 @@
 ---
-title: "Step 2: Add Local DOM"
+title: "Step 2: Add Shadow DOM"
 subtitle: "Build your first Polymer element"
 ---
+
+<!-- toc -->
 
 接下来，您将创建一个显示图标的简单元素。
 
@@ -44,7 +46,7 @@ _阴影 DOM_ 是由您的元素管理的一组 DOM 元素。您将在本节中�
 
 接下来是元素本身的定义：
 
-起始代码——本地 DOM 模板 { .caption }
+起始代码——阴影 DOM 模板 { .caption }
 
 ```html
 <dom-module id="icon-toggle">
@@ -62,11 +64,11 @@ _阴影 DOM_ 是由您的元素管理的一组 DOM 元素。您将在本节中�
 
 关键信息：
 
-*   `<dom-module>` 标签包装了元素的本地 DOM 定义。
-    在本例中，`id` 属性显示了这个模块包含一个叫做 `icon-toggle` 的元素的本地 DOM。
-*   `<template>` 实际定义元素的本地 DOM 结构和样式。这就是您为自定义元素添加标记的位置。
-*   `<template>` 里的 `<style>` 元素让您定义<em>作用域</em>为本地 DOM 的样式，因此它们不会影响文档的其余部分。
-*   `:host` 伪类匹配您所定义的自定义元素 (在本例中： `<icon-toggle>`)。这是包含或<em>主有 </em>该本地 DOM 树的元素。
+*   `<dom-module>` 标签包装了元素的阴影 DOM 定义。
+    在本例中，`id` 属性显示了这个模块包含一个叫做 `icon-toggle` 的元素的阴影 DOM。
+*   `<template>` 实际定义元素的阴影 DOM 结构和样式。这就是您为自定义元素添加标记的位置。
+*   `<template>` 里的 `<style>` 元素让您定义<em>作用域</em>为阴影 DOM 的样式，因此它们不会影响文档的其余部分。
+*   `:host` 伪类匹配您所定义的自定义元素 (在本例中： `<icon-toggle>`)。这是包含或<em>主有 </em>该阴影 DOM 树的元素。
 
 **了解更多：阴影 DOM。** 阴影 DOM 允许您在元素内添加<em>定界的</em> DOM 树，拥有与网页的其余部分解耦的本地样式和标记。
 阴影 DOM 基于阴影 DOM 规范，当原生阴影 DOM 可用时，使用原生。
@@ -126,9 +128,9 @@ DOM 概念</a>。
     customElements.define(IconToggle.is, IconToggle);
     ```
 
-### 创建本地 DOM 结构
+### 创建阴影 DOM 结构
 
-现在，您已经熟悉了元素的基本布局，下面为其本地 DOM 模板添加一些有用的东西。
+现在，您已经熟悉了元素的基本布局，下面为其阴影 DOM 模板添加一些有用的东西。
 
 找到  `阴影 DOM 放在这里` 注释下面的 `<span>` ：
 
@@ -155,7 +157,7 @@ icon-toggle.html—after { .caption }
 
   * `<iron-icon>` 元素是呈现图标的自定义元素。这里用硬编码的方式来使用一个叫做 "polymer" 的图标。
 
-### 样式化本地 DOM
+### 样式化阴影 DOM
 
 有一些新的 CSS 选择器可以用于处理阴影 DOM。前面讨论过，`icon-toggle.html ` 文件已经包括一个 `:host` 选择器，用来样式化顶级的 `<icon-toggle>` 元素。
 

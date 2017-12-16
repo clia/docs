@@ -11,51 +11,14 @@ title: Custom element concepts
 *   当实例上的一组特定属性之一更改时，将被调用的一个回调。
 
 放在一起，这些功能可以让您使用元素自己的公共 API 构建一个元素，该 API 对状态更改做出反应。
+Polymer provides a set of features on top of the basic custom element specification.
 
 本文档提供了一份与 Polymer 有关的自定义元素的概述。有关自定义元素的更详细的概述，请参阅：
-[自定义元素 v1: 可重用的 Web 组件](https://developers.google.com/web/fundamentals/getting-started/primers/customelements)
+[自定义元素 v1: 可重用的 Web 组件](https://developers.google.com/web/fundamentals/web-components/customelements)
 于 Web 基础集。
 
 要定义一个自定义元素，您将创建一个 ES6 类并将其与自定义元素名称相关联。
-
-```
-// 创建一个类扩展 HTMLElement (直接或非直接)
-class MyElement extends HTMLElement { … };
-
-// 把这个新的类与一个元素名相关联
-window.customElements.define('my-element', MyElement);
-```
-
-
-您可以像使用标准元素一样使用自定义元素：
-
-
-```html
-<my-element></my-element>
-```
-
-或者：
-
-```js
-const myEl = document.createElement('my-element');
-```
-
-或者：
-
-```js
-const myEl = new MyElement();
-```
-
-该元素的类定义了它的行为和公共 API。该类必须扩展 `HTMLElement` 或者它的一个子类（例如另一个自定义元素）。
-
-**自定义元素名称。** 按照规范，自定义元素的名称 **必须以小写 ASCII 字母开头，并且必须包含连字符（-）**。
-还有一个与已存在的元素名称冲突的被禁用的名称的简短列表。
-有关详细信息，请参阅 HTML 规范中的 [自定义元素核心概念](https://html.spec.whatwg.org/multipage/scripting.html#custom-elements-core-concepts)
-章节。
-{.alert .alert-info}
-
-Polymer 在基本的自定义元素规范之上提供了一组功能。要将这些功能添加到您的元素中，
-请扩展 Polymer 的基本元素类 `Polymer.Element`：
+For the full set of Polymer features, extend the `Polymer.Element` class:
 
 ```html
 <link rel="import" href="/bower_components/polymer/polymer-element.html">
@@ -68,6 +31,16 @@ Polymer 在基本的自定义元素规范之上提供了一组功能。要将这
   customElements.define('my-polymer-element', MyPolymerElement);
 </script>
 ```
+
+You can use a custom element just like you'd use a standard element.
+
+该元素的类定义了它的行为和公共 API。
+
+**自定义元素名称。** 按照规范，自定义元素的名称 **必须以小写 ASCII 字母开头，并且必须包含连字符（-）**。
+还有一个与已存在的元素名称冲突的被禁用的名称的简短列表。
+有关详细信息，请参阅 HTML 规范中的 [自定义元素核心概念](https://html.spec.whatwg.org/multipage/scripting.html#custom-elements-core-concepts)
+章节。
+{.alert .alert-info}
 
 Polymer 为基本的自定义元素添加了一组功能：
 
@@ -153,7 +126,7 @@ For a complete list of limitations, see [Requirements for custom element constru
 
 Whenever possible, defer work until the `connectedCallback` or later instead of performing it in the constructor.
 
-### 一次性初始化
+### Polymer 元素初始化
 
 The custom elements specification doesn't provide a one-time initialization callback. Polymer
 provides a `ready` callback, invoked the first time the element is added to the DOM.
@@ -161,17 +134,20 @@ provides a `ready` callback, invoked the first time the element is added to the 
 ```js
 ready() {
   super.ready();
-  // When possible, use afterNextRender to defer non-critical
-  // work until after first paint.
-  Polymer.RenderStatus.afterNextRender(this, function() {
-    ...
-  });
+  // do something that requires access to the shadow tree
+  ...
+
 }
 ```
 
-
 The `Polymer.Element` class initializes your element's template and data system during the `ready`
-callback, so if you override ready, you must call `super.ready()` at some point.
+callback, so if you override `ready`, you must call `super.ready()` at some point.
+
+Polymer does several things at `ready` time:
+
+-   Creates and attaches the element's shadow DOM tree.
+-   Initializes the data system, propagating initial values to data bindings.
+-   Allows observers and computed properties to run (as soon as any of their dependencies are defined).
 
 When the superclass `ready` method returns, the element's template has been instantiated and initial
 property values have been set. However, light DOM elements may not have been distributed when
@@ -188,6 +164,30 @@ Related topics:
 *   [Data system concepts](data-system)
 *   [Observers and computed properties](observers)
 *   [Observe added and removed children](shadow-dom#observe-nodes)
+
+### Defer non-critical work
+
+When possible, defer work until after first paint. [`Polymer.RenderStatus`](/{{{polymer_version_dir}}}/docs/api/namespaces/Polymer.RenderStatus) provides a utility for this purpose. `Polymer.RenderStatus` is included by default for hybrid elements. For class-style elements using the `polymer-element.html` import, you need to import `Polymer.RenderStatus` separately.
+
+```js
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+<link rel="import" href="/bower_components/polymer/lib/utils/render-status.html">
+
+class DeferElement extends Polymer.Element {
+  ...
+  constructor() {
+    super();
+    // When possible, use afterNextRender to defer non-critical
+    // work until after first paint.
+    Polymer.RenderStatus.afterNextRender(this, function() {
+      this.addEventListener('click', this._handleClick);
+    });
+  }
+}
+```
+
+In most cases, you can call `afterNextRender` from either the `constructor` or the `ready`
+callback with similar results.
 
 ## 元素升级
 
@@ -450,6 +450,7 @@ MyNamespace.MyMixin = Polymer.dedupingMixin((base) =>
   }
 );
 ```
+
 
 ## 资源
 

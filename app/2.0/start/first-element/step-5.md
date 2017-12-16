@@ -3,6 +3,8 @@ title: "Step 5: Theming with custom CSS properties"
 subtitle: "Build your first Polymer element"
 ---
 
+<!-- toc -->
+
 您现在已有了一个基本功能的按钮。但它现在受困于使用已有的文本颜色，既用于按压的状态，也用于未按压的状态。
 如果您想要更闪亮一点呢？
 

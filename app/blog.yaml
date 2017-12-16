@@ -1,4 +1,10 @@
 ---
+- title:  "元素的未来"
+  path: /blog/2017-11-27-future-of-elements
+  published: 2017-11-27
+  author: notwaldorf
+  description: "对于 Polymer 元素我们现在正在做的，我们现在不做的，以及为什么不做。"
+
 - title:  "阴影 DOM v0 和 HTML 导入已经改变了"
   path: /blog/2017-10-18-upcoming-changes
   published: 2017-10-18

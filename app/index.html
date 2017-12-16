@@ -333,15 +333,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <h2>从目录中使用元素</h2>
         <div class="section-columns">
           <div class="example-code flex">
-            <pre><code class="lang-html">
-  &lt;!-- Polyfill 为老旧浏览器提供的 Web 组件支持 --&gt;
-  &lt;script src=&quot;components/webcomponentsjs/webcomponents-lite.min.js&quot;&gt;&lt;/script&gt;
+            <pre><code class="html">
+  <!-- Polyfill 为老旧浏览器提供的 Web 组件支持 -->
+  <script src="components/webcomponentsjs/webcomponents-lite.min.js"></script>
 
-  &lt;!-- 导入元素 --&gt;
-  &lt;link rel=&quot;import&quot; href=&quot;components/google-map/google-map.html&quot;&gt;
+  <!-- 导入元素 -->
+  <link rel="import" href="components/google-map/google-map.html">
 
-  &lt;!-- 使用元素 --&gt;
-  &lt;google-map latitude=&quot;37.790&quot; longitude=&quot;-122.390&quot;&gt;&lt;/google-map&gt;
+  <!-- 使用元素 -->
+  <google-map latitude="37.790" longitude="-122.390"></google-map>
           </code></pre>
           </div>
           <div class="example-google-map">
@@ -356,14 +356,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <h2>创建您自己的元素</h2>
         <div class="section-columns">
           <div class="example-code flex">
-            <pre><code class="lang-html">
-  &lt;dom-module id=&quot;contact-card&quot;&gt;
-    &lt;template&gt;
-      &lt;style&gt;...&lt;/style&gt;
-      &lt;slot&gt;&lt;/slot&gt;
-      &lt;iron-icon icon=&quot;star&quot; hidden$=&quot;{{!starred}}&quot;&gt;&lt;/iron-icon&gt;
-    &lt;/template&gt;
-    &lt;script&gt;
+            <pre><code class="html">
+  <dom-module id="contact-card">
+    <template>
+      <style>/* ... */</style>
+      <slot></slot>
+      <iron-icon icon="star" hidden$="{{!starred}}"></iron-icon>
+    </template>
+    <script>
       class ContactCard extends Polymer.Element {
         static get is() { return "contact-card"; }
         static get properties() {
@@ -373,15 +373,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
       }
       customElements.define(ContactCard.is, ContactCard);
-    &lt;/script&gt;
-  &lt;/dom-module&gt;
+    </script>
+  </dom-module>
             </code></pre>
             <br>
-            <pre><code class="lang-html">
-  &lt;contact-card starred&gt;
-    &lt;img src=&quot;profile.jpg&quot; alt=&quot;Eric's photo&quot;&gt;
-    &lt;span&gt;Eric Bidelman&lt;/span&gt;
-  &lt;/contact-card&gt;
+            <pre><code class="html">
+  <contact-card starred>
+    <img src="profile.jpg" alt="Eric's photo">
+    <span>Eric Bidelman</span>
+  </contact-card>
             </code></pre>
           </div>
 
@@ -397,27 +397,27 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <h2>构建渐进式 Web App</h2>
         <div class="section-columns">
           <div class="example-code flex">
-            <pre><code class="lang-html">
-  &lt;iron-pages role="main" selected="[[page]]" attr-for-selected="name" selected-attribute="visible"&gt;
-    &lt;!-- 主页视图 --&gt;
-    &lt;shop-home name="home" categories="[[categories]]"&gt;&lt;/shop-home&gt;
+            <pre><code class="html">
+  <iron-pages role="main" selected="[[page]]" attr-for-selected="name" selected-attribute="visible">
+    <!-- 主页视图 -->
+    <shop-home name="home" categories="[[categories]]"></shop-home>
 
-    &lt;!-- 目录中商品的列表视图 --&gt;
-    &lt;shop-list name="list" route="[[subroute]]" offline="[[offline]]"&gt;&lt;/shop-list&gt;
+    <!-- 目录中商品的列表视图 -->
+    <shop-list name="list" route="[[subroute]]" offline="[[offline]]"></shop-list>
 
-    &lt;!-- 商品详情视图 --&gt;
-    &lt;shop-detail name="detail" route="[[subroute]]" offline="[[offline]]"&gt;&lt;/shop-detail&gt;
+    <!-- 商品详情视图 -->
+    <shop-detail name="detail" route="[[subroute]]" offline="[[offline]]"></shop-detail>
 
-    &lt;!-- 购物车视图 --&gt;
-    &lt;shop-cart name="cart" cart="[[cart]]" total="[[total]]"&gt;&lt;/shop-cart&gt;
+    <!-- 购物车视图 -->
+    <shop-cart name="cart" cart="[[cart]]" total="[[total]]"></shop-cart>
 
-    &lt;!-- 结帐视图 --&gt;
-    &lt;shop-checkout
+    <!-- 结帐视图 -->
+    <shop-checkout
         name="checkout"
         cart="[[cart]]"
         total="[[total]]"
-        route="{{subroute}}"&gt;&lt;/shop-checkout&gt;
-  &lt;/iron-pages&gt;
+        route="{{subroute}}"></shop-checkout>
+  </iron-pages>
             </code></pre>
           </div>
 

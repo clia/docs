@@ -3,8 +3,12 @@ title: "Step 3: Use data binding and properties"
 subtitle: "Build your first Polymer element"
 ---
 
+<!-- toc -->
+
 现在，这个元素并没有做多少事。在此步骤中，您将给它一个基本的 API，
 允许您从标记中使用属性，或是从 JavaScript 中使用属物，来配置图标。
+
+## 声明属物
 
 首先，来一点数据绑定。我们将创建一个 `toggleIcon` 属物，您能在 HTML 标记中使用，如下所示：
 
@@ -67,6 +71,8 @@ icon-toggle.html: 之后 { .caption }
 要了解更多信息，请参阅 Polymer 文档中的 <a href="/2.0/docs/devguide/properties#attribute-deserialization">属性反序列化
 </a>。
 { .alert .alert-info }
+
+## 从标记配置属物 
 
 现在找到 `<iron-icon>` 元素并将 `icon` 属性的值从 `"polymer"` 改为  "`[[toggleIcon]]`"。
 
