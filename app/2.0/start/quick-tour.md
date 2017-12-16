@@ -177,11 +177,11 @@ versions of Chrome, Edge, Firefox and Safari.
   <iframe slot="results" frameborder="0" src="samples/name-tag/index.html" width="100%" height="40"></iframe>
 </demo-tabs>
 
-Try it out in **Plunker**:
-* Try editing the value of the `owner` property.
-* Try adding another property and binding it in your component. 
-  Hint: Add `this.propertyName = "Property contents";` to the constructor
-  and add {{propertyName}} to the element’s shadow DOM.  
+在 **Plunker** 上尝试：
+* 尝试编辑`owner` 属物的值。 
+* 尝试添加另一个属物并将其绑定到组件中。
+  提示：将 `this.propertyName = "Property contents";` 添加到构造函数中
+  并将 {{propertyName}} 添加到元素的阴影DOM。 
 
 <p><a href="/2.0/docs/devguide/data-binding" class="blue-button">
 了解更多：数据绑定</a></p>
@@ -279,9 +279,9 @@ Try it out in **Plunker**:
   <iframe slot="results" frameborder="0" src="samples/employee-list/index.html" width="100%" height="100"></iframe>
 </demo-tabs>
 
-Try it out in **Plunker**:
-* Change the first and last names inside this.employees
-* Add another employee by inserting the following item into the array definition:<br/>
+在 **Plunker** 上尝试：
+* 更改 this.employees 中的名字和姓氏
+* 在 Tony Morelli 之后，通过将以下文本插入数组定义添加另一名员工：<br/>
   ```js
      {first: 'Shawna', last: 'Williams'} 
   ```
