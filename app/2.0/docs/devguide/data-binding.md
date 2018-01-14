@@ -139,6 +139,60 @@ annotation or compound binding inside the target element.
 
 Binding to text content is always one-way, host-to-target.
 
+#### 在其他空节点中绑定未定义的属物
+
+Some browsers will delete empty nodes while an element's template is being cloned. For this 
+reason, data binding an undefined property in an otherwise empty node will result in a 
+node populated with a space, instead of an empty node.
+
+For example, the following template:
+
+```html
+<template>
+  ...
+  <div>[[undefinedProperty]]</div>
+  ...
+</template>
+```
+
+Renders as:
+
+```html
+<div> </div>
+```
+
+If you need the node to be empty (for example, in order to use the css `:empty` selector), 
+work around this limitation by instantiating the property with the empty string (`''`):
+
+```html
+<dom-module id='custom-element'>
+  <template>
+    ...
+    <div>[[emptyProperty]]</div>
+    ...
+  </template>
+</dom-module>
+```
+
+```js
+static get properties () {
+  return {
+    ...
+    emptyProperty: {
+      type: String,
+      value: ''
+    },
+    ...
+  }
+}
+```
+
+This renders as:
+
+```html
+<div></div>
+```
+
 ## 绑定到目标属性 {#attribute-binding}
 
 In the vast majority of cases, binding data to other elements should use [property
@@ -406,7 +460,7 @@ Example: { .caption }
         }
       }
       _formatName(first, last) {
-        return `${last}, ${first}`
+        return `${last}, ${first}`;
       }
 
     }
@@ -441,8 +495,8 @@ In addition, a computed binding can include literal arguments.
 For each type of dependent property, the argument passed to the computing function is the same as
 that passed to an observer.
 
-As with observers and computed properties, the computing function **is not called until all
-dependent properties are defined (`!=undefined`)**.
+As with observers and computed properties, the computing function **may be called when one or 
+more dependencies are undefined**.
 
 For an example computed binding using a path with a wildcard, see [Binding to array
 items](#array-binding).
