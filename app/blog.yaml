@@ -1,11 +1,20 @@
 ---
+- title:  "Polymer 2.4 发布了"
+  path: /blog/2018-01-25-polymer-2-4
+  published: 2018-01-25
+  author: polymer-team
+  description: "Polymer 2.4：为 3.0 铺好道路，以及 TypeScript 支持"
+- title:  "Polymer 3.0：新的一年，新的预览版"
+  path: /blog/2018-01-18-polymer-3-new-preview
+  published: 2018-01-18
+  author: polymer-team
+  description: "新的 Polymer 3.0 预览版：Bug 修正和新功能"
 - title:  "元素的未来"
   path: /blog/2017-11-27-future-of-elements
   published: 2017-11-27
   author: notwaldorf
   description: "对于 Polymer 元素我们现在正在做的，我们现在不做的，以及为什么不做。"
-
-- title:  "阴影 DOM v0 和 HTML 导入已经改变了"
+- title:  "阴影 DOM v0 和 HTML 导入正在改变"
   path: /blog/2017-10-18-upcoming-changes
   published: 2017-10-18
   author: arthurevans
