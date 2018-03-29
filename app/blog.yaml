@@ -1,4 +1,14 @@
 ---
+- title:  "Polymer 3.0: 最后一个预览版"
+  path: /blog/2018-03-20-polymer-3-latest-preview
+  published: 2018-03-20
+  author: polymer-team
+  description: "上手 Polymer 3.0 的最后一个预览版"
+- title:  "Polymer 3.0 预览版：路径和名称"
+  path: /blog/2018-02-26-3.0-preview-paths-and-names
+  published: 2018-02-26
+  author: polymer-team
+  description: "我们将在 Polymer 3.x 中改变模块导入的方式"
 - title:  "Polymer 2.4 发布了"
   path: /blog/2018-01-25-polymer-2-4
   published: 2018-01-25

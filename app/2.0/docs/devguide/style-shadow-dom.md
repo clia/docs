@@ -58,7 +58,7 @@ The HTML elements in your template become children in your custom element's shad
 provides a mechanism for encapsulation, meaning that elements inside the shadow DOM don't match 
 selectors outside the shadow DOM.
 
-Likewise, styling rules in side the shadow DOM can't "leak" out to affect elements outside the 
+Likewise, styling rules inside the shadow DOM can't "leak" out to affect elements outside the 
 shadow DOM.
 
 Shadow DOM permits encapsulation of styling rules for custom elements. You can freely define 
@@ -290,10 +290,7 @@ selector applies to any `p` element in the shadow tree if the host has class "wa
 
 Styling with the `:host` selector is one of two instances where rules inside a shadow tree can 
 affect an element outside a shadow tree. The second instance uses the `::slotted()` syntax to apply 
-styling rules to distributed children. See [*Composition and slots* in Eric Bidelman's article on 
-shadow 
-DOM](https://developers.google.com/web/fundamentals/getting-started/primers/shadowdom#composition_sl
-ot) for more information.
+styling rules to distributed children. See [*Composition and slots* in Eric Bidelman's article on shadow DOM](https://developers.google.com/web/fundamentals/getting-started/primers/shadowdom#composition_slot) for more information.
 
 ### 样式化插槽内内容（分布的子节点）
 

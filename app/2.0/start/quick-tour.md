@@ -250,7 +250,7 @@ Try it out in **Plunker**:
 </demo-tabs>
 
 在 **Plunker** 上尝试：
-* 编辑占位符文本以观察双向数据绑定如何工作的。
+* 编辑输入框内容以观察双向数据绑定如何工作的。
 
 **注意：** `<iron-input>` 元素包装了原生的 `<input>` 元素，并提供双向数据绑定和输入校验。
 {: .alert .alert-info }

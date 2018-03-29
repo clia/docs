@@ -98,7 +98,7 @@ Polymer CLI 需要 Node.js、npm、git 和 Bower。有关完整的安装说明�
     在切换图标应显示的位置，您将会看到一些文本。它看起来不是很有趣，但它表明一切都正常。
  
     (请注意：URL 包含 `icon-toggle`——在此元素的 `bower.json` 文件中列出的组件名称——而不是实际的目录名。
-    如果您想知道为什么 `polymer serve` 这样做，请看 [HTML 导入和依赖管理](/2.0/docs/tools/polymer-cli#element-project-layout)。)
+    如果您想知道为什么 `polymer serve` 这样做，请看 [HTML 导入和依赖管理](/2.0/docs/tools/create-element-polymer-cli#dependencies)。)
 
 <img src="/images/2.0/first-element/starting-state.png" alt="Initial state of the demo. The demo 
 shows three icon-toggle elements, two labeled 'statically-configured icon toggles' and one labeled 
