@@ -49,6 +49,8 @@ Polymer 为基本的自定义元素添加了一组功能：
 *   基于提供的 `<template>` 为元素实例创建阴影 DOM 树。
 *   支持数据绑定，属物变更观察者和被计算的属物的数据系统。
 
+
+
 ## 自定义元素的生命周期 {#element-lifecycle}
 
 The custom element spec provides a set of callbacks called "custom element reactions" that allow you
@@ -215,33 +217,8 @@ by any pending lifecycle callbacks.
 
 Element upgrades allow you to place elements in the DOM while deferring the cost of initializing them. It's a progressive enhancement feature.
 
-Elements have a *custom element state* that takes one of the following values:
-
-
-
-*   "uncustomized". The element does not have a valid custom element name. It is either a built-in
-    element (`<p>`, `<input>`) or an unknown element that cannot become a custom element
-    (`<nonsense>`)
-*   "undefined". The element has a valid custom element name (such as "my-element"), but has not
-    been defined.
-*   "custom". The element has a valid custom element name and has been defined and upgraded.
-*   "failed". An attempt to upgrade the element failed (for example, because the class was invalid).
-
-The custom element state isn't exposed as a property, but you can style elements depending on
-whether they're defined or undefined.
-
-Elements in the "custom" and "uncustomized" state are considered "defined". In CSS you can use the
-`:defined` pseudo-class selector to target elements that are defined. You can use this to provide
-placeholder styles for elements before they're upgraded:
-
-```
-my-element:not(:defined) {
-  background-color: blue;
-}
-```
-
-**`:defined` is not supported by the Custom Elements polyfill.** See the [documentation on styling](style-shadow-dom#style-undefined-elements) for a workaround.
-{.alert .alert-warning}
+To avoid showing unstyled content, you can add styles for elements that haven't upgraded yet. For 
+details, see [Style undefined elements](style-shadow-dom#style-undefined-elements).
 
 ## 扩展其他元素 {#extending-elements}
 

@@ -1,4 +1,9 @@
 ---
+- title:  "Polymer 3.0 工具更新"
+  path: /blog/2018-04-12-polymer-3-tools-update
+  published: 2018-04-12
+  author: polymer-team
+  description: "Polymer CLI 获得改进的模块支持"
 - title:  "Polymer 3.0: 最后一个预览版"
   path: /blog/2018-03-20-polymer-3-latest-preview
   published: 2018-03-20
