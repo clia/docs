@@ -121,7 +121,7 @@
   - title: Polyfills
     path: /3.0/docs/polyfills
     indent: True
-  - title: ES6
+  - title: ES6 and modules
     path: /3.0/docs/es6
     indent: True
   - endheader: True
@@ -147,9 +147,6 @@
   - title: Test your elements
     path: /3.0/docs/tools/tests
     indent: True
-  - title: Publish your elements
-    path: /3.0/docs/tools/publish
-    indent: True
   - title: polymer.json specification
     path: /3.0/docs/tools/polymer-json
     indent: True
@@ -160,9 +157,6 @@
   - header: Resources
   - title: Glossary
     path: /3.0/docs/glossary
-    indent: True
-  - title: Polymer 3.0 on StackBlitz
-    path: /3.0/docs/stackblitz
     indent: True
   - endheader: True
   - header: API Reference
@@ -211,7 +205,7 @@
     path: /3.0/toolbox/prpl
     indent: True
   - endheader: true
-  - header: Case study
+  - header: Case studies
   - title: "Shop"
     path: /3.0/toolbox/case-study
     indent: True
