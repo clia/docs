@@ -21,7 +21,7 @@ The server and service worker together work to precache the resources for the in
 When the user switches routes, the app lazy-loads any required resources that haven't been cached
 yet, and creates the required views.
 
-## App structure
+## App 结构
 
 Currently, the Polymer CLI and reference server support a single-page app (SPA) with the
 following structure:
@@ -50,7 +50,7 @@ The build process builds a graph of all of these dependencies, and the server us
 to serve the files efficiently. It also builds a set of bundles, for browsers that don't
 support HTTP2 push.
 
-### App entrypoint
+### App 入口点
 
 The entrypoint must import and instantiate the shell, as well as conditionally load any
 required polyfills.
@@ -64,7 +64,7 @@ The main considerations for the entrypoint are:
 When you generate an App Toolbox project using Polymer CLI, the new project contains an entrypoint
 `index.html`. For most projects, you shouldn't need to update this file.
 
-### App shell
+### App 外壳
 
 The shell is responsible for routing and usually includes the main navigation UI for the app.
 
@@ -118,7 +118,7 @@ _pageChanged(page) {
 
 The shell (including its static dependencies) should contain everything needed for first paint.
 
-## Build output
+## 构建输出
 
 By default, the Polymer CLI build process produces an unbundled build designed for server/browser combinations that support HTTP/2 and HTTP/2 server push to deliver the resources the browser needs for a fast first paint while optimizing caching.
 
@@ -126,7 +126,7 @@ To generate a bundled build, designed to minimize the number of round-trips requ
 
 If you have multiple builds, your server logic must deliver the appropriate build for each browser.
 
-### Bundled build
+### 打包的构建
 
 For browsers that don't handle HTTP2 Push, the `--bundle` flag outputs a set of bundles: one bundle for the shell, and one bundle for each fragment. The diagram below shows how a simple app would be bundled:
 
@@ -141,7 +141,7 @@ This means that the shell code can lazy-load a fragment _without having to know 
 it is bundled or unbundled_. It relies on the server and browser to load the dependencies in the
 most efficient way.
 
-## Background: HTTP/2 and HTTP/2 server push
+## 背景：HTTP/2 和 HTTP/2 服务器推
 
 HTTP/2 allows _multiplexed_ downloads over a single connection, so that multiple small files can be
 downloaded more efficiently.

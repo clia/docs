@@ -21,7 +21,7 @@ static get template() {
 
 Updating data bindings is a [property effect](data-system#property-effects).
 
-## Anatomy of a data binding
+## 对数据绑定的剖析
 
 A data binding appears in the local DOM template as an HTML attribute:
 
@@ -68,7 +68,7 @@ by the type of binding annotation and the configuration of the target property.
 
 For more on data flow, see [How data flow is controlled](data-system#data-flow-control).
 
-## Bind to a target property {#property-binding}
+## 绑定到目标属物 {#property-binding}
 
 To bind to a target property, specify the attribute name that corresponds to the
 property, with an [annotation](#binding-annotation) or [compound binding](#compound-binding)
@@ -108,7 +108,7 @@ arrays](data-system#data-flow-objects-arrays).
 syntax. For more information, see [Binding to native element attributes](#native-binding).
 { .alert .alert-info }
 
-### Bind to text content
+### 绑定到文本内容
 
 To bind to a target element's `textContent`, you can simply include the
 annotation or compound binding inside the target element.
@@ -140,7 +140,7 @@ customElements.define('user-view', UserView);
 
 Binding to text content is always one-way, host-to-target.
 
-## Bind to a target attribute {#attribute-binding}
+## 绑定到目标属性 {#attribute-binding}
 
 In the vast majority of cases, binding data to other elements should use [property
 bindings](#property-binding), where changes are propagated by setting the new value to the
@@ -198,7 +198,7 @@ value's _current_ type, as described for
 Again, as values must be serialized to strings when binding to attributes, it is always more
 performant to use property binding for pure data propagation.
 
-### Native properties that don't support property binding {#native-binding}
+### 不支持属物绑定的原生属物 {#native-binding}
 
 There are a handful of common native element properties that Polymer can't data-bind to directly,
 because the binding causes issues on one or more browsers.
@@ -255,7 +255,7 @@ Attribute binding to dynamic values (use `$=`):
 
 ```
 
-## Binding annotations {#binding-annotation}
+## 绑定注解 {#binding-annotation}
 
 Polymer provides two kinds of data binding delimiters:
 
@@ -277,7 +277,7 @@ The text inside the delimiters can be one of the following:
 The paths in a data binding annotation are relative to the current [data binding
 scope](data-system#data-binding-scope).
 
-### Bind to a host property {#host-property}
+### 绑定到宿主属物 {#host-property}
 
 The simplest form of binding annotation uses a host property:
 
@@ -290,7 +290,7 @@ object**. This means that either element can change the object and a true one-wa
 impossible. For more information, see [Data flow for objects and
 arrays](data-system#data-flow-objects-arrays).
 
-### Bind to a host sub-property {#path-binding}
+### 绑定到宿主子属物 {#path-binding}
 
 Binding annotations can also include paths to sub-properties, as shown below:
 
@@ -366,7 +366,7 @@ object**. This means that either element can change the object and a true one-wa
 impossible. For more information, see [Data flow for objects and
 arrays](data-system#data-flow-objects-arrays).
 
-### Logical not operator {#expressions-in-binding-annotations}
+### 逻辑非算子 {#expressions-in-binding-annotations}
 
 Binding annotations support a single logical not operator (`!`), as the first character inside
 the binding delimiters:
@@ -388,7 +388,7 @@ more complicated transformations, use a [computed binding](#annotated-computed).
 A binding with a logical not operator is **always one-way, host-to-target**.
 {.alert .alert-info}
 
-### Computed bindings {#annotated-computed}
+### 被计算的绑定 {#annotated-computed}
 
 A *computed binding* is similar to a [computed property](observers#computed-properties). It's
 declared inside a binding annotation.
@@ -453,7 +453,7 @@ of `_formatName`, which is recalculated whenever `first` or `last` changes.
 **Computed bindings are one-way.** A computed binding is always one-way, host-to-target.
 {.alert .alert-info}
 
-#### Dependencies of computed bindings {#computed-binding-dependencies}
+#### 被计算的绑定的依赖项 {#computed-binding-dependencies}
 
 A computed binding's dependencies can include any of the dependency types supported by
 [complex observers](observers#complex-observers):
@@ -477,7 +477,7 @@ dependent properties are defined (`!=undefined`)**.
 For an example computed binding using a path with a wildcard, see [Binding to array
 items](#array-binding).
 
-#### Literal arguments to computed bindings {#literals}
+#### 被计算的绑定的字面参数 {#literals}
 
 Arguments to computed bindings may be string or number literals.
 
@@ -516,7 +516,7 @@ customElements.define('x-custom', XCustom);
 
 [See it in Plunker](https://plnkr.co/edit/iWFpsh?p=preview)
 
-## Compound bindings {#compound-bindings}
+## 复合绑定 {#compound-bindings}
 
 You can combine string literals and bindings in a single property binding or
 text content binding. For example:
@@ -536,7 +536,7 @@ one-way, host-to-target.**
 {.alert .alert-info}
 
 
-## Binding to arrays and array items {#array-binding}
+## 绑定到数组和数组项 {#array-binding}
 
 To keep annotation parsing simple, **Polymer doesn't provide a way to bind directly to an array
 item**.
@@ -564,7 +564,7 @@ Related topics:
 *   [Array selector](templates#array-selector)
 *   [Bind to an array item](#bind-array-item)
 
-### Bind to an array item {#bind-array-item}
+### 绑定到数组项 {#bind-array-item}
 
 You can use a computed binding to bind to a specific array item, or to a
 subproperty of an array item, like `array[index].name`.
@@ -606,7 +606,7 @@ class XCustom extends PolymerElement {
 }
 ```
 
-## Two-way bindings
+## 双向绑定
 
 Two-way bindings can propagate data changes both downward (from host to target) and upward (from
 target to host). For changes to propagate upward, you must use automatic data binding
@@ -618,9 +618,9 @@ and both can make changes to it. Use automatic binding delimiters to ensure that
 propagate upward. For more information, see [Data flow for objects and
 arrays](#data-flow-objects-arrays).
 
-### Two-way binding to a non-Polymer element {#two-way-native}
+### 双向绑定到非 Polymer 元素 {#two-way-native}
 
-As described in [Change notification events](#change-events), Polymer uses an event naming
+As described in [Change notification events](data-system#change-events), Polymer uses an event naming
 convention to achieve two-way binding.
 
 To two-way bind to native elements or non-Polymer elements that _don't_ follow this event naming

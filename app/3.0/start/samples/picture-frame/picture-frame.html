@@ -1,0 +1,28 @@
+<link rel="import"  href="https://polygit.org/components/polymer/polymer-element.html">
+
+<dom-module id="picture-frame">
+
+  <template>
+    <!-- 该元素作用域的 CSS -->
+    <style>
+      div {
+        display: inline-block;
+        background-color: #ccc;
+        border-radius: 8px;
+        padding: 4px;
+      }
+    </style>
+    <div>
+      <!-- 所有子元素渲染到这里 -->
+      <slot></slot>
+    </div>
+  </template>
+
+  <script>
+    class PictureFrame extends Polymer.Element {
+      static get is() { return "picture-frame"; }
+    }
+    customElements.define(PictureFrame.is, PictureFrame);
+  </script>
+
+</dom-module>

@@ -4,15 +4,13 @@ title: DOM templating
 
 <!-- toc -->
 
-Many elements use a subtree of DOM elements to implement their features. DOM templating provides 
-an easy way to create a DOM subtree for your element.
+许多元素使用 DOM 元素的子树来实现它们的功能。DOM 模板化为您的元素创建一个 DOM 子树提供了一种简单的方法。
 
-By default, adding a DOM template to an element causes Polymer to create a shadow root for the 
-element and clone the template into the shadow tree.
+默认情况下，向元素添加 DOM 模板会导致 Polymer 为元素创建一个阴影根，并将该模板克隆到阴影树中。
 
-The DOM template is also processed to enable data binding and declarative event handlers.
+DOM 模板也被处理以启用数据绑定和声明性事件处理器。
 
-## Specify a DOM template
+## 指定 DOM 模板
 
 To specify a template, define a `template` property on the constructor. When extending an 
 element, you can inherit or extend the superclass's template.
@@ -20,7 +18,7 @@ element, you can inherit or extend the superclass's template.
 -   [Define a template property on the constructor](#templateobject).
 -   [Inherit a template from another Polymer element](#inherit).
 
-### Define a template property on the constructor {#templateobject}
+### 在构造方法中定义模板属物 {#templateobject}
 
 To specify the element's template, define a `template` property on the element's 
 constructor. For example, you can create a static `template` getter. The template
@@ -49,7 +47,7 @@ customElements.define('my-element', MyElement);
 [See a working example in Plunker](https://plnkr.co/edit/zFlQU6SzJIXxBpHs9iuU?p=preview).
 
 
-## Inherit a template from another Polymer element {#inherit}
+## 从另一个 Polymer 元素继承模板 {#inherit}
 
 An element that extends another Polymer element can inherit its template. If the element doesn't
 provide its own DOM template, Polymer uses the same template as the superclass, if any.
@@ -127,7 +125,7 @@ customElements.define('child-class', ChildClass);
 
 [See a working example in Plunker](https://plnkr.co/edit/RGVxfbAGbqeLYnyeBO0T?p=preview).
 
-#### Extend a base class template in a child class {#extendbase}
+#### 在子类中扩展基类的模板 {#extendbase}
 
 You can use the functionality of embedded expressions in JavaScript template literals 
 to provide convenient ways to extend [inherited templates](#inherited-templates). 
@@ -192,7 +190,7 @@ customElements.define('child-class', ChildClass);
 
 [See a working example in Plunker](https://plnkr.co/edit/QZM9FD?p=preview).
 
-#### Provide template extension points {#insertcontent}
+#### 提供模板扩展点 {#insertcontent}
 
 Polymer makes it easy to provide template extension points in a base class, which a child
 class can then optionally override. You can provide template extension points by composing your
@@ -258,7 +256,7 @@ export class ChildClass extends BaseClass {
 
 [See a working example in Plunker](https://plnkr.co/edit/1uEd5Vv2Ob4bGHppzCs9?p=preview).
 
-### Elements with no shadow DOM
+### 没有阴影 DOM 的元素
 
 To create an element with no shadow DOM, don't specify a `template` getter. Then no shadow root is created for the element.
 
@@ -271,7 +269,7 @@ static get template() {
 }
 ```
 
-### URLs in templates {#urls-in-templates}
+### 模板中的 URL {#urls-in-templates}
 
 **Outdated information.** This section needs to be updated after
 [issue #5163](https://github.com/Polymer/polymer/issues/5163) is resolved.
@@ -317,7 +315,7 @@ static get template() {
 <a href$="[[rootPath]]users/profile">View profile</a>
 ```
 
-## Static node map {#node-finding}
+## 静态节点映射 {#node-finding}
 
 Polymer builds a static map of node IDs when the element initializes its DOM template, to provide
 convenient access to frequently used nodes without the need to query for them manually. Any node
@@ -353,7 +351,7 @@ use the standard DOM `querySelector`  method.
 
 
 
-## Remove empty text nodes {#strip-whitespace}
+## 删除空文本节点 {#strip-whitespace}
 
 **Need update for 3.x.** This needs a new API parallel to `html`...
 See https://github.com/Polymer/polymer/issues/4731
@@ -428,7 +426,7 @@ Here, the shadow tree contains only the two `<div>` nodes:
 
 Note that the whitespace _inside_ the `<div>` elements isn't affected.
 
-## Preserve template contents
+## 保持模板内容
 
 Polymer performs one-time processing on your DOM template. For example:
 
@@ -470,14 +468,14 @@ class CustomTemplate extends PolymerElement {
 customElements.define(CustomTemplate.is, CustomTemplate);
 ```
 
-## Customize DOM initialization
+## 定制 DOM 初始化
 
 There are several points where you can customize how Polymer initializes your element's DOM. You
 can customize how the shadow root is created by creating it yourself. And you can override the
 `_attachDom` method to change how the the DOM tree is added to your element: for example, to
 stamp into light DOM instead of shadow DOM.
 
-### Create your own shadow root
+### 创建您自己的阴影根
 
 In some cases, you may want to create your own shadow root. You can do this by creating a shadow root
 before calling `super.ready()`—or before the `ready` callback, such as in the constructor.
@@ -498,7 +496,7 @@ _attachDom(dom) {
 }
 ```
 
-### Stamp templates in light DOM
+### 轻型 DOM 中的印花模板
 
 You can customize how the DOM is stamped by overriding the `_attachDom` method. The method takes a
 single argument, a `DocumentFragment` containing the DOM to be stamped. If you want to stamp the

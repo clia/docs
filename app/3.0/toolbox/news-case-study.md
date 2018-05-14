@@ -11,7 +11,7 @@ here:
 
 This case study shows how News uses the principles of Progressive Web App (PWA) design to deliver a great user experience.
 
-## App structure
+## App 结构
 
 Like other PWAs, News is designed with an [application shell
 architecture](https://developers.google.com/web/fundamentals/architecture/app-shell). The app shell
@@ -40,7 +40,7 @@ subfolders.
   </div>
 </div>
 
-## Views and routing
+## 视图和路由
 
 Views in the News app use the same implementation as the Shop app. [See the Shop app case study for
 more information on views and
@@ -72,7 +72,7 @@ the cached content is displayed.
 
 -   [`<app-route>` API reference](https://www.webcomponents.org/element/PolymerElements/app-route)
 
-## Routing and data binding in the News app
+## 新闻 App 中的路由和数据绑定
 
 Routing and data bindings work together in the News app to retrieve and display the data relevant
 to the URL that the user selects.
@@ -91,7 +91,7 @@ The app shell element, `<news-app>`, acts as the host, while `<news-data>`, `<ne
 * The list of articles in the current category (`category`)
 * The raw HTML for the current article (`article`)
 
-### Part 1: Routing
+### 第 1 部分：路由
 
 `categoryName` and `articleId` are set by the routing logic in the view elements (`<news-list>` and
 `<news-article>`). The active view element processes the user's selected URL in order to set
@@ -149,7 +149,7 @@ Two-way data binding in the host element ensures that the data is passed back to
     ...></news-list>
 ```
 
-### Part 2: Data retrieval
+### 第 2 部分：数据检索
 
 `categoryName` and `articleId` are one-way bound from `<news-app>` to `<news-data>`:
 
@@ -187,7 +187,7 @@ therefore propagate back to `<news-app>`:
     ...></news-data>
 ```
 
-### Part 3: Data display
+### 第 3 部分：数据显示
 
 `category` and `article` are one-way bound from `<news-app>` to the elements that display this
 content (`<news-list>` and `<news-article>`. When these properties are updated in `<news-app>`,

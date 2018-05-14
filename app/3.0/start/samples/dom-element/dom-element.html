@@ -1,0 +1,16 @@
+<link rel="import"  href="https://polygit.org/components/polymer/polymer-element.html">
+
+<dom-module id="dom-element">
+
+  <template>
+    <p>我是一个 DOM 元素。这是我的阴影 DOM ！</p>
+  </template>
+
+  <script>
+    class DomElement extends Polymer.Element {
+      static get is() { return "dom-element"; }
+    }
+    customElements.define(DomElement.is, DomElement);
+  </script>
+
+</dom-module>

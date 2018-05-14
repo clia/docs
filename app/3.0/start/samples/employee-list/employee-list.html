@@ -1,0 +1,35 @@
+<!-- 导入 polymer-element -->
+<link rel="import"  href="https://polygit.org/components/polymer/polymer-element.html">
+
+<!-- 导入模板重复器 --> 
+<link rel="import"  href="https://polygit.org/components/polymer/lib/elements/dom-repeat.html">
+
+<dom-module id="employee-list">
+  <template>
+    <div> 雇员列表：</div>
+    <p></p>
+    <template is="dom-repeat" items="{{employees}}">
+        <div>First name: <span>{{item.first}}</span></div>
+        <div>Last name: <span>{{item.last}}</span></div>
+        <p></p>
+    </template>
+  </template>
+  <script>
+    class EmployeeList extends Polymer.Element {
+      static get is() { return "employee-list"; }
+      
+      // 设置元素的雇员属物
+      constructor() {
+        super();
+        this.employees = [
+          {first: 'Bob', last: 'Li'},
+          {first: 'Ayesha', last: 'Johnson'},
+          {first: 'Fatma', last: 'Kumari'},
+          {first: 'Tony', last: 'Mori'}
+        ]; 
+      }
+    }
+  customElements.define(EmployeeList.is, EmployeeList);
+  </script>
+
+</dom-module>

@@ -16,23 +16,19 @@ table.config-summary td {
 }
 </style>
 
-Polymer lets you observe changes to an element's properties and take various actions based on data
-changes. These actions, or *property effects*, include:
+Polymer 可让您观察元素属物的更改，并根据数据更改执行各种动作。
+这些动作或*属物效应*包括：
 
 
-*   Observers. Callbacks invoked when data changes.
+*   观察者。数据更改时调用回调。
 
-*   Computed properties. Virtual properties computed based on other properties, and recomputed when
-    the input data changes.
+*   计算的属物。基于其他属物计算的虚拟属物，并在输入数据更改时重新计算。
 
-*   Data bindings. Annotations that update the properties, attributes, or text content of a DOM node
-    when data changes.
+*   数据绑定。提供注解，当数据更改时，更新 DOM 节点的属物，属性或文本内容。
 
-Each Polymer element manages  its own data model and local DOM elements. The *model* for an element
-is the element's properties. Data bindings link an element's model with the elements in its local
-DOM.
+每个 Polymer 元素管理自己的数据模型和本地 DOM 元素。元素的*模型*是元素的属物。数据绑定将元素的模型与元素在其本地 DOM 中相连接。
 
-Consider a very simple element:
+考虑一个非常简单的元素：
 
 ```js
 class NameCard extends PolymerElement {
@@ -99,7 +95,7 @@ In summary:
     calling observers.
 *   Data bindings establish connections between paths on different elements.
 
-## Observable changes {#observable-changes}
+## 可观察的变化 {#observable-changes}
 
 An *observable change* is **a data change that Polymer can associate with a path**. Certain changes
 are automatically *observable*:
@@ -123,7 +119,7 @@ are automatically *observable*:
     as a change to the path `"hostProperty.subProperty"`.
 
 
-### Unobservable changes
+### 不可观察的变化
 
 Changes that **imperatively mutate an object or array are *not* observable**. This includes:
 
@@ -148,7 +144,7 @@ Changes that **imperatively mutate an object or array are *not* observable**. Th
 
 In both cases, you need to use Polymer methods to ensure that the changes are observable.
 
-### Mutating objects and arrays observably {#make-observable-changes}
+### 使对象和数组可观察地突变 {#make-observable-changes}
 
 Polymer provides methods for making observable changes to subproperties and arrays:
 
@@ -206,7 +202,7 @@ Related tasks:
 *   [Notify Polymer of subproperty changes](model-data#notify-path).
 *   [Notify Polymer of array mutations](model-data#notifysplices).
 
-### Batched property changes
+### 批量属物变更
 
 Propagation of data through the binding system is  batched, so complex observers and computing
 functions run once with a set of coherent changes. There's several ways to create a set of coherent
@@ -234,7 +230,7 @@ this.b = 20;
 this.setProperties({a: 10, b: 20});
 ```
 
-## Data paths {#paths}
+## 数据路径 {#paths}
 
 In the data system, a _path_ is a string that identifies a property or subproperty *relative to a
 scope*. In most cases, the scope is a host element. For example, consider the following
@@ -255,7 +251,7 @@ If `<address-card>` makes a change to the object, no property effects are invoke
 binding.**
 
 
-### Linking paths with data bindings
+### 把路径和数据绑定进行链接
 
 Data bindings can create links between paths on different elements. In fact, **data binding is the
 only way to link paths on different elements**. For example, consider the `<user-profile>` example
@@ -284,7 +280,7 @@ Now the paths are connected by data binding.
 If `<address-card>` makes an observable change to the object, property effects are invoked on
 `<user-profile>` as well.
 
-### Data binding scope {#data-binding-scope}
+### 数据绑定作用域 {#data-binding-scope}
 
 Paths are relative to the current data binding *scope*.
 
@@ -293,7 +289,7 @@ The topmost scope for any element is the element's properties. Certain data bind
 
 For observers and computed properties, the scope is always the element's properties.
 
-### Special paths
+### 特殊路径
 
 A path is a series of path segments. *In most cases*, each path segment is a property name.
 
@@ -310,7 +306,7 @@ There are a few special types of path segments.
 
 
 
-#### Wildcard paths {#wildcard-paths}
+#### 通配符路径 {#wildcard-paths}
 
 When used as the last segment in a path, the wildcard character (`*`) represents any change to the
 previous property or its subproperties. For example, if `users` is an array, `users.*` indicates an
@@ -319,7 +315,7 @@ interest in any changes to the `users` array or its subproperties.
 Wildcard paths are only used in observers, computed properties and computed bindings. You can't use
 a wildcard path in a data binding.
 
-#### Array mutation paths
+#### 数组突变路径
 
 When used as the last segment in a path, `splices` represents any array *mutations* to the
 identified array (additions or deletions). For example, if `users` is an array, the path
@@ -331,7 +327,7 @@ registered by a wildcard path (for example, you won't see changes to subproperti
 *inside* the array). **In most cases, it's more useful to use a wildcard observer for arrays.**
 
 
-### Two paths referencing the same object {#two-paths}
+### 两个路径指向同一个对象 {#two-paths}
 
 Sometimes an element has two paths that point to the same object.
 
@@ -370,7 +366,7 @@ Related task:
 
 
 
-## Data flow {#data-flow}
+## 数据流 {#data-flow}
 
 Polymer implements the mediator pattern, where a host element manages data flow between itself and
 its local DOM nodes.
@@ -382,14 +378,14 @@ When two elements in the local DOM are bound to the same property data appears t
 element to the other, but this flow is _mediated_ by the host. A change made by one element
 propagates **up** to the host, then the host propagates the change **down** to the second element.
 
-### Data flow is synchronous
+### 数据流是同步的
 
 Data flow is **synchronous**. When your code makes an [observable change](#observable-changes),
 all of the data flow and property effects from that change occur before the next line of your
 JavaScript is executed, unless an element explicitly defers action (for example, by calling an
 asynchronous method).
 
-### How data flow is controlled {#data-flow-control}
+### 如何控制数据流 {#data-flow-control}
 
 The type of data flow supported by an individual binding depends on:
 
@@ -519,7 +515,7 @@ object or array. For more information, see [Data flow for objects and
 arrays](#data-flow-objects-arrays)
 {.alert .alert-warning}
 
-### Data flow examples
+### 数据流示例
 
 The following examples show the various data flow scenarios described above.
 
@@ -680,7 +676,7 @@ Example of no data flow / nonsensical state { .caption }
   customElements.define('x-host', XHost);
 ```
 
-### Upward and downward data flow
+### 向上和向下的数据流
 
 Since the host element manages data flow, it can directly interact with the target element. The host
 propagates data downward by setting the target element’s properties or invoking its methods.
@@ -713,7 +709,7 @@ effects may include:
 For **one-way binding** annotations, the host doesn't create a change listener, so upward data changes
 aren't propagated.
 
-### Data flow for objects and arrays {#data-flow-objects-arrays}
+### 对象和数组的数据流 {#data-flow-objects-arrays}
 
 For object and array properties, data flow is a little more complicated. An object or array can be
 referenced by multiple elements, and there's no way to prevent one element from mutating a shared
@@ -731,7 +727,7 @@ Since one-way binding annotations don't create an event listener, they prevent t
 notifications from being propagated to the host element.
 
 
-### Change notification events {#change-events}
+### 变更通知事件 {#change-events}
 
 An element fires a change notification event when one of the following
 [observable changes](#observable-changes) occurs:
@@ -763,7 +759,7 @@ on a change notification event **prevents all future events for that property.**
 events don't bubble, so there should be no reason to stop propagation.
 {.alert .alert-warning}
 
-### Custom change notification events
+### 自定义变更通知事件
 
 Native elements like `<input>` don't provide the change notification events that Polymer uses for
 upward data flow. To support two-way data binding of native input elements, Polymer lets you
@@ -788,7 +784,7 @@ Related tasks:
 
 *   [Two-way bind to a non-Polymer element](data-binding#two-way-native)
 
-### Element initialization
+### 元素初始化
 
 When an element initializes its local DOM, it configures the properties of its local DOM children and
 initializes data bindings.
@@ -797,7 +793,7 @@ The host’s values take priority during initialization. For example, when a hos
 a target property, if both host and target elements specify default values, the parent's default
 value is used.
 
-## Property effects {#property-effects}
+## 属物效应 {#property-effects}
 
 Property effects are actions triggered by [observable changes](#observable-changes) to a given
 property (or path). Property effects include:
@@ -819,7 +815,7 @@ These property effects run in a well-defined order:
 This order ensures that computed properties are recomputed before changes are propagated
 downward, and that changes are propagated to the local DOM children before observers run.
 
-### Data bindings
+### 数据绑定
 
 A *data binding* establishes a connection between data on the host
 element and a property or attribute of a `target node` in the host's local DOM. You create data
@@ -856,7 +852,7 @@ The text inside the delimiters can be one of the following:
 For more information, see [Data binding](data-binding).
 
 
-## Using the MutableData mixin {#mutable-data}
+## 使用 MutableData 混入 {#mutable-data}
 
 Polymer 1.x uses a dirty-checking mechanism to prevent the data system from doing extra work.
 Polymer 2.x retains this mechanism by default, but lets elements opt out of dirty checking objects
@@ -967,7 +963,7 @@ If you're using the `dom-repeat` element, you can enable mutable data mode by se
 ```
 
 
-### Optional mutable data for reusable elements {#optional-mutable-data}
+### 用于可重用元素的可选的可变数据 {#optional-mutable-data}
 
 If you're building a reusable element that takes structured data, you can use the
 [`OptionalMutableData`](/{{{polymer_version_dir}}}/docs/api/mixins/mutable-data#OptionalMutableData)

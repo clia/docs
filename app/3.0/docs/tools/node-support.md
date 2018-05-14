@@ -10,13 +10,13 @@ This support policy tries to balance the desire to support as many environments 
 
 Luckily, Node has developed a clear release and long term support plan which we can base our support policy on. In developing this plan, we've made the assumption that our tools are run at development time, not in production, and developer environments are usually easier to update than production environments.
 
-## What versions of Node.js do we support?
+## 我们支持哪些版本的 Node.js？
 
 We support all "Current" and "Active LTS" releases of Node.js according to the [Node.js Long Term Support Release Schedule](https://github.com/nodejs/LTS#lts-schedule), but **not** "Maintenance" releases.
 
 This means we will support from two to three semver major versions of Node.js, depending on where we are in the Node LTS schedule. Currently we support 8.x and 10.x.
 
-## What package managers and which versions do we support?
+## 我们支持哪些包管理器和哪些版本？
 
 We support both the [NPM](http://www.npmjs.com) and [Yarn](http://yarnpkg.com) package managers.
 
@@ -24,11 +24,11 @@ Yarn should be drop-in compatible with npm, as it [uses the same package.json fo
 
 We support npm v3 and newer. If you don't have v3 or newer installed, you can upgrade npm by running `npm i -g npm`.
 
-## What operating systems do we support?
+## 我们支持哪些操作系统？
 
 We support Windows 10, Linux and macOS (née OS X).
 
-## What does "support" mean? How do we guarantee it?
+## “支持”是什么意思？我们如何保证？
 
 "Support" for an environment means we test in it, and will fix any issues specific to it. We ensure support for environments via continuous integration.
 
@@ -36,7 +36,7 @@ We run tests for our tools libraries on Travis CI, which covers Ubuntu Linux and
 
 We will be increasing coverage of libraries on Appveyor Windows environments and Travis macOS environments over time.
 
-## How does support end?
+## 支持如何结束？
 
 When we end support for an environment we will do so with a major version change so that legacy environments can depend on the old version. We will update CI configurations to stop testing on unsupported environments.
 

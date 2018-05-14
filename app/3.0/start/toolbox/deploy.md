@@ -5,11 +5,11 @@ subtitle: "Build an app with App Toolbox"
 
 <!-- toc -->
 
-In this step, you'll deploy your application to the web.
+在此步骤中，您将把应用部署到 Web 上。
 
-## Build for deployment
+## 为部署而构建
 
-Type `polymer build` to build your Polymer application for production. 
+输入 `polymer build` 来为生产环境构建您的 Polymer 应用。
 
 You can serve different builds of your app to browsers with different capabilities. In this step, you'll deploy `es5-bundled`. 
 
@@ -35,7 +35,7 @@ polymer.json { .caption}
 ...
 ```
 
-The builds will be output to subfolders under the `build/` folder as follows:
+构建的文件将被输出到 `build/` 目录的子目录中，如下所示：
 
     build/
       esm-bundled/
@@ -44,13 +44,11 @@ The builds will be output to subfolders under the `build/` folder as follows:
 
 To configure a custom build, you can use command line options, or edit `polymer.json`. Run `polymer help build` for the full list of available options and optimizations. Also, see the documentation on the [polymer.json specification](/{{{polymer_version_dir}}}/docs/tools/polymer-json) and [building your Polymer application for production](/{{{polymer_version_dir}}}/toolbox/build-for-production).
 
-## Deploy to a server
+## 部署到服务器
 
-Polymer applications can be deployed to any web server.
+Polymer 应用可以部署到任何 Web 服务器。
 
-This template uses the `<app-location>` element to enable URL-based routing,
-which requires that the server serve the `index.html` entry point for all
-routes.
+这个模板采用了 `<app-location>` 元素来启用基于 URL 的路由，这就要求服务器为所有路由服务 `index.html` 入口点。
 
 You can follow one of the sections below to deploy this app to either
 [Google App Engine](https://cloud.google.com/appengine) or [Firebase
@@ -60,17 +58,17 @@ is similar for other hosting providers.
 
 ### Deploy with App Engine
 
-1.  Download the [Google App Engine SDK](https://cloud.google.com/appengine/downloads)
-and follow the instructions for your platform to install it. This tutorial uses the Python SDK.
+1.  下载 [Google App Engine SDK](https://cloud.google.com/appengine/downloads)，
+并按照平台的说明进行安装。本教程使用 Python SDK。
 
 1.  [Sign up for an App Engine account](https://cloud.google.com/appengine).
 
-1.  [Open the project dashboard](https://console.cloud.google.com/iam-admin/projects)
-and create a new project.
+1.  [打开项目仪表板](https://console.cloud.google.com/iam-admin/projects)
+并创建一个新项目
 
-    * Click the Create Project button.
-    * Type a project name.
-    * Click the Create button.
+    * 单击“创建项目”按钮。
+    * 键入项目名称。
+    * 单击“创建”按钮。
     
     The App Engine gives you a unique identifier for your project-make note of this ID.
 
@@ -170,22 +168,21 @@ and create a new project.
    
         gcloud app browse
 
-### Deploy with Firebase
+### 使用 Firebase 部署
 
-The instructions below are based on the [Firebase hosting quick start
-guide](https://www.firebase.com/docs/hosting/quickstart.html).
+以下说明基于 [Firebase 托管快速入门指南](https://www.firebase.com/docs/hosting/quickstart.html)。
 
-1.  [Sign up for a Firebase account](https://www.firebase.com/signup/).
+1.  [注册一个 Firebase 帐号](https://www.firebase.com/signup/)。
 
-1.  Go to [https://www.firebase.com/account](https://www.firebase.com/account) to create a new app. Make note of the project ID associated with your app.
+1.  转到 [https://www.firebase.com/account](https://www.firebase.com/account) 去创建一个新的 App。记下与您的 App 关联的项目 ID。
 
     ![Welcome to Firebase showing Project ID](/images/3.0/toolbox/welcome-firebase.png)
 
-1.  Install the Firebase command line tools.
+1.  安装 Firebase 命令行工具。
 
         npm install -g firebase-tools
 
-1.  `cd` into your project folder.
+1.  `cd` 进入您的项目目录。
 
 1.  Initialize the Firebase application.
 

@@ -7,7 +7,7 @@ title: Browser support overview
 Polymer 3.x works in the _latest two versions_ of all major browsers: Safari 10+, IE 11+, and the
 evergreen Chrome, Firefox, and Edge.
 
-## Platform features
+## 平台功能
 
 The Polymer library is a lightweight sugaring layer on top of the [Web Components
 APIs](http://webcomponents.org/articles/why-web-components/). Some features used by Polymer are not

@@ -1,18 +1,17 @@
 ---
-title: Step 3. Add some elements
-subtitle: "Build an app with App Toolbox"
+title: 步骤3. 添加一些元素
+subtitle: "使用 App 工具箱构建 App"
 ---
 
 <!-- toc -->
 
-Now that you've added a new view to your application, you can start building
-out the details of that view.
+现在您已经向应用程序添加了新的视图，您可以开始构建
+该视图的细节了。
 
-In the process, you'll likely want to turn
-to some off-the-shelf components, for example from [webcomponents.org][webcomponents.org].
+在此过程中，您可能想使用一些现成的组件，例如从 [webcomponents.org][webcomponents.org] 获取。
 
 
-## Install an off-the-shelf component
+## 安装现成的组件
 
 Once you've identified a component you'd like to install, you'll want to find
 the npm package name for the component.
@@ -23,7 +22,7 @@ Run the following command from your root project folder:
 
     npm install @polymer/paper-checkbox@next --save
 
-## Add the element to your application
+## 将元素添加到您的应用
 
 1.  Open `src/my-new-view.js` in a text editor.
 
@@ -35,7 +34,7 @@ Run the following command from your root project folder:
     import '@polymer/paper-checkbox/paper-checkbox.js';
     ```
 
-1.  Add the `<paper-checkbox>` element to the template for the element.
+1.  为该元素向模板中添加 `<paper-checkbox>` 元素。
 
     ```
     <paper-checkbox>Ready to deploy!</paper-checkbox>
@@ -67,14 +66,14 @@ Run the following command from your root project folder:
     }
     ```
 
-You should be able to see the `paper-checkbox` working in your new view now:
+您现在应该可以看到新视图中已经出现 `paper-checkbox`:
 
 ![Example of page with checkbox](/images/3.0/toolbox/starter-kit-checkbox.png)
 
-## Next steps
+## 下一步
 
-Now that you've added a 3rd-party component to your page, learn how to
-[deploy the app to the web](deploy).
+现在您已经向页面添加了第三方组件，该学习如何
+[部署 App 到 Web 上](deploy).
 
 [webcomponents.org]: https://www.webcomponents.org
 [paper-checkbox]: https://www.webcomponents.org/element/PolymerElements/paper-checkbox

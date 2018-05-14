@@ -9,7 +9,7 @@ responsive layouts easily.
 
 The app layout elements are designed to be flexible and composable, and to support a wide range of layout patterns. They support Material Design effects and UI patterns, without enforcing any particular look or feel. The app layout elements are also extensible, with a pluggable system for scroll effects.
 
-## Design your layout
+## 设计您的布局
 
 Before you can build your layout, you need to design it.
 
@@ -38,7 +38,7 @@ Once you've decided on your basic design, you can start implementing it, startin
 the screen: toolbars and headers.
 
 
-## Toolbars and headers
+## 工具栏和页眉
 
 Almost every app has some kind of header or toolbar at the top. The header can scroll with the
 content, be fixed at the top of the screen, or have dynamic behavior as the user scrolls. The
@@ -52,7 +52,7 @@ elements you need depend on what you're looking for:
     `<app-header>` element. The `<app-header>` can hold one or more toolbars, and it manages scroll
     effects.
 
-### Simple toolbars
+### 简单的工具栏
 
 A toolbar by itself serves as a simple header that scrolls with the page content. With a little
 extra CSS, it can be fixed to the top of the page. The following [sample on StackBlitz](https://stackblitz.com/edit/polymer-3-qsvbtx?file=index.html) uses a toolbar as a simple scrolling header with a title:
@@ -111,7 +111,7 @@ title, they'll automatically be pushed to the sides of the toolbar:
 
 ![screenshot of a simple app-toolbar with a menu and search buttons](/images/3.0/toolbox/toolbar-with-buttons.png)
 
-### Dynamic headers
+### 动态页眉
 
 An `<app-header>` element is a container that applies scroll effects. The app header can hold any
 kind of element, but the most common children are toolbars and tab bars. Use multiple toolbars for
@@ -129,7 +129,7 @@ You can change the default behavior by adding attributes to the header:
     revealing header.
 
 
-### Condensing header
+### 渐凝的页眉
 
 When using a condensing header with multiple toolbars, you can choose two basic techniques:
 
@@ -191,7 +191,7 @@ To retain just a tab bar, place the tab bar last, and mark it as sticky.
   </app-header>
 ```
 
-### Scroll effects
+### 滚动效果
 
 Most of the scroll effects are used with _condensing headers_. These effects change the header's
 appearance as it condenses.
@@ -223,7 +223,7 @@ For more background, see [Scrolling
 techniques](https://material.io/guidelines/patterns/scrolling-techniques.html) in the material
 design specification for an overview of the different scroll effects.
 
-### Document scroller and element scrollers
+### 文档滚动和元素滚动
 
 The `<app-header>` element uses the document scroller used by default. On mobile browsers, this
 means the browser can hide the URL bar as you scroll down the page. However, since there's only one
@@ -248,7 +248,7 @@ You can use an element scroller by specifying a `scrollTarget` property on `<app
 This can be useful if you want to use header scroll effects in a side panel, such as a drawer.
 
 
-### Header layout
+### 页眉布局
 
 The [`<app-header-layout>`](https://www.webcomponents.org/element/PolymerElements/app-layout/app-header-layout)
 element is a simple way to put together a layout with an `<app-header>`. It supplies the necessary
@@ -276,7 +276,7 @@ By default the layout uses document scrolling. If you don't want to to scroll th
 layout can define its own scrolling region, as shown in the [API
 docs](https://www.webcomponents.org/element/PolymerElements/app-layout/app-header-layout).
 
-## Drawers
+## 抽屉
 
 The [`<app-drawer>`](https://www.webcomponents.org/element/PolymerElements/app-layout/app-drawer)
 element is a drawer that can be positioned on the left or right side of the screen.
@@ -316,7 +316,7 @@ Because the drawer is a separate component, you can compose it in different ways
 -   For a drawer that opens _underneath_ a header, put the drawer or drawer layout inside a header
     layout.
 
-### Styling the drawer
+### 样式化抽屉
 
 You can style the drawer using the `--app-drawer-content-container` mixin. For example, you can set
 a background, or add a border or shadow to define the edge of the drawer.
@@ -336,7 +336,7 @@ The following CSS adds a border shadow to the drawer and provides a colored scri
   }
 ```
 
-### Drawer layouts
+### 抽屉布局
 
 The [`<app-drawer-layout>`](https://www.webcomponents.org/element/PolymerElements/app-layout/app-drawer-layout)
 element creates a responsive layout with a single drawer. On
@@ -381,7 +381,7 @@ with drawer and header.
 Specifying `slot="drawer"` is required with App Layout 3.0.
 {.alert .alert-info}
 
-## Responsive navigation pattern
+## 响应式导航模式
 
 In many cases, you'll want to switch your navigation based on the screen size. One common pattern
 uses navigation tabs on desktop, which are replaced by a navigation drawer on mobile, as in the

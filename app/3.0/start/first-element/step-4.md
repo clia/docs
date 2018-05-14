@@ -99,9 +99,9 @@ Save `icon-toggle.js` and reload the demo. You should be able to press the butto
 Next, learn to style your elements with custom CSS properties in [step 5](step-5). 
 
 <a class="blue-button" href="step-3">
-  Previous step: Use data binding and properties
+  上一步：使用数据绑定和属物
 </a>
 
 <a class="blue-button" href="step-5">
-  Next step: Theming with custom CSS properties
+  下一步：用自定义 CSS 属物主题化
 </a>

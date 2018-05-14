@@ -5,16 +5,15 @@ title: Define an element
 <!-- toc -->
 
 
-## Define a custom element {#register-element}
+## 定义一个自定义元素 {#register-element}
 
 
 To define a custom element, create a class that extends `PolymerElement` and pass the class to the
 `customElements.define` method.
 
-By specification, the custom element's name **must start with a lower-case ASCII letter and must
-contain a dash (-)**.
+按照规范，自定义元素的名称 **必须以小写 ASCII 字母开头，并且必须包含连字符（-）**。
 
-Example: { .caption }
+示例： { .caption }
 
 ```js
 // Import PolymerElement class
@@ -23,7 +22,7 @@ import {PolymerElement} from '@polymer/polymer/polymer-element.js';
 // define the element's class element
 class MyElement extends PolymerElement {
 
-  // Element class can define custom element reactions
+  // 元素类能定义一些自定义元素的反应
   connectedCallback() {
     super.connectedCallback();
     this.textContent = 'I\'m a custom element!';
@@ -36,20 +35,19 @@ class MyElement extends PolymerElement {
   }
 }
 
-// Associate the new class with an element name
+// 将新类与一个元素名称相关联
 customElements.define('my-element', MyElement);
 
-// create an instance with createElement:
+// 用 createElement 创建一个实例：
 var el1 = document.createElement('my-element');
 
-// ... or with the constructor:
+// ... 或者使用构造方法：
 var el2 = new MyElement();
 ```
 
-As shown above, the element's class can define callbacks for the custom element reactions as
-described in [Custom element lifecycle](custom-elements#element-lifecycle).
+如上所示，元素的类可以定义一些自定义元素反应的回调，如在 [自定义元素生命周期](custom-elements#element-lifecycle) 中所描述的那样。
 
-## Extending an existing element {#extend-element}
+## 扩展现有元素 {#extend-element}
 
 You can leverage native subclassing support provided by ES6 to extend and customize existing
 elements defined using ES6 syntax:
@@ -76,7 +74,7 @@ in Custom element concepts.
 If you don't provide a template for your subclass, it inherits the superclass's template by default.
 For more information, see [Inherit a template from another Polymer element](dom-template#inherit).
 
-## Using mixins
+## 使用混入
 
 You can share code using _class expression mixins_. You use a mixin to add new features on top of a base class:
 

@@ -24,7 +24,7 @@ Unless otherwise specified, notes about observers apply to simple observers, com
 computed properties.
 
 
-### Observers and element initialization
+### 观察者和元素初始化
 
 The first call to an observer is deferred until the following criteria are met:
 
@@ -40,7 +40,7 @@ observer, **even if the new value for the dependency is <code>undefined</code>.*
 This allows the element to avoid running observers in the default case.
 
 
-### Observers are synchronous
+### 观察者是同步的
 
 Like all property effects, observers are synchronous. If the observer is likely to be invoked
 frequently, consider deferring time-consuming work, like inserting or removing DOM. For example, you
@@ -50,7 +50,7 @@ However, if you handle a data change asynchronously, note that the parameters pa
 may not match the element's current property values.
 
 
-## Simple observers {#simple-observers}
+## 简单的观察者 {#simple-observers}
 
 Simple observers are declared in the `properties` object, and always observe a single property. You
 shouldn't assume any particular initialization order for properties: if your observer depends on
@@ -67,7 +67,7 @@ You specify an observer method by name. The host element must have a method with
 
 The observer method receives the new and old values of the property as arguments.
 
-### Observe a property  {#change-callbacks}
+### 观察属物  {#change-callbacks}
 
 Define a simple observer by adding an `observer` key to the property's declaration, identifying
 the observer method by name.
@@ -108,7 +108,7 @@ as observer arguments](#dependencies) for details.
 
 
 
-## Complex observers {#complex-observers}
+## 复杂的观察者 {#complex-observers}
 
 Complex observers are declared in the `observers` array.
 Complex observers can monitor one or more paths. These
@@ -156,7 +156,7 @@ Related tasks:
 
 
 
-### Observe changes to multiple properties {#multi-property-observers}
+### 观察对多个属物的更改 {#multi-property-observers}
 
 To observe changes to a set of properties, use the `observers`
 array.
@@ -207,7 +207,7 @@ customElements.define('x-custom', XCustom);
 In addition to properties, observers can also observe [paths to sub-properties](#observing-path-changes),
 [paths with wildcards](#deep-observation), or [array changes](#array-observation).
 
-### Observe sub-property changes {#observing-path-changes}
+### 观察子属物变化 {#observing-path-changes}
 
 To observe changes in object sub-properties:
 
@@ -267,7 +267,7 @@ class XCustom extends PolymerElement {
 customElements.define('x-custom', XCustom);
 ```
 
-### Observe array mutations {#array-observation}
+### 观察数组突变 {#array-observation}
 
 Use an array mutation observer to call an observer function whenever an array
 item is added or deleted using Polymer's [array mutation methods](model-data#array-mutation).
@@ -365,7 +365,7 @@ class XCustom extends PolymerElement {
 customElements.define('x-custom', XCustom);
 ```
 
-### Observe all changes related to a path {#deep-observation}
+### 观察与路径相关的所有更改 {#deep-observation}
 
 To call an observer when any (deep) sub-property of an
 object or array changes, specify a path with a wildcard (`*`).
@@ -417,7 +417,7 @@ class XCustom extends PolymerElement {
 customElements.define('x-custom', XCustom);
 ```
 
-### Identify all dependencies {#dependencies}
+### 识别所有依赖项 {#dependencies}
 
 Observers shouldn't rely on any properties, sub-properties, or paths other
 than those listed as dependencies of the observer. This creates "hidden" dependencies,
@@ -494,7 +494,7 @@ dependencies listed in its arguments changes. For example, if an observer
 relies on `this.firstName` but does not list it as a dependency, the observer
 is not called when `this.firstName` changes.
 
-## Computed properties {#computed-properties}
+## 被计算的属物 {#computed-properties}
 
 Computed properties are virtual properties computed on the basis of one or more paths. The computing
 function for a computed property follows the same rules as a complex observer, except that it
@@ -504,7 +504,7 @@ As with complex observers, the computing function is run once at initialization 
 dependencies are defined. After that, the function runs whenever there is an
 [observable changes](data-system#observable-changes) to any dependency.
 
-### Define a computed property
+### 定义被计算的属物
 
 Polymer supports virtual properties whose values are calculated from other properties.
 
@@ -572,7 +572,7 @@ can use a computed binding instead. See
 [Computed bindings](data-binding#annotated-computed).
 { .alert .alert-info }
 
-## Dynamic observer methods {#dynamic-observer-methods}
+## 动态观察者方法 {#dynamic-observer-methods}
 
 If the observer method is declared in the `properties` object, the method is considered _dynamic_:
 the method itself may change during runtime. A dynamic method is considered an extra dependency of
@@ -626,13 +626,13 @@ console.log(nameCard.formattedName); // Hopper, Grace
 Since a dynamic observer property counts as a dependency, if the method is defined, the
 observer runs at initialization, even if none of the other dependencies are defined.
 
-## Add observers and computed properties dynamically {#dynamic-observers}
+## 动态添加观察者和被计算的属物 {#dynamic-observers}
 
 In some cases, you may want to add an observer or computed property dynamically. A set of instance
 methods allow you to add a simple observer, complex observer, or computed property to the current
 element _instance_.
 
-### Add a simple observer dynamically
+### 动态添加简单的观察者
 
 You can create a simple observer dynamically using the `_createPropertyObserver` instance method.
 For example:
@@ -645,7 +645,7 @@ this._createPropertyObserver('observedProperty', '_observedPropertyChanged', tru
 The optional third argument determines whether the method itself (in this case, `_observedPropertyChanged`)
 should be treated as a dependency.
 
-### Add a complex observer dynamically
+### 动态添加复杂的观察者
 
 You can create a computed property dynamically using the `_createMethodObserver` instance method.
 For example:
@@ -658,7 +658,7 @@ The optional third argument determines whether the method itself (in this case, 
 should be treated as a dependency.
 
 
-### Add a computed property dynamically
+### 动态添加被计算的属物
 
 You can create a computed property dynamically using the `_createComputedProperty` instance method.
 For example:

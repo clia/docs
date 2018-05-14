@@ -7,7 +7,7 @@ title: Application templates
 You can get started with the Polymer App Toolbox using one of several templates
 that incorporate the elements and patterns discussed here using the Polymer CLI.
 
-## Initialize project from template
+## 从模板初始化项目
 
 To initialize a project from a template, ensure you have the
 [Polymer CLI](/{{{polymer_version_dir}}}/docs/tools/polymer-cli) installed, `cd` into an empty project folder,
@@ -18,7 +18,7 @@ the currently available templates.
     $ polymer init
 ```
 
-## Templates
+## 模板
 
 ### Element
 
@@ -31,7 +31,7 @@ with Polymer. It starts with a single bare-bones custom element that can serve
 as the root of your application, from which you can build in any direction with
 maximum flexibility.
 
-### Starter Kit
+### 入门套件
 
 ![](/images/3.0/toolbox/starter-kit.png)
 
@@ -44,7 +44,7 @@ The template is also set up to use the [PRPL pattern](prpl) for efficient
 and progressive loading of the application, where views are loaded on-demand
 and will be pre-cached for offline and subsequent use.
 
-## Where to go from here
+## 从这里去哪儿
 
 The templates are starting points, and you are free to add web components
 discussed in the rest of the Polymer App Toolbox documentation according

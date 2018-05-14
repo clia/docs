@@ -30,13 +30,13 @@ worker at build time, so you don't need to write your own service worker code.
 For background, gotchas and debugging tips on service workers, see [Introduction to Service
 Worker](https://developers.google.com/web/fundamentals/primers/service-worker/) on Web Fundamentals.
 
-## Prerequisites
+## 先决条件
 
 To work with service worker, your application **must** be served over HTTPS. However, you can
 test service worker on your local system without a SSL certificate, because `localhost` is
 considered a secure origin.
 
-## Add a service worker
+## 添加服务工作者
 
 Support for Service Worker Precache is built into the [Polymer CLI](/{{{polymer_version_dir}}}/docs/tools/polymer-cli),
 so a service worker script is automatically generated when you build your app.
@@ -53,7 +53,7 @@ if ('serviceWorker' in navigator) {
 Registering a service worker doesn't speed up the first load of your site, so you can delay
 registering it until after your app has loaded.
 
-## Configuring the service worker
+## 配置服务工作者
 
 You can specify any Service Worker Precache options by passing an options file
 to the build command:
@@ -94,7 +94,7 @@ Only paths that match the whitelist fall back to `/index.html`. In this case, th
 all files _except_ those that end in `.html` (for HTML imports) and ones with `/data/` in the path
 (for dynamically-loaded data).
 
-## More resources
+## 更多资源
 
 The library supports a number of other features, including runtime caching of
 your app's dynamic content.

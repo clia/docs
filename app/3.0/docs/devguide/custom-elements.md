@@ -4,20 +4,18 @@ title: Custom element concepts
 
 <!-- toc -->
 
-Custom elements provide a component model for the web. The custom elements specification provides:
+自定义元素为 Web 提供了一套组件模型。自定义元素规范提供：
 
-*   A mechanism for associating  a class with a custom element name.
-*   A set of lifecycle callbacks invoked when an instance of the custom element changes state (for
-    example, added or removed from the document).
-*   A callback invoked whenever one of a specified set of attributes changes on the instance.
+*   将类与自定义元素名称关联的机制。
+*   当自定义元素的实例更改状态（例如，从文档添加或删除）时调用的一组生命周期回调。
+*   当实例上的一组特定属性之一更改时，将被调用的一个回调。
 
 Put together, these features let you build an element with its own public API that reacts to state
 changes. Polymer provides a set of features on top of the basic custom element specification. 
 
-This document provides an overview of custom elements as they relate to Polymer. For a more detailed
-overview of custom elements, see: [Custom Elements v1: Reusable Web
-Components](https://developers.google.com/web/fundamentals/web-components/customelements)
-on Web Fundamentals.
+本文档提供了一份与 Polymer 有关的自定义元素的概述。有关自定义元素的更详细的概述，请参阅：
+[自定义元素 v1: 可重用的 Web 组件](https://developers.google.com/web/fundamentals/web-components/customelements)
+于 Web 基础集。
 
 To define a custom element, you create an ES6 class and associate it with the custom element name. For the full set of Polymer features, extend the `PolymerElement` class:
 
@@ -44,20 +42,18 @@ Once you've imported it, you can use a custom element just like you'd use a stan
 
 The element's class defines its behavior and public API. 
 
-**Custom element names.** By specification, the custom element's name **must start with a lower-case
-ASCII letter and must contain a dash (-)**. There's also a short list of prohibited element names
-that match existing names. For details, see the [Custom elements core
-concepts](https://html.spec.whatwg.org/multipage/scripting.html#custom-elements-core-concepts)
-section in the HTML specification.
+**自定义元素名称。** 按照规范，自定义元素的名称 **必须以小写 ASCII 字母开头，并且必须包含连字符（-）**。
+还有一个与已存在的元素名称冲突的被禁用的名称的简短列表。
+有关详细信息，请参阅 HTML 规范中的 [自定义元素核心概念](https://html.spec.whatwg.org/multipage/scripting.html#custom-elements-core-concepts)
+章节。
 {.alert .alert-info}
 
-Polymer adds a set of features to the basic custom element:
+Polymer 为基本的自定义元素添加了一组功能：
 
-*   Instance methods to handle common tasks.
-*   Automation for handling properties and attributes, such as setting a property based on the
-    corresponding attribute.
-*   Creating shadow DOM trees for element instances based on a supplied template.
-*   A data system that supports data binding, property change observers, and computed properties.
+*   用于处理常见任务的实例方法。
+*   用于处理属物和属性的自动化，例如基于相应属性来设置属物。
+*   基于提供的 `<template>` 为元素实例创建阴影 DOM 树。
+*   支持数据绑定，属物变更观察者和被计算的属物的数据系统。
 
 The `PolymerElement` class is made up of a set of _class expression mixins_ that add individual features.
 You can also use these mixins individually if you want to use a subset of Polymer's features. See the API
@@ -156,7 +152,7 @@ For a complete list of limitations, see [Requirements for custom element constru
 
 Whenever possible, defer work until the `connectedCallback` or later instead of performing it in the constructor. See [Defer non-critical work](#defer-work) for some suggestions.
 
-### Polymer element initialization {#ready-callback}
+### Polymer 元素初始化 {#ready-callback}
 
 The custom elements specification doesn't provide a one-time initialization callback. Polymer
 provides a `ready` callback, invoked the first time the element is added to the DOM. (If the element 
@@ -223,7 +219,7 @@ In most cases, you can call `afterNextRender` from either the `constructor` or t
 callback with similar results. For anything requiring access to the element's shadow tree, use
 the `ready` callback.
 
-## Element upgrades
+## 元素升级
 
 By specification, custom elements can be used before they're defined. Adding a definition for an
 element causes any existing instances of that element to be *upgraded* to the custom class.
@@ -250,7 +246,7 @@ To avoid unstyled content, you can apply styles to undefined elements. See
 [Style undefined elements](style-shadow-dom#style-undefined-elements) for details.
 
 
-## Extending other elements {#extending-elements}
+## 扩展其他元素 {#extending-elements}
 
 In addition to `PolymerElement`, a custom element can extend another custom element:
 
@@ -315,7 +311,7 @@ const LegacyButton = customElements.get('legacy-button');
 export class MyExtendedButton extends LegacyButton { ... }
 ```
 
-## Sharing code with class expression mixins {#mixins}
+## 与类表达式混入共享代码 {#mixins}
 
 ES6 classes allow single inheritance, which can make it challenging to share code between unrelated
 elements. Class expression mixins let you share code between elements without adding a common
@@ -485,6 +481,6 @@ applied once.
 
 
 
-## Resources
+## 资源
 
 More information: [Custom elements v1: reusable web components](https://developers.google.com/web/fundamentals/primers/customelements/?hl=en) on Web Fundamentals.

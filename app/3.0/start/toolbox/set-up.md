@@ -1,21 +1,18 @@
 ---
-title: Step 1. Get set up
-subtitle: "Build an app with App Toolbox"
+title: 第 1 步：设置好
+subtitle: "使用 App 工具箱创建一个 App"
 ---
 
 <!-- toc -->
 
-The [Polymer App Toolbox][toolbox] is a collection of components, tools and
-templates for building Progressive Web Apps with Polymer.
+[Polymer App 工具箱][toolbox] 是组件，工具和模板的一个集合，用来使用 Polymer 构建渐进式 Web App。
 
-Follow the instructions below to install, build, and deploy a project using an
-App Toolbox template in less than 15 minutes.
+按照以下说明，使用 App 工具箱模板，在不到 15 分钟内安装、创建和部署一个项目。
 
-## Install Polymer CLI
+## 安装 Polymer CLI
 
-Polymer CLI is an all-in-one command line tool for Polymer projects. In this tutorial you use
-Polymer CLI to initialize, serve, and build your project. You can also use it for linting and
-testing, but this tutorial won't cover those topics.
+Polymer CLI 是 Polymer 项目的一个一体化命令行工具。在本教程中，您使用 Polymer CLI 初始化，服务和构建您的项目。
+您还可以使用它来进行代码检查和测试，但本教程不会涵盖这些主题。
 
 To work with Polymer CLI, you will need a Node.js version [supported by the Polymer toolset](/{{{polymer_version_dir}}}/docs/tools/node-support), npm, Git, and Yarn. For full installation instructions, see [the
 Polymer CLI documentation](/{{{polymer_version_dir}}}/docs/tools/polymer-cli).
@@ -31,7 +28,7 @@ Once you have the prerequisites set up, install Polymer CLI:
         mkdir my-app
         cd my-app
 
-1. Initialize your project with an app template.
+1. 使用 App 模板初始化您的项目
 
         polymer init
 
@@ -40,14 +37,11 @@ Once you have the prerequisites set up, install Polymer CLI:
 
 Polymer CLI downloads and installs dependencies, and creates an app from the `polymer-3-starter-kit template`.
 
-## Serve your project
+## 服务您的项目
 
-The App Toolbox templates do not require any build steps to get started
-developing.  You can serve the application using the Polymer CLI, and
-file changes you make will be immediately visible by refreshing
-your browser.
+App 工具箱模板不需要任何构建步骤即可开始开发。您可以使用 Polymer CLI 服务应用，并且您所做的文件更改将通过刷新浏览器立即可见。
 
-To serve your project:
+要服务您的项目：
 
     polymer serve
 
@@ -60,10 +54,9 @@ info: [cli.command.serve]    Files in this directory are available under the fol
       reusable components: http://127.0.0.1:8081/components/polymer-starter-kit/
 ```
 
-## Project structure
+## 项目结构
 
-The diagram below is a brief summary of the files and directories within
-the project.
+下图是项目中的文件和目录的简要摘要。
 
 ```text
 images/
@@ -86,13 +79,12 @@ sw-precache-config.js  # service worker pre-cache configuration
 test/                  # unit tests
 ```
 
-## Next steps
+## 下一步
 
-Your app is now up and running locally. Next, learn how to add
-a page to your app.
+您的 App 现已建立并在本机运行。接下来，了解如何向您的 App 添加页面。
 
 <a class="blue-button"
-    href="create-a-page">Next step: Create a page</a>
+    href="create-a-page">下一步：创建页面</a>
 
 [toolbox]: /3.0/toolbox/
 [md]: http://www.google.com/design/spec/material-design/introduction.html

@@ -7,14 +7,12 @@ title: Shadow DOM concepts
 Shadow DOM is a DOM feature that helps you build components. You can think of shadow DOM as a
 **scoped subtree** inside your element.
 
-**Read more on Web Fundamentals**. This document gives an overview of shadow DOM as it relates to
-Polymer. For a more comprehensive overview of Shadow DOM, see
-[Shadow DOM v1: self-contained web components](https://developers.google.com/web/fundamentals/primers/shadowdom/?hl=en)
-on Web Fundamentals.
+**阅读更多关于 Web 基础知识**。本文档概述了与 Polymer 有关的阴影 DOM。
+有关阴影 DOM 的更全面的概述，请参阅 Web 基础中的
+[阴影 DOM v1：自包含的 Web 组件](https://developers.google.com/web/fundamentals/primers/shadowdom/?hl=en)。
 {.alert .alert-info}
 
-Consider a header component that includes a page title and a  menu button: The DOM tree for this
-element might look like this:
+考虑一个包含页面标题和菜单按钮的页头组件：此元素的 DOM 树可能如下所示：
 
 
 ```html
@@ -25,8 +23,7 @@ element might look like this:
 ```
 
 
-Shadow DOM lets you place the children in a scoped subtree, so document-level CSS can't restyle the
-button by accident, for example. This subtree is called a shadow tree.
+阴影 DOM 可以让您把子节点们放在一个作用域子树中，因此，文档级的 CSS 不能无意间影响例如这个按钮的样式。这个子树称为阴影树。
 
 
 ```
@@ -88,7 +85,7 @@ customElements.define('my-header', MyHeader);
 Note that the template includes a `<style>` element. CSS placed in the shadow tree is scoped to the
 shadow tree, and won't leak out to other parts of your DOM.
 
-## Shadow DOM and composition
+## 阴影 DOM 和构造
 
 By default, if an element has shadow DOM, **the shadow tree is rendered instead of the element's
 children.** To allow children to render, you can add a `<slot>` element to your shadow tree. Think
@@ -201,7 +198,7 @@ The `<example-card>` has two top-level children, both `<div>` elements. Both are
 default slot. The `slot` attribute on the span has no effect on the distribution, because the span
 isn't a top-level child.
 
-### Fallback content
+### 后备内容
 
 A slot can contain *fallback content* that's displayed when no nodes are assigned to the slot. For
 example:
@@ -244,7 +241,7 @@ If the user omits the icon, the fallback content supplies a default icon:
 </fancy-note>
 ```
 
-### Multi-level distribution
+### 多层级分布
 
 A slot element may also be assigned to a slot. For example, consider two levels of shadow trees.
 
@@ -313,7 +310,7 @@ their assigned nodes or fallback content. So in the example above, `#child-slot`
 distributed node, the span. You can think of the distributed nodes as the *list of nodes that take
 the place of the slot in the rendered tree*.
 
-### Slot APIs
+### 插槽 API
 
 Shadow DOM provides a few new APIs for checking distribution:
 
@@ -327,7 +324,7 @@ Shadow DOM provides a few new APIs for checking distribution:
 For more details, see [Working with slots in JS](https://developers.google.com/web/fundamentals/primers/shadowdom/?hl=en#workwithslots) on Web Fundamentals.
 
 
-### Observe added and removed children {#observe-nodes}
+### 观察添加和删除的子节点 {#observe-nodes}
 
 The `Polymer.FlattenedNodesObserver` class provides utilities to track an element's _flattened tree_.
 That is, a list of the node's child nodes, with any `<slot>` elements replaced by their distributed
@@ -377,7 +374,7 @@ A few notes on `FlattenedNodesObserver`:
 *   The observer handle also provides a `flush` method, that can be used for unit testing.
 
 
-## Event retargeting
+## 事件重定向
 
 To preserve the encapsulation of the shadow tree, some events are stopped at the shadow DOM boundary.
 
@@ -425,7 +422,7 @@ var event = new CustomEvent('my-event', {bubbles: true, composed: true});
 
 For more information on events in shadow trees, see [The Shadow DOM event model](https://developers.google.com/web/fundamentals/getting-started/primers/shadowdom#events) in the Web Fundamentals article on shadow DOM.
 
-## Shadow DOM styling
+## 阴影 DOM 样式化
 
 Styles inside a shadow tree are *scoped* to the shadow tree, and don't affect elements outside the
 shadow tree. Styles outside the shadow tree also don't match selectors inside the shadow tree.
@@ -492,7 +489,7 @@ shadow tree.
 
 For more information, see [Styling](https://developers.google.com/web/fundamentals/getting-started/primers/shadowdom#styling) in the Web Fundamentals article on shadow DOM.
 
-## Theming and custom properties
+## 主题化和自定义属物
 
 You can't directly style anything in a shadow tree using a CSS rule **outside** of the shadow tree.
 The exception is CSS properties (such as color and font) that inherit down the tree. A shadow tree
@@ -547,7 +544,7 @@ background-color: var(--my-theme-color, var(--another-theme-color, blue));
 ```
 
 
-### Custom property mixins
+### 自定义属物混入
 
 Custom property *mixins* are a feature built on top of the custom property specification. Basically,
 the mixin is a variable that contains multiple properties:
@@ -577,7 +574,7 @@ The `@apply` rule has the same effect as adding the contents of `--my-custom-mix
 ruleset where `@apply` is used.
 
 
-## Shadow DOM polyfills
+## 阴影 DOM polyfills
 
 Because shadow DOM is not available on all platforms, Polymer takes advantage of the shady DOM and
 shady CSS polyfills if they're installed. These polyfills are included in the `webcomponents-lite.js`
@@ -589,7 +586,7 @@ supporting browsers that don't include native shadow DOM, you need to be aware o
 It's also helpful to understand some details of the shady DOM polyfill when debugging applications
 under shady DOM.
 
-### How the polyfills work
+### polyfills 如何工作
 
 The polyfills use a combination of techniques to emulate shadow DOM:
 
@@ -653,7 +650,7 @@ rewriting rules so they don't leak into shadow trees.
 
 For more information, see the [Shady CSS polyfill README](https://github.com/webcomponents/shadycss/blob/master/README.md).
 
-## Resources
+## 资源
 
 For further reading:
 

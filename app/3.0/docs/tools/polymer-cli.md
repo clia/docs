@@ -13,14 +13,14 @@ Follow these instructions to install the Polymer CLI on a Linux or MacOS operati
 For a suggested way to run the Polymer CLI on Windows 10, see the instructions below on 
 [Installing Polymer CLI pre-requisites on Windows 10](#windows-10). 
 
-## Install Polymer CLI {#install}
+## 安装 Polymer CLI {#install}
 
 1.  Make sure you have installed a version of Node.js supported by Polymer. To check the version
     of Node.js that you have installed, run:
     
         node --version
     
-    See the [official node version support policy](node-support) for more details.
+    查看 [官方 node 版本支持政策](node-support) 以了解更多详情。
 
 1.  Update npm.
 
@@ -38,7 +38,7 @@ For a suggested way to run the Polymer CLI on Windows 10, see the instructions b
 
 You're all set. Run `polymer help` to view a list of commands.
 
-## CLI project types {#project-types}
+## CLI 项目类型 {#project-types}
 
 Polymer CLI works with two types of projects:
 
@@ -57,12 +57,12 @@ Polymer CLI works with two types of projects:
   See the guide to [creating an application project with the Polymer CLI](create-app-polymer-cli)
   for more information.
 
-## Commands
+## 命令
 
 See the documentation on [Polymer CLI commands](polymer-cli-commands) for a list of commands and
 how to use them.
 
-## Installing Polymer CLI pre-requisites on Windows 10 {#windows-10}
+## 在 Windows 10 上安装 Polymer CLI 先决条件 {#windows-10}
 
 There are multiple ways to install the pre-requisites for the Polymer CLI on a Windows 10 system. 
 This method uses Bash on the Windows Subsystem for Linux. 
@@ -70,7 +70,7 @@ This method uses Bash on the Windows Subsystem for Linux.
 For complete and up-to-date installation instructions for Bash on the Windows Subsystem for Linux, 
 we recommend you review the [Bash on ubuntu on Windows documentation](https://msdn.microsoft.com/en-us/commandline/wsl/about). 
 
-### Enable Bash on Windows 10 {#enable-bash}
+### 在 Windows 10 上启用 Bash {#enable-bash}
 
 1.  Check your Windows OS build:
 
@@ -104,7 +104,7 @@ Subsystem for Linux**.
 Your Bash installation is complete. You can start now start a new Bash prompt by typing `bash` from 
 the Start menu.
 
-### Install Node with nvm {#install-node}
+### 用 nvm 安装 Node {#install-node}
 
 For complete and up-to-date instructions, refer to the [official documentation for installing Node 
 with nvm](https://github.com/creationix/nvm).
@@ -119,7 +119,7 @@ with nvm](https://github.com/creationix/nvm).
 
         nvm install node
 
-### Optional: Set a default browser {#set-default-browser}
+### 可选项：设置一个默认浏览器 {#set-default-browser}
 
 Optionally, set a default browser so `polymer serve --open` has something to open. Use your own 
 Path variable.

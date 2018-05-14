@@ -1,0 +1,26 @@
+<link rel="import"  href="https://polygit.org/components/polymer/polymer-element.html">
+
+<dom-module id="configurable-name-tag">
+
+  <template>
+    <!-- 绑定到 "owner" 属物 -->
+    这是 <b>[[owner]]</b> 的 name-tag 元素。
+  </template>
+  
+  <script>
+    class ConfigurableNameTag extends Polymer.Element {
+      static get is() { return "configurable-name-tag"; }
+      // 配置 owner 属物
+      static get properties() {
+        return {
+          owner: {
+            type: String,
+            value: "Daniel",
+          }
+        };
+      }
+    }
+    customElements.define(ConfigurableNameTag.is, ConfigurableNameTag);
+  </script>
+
+</dom-module>

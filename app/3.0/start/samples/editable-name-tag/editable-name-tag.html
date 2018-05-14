@@ -1,0 +1,35 @@
+<link rel="import"  href="https://polygit.org/components/polymer/polymer-element.html">
+<!-- 导入 iron-input 元素 -->
+<link rel="import"  href="https://polygit.org/components/iron-input/iron-input.html">
+
+<dom-module id="editable-name-tag">
+
+  <template>
+    <!-- 绑定到 "owner" 属物 -->
+    <p>这是 <b>[[owner]]</b> 的 name-tag 元素。</p>
+    
+    <!-- iron-input 暴露一个可双向绑定的输入框值 -->
+    <iron-input bind-value="{{owner}}">
+      <input is="iron-input" placeholder="这里填您的名字...">
+    </iron-input>
+  </template>
+
+  <script>
+    class EditableNameTag extends Polymer.Element {
+      static get is() { return "editable-name-tag"; }
+      
+      // 配置 owner 属物
+      static get properties() {
+        return {
+          owner: {
+            type: String,
+            value: 'Daniel'
+          }
+        };
+      }
+      
+    }
+    customElements.define(EditableNameTag.is, EditableNameTag);
+  </script>
+
+</dom-module>

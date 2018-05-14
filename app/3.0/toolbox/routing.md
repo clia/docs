@@ -14,13 +14,13 @@ to other components.
 [Encapsulated routing with elements](/blog/routing).
 {.alert .alert-info}
 
-## Install app-route
+## 安装 app-route
 
 Install the `app-route` package with npm:
 
     npm install --save @polymer/app-route@next
 
-## Add routing
+## 添加路由
 
 Your first task is to decide how your app's routes map to elements. For example, if you have an
 application with several main views:
@@ -81,7 +81,7 @@ to load the user's data:
 ```
 
 
-## Route objects
+## 路由对象
 
 The `route` object contains two properties:
 
@@ -115,7 +115,7 @@ And the `routeData` object is:
       user: 'bob'
     }
 
-## Change routes
+## 改变路由
 
 When using `<app-route>`, there are two ways to change the current URL.
 
@@ -134,7 +134,7 @@ When using `<app-route>`, there are two ways to change the current URL.
 
     `this.set('routeData.user', 'mary');`
 
-## Take action on route changes
+## 当路由变化时执行动作
 
 Previous sections showed data binding to routes and route data, but sometimes you need to run code
 when the route changes. Using observers, it's simple to react to changes to the route or data:
@@ -159,7 +159,7 @@ _viewChanged(view) {
 }
 ```
 
-## More resources
+## 更多资源
 
 -   [Encapsulated routing with elements](/blog/routing)
 -   [`<app-route>`

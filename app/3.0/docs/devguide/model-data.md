@@ -13,7 +13,7 @@ Related concepts:
 -   [Data paths](data-system#paths).
 -   [Observable changes](data-system#observable-changes).
 
-## Specifying paths
+## 指定路径
 
 A [data path](data-system#paths) is a series of path segments. *In most cases*, each path segment is
 a property name. The data APIs accept two kinds of paths:
@@ -39,7 +39,7 @@ There are a few special types of path segments.
 *   Array mutation paths (like `foo.splices`) represent all array mutations to a given array.
 *   Array item paths (like `foo.11`) represent an item in an array.
 
-## Get a value by path {#get-value}
+## 通过路径获取值 {#get-value}
 
 Use the [`get`](/{{{polymer_version_dir}}}/docs/api/polymer-element#PolymerElement-method-get) method to retrieve a value based on
 its path.
@@ -52,7 +52,7 @@ var item = this.get(['myArray', 11])
 
 ```
 
-## Set a property or subproperty by path {#set-path}
+## 通过路径设置属物或子属物 {#set-path}
 
 Use the [`set`](/{{{polymer_version_dir}}}/docs/api/polymer-element#PolymerElement-method-set) method to
 make an [observable change](data-system#observable-changes) to a subproperty.
@@ -98,7 +98,7 @@ Related tasks:
 -   [Mutate an array](#array-mutation)
 -   [Notify Polymer of array mutations](#notifysplices)
 
-### Notify Polymer of a subproperty change {#notify-path}
+### 通知 Polymer 有关子属物的变更 {#notify-path}
 
 After making changes to an object subproperty, call `notifyPath` to make the change
 [_observable_](data-system#observable-changes) to the data system.
@@ -118,7 +118,7 @@ that object or array, even if the object or array itself hasn't changed. For det
 [Using the MutableData mixin](data-system#mutable-data).
 {.alert .alert-info}
 
-## Work with arrays {#work-with-arrays}
+## 使用数组 {#work-with-arrays}
 
 Use Polymer's array mutation methods to make [observable changes](data-system#observable-changes)
 to arrays.
@@ -126,7 +126,7 @@ to arrays.
 If you manipulate an array using the native methods (like `Array.prototype.push`), you can notify
 Polymer after the fact, as described in [Batch changes to an object or array](#batch-changes).
 
-### Mutate an array {#array-mutation}
+### 突变数组 {#array-mutation}
 
 When modifying arrays, Polymer provides a set of array mutation methods that mimic
 `Array.prototype` methods, with the exception that
@@ -201,7 +201,7 @@ a few choices:
     graph starting at that object or array, even if the object or array itself hasn't changed. For
     details, see [Using the MutableData mixin](data-system#mutable-data).
 
-### Notify Polymer of array mutations {#notifysplices}
+### 通知 Polymer 有关数组的突变 {#notifysplices}
 
 Whenever possible you should always use Polymer's [array mutation methods](#array-mutation).
 However, this isn't always possible. For example, you may be using a third-party library
@@ -223,7 +223,7 @@ causes Polymer to re-evaluate the entire object graph starting at that object or
 object or array itself hasn't changed. For details, see [Using the MutableData mixin](data-system#mutable-data).
 
 
-## Batch multiple property changes {#set-property}
+## 批量多属物变更 {#set-property}
 
 Use [`setProperties`](/{{{polymer_version_dir}}}/docs/api/polymer-element#PolymerElement-method-setProperties)
 method to make a batch change to a set of properties. This ensures the property changes
@@ -246,7 +246,7 @@ this.setProperties({
 }, true);
 ```
 
-## Link two paths to the same object {#linkpaths}
+## 链接两个路径到同一个对象 {#linkpaths}
 
 Use the [`linkPaths`](/{{{polymer_version_dir}}}/docs/api/polymer-element#PolymerElement-method-linkPaths)
 method to associate two paths. Use `linkPaths` when an element has two paths that refer to the same

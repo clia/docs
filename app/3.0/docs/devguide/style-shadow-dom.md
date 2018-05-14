@@ -4,11 +4,11 @@ title: Style an element's shadow DOM
 
 <!-- toc -->
 
-## Style your elements
+## 样式化您的元素
 
 Polymer supports DOM templating and the shadow DOM API. When you provide a DOM template for your custom element, Polymer then copies in the contents of the template you provided for your element.
 
-Here's an example:
+以下是一个例子：
 
 custom-element.js { .caption }
 
@@ -91,7 +91,7 @@ For a detailed explanation of shadow DOM as it applies to Polymer, see [Shadow D
 
 For an exploration of the shadow DOM v1 API, see [Shadow DOM v1: Self-Contained Web Components](https://developers.google.com/web/fundamentals/getting-started/primers/shadowdom).
 
-### Use inheritance from document-level styles
+### 从文档级样式继承
 
 When used in an HTML document, your element will still inherit any styling information that applies to its parent element:
 
@@ -177,7 +177,7 @@ index.html { .caption }
 
 [See it on Plunker](http://plnkr.co/edit/XDCXXG?p=preview)
 
-### Style the host element
+### 样式化宿主元素
 
 
 The element to which shadow DOM is attached is known as the host. To style the host, use the `:host` selector.
@@ -220,7 +220,7 @@ index.html { .caption }
 
 [See it on Plunker](http://plnkr.co/edit/BByXie?p=preview)
 
-#### Use CSS selectors to style the host element
+#### 使用 CSS 选择器样式化宿主元素
 
 You can use CSS selectors to determine when and how to style the host. In this code sample:
 
@@ -296,7 +296,7 @@ index.html { .caption }
 
 Styling with the `:host` selector is one of two instances where rules inside a shadow tree can affect an element outside a shadow tree. The second instance uses the `::slotted()` syntax to apply styling rules to distributed children. See [*Composition and slots* in Eric Bidelman's article on shadow DOM](https://developers.google.com/web/fundamentals/getting-started/primers/shadowdom#composition_slot) for more information.
 
-### Style slotted content (distributed children)
+### 样式化插槽内内容（分布的子节点）
 
 You can create **slots** in an element's template that are populated at runtime. For more information on slots, see the documentation on [shadow DOM and composition](/2.0/docs/devguide/shadow-dom#shadow-dom-and-composition).
 
@@ -492,7 +492,7 @@ index.html { .caption }
 
 [See it on Plunker](http://plnkr.co/edit/hR3I4w?p=preview)
 
-### Style undefined elements
+### 样式化未定义的元素
 
 To avoid FOUC (flash of unstyled content), you might want to style custom elements before they are 
 defined (that is, before the browser has attached their class definition to their markup tag). If 
@@ -596,7 +596,7 @@ customElements.define('using-dir-selector', UsingDirSelector);
 
 ## Share styles between elements
 
-### Use style modules {#style-modules}
+### 使用样式模块 {#style-modules}
 
 The preferred way to share styles is with *style modules*. You can package up styles in a style module, and share them between elements.
 
@@ -766,7 +766,7 @@ index.html { .caption }
 
 **Don't use custom-style inside an element's template.** You should only use `custom-style` to define styles for the main document. To define styles for an element's shadow DOM, just use a `<style>` block. {.alert .alert-info}
 
-### Examples
+### 示例
 
 In the following code sample, the document-level style in index.html "leaks" into the shadow DOM of `<custom-element>` in browsers that haven’t implemented the Shadow DOM v1 specs.
 

@@ -1,6 +1,6 @@
 ---
-title: Step 2. Create a new page
-subtitle: "Build an app with App Toolbox"
+title: 步骤 2. 创建一个新页面
+subtitle: "使用 App Toolbox 构建应用程序"
 ---
 
 <!-- toc -->
@@ -8,16 +8,15 @@ subtitle: "Build an app with App Toolbox"
 The starter kit includes placeholder pages you can use to start building out
 the views of your application. But at some point, you'll probably want to add more.
 
-This step takes you through the process of adding a new page or top-level view to your application.
+此步骤将引导您完成向应用添加新页面或顶级视图的过程。
 
-## Create an element for the new page
+## 为新页面创建元素
 
-First, create a new custom element that encapsulates the contents of
-your new view.
+首先，创建一个封装新视图内容的新自定义元素。
 
 1.  Create a new file called `src/my-new-view.js` and open it in an editor.
 
-2.  Add some scaffolding for a new custom element definition using Polymer:
+2.  使用 Polymer 为新的自定义元素定义添加一些脚手架：
 
     ```js
     /* Load the PolymerElement base class and html helper function */
@@ -57,7 +56,7 @@ you need to add it to your app's HTML template.
 
 1.  Open `src/my-app.js` in a text editor.
 
-1.  Find the set of existing pages inside the `<iron-pages>`:
+1.  在 `<iron-pages>` 中找到一组已有的页面：
 
     ```html
     <iron-pages
@@ -71,16 +70,15 @@ you need to add it to your app's HTML template.
     </iron-pages>
     ```
 
-    The `<iron-pages>` is bound to the `page` variable that changes with the
-    route, and selects the active page while hiding the others.
+    `<iron-pages>` 是绑定到 `page` 变量，根据路由而改变，并且选择活动的页面，而隐藏其他页面。
 
-1.  Add your new page inside the iron-pages:
+1.  在 iron-pages 中添加您的新页面：
 
     ```html
     <my-new-view name="new-view"></my-new-view>
     ```
 
-    Your `<iron-pages>` should now look like this:
+    您的 `<iron-pages>` 现在应该看起来像这样：
 
     ```html
     <iron-pages
@@ -202,7 +200,7 @@ The starter kit uses [dynamic `import()`](https://developers.google.com/web/upda
     }
     ```
 
-## Create a navigation menu item
+## 创建导航菜单项
 
 You've defined your new element, created a valid route to handle the case when a user navigates to it, and imported its JavaScript file dynamically. Now you need to add a menu item in the left-hand drawer so that users can navigate to the new page.
 
@@ -226,7 +224,7 @@ You've defined your new element, created a valid route to handle the case when a
     <a name="new-view" href="[[rootPath]]new-view">New View</a>
     ```
 
-    Your menu should now look like the following:
+    您的菜单现在应如下所示：
 
     ```html
     <!-- Drawer content -->
@@ -247,9 +245,9 @@ Your new page is now ready! If the Polymer CLI development server is still runni
 
 ![Example new page](/images/3.0/toolbox/new-view.png)
 
-## Next steps
+## 下一步
 
-You've added a new page to your application. Next, learn how to install and add an off-the-shelf custom element to your app.
+您已经在应用中添加了一个新页面。接下来，了解如何安装和添加现成的自定义元素到您的 App。
 
 <a class="blue-button"
-    href="add-elements">Next step: Add an element</a>
+    href="add-elements">下一步：添加元素</a>

@@ -13,7 +13,7 @@ Toolbox. You can try it out here:
 This case studies shows how Shop uses the App Toolbox to deliver a great
 user experience.
 
-## App structure
+## App 结构
 
 The Shop app is made up of several main views: the home view, list view,
 detail view, and shopping cart view:
@@ -41,7 +41,7 @@ element controls which view is currently visible.
 
 ![the high level architecture of the application, as described above](/images/3.0/toolbox/high-level-arch.png)
 
-## Routing
+## 路由
 
 Shop's client-side URL routing is based on the
 [`<app-route>`](https://www.webcomponents.org/element/PolymerElements/app-route)
@@ -66,7 +66,7 @@ More information:
 -   [Encapsulated routing with elements](/blog/routing)
 -   [`<app-route>` API reference](https://www.webcomponents.org/element/PolymerElements/app-route)
 
-## Views
+## 视图
 
 The main views of the element are controlled by an `<iron-pages>` element, which
 displays a single view at a time. When a view is active, it takes over the whole
@@ -159,7 +159,7 @@ contents are inserted into the DOM, the elements are initialized and their local
 DOM trees created. Since the tabs are only displayed on desktop, mobile users
 never pay the cost to create elements they're not using.
 
-## Theming
+## 主题化
 
 Shop uses
 [CSS custom properties](/{{{polymer_version_dir}}}/docs/devguide/custom-css-properties) and
@@ -211,7 +211,7 @@ to do anything fancy with custom properties, read up on the [shim
 limitations](/{{{polymer_version_dir}}}/docs/devguide/custom-css-properties#custom-properties-shim-limitations)
 and the [custom style API](/{{{polymer_version_dir}}}/docs/devguide/custom-css-properties#style-api).
 
-## Offline caching
+## 离线缓存
 
 To provide a better experience in offline and spotty network situations, Shop
 uses service worker to provide offline caching for its "app shell"—that is, the
@@ -232,7 +232,7 @@ a service worker at build time, so you don't need to write your own service
 worker code. Just create a list of the essential resources and add the precache
 script to your build process. Then, [generate a service worker for your app with Polymer CLI](/{{{polymer_version_dir}}}/toolbox/service-worker).
 
-## Application layout using app-layout
+## 应用布局，使用 app-layout
 
 The app layout elements provide a responsive layout for the Shop. The elements
 are modular building blocks designed to be composed together to create different
@@ -269,7 +269,7 @@ The app layout element set also includes simple container elements for
 positioning headers and drawers: the `<app-header-layout>` and
 `<app-drawer-layout>` elements.
 
-## More resources
+## 更多资源
 
 If you want to look at the Shop app in more detail, you can find the full source
 on GitHub:

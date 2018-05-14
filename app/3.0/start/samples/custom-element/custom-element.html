@@ -1,0 +1,14 @@
+<link rel="import"  href="https://polygit.org/components/polymer/polymer-element.html">
+
+<script>
+  // 为一个新的叫做 custom-element 的元素定义类
+  class CustomElement extends Polymer.Element {
+    static get is() { return "custom-element"; }
+    constructor() {
+        super();
+        this.textContent = "我是一个自定义元素。";
+      }
+  }
+  // 在浏览器中注册这个新的元素
+  customElements.define(CustomElement.is, CustomElement);
+</script>

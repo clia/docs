@@ -12,7 +12,7 @@ library (the underlying library that powers Polymer CLI's testing tools).
 version of the Polymer CLI (`npm install --g polymer-cli`).
 {.alert .alert-info}
 
-## Overview
+## 概览
 
 Polymer CLI is an all-in-one command-line interface that covers the vast majority of
 Polymer development tasks, including unit testing. The underlying library
@@ -32,7 +32,7 @@ popular third-party tools, including:
     multiple browsers.
 *   [Accessibility Developer Tools](https://github.com/GoogleChrome/accessibility-developer-tools) for accessibility audits.
 
-## Quick start {#quick-start}
+## 快速开始 {#quick-start}
 
 For demonstration purposes, this guide shows you how to install Polymer CLI
 and initialize an element project. You'll then use this project to learn how
@@ -73,7 +73,7 @@ to add and run unit tests.
 
 If you receive errors about testing on Safari, see [Set up testing on Safari](#safari).
 
-### Run tests interactively
+### 交互式运行测试
 
 You can also run your tests in the browser. This allows you to use the
 browser's DevTools to inspect or debug your unit tests.
@@ -87,7 +87,7 @@ Then, to run the basic `my-el_test.html` unit test, open a web browser and go to
 
     localhost:8080/components/my-el/test/my-el_test.html
 
-## Creating tests
+## 创建测试
 
 Now that you've got the basics down of using Polymer CLI to run tests, it's
 time to start creating them.
@@ -95,7 +95,7 @@ time to start creating them.
 This section of the doc shows you how to accomplish various tasks or scenarios
 while implementing your unit tests.
 
-### Asynchronous tests {#async}
+### 异步测试 {#async}
 
 To create an asynchronous test, pass `done` as an argument to the test function
 and then call `done()` when the test is complete. The `done` argument is a
@@ -128,7 +128,7 @@ test('fires an event', function(done) {
 });
 ```
 
-### Prevent shared state with test fixtures {#test-fixtures}
+### 用测试夹具防止共享状态 {#test-fixtures}
 
 Test fixtures enable you to define a template of content and copy a clean,
 new instance of that content into each test suite. Use test fixtures to
@@ -163,7 +163,7 @@ my-el_test.html {.caption}
 </script>
 ```
 
-### Create stub methods
+### 创建存根方法
 
 Stubs enable you to replace default implementations with custom methods. This
 is useful for catching side effects.
@@ -183,7 +183,7 @@ setup(function() {
 You don't have to use stubs directly on individual elements. You can override
 the implementation for all elements of a given type.
 
-### Create stub elements
+### 创建存根元素
 
 Use [stub elements](http://stackoverflow.com/questions/463278/what-is-a-stub)
 to test elements in isolation. For example, if one of your tests
@@ -295,7 +295,7 @@ Check out Sinon's documentation for more in-depth examples.
 assertion style.
 { .alert .alert-info }
 
-### Run a set of test suites {#test-sets}
+### 运行一套测试套件 {#test-sets}
 
 To run a set of test suites:
 
@@ -331,7 +331,7 @@ To run a set of test suites:
     wct test/my-test-set.html
     ```
 
-#### Test DOM mutations
+#### 测试 DOM 突变
 
 Always wrap your test in `flush` if your element template contains a [template
 repeater (`dom-repeat`)](/{{{polymer_version_dir}}}/docs/devguide/templates#dom-repeat) or
@@ -365,7 +365,7 @@ suite('my-list tests', function() {
 )};
 ```
 
-#### Test with polyfills {#shady-dom}
+#### 使用 polyfills 测试 {#shady-dom}
 
 To run your tests with polyfills, create a [test set](#test-sets). When you call `loadSuites`, add parameters to the URL of your test suite to enable one or more polyfills. For example:
 
@@ -380,7 +380,7 @@ WCT.loadSuites([
 
 The sample above runs `basic-test.html` twice, once using native APIs (where the browser supports them), and once using using all of the polyfills.
 
-### Automated testing in the cloud
+### 在云端自动测试
 
 It's important to get a good testing setup in place for your project as
 early as possible. Using services like Travis for continuous integration,
@@ -391,7 +391,7 @@ devices. For guidance on setting up these tools check out the Polycast below.
 <google-youtube video-id="afy_EEq_4Go" autoplay="0"
                 rel="0" fluid></google-youtube>
 
-## Set up testing on Safari {#safari}
+## 在 Safari 上设置好测试 {#safari}
 
 Safari 10 and 11 have built-in support for testing, but it must be manually enabled.
 
@@ -414,7 +414,7 @@ To enable testing on Safari 10 and 11:
 More information:
 [WebDriver support in Safari 10](https://webkit.org/blog/6900/webdriver-support-in-safari-10/)
 
-## Learn more
+## 了解更多
 
 Polymer Summit 2015 video on testing:
 

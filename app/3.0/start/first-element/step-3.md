@@ -62,7 +62,7 @@ class IconToggle extends PolymerElement {
 }
 ```
 
-Key information:
+关键信息：
 
   * Declare properties for your elements inside a `properties` getter function.
 
@@ -182,7 +182,7 @@ Key information:
 
 **Learn more: `notify` and `reflectToAttribute`.** The `notify` and `reflectToAttribute` properties may _sound_ similar: they both make the element's state visible to the outside world. `reflectToAttribute` makes the state visible **in the DOM tree**, so that it's visible to CSS and the `querySelector` methods. `notify` **makes state changes observable outside the element**, either using JavaScript event handlers or Polymer <a href="//{{{polymer_version_dir}}}/docs/devguide/data-binding#two-way-bindings">two-way data binding</a>. { .alert .alert-info }
 
-Now your element has `pressed` and `toggleIcon` properties working.
+现在您的元素已有 `pressed` 和 `toggleIcon` 属物在工作。
 
 Reload the demo, and you should see star and heart icons:
 
@@ -190,5 +190,5 @@ Reload the demo, and you should see star and heart icons:
 
 Next, we'll make the icons react to being clicked. On to [step 4](step-4)!
 
-<a class="blue-button" href="step-2">Previous step: Add local DOM</a>
-<a class="blue-button" href="step-4">Next step: React to input</a>
+<a class="blue-button" href="step-2">上一步：添加本地 DOM</a>
+<a class="blue-button" href="step-4">下一步：响应输入</a>

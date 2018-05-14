@@ -63,9 +63,9 @@ polymer.json
 
 The main file you’ll work with is `icon-toggle.js` in the top-level project folder. This file contains the definition for your a custome element, which you will modify.
 
-### Install dependencies and run the demo {#run}
+### 安装依赖项并运行 demo {#run}
 
-To install the element's dependencies and run the demo:
+要安装元素的依赖项并运行演示：
 
 1.  Run `npm install` from the repo directory:
 
@@ -104,4 +104,4 @@ To install the element's dependencies and run the demo:
 
 Keep the demo open, and move on to [step 2](step-2).
 
-<a class="blue-button" href="step-2">Step 2: Add local DOM</a>
+<a class="blue-button" href="step-2">步骤 2：添加本地 DOM</a>

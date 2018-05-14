@@ -38,7 +38,7 @@ import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '@polymer/iron-icon/iron-icon.js';
 ```
 
-Key information:
+关键信息：
 
   *   `'@polymer/polymer/polymer-element.js'` is a _module specifier_. The Polymer CLI development server finds this module and converts the module specifier to a file path so that your web browser can load the file.
 
@@ -155,7 +155,7 @@ After { .caption }
 <iron-icon icon="polymer"></iron-icon>
 ```
 
-Key information:
+关键信息：
 
   * The `<iron-icon>` element renders the icon specified by its `icon` attribute. Here, `iron-icon` is hard-coded to use an icon named `"polymer"`.
 
@@ -226,7 +226,7 @@ class IconToggle extends PolymerElement {
 customElements.define('icon-toggle', IconToggle);
 ```
 
-Make sure `polymer serve` is running and reload the demo page. You should see the toggle buttons show up with the hard-coded icon.
+确保 `polymer serve` 正在运行并重新加载演示页面。您应该看到切换按钮处显示的硬编码的图标。
 
 <img width="400px" src="/images/3.0/first-element/hardcoded-toggles.png" alt="Demo showing icon toggles displaying Polymer icon">
 
@@ -234,6 +234,6 @@ You'll notice that one toggle is styled as pressed, because the `pressed` attrib
 
 We'll fix that in [step 3](step-3)!
 
-<a class="blue-button" href="intro">Previous step: Intro</a>
+<a class="blue-button" href="intro">上一步：简介</a>
 <a class="blue-button"
-    href="step-3">Next step: Use data binding and properties</a>
+    href="step-3">下一步：使用数据绑定和属物</a>

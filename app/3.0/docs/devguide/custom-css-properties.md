@@ -6,7 +6,7 @@ title: Use custom properties
 
 Custom CSS properties allow you to define a CSS variable and use it in your styles. 
 
-## Basic syntax for custom CSS properties 
+## 自定义 CSS 属物的基本语法 
 
 To set the value of a custom CSS property:
 
@@ -57,7 +57,7 @@ You can use custom CSS properties outside of the context of custom elements, sim
 
 In the code sample above, the visual theme can be changed by editing the values of the custom properties. This makes it easier to create consistent themes, and your code will be less prone to error.
 
-## Use the custom CSS properties provided by a Polymer element
+## 使用 Polymer 元素提供的自定义 CSS 属物
 
 The author of a Polymer element can provide custom CSS properties that you can use to style the appearance of the element in your application. This way, you don't need to know how the element's code works.
 
@@ -112,7 +112,7 @@ To find out about the custom CSS properties an element provides, see the element
 
 For examples of Polymer elements that provide extensive styling options with custom CSS properties, see the [API documentation for the `paper-ui-elements`](https://www.webcomponents.org/collection/PolymerElements/paper-ui-elements).
 
-## Provide custom CSS properties to users of your elements
+## 为您的元素的用户提供自定义 CSS 属物
 
 When you create Polymer elements, you can use custom CSS properties in your style rules. Users of your elements can then set values for the custom CSS properties, and control the appearance of your elements without needing to know how your code works.
 
@@ -399,7 +399,7 @@ import '@webcomponents/shadycss/entrypoints/apply-shim.js';
 
 [See it in Plunker](http://plnkr.co/edit/glgUKv?p=preview)
 
-### Custom property API for Polymer elements {#style-api}
+### 用于 Polymer 元素的自定义属物 API {#style-api}
 
 Polymer's custom property shim evaluates and applies custom property values once
 at element creation time. In order to have an element (and its subtree) re-
@@ -452,7 +452,7 @@ Elements using the legacy API can use the
 [`getComputedStyleValue`](/3.0/docs/api/legacy/legacy-element-mixin#LegacyElementMixin-method-getComputedStyleValue)
 instance method instead of testing for `ShadyCSS`.
 
-### Custom properties shim limitations
+### 自定义属物垫片限制
 
 Cross-platform support for custom properties is provided in Polymer by a
 JavaScript library that **approximates** the capabilities of the CSS Variables
@@ -466,7 +466,7 @@ interests of practicality and performance.
 Below are current limitations of the shim. Improvements to performance and
 dynamism will continue to be explored.
 
-#### Dynamism limitations
+#### 动态性限制
 
 Only property definitions which match the element at *creation time* are applied.
 Any dynamic changes that update property values are not applied automatically. You
@@ -528,7 +528,7 @@ have the desired effect, since the dynamism is related to *application* of a cus
 }
 ```
 
-#### Inheritance limitations
+#### 继承限制
 
 Unlike normal CSS inheritance which flows from parent to child, custom
 properties in Polymer's shim can only change when inherited by a custom element
@@ -566,7 +566,7 @@ class MyElement extends PolymerElement {
 }
 ```
 
-#### Styling distributed elements not supported
+#### 不支持样式化分布式的元素
 
 The custom properties shim doesn't support styling distributed elements.
 

@@ -17,7 +17,7 @@ Create a bundled build with the `--bundled` flag:
 
     polymer build --bundle
 
-## Dynamic serving
+## 动态服务
 
 If you need to perform dynamic serving (serving different content to users with different browsers), multiple builds are an option. You can generate multiple builds by configuring them in your [polymer.json file](/{{{polymer_version_dir}}}/docs/tools/polymer-json).
 

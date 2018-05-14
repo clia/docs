@@ -9,7 +9,7 @@ interactions. These events fire consistently on both touch and mouse environment
 so we recommend using these events instead of their mouse- or
 touch-specific event counterparts. This provides better interoperability with both touch and mouse devices.
 
-## Using gesture events
+## 使用手势事件
 
 Add gesture support by importing and using the `GestureEventListeners` mixin:
 
@@ -54,7 +54,7 @@ using the generic `addEventListener` method. To listen for a gesture event:
 
     You can use the `addListener` function to add a listener to the host element.
 
-### Gesture event types
+### 手势事件类型
 
 The following are the gesture event types supported, with a short description
 and list of detail properties available on `event.detail` for each type:
@@ -84,7 +84,7 @@ and list of detail properties available on `event.detail` for each type:
   * `ddy`—change in pixels vertically since last track event
   * `hover()`—a function that may be called to determine the element currently being hovered
 
-### Examples
+### 示例
 
 Example declarative event listener { .caption }
 

@@ -21,7 +21,7 @@ transformed to AMD modules), or serve multiple versions of the code to different
 Information on multiple builds and differential serving is available in the
 [documentation on building for production](/{{{polymer_version_dir}}}/toolbox/build-for-production).
 
-## JavaScript (ES6) Modules
+## JavaScript (ES6) 模块
 
 Polymer 3.x is packaged using JavaScript Modules. JavaScript modules are the first native module
 format implemented by browsers. JavaScript Modules provide _exports_ that can be used by other modules:
@@ -65,7 +65,7 @@ There are a number of online primers on JavaScript modules if you're not familia
 As an addition to the standard ES6 module syntax, Polymer supports importing modules by name, as described
 in the next section.
 
-### Module specifiers
+### 模块说明符
 
 The browser accepts only one kind of module specifier in an `import` statement: a URL, which must
 be either fully-qualified, or a path starting with `/`, `./` or `../`. This works fine for importing 
@@ -90,7 +90,7 @@ These module specifiers need to be transformed to paths before they're served to
 them at build time, and the Polymer development server can transform them at runtime, so you can test code without a build step.
 Many third-party build tools, like WebPack and Rollup also support named modules.
 
-### Dynamic imports
+### 动态导入
 
 Dynamic import is a language feature that enables lazy-loading of resources, replacing the functionality 
 that was previously used for this in Polymer 2.x (`Polymer.importHref`). 
@@ -113,7 +113,7 @@ For more on dynamic import, see:
 *   [Dynamic import()](https://developers.google.com/web/updates/2017/11/dynamic-import) on developers.google.com.
 
 
-## Compiling ES6 and beyond {#compile}
+## 编译 ES6 和更高版本 {#compile}
 
 Polymer 3.x elements use features from the ECMAScript 2015 version 
 of the JavaScript standard (commonly known as ES6). ES6 is required by the native
@@ -155,7 +155,7 @@ compiled and uncompiled code in its cache, resulting in errors. To avoid this pr
 `polymer serve` with the `--compile never` option when testing with device emulation.
 {.alert .alert info}
 
-### Custom builds
+### 自定义构建
 
 If you're putting together a custom build:
 

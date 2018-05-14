@@ -1,13 +1,12 @@
 ---
-title: Try Polymer
+title: 尝试 Polymer
 ---
 
 <!-- toc -->
 
-Polymer makes it simple to create web components, declaratively.
+Polymer 使声明性地创建 Web 组件变得简单。
 
-New web developers can simply add custom HTML elements on a web page with markup.
-It’s just like using the HTML tags you’re already familiar with:
+新的 Web 开发者能够简单地使用标记来添加自定义 HTML 元素到一个网页上去。这就像您已经熟悉的使用 HTML 标签的用法一样：
 
 ```html
 <h1>A heading!</h1>
@@ -21,17 +20,17 @@ Experienced web developers can use Polymer's special features to reduce boilerpl
 and make it even easier to build complex, interactive elements. In this tour, you'll
 learn how to:
 
-- Register elements
-- Use lifecycle callbacks
-- Observe properties
-- Create shadow DOM with templates
-- Use data binding
+- 注册元素
+- 使用生命周期回调
+- 观察属物
+- 使用模板创建阴影 DOM
+- 使用数据绑定
 
 In this section you can tour the Polymer library,
 without installing anything. Click the **Edit on StackBlitz** button to open any
 of the samples in an interactive sandbox.
 
-Tap the buttons following each feature to learn more.
+点击每个功能后面的按钮了解更多信息。
 
 ### Register an element {#register}
 
@@ -67,23 +66,21 @@ Try it out in **StackBlitz**:
   custom element’s `tagName` property to the console.
   Hint: add `console.log(this.tagName);` to the constructor method!
 
-This sample uses a lifecycle callback
-to add contents to the `<custom-element>` when it's initialized.
-When a custom element finishes its initialization, the `ready` lifecycle callback is called.
-You can use the `ready` callback for one-time initialization work after the element is created.
+此示例使用一个生命周期回调把内容添加到 `<custom-element>` 上，在它初始化完成时。
+当自定义元素完成其初始化时，`ready` 生命周期回调被调用。
+您可以使用 `ready` 回调进行一次性的初始化工作，在元素被创建以后。
 
 <p><a href="/{{{polymer_version_dir}}}/docs/devguide/registering-elements" class="blue-button">
-  Learn more: element registration
+  了解更多：元素注册
 </a></p>
 
 <p><a href="/{{{polymer_version_dir}}}/docs/devguide/registering-elements#lifecycle-callbacks" class="blue-button">
-  Learn more: lifecycle callbacks
+  了解更多：生命周期回调
 </a></p>
 
-### Add shadow DOM
+### 添加阴影 DOM
 
-Many elements include some internal DOM nodes to implement the element's UI and behavior.
-You can use Polymer's DOM templating to create a shadow DOM tree for your element.
+许多元素包括一些内部 DOM 节点来实现元素的 UI 和行为。您可以使用 Polymer 的 DOM 模板化为元素创建一个阴影 DOM 树。
 
 <demo-tabs selected="0" name="qt-2-shadow-dom" editor-open-file="dom-element.js" project-path="/3.0/start/samples/dom-element">
   <paper-tab slot="tabs">dom-element.js</paper-tab>
@@ -107,17 +104,16 @@ You can use Polymer's DOM templating to create a shadow DOM tree for your elemen
 Try it out in **StackBlitz**:
 * Try adding some other html elements inside the <template></template> block. For example, add `<h1>A heading!</h1>` or `<a href="stuff.html">A link!</a>`
 
-Shadow DOM is encapsulated inside the element.
+阴影 DOM 被封装在元素内。
 
-<p><a href="/{{{polymer_version_dir}}}/docs/devguide/dom-template" class="blue-button">Learn more: DOM templating</a></p>
+<p><a href="/{{{polymer_version_dir}}}/docs/devguide/dom-template" class="blue-button">了解更多：DOM 模板化</a></p>
 
-### Compose with shadow DOM
+### 构造阴影 DOM
 
-Shadow DOM lets you control _composition_. The element's children can be _distributed_
-so they render as if they were inserted into the shadow DOM tree.
+阴影 DOM 可让您控制 _构造_。元素的子元素可以是 _分布式的_
+以让它们可以被渲染成像被插入到阴影 DOM 树中一样。
 
-This example creates a simple tag that decorates an image by wrapping it
-with a styled `<div>` tag.
+此示例创建一个简单的标签，通过使用一个样式化的 `<div>` 标签来包装一个图片来装饰该图片。
 
 <demo-tabs selected="0" name="qt-3-compose" editor-open-file="picture-frame.js" project-path="/3.0/start/samples/picture-frame">
   <paper-tab slot="tabs">picture-frame.js</paper-tab>
@@ -142,21 +138,20 @@ Try it out in **StackBlitz**:
 * Try adding a `<div>` to `index.html`; is it affected by the styles in `<picture-frame>`'s shadow DOM?
 * Try adding other HTML elements to the DOM template to see how they are positioned relative to the distributed child nodes.
 
-**Note:** The CSS styles defined inside the `<dom-module>` are _scoped_ to the element's shadow DOM.
-So the `div` rule here only affects `<div>` tags inside `<picture-frame>`.
+**注意：**  `<dom-module>` 里面定义的 CSS 样式的 _作用域_ 仅限于元素的阴影 DOM。
+所以这里的 `div` 规则仅仅影响 `<picture-frame>` 里的 `<div>` 标签。
 {: .alert .alert-info }
 
 <p><a href="/3.0/docs/devguide/shadow-dom#shadow-dom-and-composition" class="blue-button">
 Learn more: Composition & distribution</a></p>
 
-### Use data binding
+### 使用数据绑定
 
-Of course, it's not enough to have static shadow DOM. You usually want to have your element update
-its shadow DOM dynamically.
+当然，静态阴影 DOM 还不够。您通常想让您的元素动态地更新它的阴影 DOM。
 
-Data binding is a great way to quickly propagate changes in your element and reduce boilerplate code.
-You can bind properties in your component using the "double-mustache" syntax (`{%raw%}{{}}{%endraw%}`).
-The `{%raw%}{{}}{%endraw%}` is replaced by the value of the property referenced between the brackets.
+数据绑定是快速传播元素内改变并减少样板代码的好方法。
+您可以使用“双胡子”语法 (`{%raw%}{{}}{%endraw%}`) 来绑定组件中的属物。
+这 `{%raw%}{{}}{%endraw%}` 由大括号中引用的属物的值所替换。
 
 <demo-tabs selected="0" name="qt-4-data-binding" editor-open-file="name-tag.js" project-path="/3.0/start/samples/name-tag">
   <paper-tab slot="tabs">name-tag.js</paper-tab>
@@ -186,14 +181,13 @@ Try it out in **StackBlitz**:
 <p><a href="/3.0/docs/devguide/data-binding" class="blue-button">
 Learn more: data binding</a></p>
 
-### Declare a property
+### 声明属物
 
-Properties are an important part of an element's public API. Polymer
-_declared properties_ support a number of common patterns for properties—setting default
-values, configuring properties from markup, observing property changes, and more.
+属物是元素的公共 API 的重要组成部分。Polymer
+_声明的属物_ 支持许多常见的用于属物的模式——设置默认值，从标记配置属物，观察属物更改，以及更多。
 
-The following example declares the `owner` property from the last example.
-It also shows configuring the owner property from markup in `index.html`.
+以下示例声明来自于上一个示例的 `owner` 属物。
+它还展示了在 `index.html` 中用标记配置 owner 属物。
 
 <demo-tabs selected="0" name="qt-5-declare-property" editor-open-file="configurable-name-tag.js" project-path="/3.0/start/samples/configurable-name-tag">
   <paper-tab slot="tabs">configurable-name-tag.js</paper-tab>
@@ -220,11 +214,11 @@ Try it out in **StackBlitz**:
 <p><a href="/3.0/docs/devguide/properties" class="blue-button">
 Learn more: declared properties</a></p>
 
-### Bind to a property
+### 绑定到属物
 
-In addition to text content, you can bind to an element's _properties_ (using
-`property-name="[[binding]]"`). Polymer properties
-can optionally support two-way binding, using curly braces (`property-name="{{binding}}"`).
+除文本内容之外，您还可以绑定到元素的 _属物_ (使用
+`property-name="[[binding]]"`)。Polymer 属物可以选择性地支持双向绑定，
+使用花括号 (`property-name="{{binding}}"`)。
 
 <!--
 
@@ -292,8 +286,7 @@ to the element's `owner` property, so it's updated as the user types.
 Try it out in **StackBlitz**:
 * Edit the placeholder text to see two-way data binding at work.
 
-**Note:** The `<iron-input>` element wraps a native `<input>` element and provides two-way
-data binding and input validation.
+**注意：** `<iron-input>` 元素包装了原生的 `<input>` 元素，并提供双向数据绑定和输入校验。
 {: .alert .alert-info }
 
 <p><a href="/3.0/docs/devguide/data-binding#two-way-bindings" class="blue-button">
@@ -334,6 +327,6 @@ Don't forget to make sure your commas are correct!
 <p><a href="/3.0/docs/devguide/templates" class="blue-button">
 Learn more: Template repeater</a></p>
 
-## Next steps
+## 下一步
 
 Now that you understand these fundamental Polymer concepts, you can [build an app with App Toolbox](/3.0/start/toolbox/set-up) or see a [feature overview of the Polymer library](/3.0/docs/devguide/feature-overview).

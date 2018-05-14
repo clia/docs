@@ -127,7 +127,7 @@ That's it — your element is finished. You've created an element that has a bas
 
 If you have any trouble getting the element working, the `icon-toggle-finished` folder contains the final code.
 
-If you'd like to learn a little more about custom properties, read on.
+如果您想了解更多有关自定义属物的信息，请继续阅读。
 
 ### Extra credit: Set custom properties at the document level {#extra}
 

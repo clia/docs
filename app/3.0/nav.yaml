@@ -1,46 +1,46 @@
 ---
-- section: Home
+- section: 主页
   shortpath: home
   path: /
 
-- section: Start
+- section: 开始
   shortpath: start
   path: /3.0/start/
   items:
-  - title: Get started
+  - title: 开始吧
     path: /3.0/start/
-  - title: Try Polymer
+  - title: 尝试 Polymer
     path: /3.0/start/quick-tour
-  - title: Install Polymer 3.x
+  - title: 安装 Polymer 3.x
     path: /3.0/start/install-3-0
-  - header: Build an element
-  - title: 1. Get set up
+  - header: 创建元素
+  - title: 1. 设置好
     path: /3.0/start/first-element/intro
     indent: True
-  - title: 2. Add local DOM
+  - title: 2. 添加本地 DOM
     path: /3.0/start/first-element/step-2
     indent: True
-  - title: 3. Data binding & properties
+  - title: 3. 数据绑定和属物
     path: /3.0/start/first-element/step-3
     indent: True
-  - title: 4. React to input
+  - title: 4. 响应输入
     path: /3.0/start/first-element/step-4
     indent: True
-  - title: 5. Theming with custom properties
+  - title: 5. 用自定义属物主题化
     path: /3.0/start/first-element/step-5
     indent: True
   - endheader: True
-  - header: Build an app
-  - title: 1. Get set up
+  - header: 创建 App
+  - title: 1. 设置好
     path: /3.0/start/toolbox/set-up
     indent: True
-  - title: 2. Create a new page
+  - title: 2. 创建新页面
     path: /3.0/start/toolbox/create-a-page
     indent: True
-  - title: 3. Add some elements
+  - title: 3. 添加元素
     path: /3.0/start/toolbox/add-elements
     indent: True
-  - title: 4. Deploy
+  - title: 4. 部署
     path: /3.0/start/toolbox/deploy
     indent: True
   - endheader: True
@@ -49,73 +49,73 @@
   shortpath: docs
   path: /3.0/docs/devguide/feature-overview
   items:
-  - title: Feature overview
+  - title: 功能概述
     path: /3.0/docs/devguide/feature-overview
-  - header: About this release
-  - title: What's new in 3.0
+  - header: 关于该版本
+  - title: 3.0 的新内容
     path: /3.0/docs/about_30
     indent: True
-  - title: Upgrade guide
+  - title: 升级指南
     path: /3.0/docs/upgrade
     indent: True
-  - title: Release notes
+  - title: 发布说明
     path: /3.0/docs/release-notes
     indent: True
   - endheader: True
-  - header: Custom elements
-  - title: Custom element concepts
+  - header: 自定义元素
+  - title: 自定义元素概念
     path: /3.0/docs/devguide/custom-elements
     indent: True
-  - title: Define an element
+  - title: 定义元素
     path: /3.0/docs/devguide/registering-elements
     indent: True
-  - title: Declare properties
+  - title: 声明属物
     path: /3.0/docs/devguide/properties
     indent: True
   - title: Working with legacy elements
     path: /3.0/docs/devguide/legacy-elements
   - endheader: True
-  - header: Shadow DOM & styling
-  - title: Shadow DOM concepts
+  - header: 阴影 DOM & 样式
+  - title: 阴影 DOM 概念
     path: /3.0/docs/devguide/shadow-dom
     indent: True
-  - title: DOM templating
+  - title: DOM 模版化
     path: /3.0/docs/devguide/dom-template
     indent: True
-  - title: Style shadow DOM
+  - title: 样式化阴影 DOM
     path: /3.0/docs/devguide/style-shadow-dom
     indent: True
-  - title: Custom CSS properties
+  - title: 自定义 CSS 属物
     path: /3.0/docs/devguide/custom-css-properties
     indent: True
   - endheader: True
-  - header: Events
-  - title: Handle and fire events
+  - header: 事件
+  - title: 处理和触发事件
     path: /3.0/docs/devguide/events
     indent: True
-  - title: Gesture events
+  - title: 手势事件
     path: /3.0/docs/devguide/gesture-events
     indent: True
   - endheader: True
-  - header: Data system
-  - title: Data system concepts
+  - header: 数据系统
+  - title: 数据系统的概念
     path: /3.0/docs/devguide/data-system
     indent: True
-  - title: Work with object and array data
+  - title: 使用对象和数组数据
     path: /3.0/docs/devguide/model-data
     indent: True
-  - title: Observers and computed properties
+  - title: 观察者和被计算的属物
     path: /3.0/docs/devguide/observers
     indent: True
-  - title: Data binding
+  - title: 数据绑定
     path: /3.0/docs/devguide/data-binding
     indent: True
-  - title: Helper elements
+  - title: 助手元素
     path: /3.0/docs/devguide/templates
     indent: True
   - endheader: True
-  - header: Browser support
-  - title: Overview
+  - header: 浏览器支持
+  - title: 概述
     path: /3.0/docs/browsers
     indent: True
   - title: Polyfills
@@ -125,99 +125,99 @@
     path: /3.0/docs/es6
     indent: True
   - endheader: True
-  - header: Tools
-  - title: Tools overview
+  - header: 工具
+  - title: 工具概述
     path: /3.0/docs/tools/overview
     indent: True
   - title: Polymer CLI
     path: /3.0/docs/tools/polymer-cli
     indent: True
-  - title: CLI commands
+  - title: CLI 命令
     path: /3.0/docs/tools/polymer-cli-commands
     indent: True
-  - title: Create an element project
+  - title: 创建元素项目
     path: /3.0/docs/tools/create-element-polymer-cli
     indent: True
-  - title: Create an application project
+  - title: 创建应用项目
     path: /3.0/docs/tools/create-app-polymer-cli
     indent: True
-  - title: Document your elements
+  - title: 文档化您的元素
     path: /3.0/docs/tools/documentation
     indent: True
-  - title: Test your elements
+  - title: 测试您的元素
     path: /3.0/docs/tools/tests
     indent: True
-  - title: polymer.json specification
+  - title: polymer.json 规范
     path: /3.0/docs/tools/polymer-json
     indent: True
-  - title: Node support
+  - title: Node 支持
     path: /3.0/docs/tools/node-support
     indent: True
   - endheader: True
-  - header: Resources
-  - title: Glossary
+  - header: 资源
+  - title: 词汇表
     path: /3.0/docs/glossary
     indent: True
   - endheader: True
-  - header: API Reference
-  - title: API Reference
+  - header: API 参考
+  - title: API 参考
     path: /3.0/docs/api/
     indent: True
-  - title: Global settings
+  - title: 全局设置
     path: /3.0/docs/devguide/settings
     indent: True
   - endheader: True
 
-- section: App Toolbox
+- section: App 工具箱
   shortpath: toolbox
   path: /3.0/toolbox/
   items:
-  - title: What's in the box?
+  - title: 箱子里有什么？
     path: /3.0/toolbox/
-  - header: Using the Toolbox
-  - title: App templates
+  - header: 使用工具箱
+  - title: App 模板
     path: /3.0/toolbox/templates
     indent: True
-  - title: Responsive app layout
+  - title: 响应式 App 布局
     path: /3.0/toolbox/app-layout
     indent: True
-  - title: Routing
+  - title: 路由
     path: /3.0/toolbox/routing
     indent: True
-  - title: Localization
+  - title: 本地化
     path: /3.0/toolbox/localize
     indent: True
-  - title: App storage
+  - title: App 存储
     path: /3.0/toolbox/app-storage
     indent: True
-  - title: Service worker
+  - title: 服务工作者
     path: /3.0/toolbox/service-worker
     indent: True
   - endheader: true
-  - header: Deploy
-  - title: Build for production
+  - header: 部署
+  - title: 为生产环境构建
     path: /3.0/toolbox/build-for-production
     indent: True
-  - title: Serve your app
+  - title: 服务您的 App
     path: /3.0/toolbox/serve
     indent: True
-  - title: The PRPL pattern
+  - title: PRPL 模式
     path: /3.0/toolbox/prpl
     indent: True
   - endheader: true
-  - header: Case studies
-  - title: "Shop"
+  - header: 案例分析
+  - title: “商店”
     path: /3.0/toolbox/case-study
     indent: True
-  - title: "News"
+  - title: “新闻”
     path: /3.0/toolbox/news-case-study
     indent: True
   - endheader: true
 
-- section: Blog
+- section: 博客
   shortpath: blog
   path: /blog/
 
-- section: Community
+- section: 社区
   shortpath: community
   path: /community/
