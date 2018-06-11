@@ -332,7 +332,7 @@ nodes. `FlattenedNodesObserver` is an optional utility that can be loaded from
 `lib/utils/flattened-nodes-observer.js`.
 
 ```js
-import { FlattenedNodesObserver } from '@polymer/polymer/utils/flattened-nodes-observer.js';
+import { FlattenedNodesObserver } from '@polymer/polymer/lib/utils/flattened-nodes-observer.js';
 ```
 
 `FlattenedNodesObserver.getFlattenedNodes(node)` returns a list of flattened nodes for
@@ -341,7 +341,7 @@ the specified node.
 Use the `FlattenedNodesObserver` class to track when the flattened node list changes.
 
 ```js
-import { FlattenedNodesObserver } from '@polymer/polymer/utils/flattened-nodes-observer.js';
+import { FlattenedNodesObserver } from '@polymer/polymer/lib/utils/flattened-nodes-observer.js';
 ...
 this._observer = new FlattenedNodesObserver(this.$.slot, (info) => {
   this._processNewNodes(info.addedNodes);

@@ -74,7 +74,7 @@ There are a few manual steps that may be required after converting a project usi
 
     Becomes: 
 
-    `import('my-page.js').then(null, this._showPage404.bind(this));`
+    `import('./my-page.js').then(null, this._showPage404.bind(this));`
 
     Note that `resolveUrl` is not required. Imports are always resolved relative to the current module.
 
@@ -133,7 +133,7 @@ Before upgrading an element, make sure that any changes in your repo are committ
     ```html
     <html>
       <dom-module>
-        <template>foo</dom-module>
+        <template>foo</template>
       </dom-module>
       <script>
         class A extends Polymer.Element { … }
@@ -167,7 +167,7 @@ Before upgrading an element, make sure that any changes in your repo are committ
     Becomes:
 
     ```js
-    import {afterNextRender} from '@polymer/polymer/lib/utils/render-status.js;
+    import {afterNextRender} from '@polymer/polymer/lib/utils/render-status.js';
       ...
     afterNextRender(callback);
     ```
@@ -192,10 +192,10 @@ Before upgrading an element, make sure that any changes in your repo are committ
 
 1.  Add `importMeta` static getter, if necessary.
 
-    If you use the `importPath` property in you element's template, you must add a static `importMeta` getter:
+    If you use the `importPath` property in your element's template, you must add a static `importMeta` getter:
 
     ```js
-    class extends PolymerElement {
+    class A extends PolymerElement {
       static get importMeta() { return import.meta; }
     }
     ```
