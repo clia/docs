@@ -61,7 +61,7 @@ package.json
 polymer.json
 </pre>
 
-The main file you’ll work with is `icon-toggle.js` in the top-level project folder. This file contains the definition for your a custome element, which you will modify.
+The main file you’ll work with is `icon-toggle.js` in the top-level project folder. This file contains the definition for your custom element, which you will modify.
 
 ### 安装依赖项并运行 demo {#run}
 

@@ -70,6 +70,8 @@ Run the following command from your root project folder:
 
 ![Example of page with checkbox](/images/3.0/toolbox/starter-kit-checkbox.png)
 
+**Note about duplicate dependencies:** If you get `Uncaught DOMException: Failed to execute 'define' on 'CustomElementRegistry': this name has already been used with this registry` after installing another component, it is probably because NPM installed a nested version of Polymer within that component's `node_modules/` directory. To resolve this, reset with a fresh set of dependences (`rm -rf node_modules/ package-lock.json; npm i`). See [polymer-starter-kit Issues #1123](https://github.com/Polymer/polymer-starter-kit/issues/1123) for more details. { .alert .alert-info }
+
 ## 下一步
 
 现在您已经向页面添加了第三方组件，该学习如何
